@@ -1,0 +1,12 @@
+[development]
+defaults
+not IE <= 11
+not op_mini all
+
+[production]
+defaults
+not IE <= 11
+not op_mini all
+
+[ssr]
+maintained node versions

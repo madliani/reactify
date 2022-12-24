@@ -1,0 +1,83 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:compat/recommended",
+        "plugin:etc/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:jest-dom/recommended",
+        "plugin:jest/recommended",
+        "plugin:jest/style",
+        "plugin:jsx-a11y/recommended",
+        "plugin:lodash/recommended",
+        "plugin:no-unsanitized/DOM",
+        "plugin:promise/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react-perf/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react/recommended",
+        "plugin:regexp/recommended",
+        "plugin:sonarjs/recommended",
+        "plugin:testing-library/react"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "allowReserved": false,
+        "ecmaFeatures": {
+            "globalReturn": false,
+            "impliedStrict": true,
+            "jsx": true
+        },
+        "ecmaVersion": 6,
+        "project": ["tsconfig.json"],
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "compat",
+        "etc",
+        "import",
+        "jest",
+        "jest-dom",
+        "jest-extended",
+        "jsx-a11y",
+        "lodash",
+        "no-unsanitized",
+        "promise",
+        "react",
+        "react-hooks",
+        "react-perf",
+        "regexp",
+        "simple-import-sort",
+        "sonarjs",
+        "testing-library"
+    ],
+    "root": true,
+    "rules": {
+        "jest-extended/prefer-to-be-array": "error",
+        "jest-extended/prefer-to-be-false": "error",
+        "jest-extended/prefer-to-be-object": "error",
+        "jest-extended/prefer-to-be-true": "error",
+        "jest-extended/prefer-to-have-been-called-once": "error",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "simple-import-sort/exports": "error",
+        "simple-import-sort/imports": "error"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": true
+        },
+        "react": {
+            "version": "detect"
+        }
+    }
+}
