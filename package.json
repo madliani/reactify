@@ -1,7 +1,7 @@
 {
     "author": {
-        "name": "crystallographer",
         "email": "human@mailfence.com",
+        "name": "crystallographer",
         "url": "https://github.com/crystallographer"
     },
     "bugs": {
@@ -107,8 +107,8 @@
     ],
     "private": true,
     "repository": {
-        "url": "git+https://github.com/crystallographer/reactify.git",
-        "type": "git"
+        "type": "git",
+        "url": "git+https://github.com/crystallographer/reactify.git"
     },
     "scripts": {
         "build": "parcel build src/index.html --no-source-maps",

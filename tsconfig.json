@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "jsx": "react-jsx",
         "allowJs": false,
         "allowSyntheticDefaultImports": true,
         "allowUmdGlobalAccess": false,
@@ -25,6 +24,7 @@
         "inlineSourceMap": false,
         "inlineSources": false,
         "isolatedModules": false,
+        "jsx": "react-jsx",
         "jsxImportSource": "react",
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
         "maxNodeModuleJsDepth": 1,
@@ -41,10 +41,10 @@
         "noImplicitThis": true,
         "noImplicitUseStrict": false,
         "noLib": false,
-        "noPropertyAccessFromIndexSignature": false,
+        "noPropertyAccessFromIndexSignature": true,
         "noResolve": false,
         "noStrictGenericChecks": false,
-        "noUncheckedIndexedAccess": false,
+        "noUncheckedIndexedAccess": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "preserveConstEnums": false,
