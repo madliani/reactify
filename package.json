@@ -1,13 +1,18 @@
 {
     "author": {
-        "email": "human@mailfence.com",
         "name": "crystallographer",
+        "email": "human@mailfence.com",
         "url": "https://github.com/crystallographer"
     },
     "bugs": {
         "email": "human@mailfence.com",
         "url": "https://github.com/crystallographer/reactify/issues"
     },
+    "cpu": [
+        "arm64",
+        "ia32",
+        "x64"
+    ],
     "dependencies": {
         "@faker-js/faker": "^7.6.0",
         "@reduxjs/toolkit": "^1.9.3",
@@ -83,7 +88,7 @@
     "engines": {
         "node": ">=16.13.0"
     },
-    "engineStrict": false,
+    "engineStrict": true,
     "homepage": "https://github.com/crystallographer/reactify",
     "keywords": [
         "parcel",
@@ -95,10 +100,15 @@
     ],
     "license": "GPLv3",
     "name": "reactify",
+    "os": [
+        "darwin",
+        "linux",
+        "win32"
+    ],
     "private": true,
     "repository": {
-        "type": "git",
-        "url": "git+https://github.com/crystallographer/reactify.git"
+        "url": "git+https://github.com/crystallographer/reactify.git",
+        "type": "git"
     },
     "scripts": {
         "build": "parcel build src/index.html --no-source-maps",
