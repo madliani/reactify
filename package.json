@@ -78,19 +78,20 @@
         "typescript": "^4.9.5"
     },
     "engines": {
-        "node": ">=16.13.0"
+        "node": ">=18.15.0"
     },
     "engineStrict": true,
     "homepage": "https://github.com/crystallographer/reactify",
     "keywords": [
         "parcel",
+        "pnpm",
         "react",
         "reactify",
         "sass",
         "scss",
         "typescript"
     ],
-    "license": "GPLv3",
+    "license": "MIT",
     "name": "reactify",
     "os": [
         "darwin",
