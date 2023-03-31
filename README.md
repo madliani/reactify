@@ -1,5 +1,13 @@
 # Reactify - The React Starter Kit
 
+<div align="center">
+    <img src="./assets/icons/apple-touch-icon.png" alt="React logo">
+</div>
+
+![Built with React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Built with SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Built with TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
 ## Available Scripts
 
 In the project directory, you can run:
