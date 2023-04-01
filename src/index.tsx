@@ -2,7 +2,7 @@ import "./index.scss";
 
 import { createRoot } from "react-dom/client";
 
-import App from "./app/App";
+import { App } from "./app/App";
 
 try {
     const root = document.getElementById("root");
