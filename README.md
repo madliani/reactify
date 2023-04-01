@@ -13,7 +13,7 @@
 
 ## Screenshots
 
-![Homepage]("./assets/images/reactify-homepage.png")
+![Homepage](./assets/images/reactify-homepage.png)
 
 ## Available Scripts
 
