@@ -1,8 +1,9 @@
 import logo from "../../assets/images/logo.svg";
+import { Main } from "../layouts/Main";
 
 export const Home = function () {
     return (
-        <div className="App">
+        <Main>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
@@ -17,6 +18,6 @@ export const Home = function () {
                     Learn React
                 </a>
             </header>
-        </div>
+        </Main>
     );
 };
