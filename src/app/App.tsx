@@ -1,4 +1,3 @@
-import { Provider } from "jotai";
 import { RouterProvider } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
@@ -17,9 +16,9 @@ const GlobalStyle = createGlobalStyle`
 
 export const App = function () {
     return (
-        <Provider>
+        <>
             <GlobalStyle />
             <RouterProvider router={router} />
-        </Provider>
+        </>
     );
 };
