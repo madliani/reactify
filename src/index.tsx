@@ -1,14 +1,13 @@
 import "./index.scss";
 
-import React from "react";
 import { createRoot } from "react-dom/client";
 
 import App from "./components/App/App";
 
-const root = createRoot(document.getElementById("root") as HTMLElement);
+try {
+    const root = document.getElementById("root");
 
-root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
-);
+    root ? createRoot(root)?.render(<App />) : undefined;
+} catch (error) {
+    console.log(error);
+}
