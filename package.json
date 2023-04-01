@@ -87,9 +87,11 @@
     "engineStrict": true,
     "homepage": "https://github.com/crystallographer/reactify",
     "keywords": [
+        "jotai",
         "parcel",
         "pnpm",
         "react",
+        "react-router",
         "reactify",
         "styled-components",
         "typescript"
