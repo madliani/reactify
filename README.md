@@ -1,7 +1,10 @@
-# Reactify - The React Starter Kit
+# Reactify
 
 <div align="center">
-    <img src="./assets/icons/apple-touch-icon.png" alt="React logo">
+    <img src="./assets/icons/apple-touch-icon.png" alt="React logo" />
+
+    The React Starter Kit
+
 </div>
 
 ![Built with React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
