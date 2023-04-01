@@ -3,14 +3,14 @@ import styled, { keyframes } from "styled-components";
 import logo from "../../assets/images/logo.svg";
 
 const HeaderWrapper = styled.header`
-    background-color: #282c34;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
     font-size: calc(10px + 2vmin);
     color: white;
+    background-color: #282c34;
 `;
 
 const imageAnimation = keyframes`
@@ -23,8 +23,8 @@ const imageAnimation = keyframes`
 `;
 
 const ImageWrapper = styled.img`
-    height: 40vmin;
     pointer-events: none;
+    height: 40vmin;
 
     @media (prefers-reduced-motion: no-preference) {
         animation: ${imageAnimation} infinite 20s linear;
