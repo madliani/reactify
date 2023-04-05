@@ -5,6 +5,8 @@ import styled, { keyframes } from "styled-components";
 import logo from "../../assets/images/logo.svg";
 import { storeAtom } from "../jotai/atoms/store";
 
+const { CODE } = process.env;
+
 const HeaderWrapper = styled.header`
     display: flex;
     flex-direction: column;
@@ -48,9 +50,9 @@ export const Header = function () {
     const { code } = store;
 
     useEffect(() => {
-        if (!code) {
+        if (!code && CODE) {
             setStore({
-                code: "src/App.tsx"
+                code: CODE
             });
         }
     }, [code, setStore]);
