@@ -39,3 +39,16 @@ performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+## Authors
+
+Rakhman Abdurakhmanov - [Portfolio](https://crystallographer.github.io) |
+[GitHub](https://github.com/crystallographer).
+
+Based on [Create React App](https://create-react-app.dev) by
+[Meta](https://opensource.fb.com).
+
+## License
+
+The MIT License - [Open Source Initiative](https://opensource.org/license/mit) |
+[Free Software Directory](https://directory.fsf.org/wiki/License:Expat).
