@@ -20,11 +20,11 @@
         "plugin:no-unsanitized/DOM",
         "plugin:promise/recommended",
         "plugin:react-hooks/recommended",
-        "plugin:react-perf/recommended",
         "plugin:react/jsx-runtime",
         "plugin:react/recommended",
         "plugin:regexp/recommended",
         "plugin:sonarjs/recommended",
+        "plugin:sort/recommended",
         "plugin:testing-library/react"
     ],
     "parser": "@typescript-eslint/parser",
@@ -52,10 +52,9 @@
         "promise",
         "react",
         "react-hooks",
-        "react-perf",
         "regexp",
-        "simple-import-sort",
         "sonarjs",
+        "sort",
         "testing-library"
     ],
     "root": true,
@@ -65,10 +64,27 @@
         "jest-extended/prefer-to-be-object": "error",
         "jest-extended/prefer-to-be-true": "error",
         "jest-extended/prefer-to-have-been-called-once": "error",
+        "react/jsx-sort-props": [
+            "error",
+            {
+                "callbacksLast": false,
+                "ignoreCase": true,
+                "multiline": "ignore",
+                "noSortAlphabetically": false,
+                "reservedFirst": false,
+                "shorthandFirst": false,
+                "shorthandLast": false
+            }
+        ],
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
-        "simple-import-sort/exports": "error",
-        "simple-import-sort/imports": "error"
+        "sort/type-properties": [
+            "error",
+            {
+                "caseSensitive": false,
+                "natural": true
+            }
+        ]
     },
     "settings": {
         "import/resolver": {

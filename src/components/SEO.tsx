@@ -15,7 +15,6 @@ export const SEO = function ({
     meta = [],
     title
 }: Properties) {
-    // eslint-disable-next-line react-perf/jsx-no-new-object-as-prop
     const htmlAttributes = {
         lang
     };
@@ -24,7 +23,6 @@ export const SEO = function ({
     return (
         <Helmet
             htmlAttributes={htmlAttributes}
-            // eslint-disable-next-line react-perf/jsx-no-new-array-as-prop
             meta={[
                 {
                     content: description,

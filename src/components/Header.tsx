@@ -1,7 +1,6 @@
 import { useAtom } from "jotai";
 import { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-
 import logo from "../../assets/images/logo.svg";
 import { storeAtom } from "../jotai/atoms/store";
 
@@ -59,7 +58,7 @@ export const Header = function () {
 
     return (
         <HeaderWrapper>
-            <ImageWrapper src={logo} alt="logo" />
+            <ImageWrapper alt="logo" src={logo} />
             <p>
                 Edit <CodeWrapper>{code}</CodeWrapper> and save to reload.
             </p>
