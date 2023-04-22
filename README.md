@@ -42,7 +42,7 @@ Your app is ready to be deployed!
 
 ## Contributors
 
-[Rakhman Abdurakhmanov](https://crystallographer.github.io) - creator and
+- [Rakhman Abdurakhmanov](https://crystallographer.github.io) - creator and
 maintainer
 
 ## Authoring
