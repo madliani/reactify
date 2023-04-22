@@ -15,7 +15,7 @@
 
 ![Homepage](./assets/images/reactify-homepage.png)
 
-## Available Scripts
+## Usage
 
 In the project directory, you can run:
 
