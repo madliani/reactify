@@ -1,7 +1,7 @@
 # Reactify
 
 <div align="center">
-    <img src="./assets/icons/apple-touch-icon.png" alt="React logo" />
+    <img src="./assets/icons/apple-touch-icon.png" alt="Reactify logo" />
 
     The React Starter Kit
 
@@ -42,8 +42,8 @@ Your app is ready to be deployed!
 
 ## Contributors
 
-- [Rakhman Abdurakhmanov](https://crystallographer.github.io) - creator and
-maintainer
+-   [Rakhman Abdurakhmanov](https://crystallographer.github.io) - creator and
+    maintainer
 
 ## Authoring
 
