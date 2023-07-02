@@ -68,5 +68,5 @@
         "useUnknownInCatchVariables": true
     },
     "exclude": ["node_modules"],
-    "include": ["src", "tests"]
+    "include": ["jest.config.ts", "mocks", "src", "tests"]
 }

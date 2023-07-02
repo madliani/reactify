@@ -1,0 +1,45 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+export default {
+    automock: false,
+    bail: 1,
+    cacheDirectory: "/tmp/jest_rs",
+    clearMocks: true,
+    collectCoverage: true,
+    coverageDirectory: "coverage",
+    coveragePathIgnorePatterns: ["/node_modules/"],
+    coverageProvider: "v8",
+    coverageReporters: ["json", "text"],
+    errorOnDeprecated: true,
+    fakeTimers: { "enableGlobally": true },
+    maxWorkers: "50%",
+    moduleDirectories: ["node_modules"],
+    moduleFileExtensions: [
+        "cjs",
+        "cjs",
+        "js",
+        "json",
+        "jsx",
+        "mjs",
+        "node",
+        "ts",
+        "tsx"
+    ],
+    notify: true,
+    notifyMode: "failure-change",
+    preset: "ts-jest",
+    resetMocks: true,
+    resetModules: true,
+    restoreMocks: false,
+    runner: "jest-runner",
+    slowTestThreshold: 5,
+    testEnvironment: "jsdom",
+    testLocationInResults: true,
+    testMatch: ["**/?(*.)+test.[t]s?(x)", "**/tests/**/*.[t]s?(x)"],
+    testPathIgnorePatterns: ["/node_modules/"],
+    testRunner: "jest-circus/runner",
+    transform: {
+        "^.+\\.svg$": "jest-transformer-svg"
+    },
+    transformIgnorePatterns: ["/node_modules/", "\\.pnp\\.[^\\/]+$"],
+    watchman: true
+};

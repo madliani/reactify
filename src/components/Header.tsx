@@ -1,10 +1,6 @@
-import { useAtom } from "jotai";
-import { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import logo from "../../assets/images/logo.svg";
-import { storeAtom } from "../jotai/atoms/store";
-
-const { CODE } = process.env;
+import { Code } from "./Code";
 
 const HeaderWrapper = styled.header`
     display: flex;
@@ -35,32 +31,16 @@ const ImageWrapper = styled.img`
     }
 `;
 
-const CodeWrapper = styled.code`
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-`;
-
 const AnchorWrapper = styled.a`
     color: #61dafb;
 `;
 
 export const Header = function () {
-    const [store, setStore] = useAtom(storeAtom);
-    const { code } = store;
-
-    useEffect(() => {
-        if (!code && CODE) {
-            setStore({
-                code: CODE
-            });
-        }
-    }, [code, setStore]);
-
     return (
         <HeaderWrapper>
             <ImageWrapper alt="logo" src={logo} />
             <p>
-                Edit <CodeWrapper>{code}</CodeWrapper> and save to reload.
+                Edit <Code /> and save to reload.
             </p>
             <AnchorWrapper
                 href="https://reactjs.org"
