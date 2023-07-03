@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import EnvironmentPlugin from "vite-plugin-environment";
 
 export default defineConfig({
-    base: "/reactify/",
+    base: "/",
     esbuild: {
         jsxFactory: "h",
         jsxFragment: "Fragment",
