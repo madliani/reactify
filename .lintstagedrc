@@ -3,6 +3,6 @@
         "prettier --write",
         "stylelint --fix",
         "eslint --fix",
-        "jest"
+        "jest --passWithNoTests"
     ]
 }

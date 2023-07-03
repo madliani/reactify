@@ -1,7 +1,6 @@
 {
     "env": {
         "browser": true,
-        "es6": true,
         "jest": true
     },
     "extends": [
@@ -35,7 +34,7 @@
             "impliedStrict": true,
             "jsx": true
         },
-        "ecmaVersion": 6,
+        "ecmaVersion": 2022,
         "project": ["tsconfig.json"],
         "sourceType": "module"
     },
@@ -55,7 +54,8 @@
         "regexp",
         "sonarjs",
         "sort",
-        "testing-library"
+        "testing-library",
+        "react-refresh"
     ],
     "root": true,
     "rules": {
@@ -64,6 +64,7 @@
         "jest-extended/prefer-to-be-object": "error",
         "jest-extended/prefer-to-be-true": "error",
         "jest-extended/prefer-to-have-been-called-once": "error",
+        "react-refresh/only-export-components": "error",
         "react/jsx-sort-props": [
             "error",
             {
