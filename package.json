@@ -66,6 +66,7 @@
         "jest-transformer-svg": "^2.0.1",
         "lint-staged": "^13.2.2",
         "node-notifier": "^10.0.1",
+        "pinst": "^3.0.0",
         "postcss": "^8.4.24",
         "postcss-styled-syntax": "^0.4.0",
         "prettier": "2.8.7",
@@ -117,7 +118,9 @@
         "format": "prettier --write './src/**/*.{ts,tsx}'",
         "lint": "tsc --noEmit && eslint --fix './src/**/*.{ts,tsx}' && stylelint --fix './src/**/*.{ts,tsx}'",
         "postinstall": "husky install",
+        "postpack": "pinst --enable",
         "pre-commit": "lint-staged",
+        "prepack": "pinst --disable",
         "prepare": "husky install",
         "preview": "vite preview",
         "test": "jest --passWithNoTests"
