@@ -92,14 +92,14 @@
         "jotai",
         "vite",
         "jest",
-        "pnpm",
+        "yarn",
         "react",
         "react-router",
         "reactify",
         "styled-components",
         "typescript"
     ],
-    "license": "MIT",
+    "license": "AGPL-3.0-or-later",
     "name": "reactify",
     "os": [
         "darwin",
