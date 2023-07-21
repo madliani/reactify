@@ -7,6 +7,7 @@
 
 </div>
 
+![Built with Jest](https://img.shields.io/badge/Jest-C21325.svg?style=for-the-badge&logo=Jest&logoColor=white)
 ![Built with React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Built with styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Built with TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -42,7 +43,7 @@ Your app is ready to be deployed!
 
 ## Contributors
 
--   [Rakhman Abdurakhmanov](https://crystallographer.github.io) - creator and
+- [Rakhman Abdurakhmanov](https://crystallographer.github.io) - creator and
     maintainer
 
 ## Authoring
