@@ -433,6 +433,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/emacs,git,linux,macos,node,vim,visualstudiocode,webstorm,windows
-
-# stryker temp files
-.stryker-tmp
