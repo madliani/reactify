@@ -1,11 +1,11 @@
 # Reactify
 
-<div align="center">
+<p align="center">
     <img src="./assets/icons/apple-touch-icon.png" alt="Reactify logo" />
 
     The React Starter Kit
 
-</div>
+</p>
 
 ![Built with Jest](https://img.shields.io/badge/Jest-C21325.svg?style=for-the-badge&logo=Jest&logoColor=white)
 ![Built with React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
