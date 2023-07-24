@@ -70,12 +70,5 @@
         "verbatimModuleSyntax": false
     },
     "exclude": ["node_modules"],
-    "include": [
-        "deploy.mts",
-        "jest.config.ts",
-        "mocks",
-        "src",
-        "tests",
-        "vite.config.ts"
-    ]
+    "include": ["jest.config.ts", "mocks", "src", "tests", "vite.config.ts"]
 }
