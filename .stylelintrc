@@ -1,20 +1,17 @@
 {
-  "customSyntax": "postcss-styled-syntax",
-  "extends": [
-    "stylelint-config-clean-order",
-    "stylelint-config-standard",
-    "stylelint-config-styled-components"
-  ],
-  "plugins": [
-    "stylelint-no-unsupported-browser-features",
-    "stylelint-order"
-  ],
-  "rules": {
-    "plugin/no-unsupported-browser-features": [
-      true,
-      {
-        "severity": "error"
-      }
-    ]
-  }
+    "customSyntax": "postcss-styled-syntax",
+    "extends": [
+        "stylelint-config-clean-order",
+        "stylelint-config-standard",
+        "stylelint-config-styled-components"
+    ],
+    "plugins": ["stylelint-no-unsupported-browser-features", "stylelint-order"],
+    "rules": {
+        "plugin/no-unsupported-browser-features": [
+            true,
+            {
+                "severity": "error"
+            }
+        ]
+    }
 }
