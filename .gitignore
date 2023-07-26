@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/emacs,git,linux,macos,node,vim,visualstudiocode,webstorm,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=emacs,git,linux,macos,node,vim,visualstudiocode,webstorm,windows
+# Created by https://www.toptal.com/developers/gitignore/api/emacs,git,linux,macos,node,react,vim,visualstudiocode,webstorm,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=emacs,git,linux,macos,node,react,vim,visualstudiocode,webstorm,windows
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
@@ -254,6 +254,19 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+### react ###
+.DS_*
+**/*.backup.*
+**/*.back.*
+
+node_modules
+
+*.sublime*
+
+psd
+thumb
+sketch
+
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
@@ -432,4 +445,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/emacs,git,linux,macos,node,vim,visualstudiocode,webstorm,windows
+# End of https://www.toptal.com/developers/gitignore/api/emacs,git,linux,macos,node,react,vim,visualstudiocode,webstorm,windows
