@@ -4,6 +4,9 @@ import EnvironmentPlugin from "vite-plugin-environment";
 
 export default defineConfig({
     base: "/",
+    build: {
+        manifest: true
+    },
     esbuild: {
         jsxFactory: "h",
         jsxFragment: "Fragment",
