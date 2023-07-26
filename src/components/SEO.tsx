@@ -9,12 +9,12 @@ type Properties = {
     title: string;
 };
 
-export const SEO = function ({
+export const SEO = ({
     description = "The React Starter Kit.",
     lang = "en",
     meta = [],
     title
-}: Properties) {
+}: Properties) => {
     const htmlAttributes = {
         lang
     };

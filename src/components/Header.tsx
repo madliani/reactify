@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import { keyframes, styled } from "styled-components";
 import logo from "../../assets/images/logo.svg";
 import { Code } from "./Code";
 
@@ -35,7 +35,7 @@ const AnchorWrapper = styled.a`
     color: #61dafb;
 `;
 
-export const Header = function () {
+export const Header = () => {
     return (
         <HeaderWrapper>
             <ImageWrapper alt="logo" src={logo} />

@@ -8974,6 +8974,7 @@ __metadata:
     stylelint-no-unsupported-browser-features: ^7.0.0
     stylelint-order: ^6.0.3
     ts-jest: ^29.1.1
+    ts-node: ^10.9.1
     tslib: ^2.6.1
     typescript: ^5.1.6
     vite: ^4.4.7
@@ -10382,7 +10383,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.8.1":
+"ts-node@npm:^10.8.1, ts-node@npm:^10.9.1":
   version: 10.9.1
   resolution: "ts-node@npm:10.9.1"
   dependencies:

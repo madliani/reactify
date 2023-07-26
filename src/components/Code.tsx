@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
 import { useEffect } from "react";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import { storeAtom } from "../jotai/atoms/store";
 
 const { CODE } = process.env;
@@ -10,7 +10,7 @@ const CodeWrapper = styled.code`
         monospace;
 `;
 
-export const Code = function () {
+export const Code = () => {
     const [store, setStore] = useAtom(storeAtom);
     const { code } = store;
 
