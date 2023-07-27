@@ -21,7 +21,7 @@
         "react-router-dom": "^6.14.2",
         "styled-components": "^6.0.5"
     },
-    "description": "The React Starter Kit",
+    "description": "The React Starter Kit.",
     "devDependencies": {
         "@commitlint/cli": "^17.6.7",
         "@commitlint/config-conventional": "^17.6.7",
@@ -114,7 +114,7 @@
         "build": "vite build",
         "dev": "vite",
         "format": "prettier --write './src/**/*.{ts,tsx}'",
-        "lint": "tsc --noEmit && eslint --fix './src/**/*.{ts,tsx}' && stylelint --fix './src/**/*.{ts,tsx}'",
+        "lint": "stylelint --fix './src/**/*.{ts,tsx}' && eslint --fix './src/**/*.{ts,tsx}' && tsc --noEmit",
         "postinstall": "husky install",
         "postpack": "pinst --enable",
         "pre-commit": "lint-staged",
