@@ -9,8 +9,6 @@
         "url": "https://github.com/crystallographer/reactify/issues"
     },
     "cpu": [
-        "arm64",
-        "ia32",
         "x64"
     ],
     "dependencies": {
