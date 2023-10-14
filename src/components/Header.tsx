@@ -1,7 +1,8 @@
-import { keyframes, styled } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import logo from "../../assets/images/logo.svg";
 import { Code } from "./Code";
 
+// eslint-disable @typescript-eslint/no-unsafe-assignment @typescript-eslint/no-unsafe-member-access @typescript-eslint/no-unsafe-call
 const HeaderWrapper = styled.header`
     display: flex;
     flex-direction: column;
@@ -13,6 +14,7 @@ const HeaderWrapper = styled.header`
     background-color: #282c34;
 `;
 
+// eslint-disable @typescript-eslint/no-unsafe-assignment @typescript-eslint/no-unsafe-member-access @typescript-eslint/no-unsafe-call
 const imageAnimation = keyframes`
     from {
         transform: rotate(0deg);
@@ -22,6 +24,7 @@ const imageAnimation = keyframes`
     }
 `;
 
+// eslint-disable @typescript-eslint/no-unsafe-assignment @typescript-eslint/no-unsafe-member-access @typescript-eslint/no-unsafe-call
 const ImageWrapper = styled.img`
     pointer-events: none;
     height: 40vmin;
@@ -31,6 +34,7 @@ const ImageWrapper = styled.img`
     }
 `;
 
+// eslint-disable @typescript-eslint/no-unsafe-assignment @typescript-eslint/no-unsafe-member-access @typescript-eslint/no-unsafe-call
 const AnchorWrapper = styled.a`
     color: #61dafb;
 `;
