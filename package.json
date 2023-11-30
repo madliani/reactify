@@ -111,8 +111,8 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "format": "prettier --write './src/**/*.{ts,tsx}'",
-        "lint": "stylelint --fix './src/**/*.{ts,tsx}' && eslint --fix './src/**/*.{ts,tsx}' && tsc --noEmit",
+        "format": "prettier --write './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}'",
+        "lint": "stylelint --fix './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}' && eslint --fix './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}' && tsc --noEmit",
         "postinstall": "husky install",
         "postpack": "pinst --enable",
         "pre-commit": "lint-staged",
