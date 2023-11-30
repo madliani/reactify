@@ -5,7 +5,6 @@ type Properties = {
     children: ReactNode;
 };
 
-// eslint-disable @typescript-eslint/no-unsafe-assignment @typescript-eslint/no-unsafe-member-access @typescript-eslint/no-unsafe-call
 const Container = styled.div`
     text-align: center;
 `;

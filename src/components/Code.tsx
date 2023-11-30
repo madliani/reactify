@@ -5,7 +5,6 @@ import { storeAtom } from "../jotai/atoms/store";
 
 const { CODE } = process.env;
 
-// eslint-disable @typescript-eslint/no-unsafe-assignment @typescript-eslint/no-unsafe-member-access @typescript-eslint/no-unsafe-call
 const CodeWrapper = styled.code`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
