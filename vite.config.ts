@@ -7,10 +7,8 @@ export default defineConfig({
     build: {
         manifest: true
     },
-    esbuild: {
-        jsxFactory: "h",
-        jsxFragment: "Fragment",
-        jsxInject: "import React from 'react'"
-    },
-    plugins: [EnvironmentPlugin("all"), react()]
+    plugins: [EnvironmentPlugin("all"), react()],
+    server: {
+        host: true
+    }
 });
