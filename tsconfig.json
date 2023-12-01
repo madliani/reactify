@@ -1,3 +1,5 @@
+// https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+
 {
     "compilerOptions": {
         "allowArbitraryExtensions": false,
@@ -25,6 +27,7 @@
         "inlineSourceMap": false,
         "inlineSources": false,
         "isolatedModules": false,
+        "jsx": "react-jsx",
         "lib": ["DOM", "DOM.Iterable", "ES2022"],
         "maxNodeModuleJsDepth": 1,
         "module": "ES2022",
