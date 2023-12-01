@@ -34,7 +34,7 @@ export const SEO = ({
                 },
                 {
                     content:
-                        "https://raw.githubusercontent.com/crystallographer/reactify/main/src/assets/images/logo.svg",
+                        "https://raw.githubusercontent.com/madliani/reactify/main/src/assets/images/logo.svg",
                     name: "og:image"
                 },
                 {
