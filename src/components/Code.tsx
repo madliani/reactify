@@ -3,8 +3,6 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { storeAtom } from "../jotai/atoms/store";
 
-const { CODE } = process.env;
-
 const CodeWrapper = styled.code`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
@@ -15,9 +13,9 @@ export const Code = () => {
     const { code } = store;
 
     useEffect(() => {
-        if (!code && CODE) {
+        if (!code) {
             setStore({
-                code: CODE
+                code: "src/App.tsx"
             });
         }
     }, [code, setStore]);

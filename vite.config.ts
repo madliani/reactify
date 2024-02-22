@@ -1,14 +1,15 @@
 import react from "@vitejs/plugin-react-swc";
 import { defineConfig } from "vite";
-import EnvironmentPlugin from "vite-plugin-environment";
 
 export default defineConfig({
     base: "/",
-    build: {
-        manifest: true
-    },
-    plugins: [EnvironmentPlugin("all"), react()],
+    plugins: [react()],
     server: {
-        host: true
+        cors: true,
+        hmr: true,
+        host: true,
+        open: true,
+        port: 8080,
+        strictPort: true
     }
 });

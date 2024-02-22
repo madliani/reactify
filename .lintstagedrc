@@ -1,8 +1,0 @@
-{
-    "*.{ts,tsx}": [
-        "prettier --write",
-        "stylelint --fix",
-        "eslint --fix",
-        "jest --passWithNoTests"
-    ]
-}
