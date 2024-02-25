@@ -110,5 +110,6 @@
         "lint": "stylelint --fix './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}' && eslint --fix './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}' && tsc --noEmit",
         "test": "jest --passWithNoTests"
     },
+    "type": "module",
     "version": "1.0.0"
 }
