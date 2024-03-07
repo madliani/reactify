@@ -10,6 +10,16 @@ export default {
     coverageProvider: "v8",
     coverageReporters: ["json", "text"],
     errorOnDeprecated: true,
+    extensionsToTreatAsEsm: [
+        "cjs",
+        "cjs",
+        "js",
+        "json",
+        "jsx",
+        "mjs",
+        "ts",
+        "tsx"
+    ],
     fakeTimers: { "enableGlobally": true },
     maxWorkers: "50%",
     moduleDirectories: ["node_modules"],
@@ -20,7 +30,6 @@ export default {
         "json",
         "jsx",
         "mjs",
-        "node",
         "ts",
         "tsx"
     ],
