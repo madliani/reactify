@@ -38,6 +38,7 @@ export default {
     testPathIgnorePatterns: ["/node_modules/"],
     testRunner: "jest-circus/runner",
     transform: {
+        "^.+\\.(t|j)sx?$": "@swc/jest",
         "^.+\\.svg$": "jest-transformer-svg"
     },
     transformIgnorePatterns: ["/node_modules/", "\\.pnp\\.[^\\/]+$"],
