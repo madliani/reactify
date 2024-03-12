@@ -7230,6 +7230,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-media-query-parser@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "postcss-media-query-parser@npm:0.2.3"
+  checksum: 8000d4d95b912994928ff86137f5ab0ed4c4ee1498af2336e93d708ae8827a690cd7acbaed55d14684cf44d82c8d44b031c1c69ae6bcd2f9620ea67573888090
+  languageName: node
+  linkType: hard
+
 "postcss-resolve-nested-selector@npm:^0.1.1":
   version: 0.1.1
   resolution: "postcss-resolve-nested-selector@npm:0.1.1"
@@ -7572,6 +7579,7 @@ __metadata:
     stylelint-config-styled-components: ^0.1.1
     stylelint-no-unsupported-browser-features: ^8.0.1
     stylelint-order: ^6.0.4
+    stylelint-scss: ^6.2.1
     stylelint-selector-bem-pattern: ^4.0.0
     ts-jest: ^29.1.2
     ts-node: ^10.9.2
@@ -8439,6 +8447,21 @@ __metadata:
   peerDependencies:
     stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
   checksum: 66ed8a80b34b98994e38d75671766f102d47c73362495b77861f0648efcc75cf3ad6f30f988c3cf16c9747ac139087ef1ff71b3bea40f9c5e081a25ebeb34feb
+  languageName: node
+  linkType: hard
+
+"stylelint-scss@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "stylelint-scss@npm:6.2.1"
+  dependencies:
+    known-css-properties: ^0.29.0
+    postcss-media-query-parser: ^0.2.3
+    postcss-resolve-nested-selector: ^0.1.1
+    postcss-selector-parser: ^6.0.15
+    postcss-value-parser: ^4.2.0
+  peerDependencies:
+    stylelint: ^16.0.2
+  checksum: bd52ca2643d8443dbf1a3d7844d9bc640fe0989436619bc7229a725997ee5aa0b457554b0721611d83d9f1ffe6b3ba1848d87b6d92028a3829cd7b9a508057c8
   languageName: node
   linkType: hard
 
