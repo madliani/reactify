@@ -72,5 +72,12 @@
         "verbatimModuleSyntax": false
     },
     "exclude": ["node_modules"],
-    "include": ["jest.config.ts", "mocks", "src", "tests", "vite.config.ts"]
+    "include": [
+        "jest.config.ts",
+        "mocks",
+        "postcss.config.ts",
+        "src",
+        "tests",
+        "vite.config.ts"
+    ]
 }
