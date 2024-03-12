@@ -6,7 +6,6 @@ import { defineConfig } from "vite";
 import { compression } from "vite-plugin-compression2";
 
 export default defineConfig({
-    base: "/",
     css: {
         postcss: {
             plugins: [autoprefixer, postCssModules, postCssPresetEnv]
