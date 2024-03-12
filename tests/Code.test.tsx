@@ -20,11 +20,16 @@ test("loads and displays code", async () => {
     };
 
     useEffectSpy.mockImplementation(useEffectMock);
+
     jest.mock("../src/components/Code", () => ({
         CODE: "src/App.tsx"
     }));
+
     arrange();
+
     await act();
+
     assert();
+
     useEffectSpy.mockClear();
 });
