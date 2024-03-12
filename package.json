@@ -64,6 +64,7 @@
         "jest-transformer-svg": "^2.0.2",
         "node-notifier": "^10.0.1",
         "postcss": "^8.4.35",
+        "postcss-modules": "^6.0.0",
         "postcss-preset-env": "^9.5.0",
         "postcss-styled-syntax": "^0.6.4",
         "prettier": "3.2.5",

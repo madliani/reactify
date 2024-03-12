@@ -1,5 +1,6 @@
 import react from "@vitejs/plugin-react-swc";
 import autoprefixer from "autoprefixer";
+import postCssModules from "postcss-modules";
 import postCssPresetEnv from "postcss-preset-env";
 import { defineConfig } from "vite";
 import { compression } from "vite-plugin-compression2";
@@ -8,7 +9,7 @@ export default defineConfig({
     base: "/",
     css: {
         postcss: {
-            plugins: [autoprefixer, postCssPresetEnv]
+            plugins: [autoprefixer, postCssModules, postCssPresetEnv]
         }
     },
     plugins: [
