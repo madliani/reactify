@@ -8586,6 +8586,7 @@ __metadata:
     styled-components: ^6.1.8
     stylelint: ^16.2.1
     stylelint-config-clean-order: ^5.4.1
+    stylelint-config-html: ^1.1.0
     stylelint-config-standard: ^36.0.0
     stylelint-config-styled-components: ^0.1.1
     stylelint-no-unsupported-browser-features: ^8.0.1
@@ -9453,6 +9454,16 @@ __metadata:
   peerDependencies:
     stylelint: ">=14"
   checksum: 5a1eb79b142f5756f413f785909ca27002e4ee99dd9cbb6488f00ec247b44df5a445c91486c9d8eb2feb4c9645e4e9caea3f9bb996aa3682dd50ed05b84a4bd1
+  languageName: node
+  linkType: hard
+
+"stylelint-config-html@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "stylelint-config-html@npm:1.1.0"
+  peerDependencies:
+    postcss-html: ^1.0.0
+    stylelint: ">=14.0.0"
+  checksum: d1b01043bcb07e33f826a59a0a22db762c07930d68e2c2c3a538aa8b0e02dc64b44abbb40e9a7583e053c04bbf18b167cbb1b714e343ef5bbe68b96860273480
   languageName: node
   linkType: hard
 

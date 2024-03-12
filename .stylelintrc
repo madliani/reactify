@@ -2,6 +2,7 @@
     "customSyntax": "postcss-styled-syntax",
     "extends": [
         "stylelint-config-clean-order",
+        "stylelint-config-html",
         "stylelint-config-standard",
         "stylelint-config-styled-components"
     ],

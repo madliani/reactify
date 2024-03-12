@@ -69,6 +69,7 @@
         "prettier": "3.2.5",
         "stylelint": "^16.2.1",
         "stylelint-config-clean-order": "^5.4.1",
+        "stylelint-config-html": "^1.1.0",
         "stylelint-config-standard": "^36.0.0",
         "stylelint-config-styled-components": "^0.1.1",
         "stylelint-no-unsupported-browser-features": "^8.0.1",
