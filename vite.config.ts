@@ -2,6 +2,7 @@ import react from "@vitejs/plugin-react-swc";
 import autoprefixer from "autoprefixer";
 import postCssPresetEnv from "postcss-preset-env";
 import { defineConfig } from "vite";
+import { compression } from "vite-plugin-compression2";
 
 export default defineConfig({
     base: "/",
@@ -10,7 +11,13 @@ export default defineConfig({
             plugins: [autoprefixer, postCssPresetEnv]
         }
     },
-    plugins: [react()],
+    plugins: [
+        react(),
+        compression({
+            algorithm: "brotliCompress",
+            exclude: [/\.(br)$/, /\.(gz)$/]
+        })
+    ],
     server: {
         cors: true,
         hmr: true,
