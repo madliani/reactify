@@ -4,7 +4,7 @@
 {
     "compilerOptions": {
         "allowArbitraryExtensions": false,
-        "allowImportingTsExtensions": true,
+        "allowImportingTsExtensions": false,
         "allowJs": false,
         "allowSyntheticDefaultImports": true,
         "allowUmdGlobalAccess": false,
