@@ -1,35 +1,39 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import { useEffectMock, useEffectSpy } from "../mocks/Code.mock";
+import {
+    act,
+    render,
+    screen,
+    waitFor,
+    waitForOptions
+} from "@testing-library/react";
+import { describe, expect, test } from "vitest";
+import { useEffectSpy } from "../mocks/Code.mock";
 import { Code } from "../src/components/Code";
 
-test("loads and displays code", async () => {
-    const arrange = () => {
+describe("Code", async () => {
+    test("loads and displays code", async () => {
+        const options: Readonly<waitForOptions> = {
+            timeout: 1_000
+        };
+
         render(<Code />);
-    };
 
-    const act = async () => {
-        await screen.findByTestId("code");
-    };
+        useEffectSpy.mockReturnValue(
+            void {
+                CODE: "src/App.tsx"
+            }
+        );
 
-    const assert = () => {
-        const code = screen.getByTestId("code").textContent;
+        await act(async () => {
+            await screen.findByTestId("code");
+        });
 
-        expect(useEffectMock).toHaveBeenCalled();
-        expect(code).toBe("");
-    };
+        await waitFor(() => {
+            const code = screen.getByTestId("code").textContent;
 
-    useEffectSpy.mockImplementation(useEffectMock);
+            expect(code).toBe("src/App.tsx");
+        }, options);
 
-    jest.mock("../src/components/Code", () => ({
-        CODE: "src/App.tsx"
-    }));
-
-    arrange();
-
-    await act();
-
-    assert();
-
-    useEffectSpy.mockClear();
+        useEffectSpy.mockClear();
+    });
 });

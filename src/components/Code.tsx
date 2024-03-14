@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { storeAtom } from "../jotai/atoms/store";
 
+const { VITE_CODE: CODE } = import.meta.env;
+
 const CodeWrapper = styled.code`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
@@ -13,9 +15,9 @@ export const Code = () => {
     const { code } = store;
 
     useEffect(() => {
-        if (!code) {
+        if (!code && CODE) {
             setStore({
-                code: "src/App.tsx"
+                code: CODE
             });
         }
     }, [code, setStore]);

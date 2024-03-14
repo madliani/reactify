@@ -1,4 +1,4 @@
 import React from "react";
+import { vi } from "vitest";
 
-export const useEffectMock = jest.fn();
-export const useEffectSpy = jest.spyOn(React, "useEffect");
+export const useEffectSpy = vi.spyOn(React, "useEffect");

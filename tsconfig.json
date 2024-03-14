@@ -66,18 +66,18 @@
         "suppressExcessPropertyErrors": false,
         "suppressImplicitAnyIndexErrors": false,
         "target": "ES2022",
-        "types": ["jest", "vite/client"],
+        "types": ["vite/client", "vitest"],
         "useDefineForClassFields": true,
         "useUnknownInCatchVariables": true,
         "verbatimModuleSyntax": false
     },
     "exclude": ["node_modules"],
     "include": [
-        "jest.config.ts",
         "mocks",
-        "postcss.config.ts",
+        "postcss.config.mts",
         "src",
         "tests",
-        "vite.config.ts"
+        "vite.config.ts",
+        "vitest.config.ts"
     ]
 }
