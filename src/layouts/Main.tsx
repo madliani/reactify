@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-type Properties = {
+type Properties = Readonly<{
     children: ReactNode;
-};
+}>;
 
 const Container = styled.div`
     text-align: center;

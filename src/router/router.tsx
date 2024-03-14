@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { Home } from "../pages/Home";
 
-const routes: RouteObject[] = [
+const routes: Readonly<RouteObject>[] = [
     {
         element: <Home />,
         path: "/"

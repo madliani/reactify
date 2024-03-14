@@ -1,13 +1,13 @@
 import { Helmet } from "react-helmet";
 
-type Meta = { content: string; name: string };
+type Meta = Readonly<{ content: string; name: string }>;
 
-type Properties = {
+type Properties = Readonly<{
     description?: string;
     lang?: string;
     meta?: Meta[];
     title: string;
-};
+}>;
 
 export const SEO = ({
     description = "The React Starter Kit.",
@@ -15,10 +15,11 @@ export const SEO = ({
     meta = [],
     title
 }: Properties) => {
+    const titleTemplates = "Reactify | %s";
+
     const htmlAttributes = {
         lang
     };
-    const titleTemplates = "Reactify | %s";
 
     return (
         <Helmet
