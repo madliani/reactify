@@ -86,6 +86,7 @@
     "keywords": [
         "happy-dom",
         "jotai",
+        "react-helmet",
         "react-router",
         "react",
         "reactify",
