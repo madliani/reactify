@@ -7,11 +7,11 @@ const { VITE_CODE: CODE } = import.meta.env;
 
 const CodeWrapper = styled.code`
     font-family:
-        source-code-pro,
-        Menlo,
-        Monaco,
         Consolas,
         Courier New,
+        Menlo,
+        Monaco,
+        source-code-pro,
         monospace;
 `;
 
