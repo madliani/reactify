@@ -1,3 +1,4 @@
+import { HelmetProvider } from "react-helmet-async";
 import { RouterProvider } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import { router } from "../router/router";
@@ -25,9 +26,9 @@ const GlobalStyle = createGlobalStyle`
 
 export const App = () => {
     return (
-        <>
+        <HelmetProvider>
             <GlobalStyle />
             <RouterProvider router={router} />
-        </>
+        </HelmetProvider>
     );
 };

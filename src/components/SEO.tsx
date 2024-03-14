@@ -1,9 +1,9 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 type Meta = Readonly<{ content: string; name: string }>;
 
 type Properties = Readonly<{
-    description?: string;
+    description: string;
     lang?: string;
     meta?: Meta[];
     title: string;
@@ -35,7 +35,7 @@ export const SEO = ({
                 },
                 {
                     content:
-                        "https://raw.githubusercontent.com/madliani/reactify/main/src/assets/images/logo.svg",
+                        "https://raw.githubusercontent.com/madliani/reactify/main/assets/images/reactify-homepage.png",
                     name: "og:image"
                 },
                 {
