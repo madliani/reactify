@@ -1,5 +1,7 @@
 declare module "*.module.css" {
-    const classes: { readonly [key: string]: string };
+    type Rules = { [property: string]: string };
 
-    export default classes;
+    const rules: Readonly<Rules>;
+
+    export default rules;
 }

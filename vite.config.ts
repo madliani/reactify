@@ -4,6 +4,7 @@ import postCssModules from "postcss-modules";
 import postCssPresetEnv from "postcss-preset-env";
 import { defineConfig } from "vite";
 import { compression } from "vite-plugin-compression2";
+import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
     css: {
@@ -12,11 +13,12 @@ export default defineConfig({
         }
     },
     plugins: [
-        react(),
         compression({
             algorithm: "brotliCompress",
             exclude: [/\.(br)$/, /\.(gz)$/]
-        })
+        }),
+        react(),
+        svgr()
     ],
     server: {
         cors: true,
