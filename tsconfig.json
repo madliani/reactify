@@ -6,7 +6,7 @@
         "allowArbitraryExtensions": false,
         "allowImportingTsExtensions": false,
         "allowJs": false,
-        "allowSyntheticDefaultImports": false,
+        "allowSyntheticDefaultImports": true,
         "allowUmdGlobalAccess": false,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
