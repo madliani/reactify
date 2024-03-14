@@ -6,7 +6,12 @@ import { storeAtom } from "../jotai/atoms/store";
 const { VITE_CODE: CODE } = import.meta.env;
 
 const CodeWrapper = styled.code`
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family:
+        source-code-pro,
+        Menlo,
+        Monaco,
+        Consolas,
+        Courier New,
         monospace;
 `;
 
