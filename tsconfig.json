@@ -74,7 +74,7 @@
     "exclude": ["node_modules"],
     "include": [
         "mocks",
-        "postcss.config.mts",
+        "postcss.config.ts",
         "src",
         "tests",
         "vite.config.ts",
