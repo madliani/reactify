@@ -1,13 +1,21 @@
-<!-- https://content-security-policy.com -->
-<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel -->
-<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color -->
-<!-- https://webhint.io/docs/user-guide/hints/hint-highest-available-document-mode -->
-<!-- https://webhint.io/docs/user-guide/hints/hint-meta-viewport -->
+<!--
+    https://content-security-policy.com
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
+    https://webhint.io/docs/user-guide/hints/hint-highest-available-document-mode
+    https://webhint.io/docs/user-guide/hints/hint-meta-charset-utf-8
+    https://webhint.io/docs/user-guide/hints/hint-meta-viewport
+-->
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+
         <meta content="#000000" name="theme-color" />
+        <meta
+            content="base-uri 'self'; connect-src 'self'; default-src 'none'; form-action 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'"
+            http-equiv="Content-Security-Policy"
+        />
         <meta content="en_GB" property="og:locale" />
         <meta content="github.com/madliani/reactify" property="og:site_name" />
         <meta
@@ -24,6 +32,8 @@
         />
         <meta content="ie=edge" http-equiv="X-UA-Compatible" />
         <meta content="initial-scale=1.0, width=device-width" name="viewport" />
+        <meta content="madliani" name="author" />
+        <meta content="reactify, react" name="keywords" />
         <meta content="Reactify" name="twitter:title" />
         <meta content="Reactify" property="og:title" />
         <meta content="ru_RU" property="og:locale:alternate" />
@@ -32,19 +42,20 @@
         <meta content="The React Starter Kit." name="twitter:description" />
         <meta content="The React Starter Kit." property="og:description" />
         <meta content="website" property="og:type" />
-        <meta
-            http-equiv="Content-Security-Policy"
-            content="default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'"
-        />
+
+        <base href="/" />
+
         <link
             href="./assets/icons/apple-touch-icon.png"
             rel="apple-touch-icon"
         />
         <link href="./assets/icons/favicon.ico" rel="icon" />
+
         <title>Reactify</title>
     </head>
     <body>
         <div id="root"></div>
+
         <noscript>
             For full functionality of this site it is necessary to enable
             JavaScript. Here are the
@@ -56,6 +67,7 @@
                 instructions how to enable JavaScript in your web browser</a
             >.
         </noscript>
-        <script defer src="./src/index.tsx" type="module"></script>
+
+        <script defer src="./src/index.tsx" type="module" />
     </body>
 </html>
