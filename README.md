@@ -41,10 +41,6 @@ performance.
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-## Repobeats analytics image
-
-![Alt](https://repobeats.axiom.co/api/embed/dfc2eff90891cb43aaef45d1f57b9d693c741b08.svg "Repobeats analytics image")
-
 ## Authorship
 
 Based on [Create React App](https://create-react-app.dev) by
