@@ -21,8 +21,6 @@
     },
     "description": "The React Starter Kit.",
     "devDependencies": {
-        "@commitlint/cli": "^19.8.1",
-        "@commitlint/config-conventional": "^19.8.1",
         "@testing-library/dom": "^9.3.4",
         "@testing-library/jest-dom": "^6.9.1",
         "@testing-library/react": "^14.3.1",
