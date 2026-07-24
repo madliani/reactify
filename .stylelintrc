@@ -1,5 +1,4 @@
 {
-    "customSyntax": "postcss-styled-syntax",
     "extends": ["stylelint-config-clean-order", "stylelint-config-standard"],
     "plugins": [
         "stylelint-no-unsupported-browser-features",
