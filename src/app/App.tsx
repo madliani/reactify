@@ -1,33 +1,11 @@
 import { HelmetProvider } from "react-helmet-async";
 import { RouterProvider } from "react-router-dom";
-import { createGlobalStyle } from "styled-components";
 import { router } from "../router/router";
-
-const GlobalStyle = createGlobalStyle`
-    body {
-        margin: 0;
-        font-family:
-			system-ui,
-			-apple-system,
-			BlinkMacSystemFont,
-			Cantarell,
-			Droid Sans,
-			Fira Sans,
-			Helvetica Neue,
-			Oxygen,
-			Roboto,
-			Segoe UI,
-			Ubuntu,
-			sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-`;
+import "../styles/index.css";
 
 export const App = () => {
     return (
         <HelmetProvider>
-            <GlobalStyle />
             <RouterProvider router={router} />
         </HelmetProvider>
     );
