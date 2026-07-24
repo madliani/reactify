@@ -1,7 +1,6 @@
 import pluginReactSWC from "@vitejs/plugin-react-swc";
 import { defineConfig } from "vite";
 import { compression as pluginCompression } from "vite-plugin-compression2";
-import pluginSVGR from "vite-plugin-svgr";
 
 export default defineConfig({
     plugins: [
@@ -9,8 +8,7 @@ export default defineConfig({
             algorithm: "brotliCompress",
             exclude: [/\.(br)$/, /\.(gz)$/]
         }),
-        pluginReactSWC(),
-        pluginSVGR()
+        pluginReactSWC()
     ],
     server: {
         cors: true,
