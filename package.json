@@ -53,7 +53,6 @@
         "postcss": "8.5.6",
         "postcss-modules": "6.0.1",
         "postcss-preset-env": "9.6.0",
-        "postcss-styled-syntax": "0.6.4",
         "prettier": "3.2.5",
         "stylelint": "16.26.1",
         "stylelint-config-clean-order": "5.4.2",
