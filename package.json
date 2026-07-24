@@ -19,6 +19,7 @@
     },
     "description": "The React Starter Kit.",
     "devDependencies": {
+        "@tailwindcss/vite": "^4.3.3",
         "@testing-library/dom": "9.3.4",
         "@testing-library/jest-dom": "6.9.1",
         "@testing-library/react": "14.3.1",
@@ -58,6 +59,7 @@
         "stylelint-order": "6.0.4",
         "stylelint-scss": "6.14.0",
         "stylelint-selector-bem-pattern": "4.0.1",
+        "tailwindcss": "^4.3.3",
         "ts-node": "10.9.2",
         "tslib": "2.8.1",
         "typescript": "5.9.3",
