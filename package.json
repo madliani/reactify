@@ -85,7 +85,6 @@
         "react-router",
         "react",
         "reactify",
-        "styled-components",
         "testing-library",
         "typescript",
         "vite",
