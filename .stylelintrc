@@ -3,7 +3,6 @@
     "plugins": [
         "stylelint-no-unsupported-browser-features",
         "stylelint-order",
-        "stylelint-scss",
         "stylelint-selector-bem-pattern"
     ],
     "rules": {
