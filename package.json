@@ -79,17 +79,10 @@
     "engineStrict": false,
     "homepage": "https://github.com/madliani/reactify",
     "keywords": [
-        "happy-dom",
-        "jotai",
-        "pnpm",
-        "react-helmet",
-        "react-router",
         "react",
         "reactify",
-        "testing-library",
         "typescript",
-        "vite",
-        "vitest"
+        "vite"
     ],
     "license": "AGPL-3.0-or-later",
     "name": "reactify",
