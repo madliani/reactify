@@ -1,55 +1,27 @@
-import { Helmet } from "react-helmet-async";
-
-type Meta = Readonly<{ content: string; name: string }>;
+import { Head } from "vite-react-ssg";
 
 type Properties = Readonly<{
     description?: string;
     lang?: string;
-    meta?: Meta[];
     title: string;
 }>;
 
 export const SEO = ({
     description = "The React Starter Kit.",
-    lang = "en",
-    meta = [],
     title
 }: Properties) => {
-    const titleTemplates = "Reactify | %s";
-
-    const htmlAttributes = {
-        lang
-    };
-
     return (
-        <Helmet
-            htmlAttributes={htmlAttributes}
-            meta={[
-                {
-                    content: description,
-                    name: "description"
-                },
-                {
-                    content: description,
-                    property: "og:description"
-                },
-                {
-                    content:
-                        "https://raw.githubusercontent.com/madliani/reactify/main/assets/images/reactify-homepage.png",
-                    name: "og:image"
-                },
-                {
-                    content: "github.com/reactify",
-                    name: "og:site_name"
-                },
-                {
-                    content: title,
-                    property: "og:title"
-                },
-                ...meta
-            ]}
-            title={title}
-            titleTemplate={titleTemplates}
-        />
+        <Head>
+            <meta content={description} name="description" />
+            <meta content={description} name="og:description" />
+            <meta
+                content="https://raw.githubusercontent.com/madliani/reactify/main/assets/images/reactify-homepage.png"
+                name="og:image"
+            />
+            <meta content="github.com/reactify" name="og:site_name" />
+            <meta content={title} name="og:title" />
+
+            <title>Reactify | {title}</title>
+        </Head>
     );
 };
