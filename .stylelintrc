@@ -3,8 +3,7 @@
     "extends": [
         "stylelint-config-clean-order",
         "stylelint-config-html",
-        "stylelint-config-standard",
-        "stylelint-config-styled-components"
+        "stylelint-config-standard"
     ],
     "plugins": [
         "stylelint-no-unsupported-browser-features",

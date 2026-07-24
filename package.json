@@ -16,8 +16,7 @@
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-helmet-async": "^2.0.5",
-        "react-router-dom": "^6.30.3",
-        "styled-components": "^6.3.8"
+        "react-router-dom": "^6.30.3"
     },
     "description": "The React Starter Kit.",
     "devDependencies": {
@@ -30,7 +29,6 @@
         "@types/react": "^18.3.27",
         "@types/react-dom": "^18.3.7",
         "@types/react-helmet": "^6.1.11",
-        "@types/styled-components": "^5.1.36",
         "@typescript-eslint/eslint-plugin": "^7.18.0",
         "@typescript-eslint/parser": "^7.18.0",
         "@vitejs/plugin-react-swc": "^3.11.0",
@@ -63,7 +61,6 @@
         "stylelint-config-clean-order": "^5.4.2",
         "stylelint-config-html": "^1.1.0",
         "stylelint-config-standard": "^36.0.1",
-        "stylelint-config-styled-components": "^0.1.1",
         "stylelint-no-unsupported-browser-features": "^8.0.5",
         "stylelint-order": "^6.0.4",
         "stylelint-scss": "^6.14.0",
