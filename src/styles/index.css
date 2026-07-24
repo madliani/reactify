@@ -1,20 +1,10 @@
-@import "tailwindcss";
-@import "@heroui/styles";
+@import url("tailwindcss");
+@import url("@heroui/styles");
 
 body {
     margin: 0;
-    font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        Cantarell,
-        Droid Sans,
-        Fira Sans,
-        Helvetica Neue,
-        Oxygen,
-        Roboto,
-        Segoe UI,
-        Ubuntu,
+    font-family: -apple-system, BlinkMacSystemFont, Cantarell, "Droid Sans",
+        "Fira Sans", "Helvetica Neue", Oxygen, Roboto, "Segoe UI", Ubuntu,
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -44,6 +34,7 @@ img {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -56,12 +47,7 @@ img {
 }
 
 code {
-    font-family:
-        Consolas,
-        Courier New,
-        Menlo,
-        Monaco,
-        source-code-pro,
+    font-family: Consolas, "Courier New", Menlo, Monaco, source-code-pro,
         monospace;
 }
 
