@@ -81,6 +81,7 @@
     "keywords": [
         "happy-dom",
         "jotai",
+        "pnpm",
         "react-helmet",
         "react-router",
         "react",
@@ -88,8 +89,7 @@
         "testing-library",
         "typescript",
         "vite",
-        "vitest",
-        "yarn"
+        "vitest"
     ],
     "license": "AGPL-3.0-or-later",
     "name": "reactify",
