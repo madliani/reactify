@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 type Meta = Readonly<{ content: string; name: string }>;
 
 type Properties = Readonly<{
-    description: string;
+    description?: string;
     lang?: string;
     meta?: Meta[];
     title: string;
