@@ -1,5 +1,5 @@
 {
-    "extends": ["stylelint-config-clean-order", "stylelint-config-standard"],
+    "extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
     "plugins": ["stylelint-no-unsupported-browser-features", "stylelint-order"],
     "rules": {
         "plugin/no-unsupported-browser-features": [
