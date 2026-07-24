@@ -80,6 +80,7 @@
     "keywords": [
         "react",
         "reactify",
+        "ssg",
         "typescript",
         "vite"
     ],
