@@ -59,7 +59,6 @@
         "stylelint-config-standard": "36.0.1",
         "stylelint-no-unsupported-browser-features": "8.0.5",
         "stylelint-order": "6.0.4",
-        "stylelint-selector-bem-pattern": "4.0.1",
         "tailwindcss": "^4.3.3",
         "ts-node": "10.9.2",
         "tslib": "2.8.1",
