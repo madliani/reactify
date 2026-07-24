@@ -51,7 +51,6 @@ flycheck_*.el
 # network security
 /network-security.data
 
-
 ### Git ###
 # Created by git for backups. To disable backups in Git:
 # $ git config --global mergetool.keepBackup false
@@ -89,7 +88,6 @@ flycheck_*.el
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
@@ -270,7 +268,7 @@ sketch
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
-!*.svg  # comment out if you don't need vector files
+!*.svg             # comment out if you don't need vector files
 [._]*.sw[a-p]
 [._]s[a-rt-v][a-z]
 [._]ss[a-gi-z]
