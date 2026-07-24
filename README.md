@@ -7,7 +7,7 @@
 
 </p>
 
-![Built with Jest](https://img.shields.io/badge/Jest-C21325.svg?style=for-the-badge&logo=Jest&logoColor=white)
+![Built with Vitest](https://img.shields.io/badge/Vitest-00FF74.svg?style=for-the-badge&logo=Vitest&logoColor=white)
 ![Built with React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Built with TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
