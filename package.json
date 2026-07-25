@@ -17,6 +17,7 @@
         "jotai": "2.17.0",
         "react": "19.2.8",
         "react-dom": "19.2.8",
+        "react-router-dom": "6.30.4",
         "tailwindcss": "^4.3.3"
     },
     "description": "The React Starter Kit.",
