@@ -6,7 +6,7 @@ import { compression as pluginCompression } from "vite-plugin-compression2";
 export default defineConfig({
     plugins: [
         pluginCompression({
-            algorithm: "brotliCompress",
+            algorithms: ["brotliCompress"],
             exclude: [/\.(br)$/, /\.(gz)$/]
         }),
         pluginReactSWC(),

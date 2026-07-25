@@ -1,5 +1,22 @@
-import "./styles/index.css";
-import { ViteReactSSG } from "vite-react-ssg";
-import { routes } from "./router/routes";
+import { createRoot } from "react-dom/client";
+import { App } from "./app/App";
 
-export const createRoot = ViteReactSSG({ routes });
+const main = () => {
+    try {
+        const rootElement = document.getElementById("root");
+
+        if (rootElement === null) {
+            console.error('DOM element with ID "root" was not found.');
+
+            return;
+        }
+
+        const root = createRoot(rootElement);
+
+        root.render(<App />);
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+document.addEventListener("DOMContentLoaded", main);

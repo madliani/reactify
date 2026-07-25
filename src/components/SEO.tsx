@@ -1,4 +1,4 @@
-import { Head } from "vite-react-ssg";
+import { Helmet } from "react-helmet-async";
 
 type Properties = Readonly<{
     description?: string;
@@ -10,8 +10,10 @@ export const SEO = ({
     description = "The React Starter Kit.",
     title
 }: Properties) => {
+    const titleTemplate = `Reactify | ${title}`;
+
     return (
-        <Head>
+        <Helmet title={titleTemplate} prioritizeSeoTags>
             <meta content={description} name="description" />
             <meta content={description} name="og:description" />
             <meta
@@ -20,8 +22,6 @@ export const SEO = ({
             />
             <meta content="github.com/reactify" name="og:site_name" />
             <meta content={title} name="og:title" />
-
-            <title>Reactify | {title}</title>
-        </Head>
+        </Helmet>
     );
 };

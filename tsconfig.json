@@ -15,7 +15,6 @@
         "composite": false,
         "declaration": false,
         "declarationMap": false,
-        "downlevelIteration": true,
         "emitBOM": false,
         "emitDeclarationOnly": false,
         "emitDecoratorMetadata": false,
@@ -78,6 +77,7 @@
         "src",
         "tests",
         "vite.config.ts",
-        "vitest.config.ts"
+        "vitest.config.ts",
+        "eslint.config.js"
     ]
 }
