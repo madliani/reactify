@@ -6,14 +6,14 @@ type Properties = Readonly<{
     title: string;
 }>;
 
+const titleTemplate = (title: string) => `Reactify | ${title}`;
+
 export const SEO = ({
     description = "The React Starter Kit.",
     title
 }: Properties) => {
-    const titleTemplate = `Reactify | ${title}`;
-
     return (
-        <Helmet title={titleTemplate} prioritizeSeoTags>
+        <Helmet title={titleTemplate(title)} prioritizeSeoTags>
             <meta content={description} name="description" />
             <meta content={description} name="og:description" />
             <meta
