@@ -17,7 +17,8 @@
         "jotai": "2.17.0",
         "react": "19.2.8",
         "react-dom": "19.2.8",
-        "react-router-dom": "6.30.3"
+        "react-router-dom": "6.30.3",
+        "tailwindcss": "^4.3.3"
     },
     "description": "The React Starter Kit.",
     "devDependencies": {
@@ -59,7 +60,6 @@
         "stylelint-config-standard": "36.0.1",
         "stylelint-no-unsupported-browser-features": "8.0.5",
         "stylelint-order": "6.0.4",
-        "tailwindcss": "^4.3.3",
         "ts-node": "10.9.2",
         "tslib": "2.8.1",
         "typescript": "5.9.3",

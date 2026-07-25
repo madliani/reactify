@@ -26,6 +26,9 @@ importers:
       react-router-dom:
         specifier: 6.30.3
         version: 6.30.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      tailwindcss:
+        specifier: ^4.3.3
+        version: 4.3.3
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.3.3
@@ -141,9 +144,6 @@ importers:
       stylelint-order:
         specifier: 6.0.4
         version: 6.0.4(stylelint@16.26.1(typescript@5.9.3))
-      tailwindcss:
-        specifier: ^4.3.3
-        version: 4.3.3
       ts-node:
         specifier: 10.9.2
         version: 10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@20.19.31)(typescript@5.9.3)
