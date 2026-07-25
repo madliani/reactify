@@ -8,7 +8,7 @@ type SEOProperties = Readonly<{
 
 const titleTemplate = (title: string) => `Reactify | ${title}`;
 
-export const SEO = ({
+const SEO = ({
     description = "The React Starter Kit.",
     title
 }: SEOProperties) => (
@@ -23,3 +23,5 @@ export const SEO = ({
         <meta content={titleTemplate(title)} name="og:title" />
     </Helmet>
 );
+
+export default SEO;
