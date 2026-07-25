@@ -5,7 +5,7 @@ export type MainProps = Readonly<{
 }>;
 
 const Main = ({ children }: MainProps) => (
-    <div className="container">{children}</div>
+    <main className="container">{children}</main>
 );
 
 export default Main;
