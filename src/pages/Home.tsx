@@ -4,11 +4,9 @@ import Main from "../layouts/Main";
 
 export const Home = () => {
     return (
-        <>
+        <Main>
             <SEO title="Home" />
-            <Main>
-                <Counter />
-            </Main>
-        </>
+            <Counter />
+        </Main>
     );
 };
