@@ -2,7 +2,7 @@ import { Button, ButtonGroup, Typography } from "@heroui/react";
 import { useAtom } from "jotai";
 import { countAtom } from "../store/atoms/count";
 
-export const Counter = () => {
+const Counter = () => {
     const [count, setCount] = useAtom(countAtom);
     const decIsDisabled = count === 0;
 
@@ -23,3 +23,5 @@ export const Counter = () => {
         </div>
     );
 };
+
+export default Counter;
