@@ -95,8 +95,8 @@
     "scripts": {
         "build": "vite-react-ssg build",
         "dev": "vite-react-ssg dev",
-        "format": "prettier --write './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}'",
-        "lint": "stylelint --fix './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}' && eslint --fix './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}' && tsc --noEmit",
+        "format": "prettier --write './src/**/*.{css,ts,tsx}' './tests/**/*.test.{ts,tsx}'",
+        "lint": "stylelint --fix './src/**/*.css' && eslint --fix './src/**/*.{ts,tsx}' './tests/**/*.test.{ts,tsx}' && tsc --noEmit",
         "test:coverage": "vitest run --coverage",
         "test:ui": "vitest run --ui",
         "test": "vitest run"

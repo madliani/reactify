@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { Clicker } from "../src/components/Clicker";
 
-describe("Clicker", async () => {
+describe("Clicker", () => {
     test("loads and displays Clicker's heading", async () => {
         render(<Clicker />);
 
