@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import Home from "../pages/Home";
+import Homepage from "../pages/Homepage";
 
 const AppRoutes = () => (
     <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<Homepage />} />
     </Routes>
 );
 

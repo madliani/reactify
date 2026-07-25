@@ -2,11 +2,11 @@ import Counter from "../components/Counter";
 import SEO from "../components/SEO";
 import Main from "../layouts/Main";
 
-const Home = () => (
+const Homepage = () => (
     <Main>
         <SEO title="Home" />
         <Counter />
     </Main>
 );
 
-export default Home;
+export default Homepage;
