@@ -4,6 +4,8 @@ type Properties = Readonly<{
     children: ReactNode;
 }>;
 
-export const Main = ({ children }: Properties) => {
+const Main = ({ children }: Properties) => {
     return <div className="container">{children}</div>;
 };
+
+export default Main;
