@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
-type MainProperties = Readonly<{
+type MainProps = Readonly<{
     children: ReactNode;
 }>;
 
-const Main = ({ children }: MainProperties) => {
+const Main = ({ children }: MainProps) => {
     return <div className="container">{children}</div>;
 };
 
