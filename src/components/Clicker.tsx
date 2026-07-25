@@ -6,8 +6,8 @@ export const Clicker = () => {
     const [count, setCount] = useAtom(countAtom);
     const decIsDisabled = count === 0;
 
-    const increment = () => setCount(count + 1);
-    const decrement = () => setCount(count - 1);
+    const inc = () => setCount(count + 1);
+    const dec = () => setCount(count - 1);
 
     return (
         <div className="clicker">
@@ -15,8 +15,8 @@ export const Clicker = () => {
                 {count}
             </Typography.Heading>
             <ButtonGroup className="clicker__btn-group">
-                <Button onClick={increment}>Increment</Button>
-                <Button isDisabled={decIsDisabled} onClick={decrement}>
+                <Button onClick={inc}>Increment</Button>
+                <Button isDisabled={decIsDisabled} onClick={dec}>
                     Decrement
                 </Button>
             </ButtonGroup>
