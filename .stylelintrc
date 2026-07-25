@@ -2,11 +2,14 @@
     "extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
     "plugins": ["stylelint-no-unsupported-browser-features", "stylelint-order"],
     "rules": {
+        "import-notation": "string",
         "plugin/no-unsupported-browser-features": [
             true,
             {
+                "ignore": ["viewport-unit-variants"],
                 "severity": "error"
             }
-        ]
+        ],
+        "selector-class-pattern": null
     }
 }

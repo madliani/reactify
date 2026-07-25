@@ -1,4 +1,4 @@
-import { Header } from "../components/Header";
+import { Clicker } from "../components/Clicker";
 import { SEO } from "../components/SEO";
 import { Main } from "../layouts/Main";
 
@@ -7,7 +7,7 @@ export const Home = () => {
         <>
             <SEO title="Home" />
             <Main>
-                <Header />
+                <Clicker />
             </Main>
         </>
     );
