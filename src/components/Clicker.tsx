@@ -1,6 +1,6 @@
-import { useAtom } from "jotai";
 import { Button, ButtonGroup, Typography } from "@heroui/react";
-import { countAtom } from "../jotai/atoms/count";
+import { useAtom } from "jotai";
+import { countAtom } from "../store/atoms/count";
 
 export const Clicker = () => {
     const [count, setCount] = useAtom(countAtom);
