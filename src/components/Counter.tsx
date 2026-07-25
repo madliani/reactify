@@ -2,7 +2,7 @@ import { Button, ButtonGroup, Typography } from "@heroui/react";
 import { useAtom } from "jotai";
 import { countAtom } from "../store/atoms/count";
 
-export const Clicker = () => {
+export const Counter = () => {
     const [count, setCount] = useAtom(countAtom);
     const decIsDisabled = count === 0;
 
@@ -10,11 +10,11 @@ export const Clicker = () => {
     const dec = () => setCount(count - 1);
 
     return (
-        <div className="clicker">
-            <Typography.Heading data-testid="clicker__heading" level={1}>
+        <div className="counter">
+            <Typography.Heading data-testid="counter__heading" level={1}>
                 {count}
             </Typography.Heading>
-            <ButtonGroup className="clicker__btn-group">
+            <ButtonGroup className="counter__btn-group">
                 <Button onClick={inc}>Increment</Button>
                 <Button isDisabled={decIsDisabled} onClick={dec}>
                     Decrement

@@ -1,4 +1,4 @@
-import { Clicker } from "../components/Clicker";
+import { Counter } from "../components/Counter";
 import { SEO } from "../components/SEO";
 import { Main } from "../layouts/Main";
 
@@ -7,7 +7,7 @@ export const Home = () => {
         <>
             <SEO title="Home" />
             <Main>
-                <Clicker />
+                <Counter />
             </Main>
         </>
     );
