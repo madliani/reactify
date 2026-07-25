@@ -21,7 +21,7 @@ export const SEO = ({
                 name="og:image"
             />
             <meta content="github.com/reactify" name="og:site_name" />
-            <meta content={title} name="og:title" />
+            <meta content={titleTemplate(title)} name="og:title" />
         </Helmet>
     );
 };
