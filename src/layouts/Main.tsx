@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type MainProps = Readonly<{
+export type MainProps = Readonly<{
     children: ReactNode;
 }>;
 
