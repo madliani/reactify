@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-type Properties = Readonly<{
+type SEOProperties = Readonly<{
     description?: string;
     lang?: string;
     title: string;
@@ -11,7 +11,7 @@ const titleTemplate = (title: string) => `Reactify | ${title}`;
 export const SEO = ({
     description = "The React Starter Kit.",
     title
-}: Properties) => (
+}: SEOProperties) => (
     <Helmet title={titleTemplate(title)} prioritizeSeoTags>
         <meta content={description} name="description" />
         <meta content={description} name="og:description" />
