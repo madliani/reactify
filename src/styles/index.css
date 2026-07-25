@@ -11,7 +11,7 @@
     min-height: 100svh;
 }
 
-.clicker {
+.counter {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
@@ -19,7 +19,7 @@
     justify-content: center;
 }
 
-.clicker__btn-group {
+.counter__btn-group {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
