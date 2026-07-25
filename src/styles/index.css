@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
-.container {
+.main {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
