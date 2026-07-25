@@ -1,11 +1,14 @@
-import { createBrowserRouter, RouteObject } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router";
 import { Home } from "../pages/Home";
 
-const routes: Readonly<RouteObject>[] = [
-    {
-        element: <Home />,
-        path: "/"
-    }
-];
+const AppRoutes = () => (
+    <Routes>
+        <Route index element={<Home />} />
+    </Routes>
+);
 
-export const router = createBrowserRouter(routes);
+export default () => (
+    <BrowserRouter>
+        <AppRoutes />
+    </BrowserRouter>
+);
