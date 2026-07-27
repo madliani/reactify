@@ -1,12 +1,12 @@
 import Counter from "../components/Counter/Counter";
 import SEO from "../components/SEO/SEO";
-import Main from "../layouts/Main";
+import Layout from "../layouts/Layout";
 
 const Homepage = () => (
-    <Main>
+    <Layout>
         <SEO title="Home" />
         <Counter />
-    </Main>
+    </Layout>
 );
 
 export default Homepage;
