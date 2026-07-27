@@ -1,4 +1,4 @@
-export type CounterViewProperties = {
+export type CounterViewProps = {
     count: number;
     decIsDisabled: boolean;
     inc: () => void;
