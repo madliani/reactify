@@ -10,18 +10,3 @@
     min-width: 100svw;
     min-height: 100svh;
 }
-
-.counter {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.counter__btn-group {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-}

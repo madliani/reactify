@@ -1,14 +1,12 @@
 import { Button, ButtonGroup, Typography } from "@heroui/react";
-import { useAtom } from "jotai";
-import { countAtom } from "../store/atoms/count";
+import { CounterViewProperties } from "./Counter.type";
 
-const Counter = () => {
-    const [count, setCount] = useAtom(countAtom);
-    const decIsDisabled = count === 0;
-
-    const inc = () => setCount(count + 1);
-    const dec = () => setCount(count - 1);
-
+const CounterView = ({
+    count,
+    dec,
+    decIsDisabled,
+    inc
+}: CounterViewProperties) => {
     return (
         <div className="counter">
             <Typography.Heading data-testid="counter__heading" level={1}>
@@ -24,4 +22,4 @@ const Counter = () => {
     );
 };
 
-export default Counter;
+export default CounterView;

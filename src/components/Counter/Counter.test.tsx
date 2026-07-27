@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
-import Counter from "../src/components/Counter";
+import Counter from "./Counter";
 
 describe("Counter", () => {
     test("loads and displays Counters's heading", async () => {

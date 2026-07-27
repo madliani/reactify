@@ -1,4 +1,4 @@
-import Counter from "../components/Counter";
+import Counter from "../components/Counter/Counter";
 import SEO from "../components/SEO/SEO";
 import Main from "../layouts/Main";
 
