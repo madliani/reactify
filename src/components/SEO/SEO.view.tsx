@@ -1,14 +1,9 @@
 import { Helmet } from "react-helmet-async";
-
-type SEOProperties = Readonly<{
-    description?: string;
-    lang?: string;
-    title: string;
-}>;
+import { SEOProperties } from "./SEO.type";
 
 const titleTemplate = (title: string) => `Reactify | ${title}`;
 
-const SEO = ({
+const SEOView = ({
     description = "The React Starter Kit.",
     title
 }: SEOProperties) => (
@@ -24,4 +19,4 @@ const SEO = ({
     </Helmet>
 );
 
-export default SEO;
+export default SEOView;

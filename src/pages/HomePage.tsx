@@ -1,5 +1,5 @@
 import Counter from "../components/Counter";
-import SEO from "../components/SEO";
+import SEO from "../components/SEO/SEO";
 import Main from "../layouts/Main";
 
 const Homepage = () => (
