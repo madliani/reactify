@@ -1,0 +1,9 @@
+.layout {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100svw;
+    min-height: 100svh;
+}
