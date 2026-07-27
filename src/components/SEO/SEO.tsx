@@ -1,6 +1,6 @@
-import { SEOProperties } from "./SEO.type";
+import { SEOProps } from "./SEO.type";
 import SEOView from "./SEO.view";
 
-const SEO = (props: SEOProperties) => <SEOView {...props} />;
+const SEO = (props: SEOProps) => <SEOView {...props} />;
 
 export default SEO;
