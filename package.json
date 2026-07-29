@@ -97,10 +97,10 @@
     },
     "scripts": {
         "build": "vite build",
-        "serve": "vite",
         "check:format": "prettier --write './src/**/*.{css,ts,tsx}'",
         "check:lint": "stylelint --fix './src/**/*.css' && eslint --fix './src/**/*.{ts,tsx}' && tsc --noEmit",
         "serve:preview": "vite preview",
+        "serve": "vite",
         "test:coverage": "vitest run --coverage",
         "test:ui": "vitest run --ui",
         "test": "vitest run"
