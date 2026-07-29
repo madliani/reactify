@@ -79,6 +79,7 @@
         "vite.config.ts",
         "vitest.config.ts",
         "eslint.config.js",
-        "stylelint.config.js"
+        "stylelint.config.js",
+        "prettier.config.js"
     ]
 }
