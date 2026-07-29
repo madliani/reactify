@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router";
-import Homepage from "../pages/HomePage/HomePage";
+import HomePage from "../pages/HomePage/HomePage";
 
 const AppRouteView = () => (
     <Routes>
-        <Route index element={<Homepage />} />
+        <Route index element={<HomePage />} />
     </Routes>
 );
 
