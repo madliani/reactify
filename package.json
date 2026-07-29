@@ -78,6 +78,7 @@
     "engineStrict": false,
     "homepage": "https://github.com/madliani/reactify",
     "keywords": [
+        "heroui",
         "react",
         "reactify",
         "spa",
