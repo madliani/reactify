@@ -98,9 +98,9 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "preview": "vite preview",
         "format": "prettier --write './src/**/*.{css,ts,tsx}'",
         "lint": "stylelint --fix './src/**/*.css' && eslint --fix './src/**/*.{ts,tsx}' && tsc --noEmit",
+        "preview": "vite preview",
         "test:coverage": "vitest run --coverage",
         "test:ui": "vitest run --ui",
         "test": "vitest run"
