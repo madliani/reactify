@@ -1,4 +1,4 @@
-import useCounterEffect from "./Counter.effect";
+import useCounterEffect from "./Counter.hook";
 import "./Counter.style.css";
 import CounterView from "./Counter.view";
 
