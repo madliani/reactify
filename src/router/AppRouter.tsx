@@ -1,10 +1,5 @@
-import { BrowserRouter } from "react-router";
-import AppRoutes from "../routes/AppRoutes";
+import AppRouterView from "./AppRouter.view";
 
-const AppRouter = () => (
-    <BrowserRouter>
-        <AppRoutes />
-    </BrowserRouter>
-);
+const AppRouter = () => <AppRouterView />;
 
 export default AppRouter;
