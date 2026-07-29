@@ -1,7 +1,7 @@
-{
-    "extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
-    "plugins": ["stylelint-no-unsupported-browser-features", "stylelint-order"],
-    "rules": {
+export default {
+    extends: ["stylelint-config-standard", "stylelint-config-clean-order"],
+    plugins: ["stylelint-no-unsupported-browser-features", "stylelint-order"],
+    rules: {
         "import-notation": "string",
         "plugin/no-unsupported-browser-features": [
             true,
@@ -12,4 +12,4 @@
         ],
         "selector-class-pattern": null
     }
-}
+};
