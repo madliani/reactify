@@ -1,11 +1,6 @@
-import { HelmetProvider } from "react-helmet-async";
-import AppRouter from "../router/AppRouter";
 import "./App.style.css";
+import AppView from "./App.view";
 
-const App = () => (
-    <HelmetProvider>
-        <AppRouter />
-    </HelmetProvider>
-);
+const App = () => <AppView />;
 
 export default App;
