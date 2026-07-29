@@ -99,6 +99,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
+        "preview": "vite preview",
         "format": "prettier --write './src/**/*.{css,ts,tsx}'",
         "lint": "stylelint --fix './src/**/*.css' && eslint --fix './src/**/*.{ts,tsx}' && tsc --noEmit",
         "test:coverage": "vitest run --coverage",
