@@ -1,10 +1,8 @@
 import { Route, Routes } from "react-router";
-import HomePage from "../pages/HomePage/HomePage";
+import { HomePage } from "../pages/HomePage/HomePage";
 
-const AppRouteView = () => (
+export const AppRouteView = () => (
     <Routes>
         <Route index element={<HomePage />} />
     </Routes>
 );
-
-export default AppRouteView;

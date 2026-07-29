@@ -3,7 +3,7 @@ import { SEOProps } from "./SEO.type";
 
 const titleTemplate = (title: string) => `Reactify | ${title}`;
 
-const SEOView = ({
+export const SEOView = ({
     description = "The React Starter Kit.",
     title
 }: SEOProps) => (
@@ -18,5 +18,3 @@ const SEOView = ({
         <meta content={titleTemplate(title)} name="og:title" />
     </Helmet>
 );
-
-export default SEOView;

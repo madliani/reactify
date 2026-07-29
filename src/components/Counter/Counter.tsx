@@ -1,8 +1,8 @@
-import useCounterEffect from "./Counter.hook";
+import { useCounterEffect } from "./Counter.hook";
 import "./Counter.style.css";
-import CounterView from "./Counter.view";
+import { CounterView } from "./Counter.view";
 
-const Counter = () => {
+export const Counter = () => {
     const { count, dec, decIsDisabled, inc } = useCounterEffect();
 
     return (
@@ -14,5 +14,3 @@ const Counter = () => {
         />
     );
 };
-
-export default Counter;

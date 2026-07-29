@@ -1,5 +1,3 @@
-import AppRouterView from "./AppRouter.view";
+import { AppRouterView } from "./AppRouter.view";
 
-const AppRouter = () => <AppRouterView />;
-
-export default AppRouter;
+export const AppRouter = () => <AppRouterView />;

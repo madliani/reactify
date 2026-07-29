@@ -1,7 +1,12 @@
 import { Button, ButtonGroup, Typography } from "@heroui/react";
 import { CounterViewProps } from "./Counter.type";
 
-const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
+export const CounterView = ({
+    count,
+    dec,
+    decIsDisabled,
+    inc
+}: CounterViewProps) => {
     return (
         <div className="counter">
             <Typography.Heading data-testid="counter__heading" level={1}>
@@ -16,5 +21,3 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
         </div>
     );
 };
-
-export default CounterView;

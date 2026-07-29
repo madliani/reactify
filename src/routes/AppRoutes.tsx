@@ -1,5 +1,3 @@
-import AppRouteView from "./AppRoutes.view";
+import { AppRouteView } from "./AppRoutes.view";
 
-const AppRoutes = () => <AppRouteView />;
-
-export default AppRoutes;
+export const AppRoutes = () => <AppRouteView />;
