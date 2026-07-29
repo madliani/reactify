@@ -1,5 +1,5 @@
 import { useAtom } from "jotai";
-import { counterAtom } from "../../store/atoms/counter";
+import { counterAtom } from "./Counter.atom";
 
 export const useCounterEffect = () => {
     const [count, setCount] = useAtom(counterAtom);
