@@ -1,8 +1,8 @@
 import { useAtom } from "jotai";
-import { countAtom } from "../../store/atoms/count";
+import { counterAtom } from "../../store/atoms/counter";
 
 export const useCounterEffect = () => {
-    const [count, setCount] = useAtom(countAtom);
+    const [count, setCount] = useAtom(counterAtom);
     const decIsDisabled = count === 0;
 
     const inc = () => setCount(count + 1);
