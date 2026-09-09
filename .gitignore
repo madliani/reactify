@@ -1,21 +1,27 @@
-# Environment variables
+# .env files
 .env*
 
-# Node.js
+# Node.js packages
 node_modules/
 
-# TypeScript
-.tsbuildinfo
-
-# Logs
+# npm files
 npm-debug.log*
+
+# pnpm files
 pnpm-debug.log*
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# Yarn files
 yarn-debug.log*
 yarn-error.log*
 
-# Vite
+# Vite directories
 dist/
 
-# Vitest
+# Vitest directories
 .vitest/
 coverage/
+
+# Files of TypeScript compiler
+.tsbuildinfo
