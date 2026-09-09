@@ -72,10 +72,7 @@
     },
     "exclude": ["node_modules"],
     "include": [
-        "mocks",
-        "postcss.config.ts",
         "src",
-        "tests",
         "vite.config.ts",
         "vitest.config.ts",
         "eslint.config.js",
