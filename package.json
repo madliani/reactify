@@ -34,6 +34,7 @@
     },
     "description": "The React Starter Kit.",
     "devDependencies": {
+        "@cspell/dict-ru_ru": "2.3.2",
         "@eslint/compat": "2.1.1",
         "@eslint/eslintrc": "3.3.7",
         "@eslint/js": "10.0.1",
@@ -49,6 +50,7 @@
         "@vitest/coverage-v8": "5.0.0",
         "@vitest/ui": "5.0.0",
         "autoprefixer": "10.5.5",
+        "cspell": "10.3.0",
         "eslint": "10.10.0",
         "eslint-import-resolver-typescript": "4.4.5",
         "eslint-plugin-compat": "7.0.2",
