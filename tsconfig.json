@@ -70,7 +70,7 @@
         "useUnknownInCatchVariables": true,
         "verbatimModuleSyntax": false
     },
-    "exclude": ["node_modules/"],
+    "exclude": [".vitest/", "coverage/", "dist/", "node_modules/"],
     "include": [
         "src/",
         "vite.config.ts",
