@@ -103,12 +103,13 @@
     },
     "scripts": {
         "build": "vite build",
-        "check:format": "prettier --write './src/**/*.{css,ts,tsx}'",
-        "check:lint": "stylelint --fix './src/**/*.css' && eslint --fix './src/**/*.{ts,tsx}' && tsc --noEmit",
+        "check:format": "prettier ./ --write --ignore-unknown",
+        "check:lint": "stylelint --fix ./ && eslint --fix && tsc",
+        "check:spell": "cspell ./",
         "serve:preview": "vite preview",
         "serve": "vite",
         "test:coverage": "vitest run --coverage",
-        "test:ui": "vitest run --ui",
+        "test:ui": "vitest watch --ui --coverage.enabled=true",
         "test": "vitest run"
     },
     "type": "module",
