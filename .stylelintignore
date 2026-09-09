@@ -1,0 +1,52 @@
+# .env files
+.env*
+
+# Node.js packages
+node_modules/
+
+# npm files
+npm-debug.log*
+
+# pnpm files
+pnpm-debug.log*
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# Yarn files
+yarn-debug.log*
+yarn-error.log*
+
+# Vite directories
+dist/
+
+# Vitest directories
+.vitest/
+coverage/
+
+# Files of TypeScript compiler
+.tsbuildinfo
+
+# AUTHORS, CONTRIBUTING, LICENSE and README files
+AUTHORS.txt
+CONTRIBUTING.md
+LICENSE.txt
+README.md
+
+# Directories of assets for README
+assets/
+
+# JSON-based configuration files
+*.json
+
+# JavaScript-based configuration files
+*.config.js
+
+# TypeScript-based configuration files
+*.config.ts
+
+# HTML-based source files
+*.html
+
+# TypeScript-based source files
+src/**/*.ts
+src/**/*.tsx
