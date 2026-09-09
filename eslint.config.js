@@ -12,7 +12,7 @@ import globals from "globals";
 import { configs as tsConfigs, parser as tsParser } from "typescript-eslint";
 
 export default defineConfig([
-    globalIgnores(["node_modules/"]),
+    globalIgnores([".vitest/", "coverage/", "dist/", "node_modules/"]),
     {
         extends: [
             js.configs.recommended,
