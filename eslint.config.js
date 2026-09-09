@@ -11,8 +11,15 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import { configs as tsConfigs, parser as tsParser } from "typescript-eslint";
 
+/** @type {import("eslint/config").Config} */
 export default defineConfig([
-    globalIgnores([".vitest/", "coverage/", "dist/", "node_modules/"]),
+    globalIgnores([
+        ".vitest/",
+        "coverage/",
+        "dist/",
+        "node_modules/",
+        "package-lock.json"
+    ]),
     {
         extends: [
             js.configs.recommended,
