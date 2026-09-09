@@ -75,6 +75,7 @@
         "src/",
         "vite.config.ts",
         "vitest.config.ts",
+        "cspell.config.js",
         "eslint.config.js",
         "stylelint.config.js",
         "prettier.config.js"
