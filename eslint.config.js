@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 import pluginCompat from "eslint-plugin-compat";
 import pluginImport from "eslint-plugin-import";
-import pluginNoUnsanitized from "eslint-plugin-no-unsanitized";
 import pluginSort from "eslint-plugin-sort";
 import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
@@ -23,7 +22,6 @@ export default defineConfig([
             pluginCompat.configs["flat/recommended"],
             pluginImport.flatConfigs.recommended,
             pluginImport.flatConfigs.typescript,
-            pluginNoUnsanitized.configs.recommended,
             pluginSort.configs["flat/recommended"]
         ],
 
