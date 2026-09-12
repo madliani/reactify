@@ -50,3 +50,4 @@ assets/
 # TypeScript-based source files
 src/**/*.ts
 src/**/*.tsx
+types/**/*.d.ts
