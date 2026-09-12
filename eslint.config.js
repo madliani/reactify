@@ -22,29 +22,23 @@ export default defineConfig([
             pluginImport.flatConfigs.recommended,
             pluginImport.flatConfigs.typescript
         ],
-
         languageOptions: {
             ecmaVersion: 2022,
-
             globals: {
                 ...globals.browser
             },
             parser: tsParser,
             parserOptions: {
                 allowReserved: false,
-
                 ecmaFeatures: {
                     globalReturn: false,
                     impliedStrict: true,
                     jsx: true
                 },
-
                 project: ["tsconfig.json"]
             },
-
             sourceType: "module"
         },
-
         settings: {
             "import/resolver": {
                 typescript: true
