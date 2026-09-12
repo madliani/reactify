@@ -1,4 +1,5 @@
 import { useAtom } from "jotai";
+
 import { counterAtom } from "./Counter.atom";
 
 export const useCounterEffect = () => {
