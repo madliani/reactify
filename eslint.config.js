@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 import pluginCompat from "eslint-plugin-compat";
 import pluginImport from "eslint-plugin-import";
-import pluginSort from "eslint-plugin-sort";
 import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import { configs as tsConfigs, parser as tsParser } from "typescript-eslint";
@@ -21,8 +20,7 @@ export default defineConfig([
             tsConfigs.recommended,
             pluginCompat.configs["flat/recommended"],
             pluginImport.flatConfigs.recommended,
-            pluginImport.flatConfigs.typescript,
-            pluginSort.configs["flat/recommended"]
+            pluginImport.flatConfigs.typescript
         ],
 
         languageOptions: {
@@ -45,10 +43,6 @@ export default defineConfig([
             },
 
             sourceType: "module"
-        },
-
-        rules: {
-            "sort/imports": "off"
         },
 
         settings: {
