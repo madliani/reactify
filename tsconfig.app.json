@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "paths": { "@src/*": ["${configDir}/src/*"] },
+        "types": ["node", "react", "react-dom"]
+    },
+    "exclude": [
+        ".vitest/",
+        "coverage/",
+        "dist/",
+        "node_modules/",
+        "**/*.test.ts"
+    ],
+    "extends": "./tsconfig.base.json",
+    "include": ["src/**/*.ts"]
+}
