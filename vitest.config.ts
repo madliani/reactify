@@ -1,5 +1,22 @@
-import { defineConfig } from "vitest/config"
+import { configDefaults, defineConfig } from "vitest/config"
 
 export default defineConfig({
-    test: { environment: "happy-dom", globals: true, setupFiles: [] }
+    plugins: [],
+    resolve: { tsconfigPaths: true },
+    test: {
+        ...configDefaults,
+        coverage: {
+            enabled: false,
+            provider: "v8",
+            reporter: ["html", "lcov"]
+        },
+        environment: "happy-dom",
+        globals: false,
+        globalSetup: [],
+        include: ["./src/**/*.test.ts"],
+        name: "quoter-bot",
+        passWithNoTests: true,
+        reporters: ["default", "html"],
+        setupFiles: []
+    }
 })
