@@ -15,7 +15,7 @@ export default defineConfig({
         globals: false,
         globalSetup: [],
         include: ["./src/**/*.test.ts"],
-        name: "quoter-bot",
+        name: "reactify",
         passWithNoTests: true,
         reporters: ["default", "html"],
         setupFiles: []
