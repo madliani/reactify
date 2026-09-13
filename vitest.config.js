@@ -1,5 +1,6 @@
 import { configDefaults, defineConfig } from "vitest/config"
 
+/** @type {import("./types/vitest").UserConfig} */
 export default defineConfig({
     plugins: [],
     resolve: { tsconfigPaths: true },
