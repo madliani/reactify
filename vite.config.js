@@ -3,6 +3,7 @@ import pluginReactSWC from "@vitejs/plugin-react-swc"
 import { defineConfig } from "vite"
 import { compression as pluginCompression } from "vite-plugin-compression2"
 
+/** @type {import("vite").UserConfig} */
 export default defineConfig({
     plugins: [
         pluginCompression({
