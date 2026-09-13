@@ -76,22 +76,21 @@ Follow these steps to set up the website:
 **Note:** The website is a React-based single-page application (SPA), so the
 project mostly contains files of the web app.
 
-- `assets/`: a directory containing the assets for the `README.md` file
-    - `assets/icons/`: a directory containing the icons for the `README.md` file
-    - `assets/images/`: a directory containing the images for the `README.md`
-- `src/`: a directory containing the source files of the web app
+- `assets/`: a directory containing assets for the `README.md` file
+    - `assets/icons/`: a directory containing icons for the `README.md` file
+    - `assets/images/`: a directory containing images for the `README.md`
+- `src/`: a directory containing source files of the web app
     - `src/app/`: a directory containing the root component of the web app
         - `src/app/App.tsx`: the root component of the web app
-    - `src/components/`: a directory containing the other components of the web
-      app
-    - `src/layouts/`: a directory containing the layouts of the web app
-    - `src/pages/`: a directory containing the pages of the web app
-    - `src/router/`: a directory containing the router of the web app
-    - `src/routes/`: a directory containing the routes of the web app
+    - `src/components/`: a directory containing other components of the web app
+    - `src/layouts/`: a directory containing layouts of the web app
+    - `src/pages/`: a directory containing pages of the web app
+    - `src/router/`: a directory containing router of the web app
+    - `src/routes/`: a directory containing routes of the web app
     - `src/main.ts`: a file containing the entry point of the web app
-- `types/`: a directory containing the type declarations for the configuration
-  files
-    - `types/vitest.ts`: a type declaration for the `Vitest` configuration file
+- `types/`: a directory containing type declarations for the configuration files
+    - `types/vitest.ts`: a file containing type declarations for the `Vitest`
+      configuration file
 - `.env`: an environment variables file (local)
 - `.browserslistrc`: a `Browserslist` configuration file
 - `.gitattributes`: a `Git` attributes file
