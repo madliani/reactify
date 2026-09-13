@@ -1,7 +1,10 @@
 # Contributing
 
 1. Fork it (<https://github.com/madliani/reactify/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'feat: some feature added'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+2. Make a new branch for a new feature, bugfix, or hotfix from the `stable`
+   branch
+3. Push branch to the remote
+4. Implement the feature, bugfix, or hotfix within the branch
+5. Test the feature, bugfix, or hotfix within the branch
+6. Push changes to the remote
+7. Make a new Pull Request
