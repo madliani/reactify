@@ -1,9 +1,9 @@
-import { BrowserRouter } from "react-router";
+import { BrowserRouter } from "react-router"
 
-import { AppRoutes } from "../routes/AppRoutes";
+import { AppRoutes } from "../routes/AppRoutes"
 
 export const AppRouterView = () => (
     <BrowserRouter>
         <AppRoutes />
     </BrowserRouter>
-);
+)

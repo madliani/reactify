@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async"
 
-import { SEOProps } from "./SEO.type";
+import { SEOProps } from "./SEO.type"
 
-const titleTemplate = (title: string) => `Reactify | ${title}`;
+const titleTemplate = (title: string) => `Reactify | ${title}`
 
 export const SEOView = ({
     description = "The React Starter Kit.",
@@ -18,4 +18,4 @@ export const SEOView = ({
         <meta content="github.com/reactify" name="og:site_name" />
         <meta content={titleTemplate(title)} name="og:title" />
     </Helmet>
-);
+)

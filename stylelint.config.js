@@ -5,11 +5,8 @@ export default {
         "import-notation": "string",
         "plugin/no-unsupported-browser-features": [
             true,
-            {
-                "ignore": ["viewport-unit-variants"],
-                "severity": "error"
-            }
+            { "ignore": ["viewport-unit-variants"], "severity": "error" }
         ],
         "selector-class-pattern": null
     }
-};
+}

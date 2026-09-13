@@ -1,17 +1,19 @@
+/** @type {import("prettier").Config} */
 export default {
-    arrowParens: "always",
+    arrowParens: "avoid",
     bracketSameLine: false,
     bracketSpacing: true,
     embeddedLanguageFormatting: "auto",
-    endOfLine: "lf",
+    endOfLine: "auto",
     htmlWhitespaceSensitivity: "strict",
+    objectWrap: "collapse",
     printWidth: 80,
     proseWrap: "always",
     quoteProps: "preserve",
-    semi: true,
+    semi: false,
     singleAttributePerLine: false,
     singleQuote: false,
     tabWidth: 4,
     trailingComma: "none",
     useTabs: false
-};
+}

@@ -1,3 +1,3 @@
-import { HomePageView } from "./HomePage.view";
+import { HomePageView } from "./HomePage.view"
 
-export const HomePage = () => <HomePageView />;
+export const HomePage = () => <HomePageView />

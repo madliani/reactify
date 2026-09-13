@@ -1,3 +1,3 @@
-import { AppRouterView } from "./AppRouter.view";
+import { AppRouterView } from "./AppRouter.view"
 
-export const AppRouter = () => <AppRouterView />;
+export const AppRouter = () => <AppRouterView />

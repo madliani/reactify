@@ -1,23 +1,23 @@
-import { createRoot } from "react-dom/client";
+import { createRoot } from "react-dom/client"
 
-import { App } from "./app/App";
+import { App } from "./app/App"
 
 const main = () => {
     try {
-        const rootElement = document.getElementById("root");
+        const rootElement = document.getElementById("root")
 
         if (rootElement === null) {
-            console.error('DOM element with ID "root" was not found.');
+            console.error('DOM element with ID "root" was not found.')
 
-            return;
+            return
         }
 
-        const root = createRoot(rootElement);
+        const root = createRoot(rootElement)
 
-        root.render(<App />);
+        root.render(<App />)
     } catch (error) {
-        console.error(error);
+        console.error(error)
     }
-};
+}
 
-document.addEventListener("DOMContentLoaded", () => main());
+document.addEventListener("DOMContentLoaded", () => main())

@@ -1,9 +1,9 @@
-import { useCounterEffect } from "./Counter.hook";
-import "./Counter.style.css";
-import { CounterView } from "./Counter.view";
+import { useCounterEffect } from "./Counter.hook"
+import "./Counter.style.css"
+import { CounterView } from "./Counter.view"
 
 export const Counter = () => {
-    const { count, dec, decIsDisabled, inc } = useCounterEffect();
+    const { count, dec, decIsDisabled, inc } = useCounterEffect()
 
     return (
         <CounterView
@@ -12,5 +12,5 @@ export const Counter = () => {
             decIsDisabled={decIsDisabled}
             inc={inc}
         />
-    );
-};
+    )
+}

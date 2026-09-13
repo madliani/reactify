@@ -1,6 +1,6 @@
-import { Button, ButtonGroup, Typography } from "@heroui/react";
+import { Button, ButtonGroup, Typography } from "@heroui/react"
 
-import { CounterViewProps } from "./Counter.type";
+import { CounterViewProps } from "./Counter.type"
 
 export const CounterView = ({
     count,
@@ -20,5 +20,5 @@ export const CounterView = ({
                 </Button>
             </ButtonGroup>
         </div>
-    );
-};
+    )
+}

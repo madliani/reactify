@@ -1,12 +1,12 @@
-import pluginJS from "@eslint/js";
-import pluginJSON from "@eslint/json";
-import pluginCompat from "eslint-plugin-compat";
-import pluginImport from "eslint-plugin-import";
-import pluginNoSecrets from "eslint-plugin-no-secrets";
-import pluginPerfect from "eslint-plugin-perfectionist";
-import { defineConfig, globalIgnores } from "eslint/config";
-import globals from "globals";
-import ts from "typescript-eslint";
+import pluginJS from "@eslint/js"
+import pluginJSON from "@eslint/json"
+import pluginCompat from "eslint-plugin-compat"
+import pluginImport from "eslint-plugin-import"
+import pluginNoSecrets from "eslint-plugin-no-secrets"
+import pluginPerfect from "eslint-plugin-perfectionist"
+import { defineConfig, globalIgnores } from "eslint/config"
+import globals from "globals"
+import ts from "typescript-eslint"
 
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
@@ -50,21 +50,11 @@ export default defineConfig([
             "no-secrets/no-pattern-match": "error",
             "no-secrets/no-secrets": "error"
         },
-        settings: {
-            "import/resolver": {
-                typescript: true
-            }
-        }
+        settings: { "import/resolver": { typescript: true } }
     },
     {
         files: ["*.tsx"],
-        languageOptions: {
-            parserOptions: {
-                ecmaFeatures: {
-                    jsx: true
-                }
-            }
-        }
+        languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } }
     },
     { files: ["*.config.js"], settings: { "import/resolver": { node: true } } },
     {
@@ -73,4 +63,4 @@ export default defineConfig([
         language: "json/jsonc",
         rules: { "json/sort-keys": "error" }
     }
-]);
+])
