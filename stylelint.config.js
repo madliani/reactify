@@ -1,11 +1,26 @@
+/** @type {import("stylelint").Config} */
 export default {
-    extends: ["stylelint-config-standard", "stylelint-config-clean-order"],
-    plugins: ["stylelint-no-unsupported-browser-features", "stylelint-order"],
+    allowEmptyInput: true,
+    cache: true,
+    defaultSeverity: "error",
+    extends: ["stylelint-config-standard-scss", "stylelint-config-clean-order"],
+    fix: true,
+    maxWarnings: 0,
+    plugins: ["stylelint-no-unsupported-browser-features"],
     rules: {
         "import-notation": "string",
         "plugin/no-unsupported-browser-features": [
             true,
-            { "ignore": ["viewport-unit-variants"], "severity": "error" }
+            {
+                ignore: [
+                    "css-logical-props",
+                    "css-media-range-syntax",
+                    "css-nesting",
+                    "intrinsic-width",
+                    "viewport-unit-variants"
+                ],
+                severity: "error"
+            }
         ],
         "selector-class-pattern": null
     }
