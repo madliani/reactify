@@ -26,6 +26,9 @@ coverage/
 # Files of TypeScript compiler
 .tsbuildinfo
 
+# Stylelint files
+.stylelintcache
+
 # AUTHORS, CONTRIBUTING, LICENSE and README files
 AUTHORS.txt
 CONTRIBUTING.md

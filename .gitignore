@@ -25,3 +25,6 @@ coverage/
 
 # Files of TypeScript compiler
 .tsbuildinfo
+
+# Stylelint files
+.stylelintcache
