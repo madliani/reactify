@@ -23,5 +23,5 @@
         "**/*.test.ts"
     ],
     "extends": "./tsconfig.base.json",
-    "include": ["src/**/*.ts"]
+    "include": ["${configDir}/src/**/*.ts"]
 }
