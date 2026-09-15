@@ -14,7 +14,9 @@ const englishWords = [
     "heroui",
     "hotfixes",
     "madliani",
+    "stylelintcache",
     "stylelintignore",
+    "vite",
     "vitest"
 ]
 
