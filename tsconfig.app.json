@@ -13,7 +13,7 @@
             "ES2022"
         ],
         "paths": { "@src/*": ["${configDir}/src/*"] },
-        "types": ["node", "react", "react-dom"]
+        "types": ["react", "react-dom"]
     },
     "exclude": [
         ".vitest/",
