@@ -16,11 +16,11 @@
         "types": ["react", "react-dom"]
     },
     "exclude": [
-        ".vitest/",
-        "coverage/",
-        "dist/",
-        "node_modules/",
-        "**/*.test.ts"
+        "${configDir}/.vitest/",
+        "${configDir}/coverage/",
+        "${configDir}/dist/",
+        "${configDir}/node_modules/",
+        "${configDir}/**/*.test.ts"
     ],
     "extends": "./tsconfig.base.json",
     "include": ["${configDir}/src/**/*.ts"]
