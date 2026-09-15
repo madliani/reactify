@@ -1,11 +1,11 @@
 [development]
-defaults and supports es6-module
-not IE <= 11
+defaults and fully supports es6-module
+not ie <= 11
 not op_mini all
 
 [production]
-defaults and supports es6-module
-not IE <= 11
+defaults and fully supports es6-module
+not ie <= 11
 not op_mini all
 
 [ssr]
