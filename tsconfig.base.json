@@ -20,15 +20,6 @@
         "inlineSourceMap": false,
         "inlineSources": false,
         "isolatedModules": true,
-        "lib": [
-            "ES2022.array",
-            "ES2022.error",
-            "ES2022.intl",
-            "ES2022.object",
-            "ES2022.regExp",
-            "ES2022.string",
-            "ES2022"
-        ],
         "module": "ES2022",
         "moduleDetection": "auto",
         "moduleResolution": "Bundler",

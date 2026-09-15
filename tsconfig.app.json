@@ -1,5 +1,17 @@
 {
     "compilerOptions": {
+        "lib": [
+            "DOM",
+            "DOM.AsyncIterable",
+            "DOM.Iterable",
+            "ES2022.array",
+            "ES2022.error",
+            "ES2022.intl",
+            "ES2022.object",
+            "ES2022.regExp",
+            "ES2022.string",
+            "ES2022"
+        ],
         "paths": { "@src/*": ["${configDir}/src/*"] },
         "types": ["node", "react", "react-dom"]
     },
