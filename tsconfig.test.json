@@ -12,7 +12,12 @@
         "paths": { "@src/*": ["${configDir}/src/*"] },
         "types": ["node"]
     },
-    "exclude": [".vitest/", "coverage/", "dist/", "node_modules/"],
+    "exclude": [
+        "${configDir}/.vitest/",
+        "${configDir}/coverage/",
+        "${configDir}/dist/",
+        "${configDir}/node_modules/"
+    ],
     "extends": "./tsconfig.base.json",
-    "include": ["**/*.test.ts", "src/**/*.ts"]
+    "include": ["${configDir}/**/*.test.ts", "${configDir}/src/**/*.ts"]
 }
