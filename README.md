@@ -5,7 +5,7 @@
         alt="Reactify logo"
         aria-label="Reactify logo"
         height="96px"
-        src="./assets/icons/apple-touch-icon.png"
+        src="./assets/icons/reactify-logo.svg"
         title="Reactify logo"
         width="96px"
     />
@@ -180,7 +180,9 @@ These dependencies are necessary for other dependencies to work correctly.
 
 </details>
 
-## Authorship
+## Attributions
 
-Based on [Create React App](https://create-react-app.dev) by
-[Meta](https://opensource.fb.com).
+1. In the [React logo](./assets/icons/reactify-logo.svg), used the
+   [React icon](https://icon-icons.com/icon/react-original-logo/146374) by
+   [Julien Monty](https://icon-icons.com/authors/934-julien-monty/) from
+   [Icon-icons.com](https://icon-icons.com/).
