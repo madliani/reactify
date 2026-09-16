@@ -5,8 +5,7 @@
     },
     "files": [],
     "references": [
-        { "path": "./tsconfig.astro.json" },
-        { "path": "./tsconfig.react.json" },
+        { "path": "./tsconfig.app.json" },
         { "path": "./tsconfig.test.json" }
     ]
 }
