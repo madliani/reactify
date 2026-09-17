@@ -27,7 +27,7 @@ const { description = "", title = "" } = Astro.props
     <body class="body">
         <Noscript />
 
-        <div class="layout">
+        <div class="base-layout">
             <Header />
 
             <Main>
@@ -68,7 +68,7 @@ const { description = "", title = "" } = Astro.props
         height: 100svh;
     }
 
-    .layout {
+    .base-layout {
         display: flex;
         flex-flow: column nowrap;
         gap: 0;
