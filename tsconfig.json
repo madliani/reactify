@@ -1,9 +1,5 @@
 {
-    "compilerOptions": {
-        "incremental": true,
-        "noEmit": true,
-        "tsBuildInfoFile": "${configDir}/.tsbuildinfo"
-    },
+    "compilerOptions": { "noEmit": true },
     "files": [],
     "references": [
         { "path": "./tsconfig.app.json" },

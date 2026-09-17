@@ -17,6 +17,7 @@
         "exactOptionalPropertyTypes": true,
         "forceConsistentCasingInFileNames": true,
         "importHelpers": false,
+        "incremental": true,
         "inlineSourceMap": false,
         "inlineSources": false,
         "isolatedModules": true,
