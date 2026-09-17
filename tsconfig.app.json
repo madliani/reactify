@@ -29,6 +29,7 @@
         "${configDir}/.astro/types.d.ts",
         "${configDir}/src/**/*.astro",
         "${configDir}/src/**/*.test.ts",
+        "${configDir}/src/**/*.test.tsx",
         "${configDir}/src/**/*.ts",
         "${configDir}/src/**/*.tsx"
     ]
