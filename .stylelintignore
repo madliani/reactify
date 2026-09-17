@@ -30,8 +30,9 @@ coverage/
 # Stylelint files
 .stylelintcache
 
-# AUTHORS, CONTRIBUTING, LICENSE and README files
+# AUTHORS, CHANGELOG, CONTRIBUTING, LICENSE and README files
 AUTHORS.txt
+CHANGELOG.md
 CONTRIBUTING.md
 LICENSE.txt
 README.md
