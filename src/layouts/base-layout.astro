@@ -24,7 +24,7 @@ const { description = "", title = "" } = Astro.props
         <ClientRouter />
     </head>
 
-    <body class="body">
+    <body>
         <Noscript />
 
         <div class="base-layout">
@@ -60,12 +60,13 @@ const { description = "", title = "" } = Astro.props
         }
     }
 
-    .body {
+    :root,
+    body {
         margin: 0;
         padding: 0;
 
-        width: 100svw;
-        height: 100svh;
+        min-width: 100svw;
+        min-height: 100svh;
     }
 
     .base-layout {
