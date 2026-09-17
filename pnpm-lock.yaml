@@ -47,6 +47,9 @@ importers:
       tailwindcss:
         specifier: 4.3.3
         version: 4.3.3
+      tslib:
+        specifier: 2.8.1
+        version: 2.8.1
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -147,9 +150,6 @@ importers:
       stylelint-order:
         specifier: 8.1.1
         version: 8.1.1(stylelint@17.15.0(supports-color@10.2.2)(typescript@6.0.3))
-      tslib:
-        specifier: 2.8.1
-        version: 2.8.1
       typescript-eslint:
         specifier: 8.65.0
         version: 8.65.0(eslint@10.10.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
