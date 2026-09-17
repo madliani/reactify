@@ -22,13 +22,13 @@
         "${configDir}/.vitest/",
         "${configDir}/coverage/",
         "${configDir}/dist/",
-        "${configDir}/node_modules/",
-        "${configDir}/**/*.test.ts"
+        "${configDir}/node_modules/"
     ],
     "extends": "./tsconfig.base.json",
     "include": [
         "${configDir}/.astro/types.d.ts",
         "${configDir}/src/**/*.astro",
+        "${configDir}/**/*.test.ts",
         "${configDir}/src/**/*.ts",
         "${configDir}/src/**/*.tsx"
     ]
