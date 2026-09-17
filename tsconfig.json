@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "incremental": true,
+        "noEmit": true,
         "tsBuildInfoFile": "${configDir}/.tsbuildinfo"
     },
     "files": [],
