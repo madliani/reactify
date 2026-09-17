@@ -79,6 +79,9 @@ project mostly contains files of the web app.
 - `assets/`: a directory containing assets for the `README.md` file
     - `assets/icons/`: a directory containing icons for the `README.md` file
     - `assets/images/`: a directory containing images for the `README.md`
+- `public/`: a directory containing assets for the website
+    - `assets/icons/`: a directory containing icons for the website
+    - `assets/images`: a directory containing icons for the website
 - `src/`: a directory containing source files of the web app
     - `src/app/`: a directory containing the root component of the web app
         - `src/app/App.tsx`: the root component of the web app

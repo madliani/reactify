@@ -16,7 +16,14 @@ export default defineConfig({
     integrations: [...integrations],
     output: "static",
     prefetch: { defaultStrategy: "tap" },
-    server: { host: true, open: true, port: PORT },
+    server: {
+        cors: true,
+        hmr: true,
+        host: true,
+        open: true,
+        port: PORT,
+        strictPort: true
+    },
     site: "https://madliani-reactify.vercel.app/",
 
     vite: { plugins: [...vitePlugins] }

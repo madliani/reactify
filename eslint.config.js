@@ -1,5 +1,6 @@
 import pluginJS from "@eslint/js"
 import pluginJSON from "@eslint/json"
+import pluginAstro from "eslint-plugin-astro"
 import pluginCompat from "eslint-plugin-compat"
 import pluginImport from "eslint-plugin-import"
 import pluginNoSecrets from "eslint-plugin-no-secrets"
@@ -11,6 +12,7 @@ import ts from "typescript-eslint"
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
     globalIgnores([
+        ".astro/",
         ".vitest/",
         "coverage/",
         "dist/",
@@ -51,6 +53,11 @@ export default defineConfig([
             "no-secrets/no-secrets": "error"
         },
         settings: { "import/resolver": { typescript: true } }
+    },
+    {
+        extends: [pluginAstro.configs["flat/recommended"]],
+        files: ["*.astro"],
+        languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } }
     },
     {
         files: ["*.tsx"],

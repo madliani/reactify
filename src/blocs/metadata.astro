@@ -1,0 +1,137 @@
+---
+import OpenGraph from "@src/components/open-graph.astro"
+import TwitterCard from "@src/components/twitter-card.astro"
+import MetadataConfig from "@src/configurations/metadata.config.json"
+
+interface Props {
+    description?: string
+    title?: string
+}
+
+function canonicalURLTemplate(pathname: string, site: undefined | URL) {
+    return new URL(pathname, site)
+}
+
+function cspTemplate(csp: typeof MetadataConfig.csp) {
+    const formatCSP = ([directive, sourceList]: [string, string[]]) => {
+        const formattedDirective = directive.replace("_", "-")
+        const formattedSourceList = sourceList
+            .map(source => `'${source}'`)
+            .join(" ")
+
+        return `${formattedDirective} ${formattedSourceList}`
+    }
+
+    return Object.entries(csp).map(formatCSP).join("; ")
+}
+
+function descTemplate(defaultDesc: string, desc: string | undefined) {
+    return desc || defaultDesc
+}
+
+function titleTemplate(defaultTitle: string, title: string | undefined) {
+    return title ? `${title} | ${defaultTitle}` : defaultTitle
+}
+
+function viewportTemplate(viewport: typeof MetadataConfig.viewport) {
+    const formatViewport = ([attr, value]: [string, number | string]) => {
+        const formattedAttr = attr.replace("_", "-")
+        const formattedValue =
+            typeof value === "number" ? value.toFixed(1) : value
+
+        return `${formattedAttr}=${formattedValue}`
+    }
+
+    return Object.entries(viewport).map(formatViewport).join(", ")
+}
+
+const metadata = {
+    atiPath: MetadataConfig.ati_path,
+    author: MetadataConfig.author,
+    basePath: MetadataConfig.base_path,
+    canonicalURL: canonicalURLTemplate(Astro.url.pathname, Astro.site),
+    charset: MetadataConfig.charset,
+    csp: cspTemplate(MetadataConfig.csp),
+    description: descTemplate(
+        MetadataConfig.description,
+        Astro.props.description
+    ),
+    faviconPath: MetadataConfig.favicon_path,
+    faviconSVGPath: MetadataConfig.favicon_svg_path,
+    generator: Astro.generator,
+    isIndexable: MetadataConfig.is_indexable,
+    isSupportedIE: MetadataConfig.is_supported_ie,
+    keywords: MetadataConfig.keywords,
+    sitemapPath: MetadataConfig.sitemap_path,
+    themeColor: MetadataConfig.theme_color,
+    title: titleTemplate(MetadataConfig.title, Astro.props.title),
+    viewport: viewportTemplate(MetadataConfig.viewport)
+}
+
+const openGraphMetadata = {
+    description: metadata.description,
+    imagePath: MetadataConfig.open_graph.image_path,
+    locale: MetadataConfig.open_graph.locale,
+    siteName: MetadataConfig.open_graph.site_name,
+    title: metadata.title,
+    type: MetadataConfig.open_graph.type,
+    url: Astro.url
+}
+
+const twitterCardMetadata = {
+    card: MetadataConfig.twitter_card.card,
+    description: metadata.description,
+    imagePath: MetadataConfig.twitter_card.image_path,
+    title: metadata.title,
+    url: Astro.url
+}
+---
+
+<meta charset={metadata.charset} />
+
+<meta content={metadata.author} name="author" />
+<meta content={metadata.description} name="description" />
+<meta content={metadata.generator} name="generator" />
+<meta content={metadata.keywords} name="keywords" />
+<meta content={metadata.themeColor} name="theme-color" />
+<meta content={metadata.title} name="title" />
+<meta content={metadata.viewport} name="viewport" />
+{metadata.isIndexable ? (
+    <meta content="follow, index" name="robots" />
+) : (
+    <meta content="nofollow, noindex" name="robots" />
+)}
+
+<meta content={metadata.csp} http-equiv="content-security-policy" />
+{metadata.isSupportedIE && (
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+)}
+
+<base href={metadata.basePath} />
+
+<link href={metadata.canonicalURL} rel="canonical" />
+<link href={metadata.sitemapPath} rel="sitemap" />
+
+<link href={metadata.atiPath} rel="apple-touch-icon" type="image/png" />
+<link href={metadata.faviconPath} rel="icon" type="image/x-icon" />
+<link href={metadata.faviconSVGPath} rel="icon" type="image/svg+xml" />
+
+<title>{metadata.title}</title>
+
+<OpenGraph
+    description={openGraphMetadata.description}
+    imagePath={openGraphMetadata.imagePath}
+    locale={openGraphMetadata.locale}
+    siteName={openGraphMetadata.siteName}
+    title={openGraphMetadata.title}
+    type={openGraphMetadata.type}
+    url={openGraphMetadata.url}
+/>
+
+<TwitterCard
+    card={twitterCardMetadata.card}
+    description={twitterCardMetadata.description}
+    imagePath={twitterCardMetadata.imagePath}
+    title={twitterCardMetadata.title}
+    url={twitterCardMetadata.url}
+/>

@@ -1,0 +1,22 @@
+---
+interface Props {
+    description: string
+    imagePath: string
+    locale: string
+    siteName: string
+    title: string
+    type: string
+    url: URL
+}
+
+const { description, imagePath, locale, siteName, title, type, url } =
+    Astro.props
+---
+
+<meta content={description} property="og:description" />
+<meta content={imagePath} property="og:image" />
+<meta content={locale} property="og:locale" />
+<meta content={siteName} property="og:site_name" />
+<meta content={title} property="og:title" />
+<meta content={type} property="og:type" />
+<meta content={url} property="og:url" />

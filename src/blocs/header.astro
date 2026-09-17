@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets"
+---
+
+<header class="header">
+    <Image
+        alt="Reactify logo"
+        src="/icons/favicon.svg"
+        width={96}
+        height={96}
+    />
+</header>
+
+<style is:global>
+    .header {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+
+        height: 10svh;
+
+        @media only screen and (width >= 640px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+</style>

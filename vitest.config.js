@@ -14,7 +14,7 @@ export default defineConfig({
         environment: "happy-dom",
         globals: false,
         globalSetup: [],
-        include: ["./src/**/*.test.ts"],
+        include: ["./src/**/*.test.ts", "./src/**/*.test.tsx"],
         name: "reactify",
         passWithNoTests: true,
         reporters: ["default", "html"],

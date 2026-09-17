@@ -16,7 +16,8 @@ pnpm-workspace.yaml
 yarn-debug.log*
 yarn-error.log*
 
-# Vite directories
+# Astro directories
+.astro/
 dist/
 
 # Vitest directories
@@ -38,6 +39,9 @@ README.md
 # Directories of assets for README
 assets/
 
+# Directories of assets for source files
+public/
+
 # JSON-based configuration files
 *.json
 
@@ -47,10 +51,10 @@ assets/
 # TypeScript-based configuration files
 *.config.ts
 
-# HTML-based source files
-*.html
+# Astro-based source files
+src/**/*.astro
 
 # TypeScript-based source files
 src/**/*.ts
-src/**/*.tsx
+src/react/**/*.tsx
 types/**/*.d.ts

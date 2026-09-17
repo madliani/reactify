@@ -16,7 +16,8 @@ pnpm-workspace.yaml
 yarn-debug.log*
 yarn-error.log*
 
-# Vite directories
+# Astro directories
+.astro/
 dist/
 
 # Vitest directories

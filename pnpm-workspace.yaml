@@ -3,4 +3,7 @@ blockExoticSubdeps: true
 ignoreScripts: true
 lockfile: true
 minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - eslint-plugin-astro@3.2.1
+  - prettier-plugin-astro@1.0.1
 nodeLinker: hoisted

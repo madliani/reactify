@@ -1,0 +1,10 @@
+---
+import Layout from "@src/layouts/layout.astro"
+
+// This path notation is necessary for Astro to work correctly with React
+import { Counter } from "../react/components/Counter/Counter"
+---
+
+<Layout title="Home">
+    <Counter client:load />
+</Layout>

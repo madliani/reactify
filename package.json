@@ -28,9 +28,7 @@
         "react-router": "8.3.1",
         "sharp": "0.35.4",
         "tailwindcss": "4.3.3",
-        "typescript": "6.0.3",
-        "vite": "8.2.2",
-        "vite-plugin-compression2": "2.5.3"
+        "typescript": "6.0.3"
     },
     "description": "The React Starter Kit.",
     "devDependencies": {
@@ -54,6 +52,7 @@
         "cspell": "10.3.0",
         "eslint": "10.10.0",
         "eslint-import-resolver-typescript": "4.4.5",
+        "eslint-plugin-astro": "3.2.1",
         "eslint-plugin-compat": "7.0.2",
         "eslint-plugin-import": "2.32.0",
         "eslint-plugin-no-secrets": "2.3.3",
@@ -62,6 +61,7 @@
         "happy-dom": "20.14.0",
         "node-notifier": "10.0.1",
         "prettier": "3.9.6",
+        "prettier-plugin-astro": "1.0.1",
         "stylelint": "17.15.0",
         "stylelint-config-clean-order": "10.0.0",
         "stylelint-config-standard-scss": "17.0.0",
@@ -78,12 +78,12 @@
     },
     "homepage": "https://github.com/madliani/reactify",
     "keywords": [
+        "astro",
         "heroui",
         "react",
         "reactify",
         "spa",
-        "typescript",
-        "vite"
+        "typescript"
     ],
     "license": "UNLICENSED",
     "name": "reactify",
@@ -96,12 +96,12 @@
         "url": "git+https://github.com/madliani/reactify.git"
     },
     "scripts": {
-        "build": "vite build",
+        "build": "astro build",
         "check:format": "prettier ./ --write --ignore-unknown",
-        "check:lint": "stylelint --fix ./ && eslint --fix && tsc",
+        "check:lint": "stylelint --fix ./ && eslint --fix && tsc && astro check",
         "check:spell": "cspell ./",
-        "serve": "vite",
-        "serve:preview": "vite preview",
+        "serve": "astro dev",
+        "serve:preview": "astro preview",
         "test": "vitest run",
         "test:coverage": "vitest run --coverage",
         "test:ui": "vitest watch --ui --coverage.enabled=true"

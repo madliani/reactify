@@ -1,0 +1,25 @@
+<footer class="footer footer--text-italic">
+    <span>© 2026 Madliani. All Rights Reserved.</span>
+    <span>Made with ❤️ by Madliani</span>
+</footer>
+
+<style is:global>
+    .footer {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        height: 10svh;
+
+        @media only screen and (width >= 640px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .footer--text-italic {
+        font-style: italic;
+    }
+</style>

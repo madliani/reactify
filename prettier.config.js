@@ -7,6 +7,7 @@ export default {
     endOfLine: "auto",
     htmlWhitespaceSensitivity: "strict",
     objectWrap: "collapse",
+    plugins: ["prettier-plugin-astro"],
     printWidth: 80,
     proseWrap: "always",
     quoteProps: "preserve",
