@@ -1,4 +1,6 @@
 ---
+import "@fontsource-variable/playfair-display"
+
 // This path notation is necessary for Astro to work correctly with React
 import BaseLayout from "@src/layouts/base-layout.astro"
 import { Counter } from "../react/components/Counter/Counter"
@@ -7,3 +9,34 @@ import { Counter } from "../react/components/Counter/Counter"
 <BaseLayout title="Home">
     <Counter client:load />
 </BaseLayout>
+
+<style is:global>
+    @import "tailwindcss";
+    @import "@heroui/styles";
+
+    /* See https://web.dev/articles/prefers-reduced-motion. */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        ::before,
+        ::after {
+            scroll-behavior: auto !important;
+
+            background-attachment: initial !important;
+
+            transition-delay: -1ms !important;
+            transition-duration: 1ms !important;
+            animation-duration: 1ms !important;
+            animation-delay: -1ms !important;
+            animation-iteration-count: 1 !important;
+        }
+    }
+
+    :root,
+    body {
+        margin: 0;
+        padding: 0;
+
+        min-width: 100svw;
+        min-height: 100svh;
+    }
+</style>

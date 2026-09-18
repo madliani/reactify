@@ -1,5 +1,4 @@
 ---
-import "@fontsource-variable/playfair-display"
 import Footer from "@src/blocs/footer.astro"
 import Header from "@src/blocs/header.astro"
 import Main from "@src/blocs/main.astro"
@@ -40,35 +39,6 @@ const { description = "", title = "" } = Astro.props
 </html>
 
 <style is:global>
-    @import "tailwindcss";
-    @import "@heroui/styles";
-
-    /* See https://web.dev/articles/prefers-reduced-motion. */
-    @media (prefers-reduced-motion: reduce) {
-        *,
-        ::before,
-        ::after {
-            scroll-behavior: auto !important;
-
-            background-attachment: initial !important;
-
-            transition-delay: -1ms !important;
-            transition-duration: 1ms !important;
-            animation-duration: 1ms !important;
-            animation-delay: -1ms !important;
-            animation-iteration-count: 1 !important;
-        }
-    }
-
-    :root,
-    body {
-        margin: 0;
-        padding: 0;
-
-        min-width: 100svw;
-        min-height: 100svh;
-    }
-
     .base-layout {
         display: flex;
         flex-flow: column nowrap;
