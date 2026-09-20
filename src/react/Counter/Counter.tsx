@@ -15,7 +15,11 @@ interface CounterViewProps {
 const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     return (
         <div className="counter">
-            <Typography.Heading data-testid="counter__heading" level={1}>
+            <Typography.Heading
+                data-testid="counter__heading"
+                level={1}
+                title={count.toString()}
+            >
                 {count}
             </Typography.Heading>
             <ButtonGroup className="counter__btn-group">
