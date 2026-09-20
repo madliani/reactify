@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.1] - 2026-09-20
+
+### Fixed
+
+- Names of blocs for the `Base Layout`
+- Project configuration
+- The `README.md` file
+
+### Changed
+
+- The structure of the `react` directory made more simple
+
 ## [3.1.0] - 2026-09-20
 
 ### Added
