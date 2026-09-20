@@ -51,4 +51,4 @@ const Counter = () => {
     )
 }
 
-export { Counter }
+export { Counter, counterAtom }
