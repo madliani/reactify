@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0] - 2026-09-20
+
+### Added
+
+- Templates
+
+### Fixed
+
+- Project configuration
+
+### Changed
+
+- Styles was refactored
+
 ## [3.0.0] - 2026-09-17
 
 ### Added
