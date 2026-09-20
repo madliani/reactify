@@ -202,4 +202,4 @@ These dependencies are necessary for other dependencies to work correctly.
 1. In the [React logo](./assets/icons/reactify-logo.svg), used the
    [React icon](https://icon-icons.com/icon/react-original-logo/146374) by
    [Julien Monty](https://icon-icons.com/authors/934-julien-monty/) from
-   [Icon-icons.com](https://icon-icons.com/).
+   [Icon-Icons.com](https://icon-icons.com/).
