@@ -200,6 +200,6 @@ These dependencies are necessary for other dependencies to work correctly.
 ## Attributions
 
 1. In the [React logo](./assets/icons/reactify-logo.svg), used the
-   [React icon](https://icon-icons.com/icon/react-original-logo/146374) by
-   [Julien Monty](https://icon-icons.com/authors/934-julien-monty/) from
-   [Icon-Icons.com](https://icon-icons.com/).
+   [React icon](https://icon-icons.com/icon/react-original-logo/146374), from
+   [Icon-Icons.com](https://icon-icons.com/), painted by
+   [Julien Monty](https://icon-icons.com/authors/934-julien-monty/).
