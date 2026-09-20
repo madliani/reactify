@@ -134,7 +134,7 @@ project mostly contains files of the web app.
 This is my personal project that I'm developing alone and for my own purposes.
 For that reason, a **simplified** `Git` workflow is used here.
 
-My `Git` workflow contains the following steps:
+The **simplified** `Git` workflow contains the following steps:
 
 0. Pull from the remote (optional)
 1. Synchronize the `unstable` branch with the `stable` branch
