@@ -1,0 +1,31 @@
+---
+import Metadata from "@src/blocs/metadata.astro"
+import Noscript from "@src/blocs/noscript.astro"
+import MetadataConfig from "@src/configurations/metadata.config.json"
+import BaseLayout from "@src/layouts/base-layout.astro"
+import { ClientRouter } from "astro:transitions"
+
+interface Props {
+    description?: string
+    title?: string
+}
+
+const { description = "", title = "" } = Astro.props
+---
+
+<!doctype html>
+<html lang={MetadataConfig.language}>
+    <head>
+        <Metadata description={description} title={title} />
+
+        <ClientRouter />
+    </head>
+
+    <body>
+        <Noscript />
+
+        <BaseLayout>
+            <slot />
+        </BaseLayout>
+    </body>
+</html>
