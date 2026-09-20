@@ -26,6 +26,10 @@
 
 This is a React starter kit.
 
+## Features
+
+1. SEO-friendly.
+
 ## Screenshots
 
 <div align="center">
