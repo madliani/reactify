@@ -155,6 +155,11 @@ The **simplified** `Git` workflow contains the following steps:
 **Note:** The optional steps are needed if you are developing a few features,
 bugfixes, or hotfixes at the same time.
 
+## Notes for developer
+
+1. The size of the image for the `Open Graph` protocol should be `1200x630`
+   pixels.
+
 ## FAQs
 
 <details>
