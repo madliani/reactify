@@ -1,15 +1,15 @@
 ---
 import BaseFooter from "@src/blocs/base-footer.astro"
 import BaseHeader from "@src/blocs/base-header.astro"
-import Main from "@src/blocs/main.astro"
+import BaseMain from "@src/blocs/base-main.astro"
 ---
 
 <div class="base-layout">
     <BaseHeader />
 
-    <Main>
+    <BaseMain>
         <slot />
-    </Main>
+    </BaseMain>
 
     <BaseFooter />
 </div>
