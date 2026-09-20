@@ -33,6 +33,8 @@ import { Counter } from "../react/Counter/Counter"
 
     :root {
         --full-width: 100%;
+        --screen-width: 100svw;
+        --screen-height: 100svh;
     }
 
     :root,
@@ -40,7 +42,7 @@ import { Counter } from "../react/Counter/Counter"
         margin: 0;
         padding: 0;
 
-        min-width: 100svw;
-        min-height: 100svh;
+        min-width: var(--screen-width);
+        min-height: var(--screen-height);
     }
 </style>
