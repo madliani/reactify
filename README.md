@@ -92,6 +92,7 @@ project mostly contains files of the web app.
     - `src/components/`: a directory containing other components of the web app
     - `src/layouts/`: a directory containing layouts of the web app
     - `src/pages/`: a directory containing pages of the web app
+    - `src/react/`: a directory containing `React` components for the web app
     - `src/router/`: a directory containing router of the web app
     - `src/routes/`: a directory containing routes of the web app
     - `src/main.ts`: a file containing the entry point of the web app
