@@ -1,7 +1,7 @@
 import { Button, Flex, Heading } from "@radix-ui/themes"
-import { atom, useAtom } from "jotai"
+import { useAtom } from "jotai"
 
-const counterAtom = atom<number>(0)
+import { counterAtom } from "./Counter.atom"
 
 interface CounterViewProps {
     count: number
