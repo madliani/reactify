@@ -163,7 +163,8 @@ bugfixes, or hotfixes at the same time.
 
 ## Notes for developer
 
-1. The size of the image for `Open Graph` protocol should be `1200x630` pixels.
+1. The size of the image for `The Open Graph protocol` should be `1200x630`
+   pixels.
 2. For performance reasons, in the project, I used the `Jotai` state manager,
    which works only with `React` components. But if you want share a state of
    the web app between `Astro` and `React` components, then you can use
