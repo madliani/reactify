@@ -34,10 +34,15 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                 justify="center"
                 wrap="wrap"
             >
-                <Button onClick={inc} variant="solid">
+                <Button onClick={inc} title="Increment" variant="solid">
                     Increment
                 </Button>
-                <Button disabled={decIsDisabled} onClick={dec} variant="soft">
+                <Button
+                    disabled={decIsDisabled}
+                    onClick={dec}
+                    title="Decrement"
+                    variant="soft"
+                >
                     Decrement
                 </Button>
             </Flex>
