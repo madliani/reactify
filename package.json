@@ -18,6 +18,7 @@
         "@fontsource-variable/playfair-display": "5.3.0",
         "@heroui/react": "3.2.4",
         "@heroui/styles": "3.2.4",
+        "@radix-ui/themes": "3.3.0",
         "@tailwindcss/vite": "4.3.3",
         "astro": "7.3.1",
         "jotai": "2.20.3",

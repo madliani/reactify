@@ -1,7 +1,5 @@
-import { Button, ButtonGroup, Typography } from "@heroui/react"
+import { Button, Flex, Heading } from "@radix-ui/themes"
 import { atom, useAtom } from "jotai"
-
-import "./Counter.style.css"
 
 const counterAtom = atom<number>(0)
 
@@ -14,21 +12,36 @@ interface CounterViewProps {
 
 const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     return (
-        <div className="counter">
-            <Typography.Heading
+        <Flex
+            align="center"
+            direction="column"
+            gap="2"
+            justify="center"
+            wrap="nowrap"
+        >
+            <Heading
+                as="h1"
                 data-testid="counter__heading"
-                level={1}
+                size="9"
                 title={count.toString()}
             >
                 {count}
-            </Typography.Heading>
-            <ButtonGroup className="counter__btn-group">
-                <Button onClick={inc}>Increment</Button>
-                <Button isDisabled={decIsDisabled} onClick={dec}>
+            </Heading>
+            <Flex
+                align="center"
+                direction="row"
+                gap="1"
+                justify="center"
+                wrap="wrap"
+            >
+                <Button onClick={inc} variant="solid">
+                    Increment
+                </Button>
+                <Button disabled={decIsDisabled} onClick={dec} variant="soft">
                     Decrement
                 </Button>
-            </ButtonGroup>
-        </div>
+            </Flex>
+        </Flex>
     )
 }
 
