@@ -1,5 +1,5 @@
 import { Button, Flex, Heading } from "@radix-ui/themes"
-import { counterAtom } from "@src/react/Counter/Counter.atom"
+import { counterAtom } from "@react/Counter/Counter.atom"
 import { useAtom } from "jotai"
 
 interface CounterViewProps {

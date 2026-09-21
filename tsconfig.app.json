@@ -15,7 +15,10 @@
             "ES2022"
         ],
         "noEmit": false,
-        "paths": { "@src/*": ["${configDir}/src/*"] },
+        "paths": {
+            "@react/*": ["${configDir}/src/react/*"],
+            "@src/*": ["${configDir}/src/*"]
+        },
         "types": ["astro/astro-jsx", "astro/client", "react", "react-dom"]
     },
     "exclude": [
