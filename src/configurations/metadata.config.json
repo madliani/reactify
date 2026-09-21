@@ -8,7 +8,7 @@
         "connect_src": ["self"],
         "form_action": ["self"]
     },
-    "description": "A React starter kit.",
+    "description": "A starter kit for React.",
     "favicon_path": "/icons/favicon.ico",
     "favicon_svg_path": "/icons/favicon.svg",
     "is_indexable": true,
