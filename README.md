@@ -29,7 +29,7 @@ This is a React starter kit.
 
 ## Features
 
-1. SEO-friendly.
+1. SEO-friendly
 
 ## Screenshots
 
