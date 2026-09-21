@@ -71,11 +71,14 @@
     "homepage": "https://github.com/madliani/reactify/",
     "keywords": [
         "astro",
+        "nodejs",
+        "pnpm",
         "radix-ui",
         "react",
         "reactify",
         "spa",
-        "typescript"
+        "typescript",
+        "vitest"
     ],
     "license": "UNLICENSED",
     "name": "reactify",
