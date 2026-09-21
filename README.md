@@ -35,8 +35,8 @@ This is a starter kit for React.
 
 <div align="center">
     <figure>
-        <img alt="The homepage screenshot" src="./assets/images/reactify-homepage.png" title="The homepage screenshot">
-        <figcaption>The homepage screenshot</figcaption>
+        <img alt="A screenshot of the homepage" src="./assets/images/reactify-homepage.png" title="A screenshot of the homepage">
+        <figcaption>A screenshot of the homepage</figcaption>
     </figure>
 </div>
 
