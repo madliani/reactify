@@ -1,6 +1,5 @@
 ---
 import { Theme } from "@radix-ui/themes"
-import "@radix-ui/themes/styles.css"
 import Metadata from "@src/blocs/metadata.astro"
 import Noscript from "@src/blocs/noscript.astro"
 import MetadataConfig from "@src/configurations/metadata.config.json"
@@ -35,27 +34,35 @@ const { description = "", title = "" } = Astro.props
 </html>
 
 <style is:global>
-    /* For details, see https://web.dev/articles/prefers-reduced-motion. */
-    @media (prefers-reduced-motion: reduce) {
-        *,
-        ::before,
-        ::after {
-            scroll-behavior: auto !important;
+    @layer vendor, root, components, important;
 
-            background-attachment: initial !important;
+    @import "@radix-ui/themes/styles.css" layer(vendor.radix-ui);
 
-            transition-delay: -1ms !important;
-            transition-duration: 1ms !important;
-            animation-duration: 1ms !important;
-            animation-delay: -1ms !important;
-            animation-iteration-count: 1 !important;
+    @layer root {
+        :root {
+            --full-width: 100%;
+
+            --screen-width: 100svw;
+            --screen-height: 100svh;
         }
     }
 
-    :root {
-        --full-width: 100%;
+    @layer important {
+        /* For details, see https://web.dev/articles/prefers-reduced-motion. */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            ::before,
+            ::after {
+                scroll-behavior: auto !important;
 
-        --screen-width: 100svw;
-        --screen-height: 100svh;
+                background-attachment: initial !important;
+
+                transition-delay: -1ms !important;
+                transition-duration: 1ms !important;
+                animation-duration: 1ms !important;
+                animation-delay: -1ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
     }
 </style>

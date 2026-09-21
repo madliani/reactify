@@ -6,23 +6,25 @@
 </footer>
 
 <style is:global>
-    .base-footer {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 1rem;
-        align-items: center;
-        justify-content: center;
+    @layer components {
+        .base-footer {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
 
-        min-width: var(--full-width);
-        min-height: 10svh;
+            min-width: var(--full-width);
+            min-height: 10svh;
 
-        &-footer--text-italic {
-            font-style: italic;
-        }
+            &-footer--text-italic {
+                font-style: italic;
+            }
 
-        @media (width >= 640px) {
-            flex-direction: row;
-            justify-content: space-between;
+            @media (width >= 640px) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
     }
 </style>

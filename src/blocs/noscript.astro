@@ -6,17 +6,19 @@
 </Fragment>
 
 <style is:global>
-    .noscript {
-        display: inline-block;
+    @layer components {
+        .noscript {
+            display: inline-block;
 
-        width: var(--full-width);
-        min-height: max-content;
-        padding: 0.3rem;
+            width: var(--full-width);
+            min-height: max-content;
+            padding: 0.3rem;
 
-        background-color: red;
-    }
+            background-color: red;
+        }
 
-    .noscript__main-information {
-        font-weight: bold;
+        .noscript__main-information {
+            font-weight: bold;
+        }
     }
 </style>

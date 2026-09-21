@@ -13,19 +13,21 @@ import { Image } from "astro:assets"
 </header>
 
 <style is:global>
-    .base-header {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 0;
-        align-items: center;
-        justify-content: center;
+    @layer components {
+        .base-header {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 0;
+            align-items: center;
+            justify-content: center;
 
-        min-width: var(--full-width);
-        min-height: 10svh;
+            min-width: var(--full-width);
+            min-height: 10svh;
 
-        @media (width >= 640px) {
-            flex-direction: row;
-            justify-content: space-between;
+            @media (width >= 640px) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
     }
 </style>

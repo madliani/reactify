@@ -3,14 +3,16 @@
 </main>
 
 <style is:global>
-    .base-main {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 0;
-        align-items: stretch;
-        justify-content: space-between;
+    @layer components {
+        .base-main {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 0;
+            align-items: stretch;
+            justify-content: space-between;
 
-        min-width: var(--full-width);
-        min-height: 75svh;
+            min-width: var(--full-width);
+            min-height: 75svh;
+        }
     }
 </style>
