@@ -34,7 +34,7 @@ const { description = "", title = "" } = Astro.props
 </html>
 
 <style is:global>
-    @layer vendor, root, components, important;
+    @layer vendor, root, components.mobile, components.media, important;
 
     @import "@radix-ui/themes/styles.css" layer(vendor.radix-ui);
 

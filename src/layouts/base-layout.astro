@@ -15,15 +15,19 @@ import BaseMain from "@src/blocs/base-main.astro"
 </div>
 
 <style is:global>
-    @layer components {
+    @layer components.mobile {
         .base-layout {
             display: flex;
             flex-flow: column nowrap;
             gap: 0;
             align-items: stretch;
             justify-content: space-between;
+        }
+    }
 
-            @media (width >= 640px) {
+    @layer components.media {
+        @media (width >= 640px) {
+            .base-layout {
                 padding-inline: 3rem;
             }
         }

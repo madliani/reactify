@@ -6,7 +6,7 @@
 </footer>
 
 <style is:global>
-    @layer components {
+    @layer components.mobile {
         .base-footer {
             display: flex;
             flex-flow: column nowrap;
@@ -20,8 +20,12 @@
             &-footer--text-italic {
                 font-style: italic;
             }
+        }
+    }
 
-            @media (width >= 640px) {
+    @layer components.media {
+        @media (width >= 640px) {
+            .base-footer {
                 flex-direction: row;
                 justify-content: space-between;
             }

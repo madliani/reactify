@@ -13,7 +13,7 @@ import { Image } from "astro:assets"
 </header>
 
 <style is:global>
-    @layer components {
+    @layer components.mobile {
         .base-header {
             display: flex;
             flex-flow: column nowrap;
@@ -23,8 +23,12 @@ import { Image } from "astro:assets"
 
             min-width: var(--full-width);
             min-height: 10svh;
+        }
+    }
 
-            @media (width >= 640px) {
+    @layer components.media {
+        @media (width >= 640px) {
+            .base-header {
                 flex-direction: row;
                 justify-content: space-between;
             }
