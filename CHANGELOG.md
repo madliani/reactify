@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Names of blocs for the `Base Layout`
+- Names of blocs for the `base layout`
 - Project configuration
 - The `README.md` file
 
