@@ -3,7 +3,4 @@ blockExoticSubdeps: true
 ignoreScripts: true
 lockfile: true
 minimumReleaseAge: 1440
-minimumReleaseAgeExclude:
-  - astro@7.3.5
-  - eslint-plugin-perfectionist@5.12.1
 nodeLinker: hoisted
