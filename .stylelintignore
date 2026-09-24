@@ -52,9 +52,6 @@ public/
 # TypeScript-based configuration files
 *.config.ts
 
-# Astro-based source files
-src/**/*.astro
-
 # TypeScript-based source files
 src/**/*.ts
 src/react/**/*.tsx
