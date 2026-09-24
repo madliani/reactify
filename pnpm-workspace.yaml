@@ -4,8 +4,6 @@ ignoreScripts: true
 lockfile: true
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
-  - eslint-plugin-astro@3.2.1
-  - prettier-plugin-astro@1.0.1
   - astro@7.3.5
   - eslint-plugin-perfectionist@5.12.1
 nodeLinker: hoisted
