@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.0] - 2026-09-24
+
+### Fixed
+
+- Project configuration
+- The `README.md` file
+
+### Changed
+
+- Dependencies were upgraded
+- The `Counter` component was refactored
+- The `HeroUI` was replaced by `Radix UI`
+- The homepage screenshot was updated
+- The styles were refactored
+
+### Removed
+
+- The `Tailwind CSS`
+- The metadata of the icons and images
+
 ## [3.1.1] - 2026-09-20
 
 ### Fixed
