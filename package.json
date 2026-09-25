@@ -71,6 +71,7 @@
     "homepage": "https://github.com/madliani/reactify/",
     "keywords": [
         "astro",
+        "nanostores",
         "nodejs",
         "pnpm",
         "radix-ui",
