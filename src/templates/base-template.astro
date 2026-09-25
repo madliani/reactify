@@ -1,5 +1,5 @@
 ---
-import { Theme } from "@radix-ui/themes"
+import { Theme as RadixUITheme } from "@radix-ui/themes"
 import BaseNoscript from "@src/blocks/base-noscript.astro"
 import Metadata from "@src/blocks/metadata.astro"
 import MetadataConfig from "@src/configurations/metadata.config.json"
@@ -25,11 +25,11 @@ const { description = "", title = "" } = Astro.props
     <body>
         <BaseNoscript />
 
-        <Theme>
+        <RadixUITheme>
             <BaseLayout>
                 <slot />
             </BaseLayout>
-        </Theme>
+        </RadixUITheme>
     </body>
 </html>
 
