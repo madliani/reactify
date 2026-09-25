@@ -78,8 +78,8 @@ Follow these steps to set up the website:
 
 ## Project Structure
 
-**Note:** The website is a React-based single-page application (SPA), so the
-project mostly contains files of the web app.
+**Note:** The website is a `React`-based single-page application (SPA), but it
+uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 
 - `assets/`: a directory containing assets for the `README.md` file
     - `assets/icons/`: a directory containing icons for the `README.md` file
@@ -87,16 +87,16 @@ project mostly contains files of the web app.
 - `public/`: a directory containing assets for the website
     - `assets/icons/`: a directory containing icons for the website
     - `assets/images`: a directory containing icons for the website
-- `src/`: a directory containing source files of the web app
-    - `src/app/`: a directory containing the root component of the web app
-        - `src/app/App.tsx`: the root component of the web app
-    - `src/components/`: a directory containing other components of the web app
-    - `src/layouts/`: a directory containing layouts of the web app
-    - `src/pages/`: a directory containing pages of the web app
-    - `src/react/`: a directory containing `React` components for the web app
-    - `src/router/`: a directory containing router of the web app
-    - `src/routes/`: a directory containing routes of the web app
-    - `src/main.ts`: a file containing the entry point of the web app
+- `src/`: a directory containing source files of the website
+    - `src/blocks/`: a directory containing blocks of the website
+    - `src/components/`: a directory containing components of the website
+    - `src/configurations/`: a directory containing configuration files for the
+      website
+    - `src/layouts/`: a directory containing layouts of the website
+    - `src/pages/`: a directory containing pages of the website
+    - `src/react/`: a directory containing `React` components of the web app
+    - `src/templates/`: a directory containing templates for the pages of the
+      website
 - `types/`: a directory containing type declarations for the configuration files
     - `types/vitest.ts`: a file containing type declarations for the `Vitest`
       configuration file
