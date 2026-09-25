@@ -19,7 +19,6 @@
         "@nanostores/react": "2.0.1",
         "@radix-ui/themes": "3.3.0",
         "astro": "7.3.4",
-        "jotai": "3.0.0",
         "react": "19.3.0",
         "react-dom": "19.3.0",
         "sharp": "0.35.4",
