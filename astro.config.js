@@ -26,6 +26,7 @@ export default defineConfig({
     site: "https://madliani-reactify.vercel.app/",
 
     vite: {
+        css: { transformer: "lightningcss" },
         resolve: {
             alias: {
                 "@react": path.resolve(import.meta.dirname, "./src/react/"),
