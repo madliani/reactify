@@ -89,9 +89,13 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
     - `assets/images`: a directory containing icons for the website
 - `src/`: a directory containing source files of the website
     - `src/blocks/`: a directory containing blocks of the website
+        - `src/blocks/metadata.astro`: a file containing metadata, which makes
+          the website more SEO-friendly
     - `src/components/`: a directory containing components of the website
     - `src/configurations/`: a directory containing configuration files for the
       website
+        - `src/configurations/metadata.config.json`: a configuration file for
+          the `metadata` block
     - `src/layouts/`: a directory containing layouts of the website
     - `src/pages/`: a directory containing pages of the website
     - `src/react/`: a directory containing `React` components of the web app
