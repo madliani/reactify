@@ -1,35 +1,9 @@
 ---
-import BaseFooter from "@src/blocks/base-footer.astro"
-import BaseHeader from "@src/blocks/base-header.astro"
 import BaseMain from "@src/blocks/base-main.astro"
 ---
 
 <div class="base-layout">
-    <BaseHeader />
-
     <BaseMain>
         <slot />
     </BaseMain>
-
-    <BaseFooter />
 </div>
-
-<style is:global>
-    @layer components.mobile {
-        .base-layout {
-            display: flex;
-            flex-flow: column nowrap;
-            gap: 0;
-            align-items: stretch;
-            justify-content: space-between;
-        }
-    }
-
-    @layer components.media {
-        @media (width >= 640px) {
-            .base-layout {
-                padding-inline: 3rem !important;
-            }
-        }
-    }
-</style>
