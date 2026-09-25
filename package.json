@@ -76,7 +76,6 @@
         "radix-ui",
         "react",
         "reactify",
-        "spa",
         "typescript",
         "vitest"
     ],
