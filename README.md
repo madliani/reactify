@@ -98,7 +98,8 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
           the `metadata` block
     - `src/layouts/`: a directory containing layouts of the website
     - `src/pages/`: a directory containing pages of the website
-    - `src/react/`: a directory containing `React` components of the web app
+    - `src/react/`: a directory containing `React`-based components of the web
+      app
     - `src/templates/`: a directory containing templates for the pages of the
       website
 - `types/`: a directory containing type declarations for the configuration files
