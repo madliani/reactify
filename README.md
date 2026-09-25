@@ -113,8 +113,8 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `.gitignore`: a `Git` ignore file
 - `.prettierignore`: a `Prettier` ignore file
 - `.stylelintignore`: a `Stylelint` ignore file
-- `.tsbuildinfo`: a file of the `TypeScript` compiler for storing incremental
-  compilation information (local and ignored by `Git`)
+- `.tsbuildinfo`: a file of the `TypeScript` compiler, which contains
+  incremental compilation information (local and ignored by `Git`)
 - `AUTHORS.txt`: an `AUTHORS` file
 - `CHANGELOG.md`: a `CHANGELOG.md` file
 - `CONTRIBUTING.md`: a `CONTRIBUTING.md` file
