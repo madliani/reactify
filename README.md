@@ -165,11 +165,10 @@ bugfixes, or hotfixes at the same time.
 
 1. The size of the image for `The Open Graph protocol` should be `1200x630`
    pixels.
-2. For performance reasons, in the project, I used the `Jotai` state manager,
-   which works only with `React` components. But if you want share a state of
-   the web app between `Astro` and `React` components, then you can use
+2. For compatibility reasons, in the project, I used the
    [Nano Stores](https://github.com/nanostores/nanostores/) state manager, which
-   is
+   both works with `Astro` and `React`. It allows you to share the state of the
+   web app between the `Astro`-based and `React`-based components, and also it's
    [officially recommended](https://docs.astro.build/en/recipes/sharing-state-islands)
    by the `Astro` developers.
 

@@ -1,6 +1,6 @@
+import { useStore } from "@nanostores/react"
 import { Button, Flex, Heading } from "@radix-ui/themes"
-import { counterAtom } from "@react/Counter/Counter.atom"
-import { useAtom } from "jotai"
+import { counterAtom, decCount, incCount } from "@react/Counter/Counter.atom"
 
 interface CounterViewProps {
     count: number
@@ -50,11 +50,11 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
 }
 
 const useCounterEffect = () => {
-    const [count, setCount] = useAtom(counterAtom)
+    const count = useStore(counterAtom)
     const decIsDisabled = count === 0
 
-    const inc = () => setCount(count + 1)
-    const dec = () => setCount(count - 1)
+    const inc = () => incCount()
+    const dec = () => decCount()
 
     return { count, dec, decIsDisabled, inc }
 }
