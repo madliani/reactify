@@ -14,6 +14,7 @@ const englishWords = [
     "fontsource",
     "hotfixes",
     "madliani",
+    "nanostores",
     "reactify",
     "stylelintcache",
     "stylelintignore",
