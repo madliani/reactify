@@ -13,6 +13,7 @@ const englishWords = [
     "browserslistrc",
     "fontsource",
     "hotfixes",
+    "lightningcss",
     "madliani",
     "nanostores",
     "reactify",
