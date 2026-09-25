@@ -34,14 +34,22 @@ const { description = "", title = "" } = Astro.props
 </html>
 
 <style is:global>
-    @layer vendor, root, components.mobile, components.media, important;
+    @layer theme, base, components, utilities, vendor, important;
+
+    @import "tailwindcss/theme.css" layer(theme);
+    @import "tailwindcss/preflight.css" layer(base);
+    @import "tailwindcss/utilities.css" layer(utilities);
 
     @import "@radix-ui/themes/styles.css" layer(vendor.radix-ui);
 
-    @layer root {
+    @layer base {
         :root {
             --full-width: 100%;
         }
+    }
+
+    @layer components {
+        @layer mobile, media;
     }
 
     @layer important {

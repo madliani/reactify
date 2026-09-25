@@ -5,6 +5,7 @@ export default {
     defaultSeverity: "error",
     extends: [
         "stylelint-config-standard",
+        "stylelint-config-tailwindcss",
         "stylelint-config-html/astro",
         "stylelint-config-clean-order"
     ],
