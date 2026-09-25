@@ -107,7 +107,8 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `types/`: a directory containing type declarations for the configuration files
     - `types/vitest.ts`: a file containing type declarations for the `Vitest`
       configuration file
-- `.env`: an environment variables file (local and ignored by `Git`)
+- `.env`: an file, which contains environment variables (local and ignored by
+  `Git`)
 - `.browserslistrc`: a `Browserslist` configuration file
 - `.gitattributes`: a `Git` attributes file
 - `.gitignore`: a `Git` ignore file
