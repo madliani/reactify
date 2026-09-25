@@ -1,7 +1,7 @@
 ---
 import { Theme } from "@radix-ui/themes"
+import BaseNoscript from "@src/blocks/base-noscript.astro"
 import Metadata from "@src/blocks/metadata.astro"
-import Noscript from "@src/blocks/noscript.astro"
 import MetadataConfig from "@src/configurations/metadata.config.json"
 import BaseLayout from "@src/layouts/base-layout.astro"
 import { ClientRouter } from "astro:transitions"
@@ -23,7 +23,7 @@ const { description = "", title = "" } = Astro.props
     </head>
 
     <body>
-        <Noscript />
+        <BaseNoscript />
 
         <Theme>
             <BaseLayout>
