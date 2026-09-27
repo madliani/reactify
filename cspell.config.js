@@ -11,6 +11,7 @@ const language = dicts.join(",")
 const englishWords = [
     "asynciterable",
     "browserslistrc",
+    "commonmark",
     "fontsource",
     "hotfixes",
     "lightningcss",

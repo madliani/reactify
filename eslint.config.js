@@ -1,5 +1,6 @@
 import pluginJS from "@eslint/js"
 import pluginJSON from "@eslint/json"
+import pluginMD from "@eslint/markdown"
 import pluginAstro from "eslint-plugin-astro"
 import pluginCompat from "eslint-plugin-compat"
 import pluginImport from "eslint-plugin-import"
@@ -69,5 +70,11 @@ export default defineConfig([
         files: ["**/*.json", "**/*.jsonc"],
         language: "json/jsonc",
         rules: { "json/sort-keys": "error" }
+    },
+    {
+        extends: [pluginMD.configs.recommended],
+        files: ["**/*.md"],
+        language: "markdown/commonmark",
+        rules: { "markdown/no-missing-label-refs": "off" }
     }
 ])
