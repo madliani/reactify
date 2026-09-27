@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.2] - 2026-09-27
+
+### Fixed
+
+- Project configuration
+
 ## [3.3.1] - 2026-09-27
 
 ### Fixed
