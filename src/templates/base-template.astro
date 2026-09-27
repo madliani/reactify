@@ -30,36 +30,3 @@ const { className, description = "", title = "" } = Astro.props
         </BaseLayout>
     </body>
 </html>
-
-<style is:global>
-    @layer theme, base, components, utilities, vendor, important;
-
-    @import "tailwindcss/theme.css" layer(theme);
-    @import "tailwindcss/preflight.css" layer(base);
-    @import "tailwindcss/utilities.css" layer(utilities);
-
-    @import "@radix-ui/themes/styles.css" layer(vendor.radix-ui);
-
-    @layer components {
-        @layer mobile, media;
-    }
-
-    @layer important {
-        /* For details, see https://web.dev/articles/prefers-reduced-motion. */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            ::before,
-            ::after {
-                scroll-behavior: auto !important;
-
-                background-attachment: initial !important;
-
-                transition-delay: -1ms !important;
-                transition-duration: 1ms !important;
-                animation-duration: 1ms !important;
-                animation-delay: -1ms !important;
-                animation-iteration-count: 1 !important;
-            }
-        }
-    }
-</style>
