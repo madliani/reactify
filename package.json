@@ -81,6 +81,7 @@
         "radix-ui",
         "react",
         "reactify",
+        "tailwindcss",
         "typescript",
         "vitest"
     ],
