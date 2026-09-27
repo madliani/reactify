@@ -7,7 +7,7 @@ export default {
     endOfLine: "auto",
     htmlWhitespaceSensitivity: "strict",
     objectWrap: "collapse",
-    plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
+    plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
     printWidth: 80,
     proseWrap: "always",
     quoteProps: "preserve",
