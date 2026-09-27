@@ -97,9 +97,9 @@
         "url": "git+https://github.com/madliani/reactify.git"
     },
     "scripts": {
-        "build": "astro build",
+        "build": "tsc && astro check && astro build",
         "check:format": "prettier ./ --write --ignore-unknown",
-        "check:lint": "stylelint --fix ./ && eslint --fix && tsc && astro check",
+        "check:lint": "stylelint --fix ./ && eslint --fix",
         "check:spell": "cspell ./",
         "serve": "astro dev",
         "serve:preview": "astro preview",
