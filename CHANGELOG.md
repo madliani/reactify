@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.0] - 2026-09-27
+
+## Added
+
+- The `Tailwind CSS` framework
+
+### Fixed
+
+- Project configuration
+- The `README.md` file
+
+### Changed
+
+- The `Jotai` state manager was replaced by `Nano Stores`
+- The homepage screenshot was updated
+- The homepage, `base template` and `base layout` were refactored
+- The styles were refactored
+
 ## [3.2.0] - 2026-09-24
 
 ### Fixed
