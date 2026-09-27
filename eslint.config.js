@@ -38,11 +38,7 @@ export default defineConfig([
             parser: ts.parser,
             parserOptions: {
                 allowReserved: false,
-                ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
-                    jsx: false
-                }
+                ecmaFeatures: { globalReturn: false, impliedStrict: true }
             },
             sourceType: "module"
         },
