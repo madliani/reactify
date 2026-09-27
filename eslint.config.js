@@ -38,7 +38,11 @@ export default defineConfig([
             parser: ts.parser,
             parserOptions: {
                 allowReserved: false,
-                ecmaFeatures: { globalReturn: false, impliedStrict: true }
+                ecmaFeatures: {
+                    globalReturn: false,
+                    impliedStrict: true,
+                    jsx: true
+                }
             },
             sourceType: "module"
         },
@@ -64,13 +68,5 @@ export default defineConfig([
         language: "markdown/commonmark",
         rules: { "markdown/no-missing-label-refs": "off" }
     },
-    {
-        extends: [pluginAstro.configs["flat/recommended"]],
-        files: ["*.astro"],
-        languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } }
-    },
-    {
-        files: ["*.tsx"],
-        languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } }
-    }
+    { extends: [pluginAstro.configs["flat/recommended"]], files: ["*.astro"] }
 ])
