@@ -1,5 +1,4 @@
 ---
-import { Theme as RadixUITheme } from "@radix-ui/themes"
 import BaseNoscript from "@src/blocks/base-noscript.astro"
 import Metadata from "@src/blocks/metadata.astro"
 import MetadataConfig from "@src/configurations/metadata.config.json"
@@ -7,11 +6,12 @@ import BaseLayout from "@src/layouts/base-layout.astro"
 import { ClientRouter } from "astro:transitions"
 
 interface Props {
-    description?: string
-    title?: string
+    className?: string | undefined
+    description?: string | undefined
+    title?: string | undefined
 }
 
-const { description = "", title = "" } = Astro.props
+const { className, description = "", title = "" } = Astro.props
 ---
 
 <!doctype html>
@@ -25,11 +25,9 @@ const { description = "", title = "" } = Astro.props
     <body>
         <BaseNoscript />
 
-        <RadixUITheme>
-            <BaseLayout>
-                <slot />
-            </BaseLayout>
-        </RadixUITheme>
+        <BaseLayout className={className}>
+            <slot />
+        </BaseLayout>
     </body>
 </html>
 
@@ -41,12 +39,6 @@ const { description = "", title = "" } = Astro.props
     @import "tailwindcss/utilities.css" layer(utilities);
 
     @import "@radix-ui/themes/styles.css" layer(vendor.radix-ui);
-
-    @layer base {
-        :root {
-            --full-width: 100%;
-        }
-    }
 
     @layer components {
         @layer mobile, media;

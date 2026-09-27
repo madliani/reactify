@@ -1,9 +1,13 @@
 ---
-import BaseMain from "@src/blocks/base-main.astro"
+import { Theme as RadixUITheme } from "@radix-ui/themes"
+
+interface Props {
+    className?: string | undefined
+}
+
+const { className } = Astro.props
 ---
 
-<div class="base-layout">
-    <BaseMain>
-        <slot />
-    </BaseMain>
-</div>
+<RadixUITheme className={className}>
+    <slot />
+</RadixUITheme>

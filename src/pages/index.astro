@@ -2,9 +2,12 @@
 import "@fontsource-variable/playfair-display"
 
 import { Counter } from "@react/Counter/Counter"
+import BaseMain from "@src/blocks/base-main.astro"
 import BaseTemplate from "@src/templates/base-template.astro"
 ---
 
-<BaseTemplate title="Home">
-    <Counter client:load />
+<BaseTemplate title="Home" className="h-[100svh]">
+    <BaseMain className="h-[100svh] flex justify-center">
+        <Counter client:load />
+    </BaseMain>
 </BaseTemplate>

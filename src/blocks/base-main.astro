@@ -1,18 +1,11 @@
-<main class="base-main">
+---
+interface Props {
+    className?: string | undefined
+}
+
+const { className } = Astro.props
+---
+
+<main class={className}>
     <slot />
 </main>
-
-<style is:global>
-    @layer components.mobile {
-        .base-main {
-            display: flex;
-            flex-flow: column nowrap;
-            gap: 0;
-            align-items: center;
-            justify-content: center;
-
-            min-width: var(--full-width);
-            min-height: 75svh;
-        }
-    }
-</style>
