@@ -1,5 +1,6 @@
 ---
 import { Theme as RadixUITheme } from "@radix-ui/themes"
+import { twMerge } from "tailwind-merge"
 
 interface Props {
     className?: string | undefined
@@ -8,6 +9,6 @@ interface Props {
 const { className } = Astro.props
 ---
 
-<RadixUITheme className={className}>
+<RadixUITheme className={twMerge(className, "h-[100svh]", "w-[100svw]")}>
     <slot />
 </RadixUITheme>
