@@ -16,6 +16,9 @@ pnpm-workspace.yaml
 yarn-debug.log*
 yarn-error.log*
 
+# Files of TypeScript compiler
+.tsbuildinfo
+
 # Astro directories
 .astro/
 dist/
@@ -23,9 +26,6 @@ dist/
 # Vitest directories
 .vitest/
 coverage/
-
-# Files of TypeScript compiler
-.tsbuildinfo
 
 # Stylelint files
 .stylelintcache
