@@ -51,15 +51,6 @@ export default defineConfig([
         },
         settings: { "import/resolver": { typescript: true } }
     },
-    {
-        extends: [pluginAstro.configs["flat/recommended"]],
-        files: ["*.astro"],
-        languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } }
-    },
-    {
-        files: ["*.tsx"],
-        languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } }
-    },
     { files: ["*.config.js"], settings: { "import/resolver": { node: true } } },
     {
         extends: [pluginJSON.configs.recommended],
@@ -72,5 +63,14 @@ export default defineConfig([
         files: ["**/*.md"],
         language: "markdown/commonmark",
         rules: { "markdown/no-missing-label-refs": "off" }
+    },
+    {
+        extends: [pluginAstro.configs["flat/recommended"]],
+        files: ["*.astro"],
+        languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } }
+    },
+    {
+        files: ["*.tsx"],
+        languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } }
     }
 ])
