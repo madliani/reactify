@@ -6,10 +6,6 @@
 
 @import "@radix-ui/themes/styles.css" layer(vendor.radix-ui);
 
-@layer components {
-    @layer mobile, media;
-}
-
 @layer important {
     /* For details, see https://web.dev/articles/prefers-reduced-motion. */
     @media (prefers-reduced-motion: reduce) {

@@ -1,24 +1,6 @@
 <Fragment>
-    <noscript class="noscript">
+    <noscript class="noscript inline-block w-[100%] max-h-[max-content] p-[0.3rem] bg-[red]">
         For full functionality of this site it is necessary to{" "}
-        <span class="noscript__main-information">enable JavaScript</span>.
+        <span class="font-bold">enable JavaScript</span>.
     </noscript>
 </Fragment>
-
-<style is:global>
-    @layer components.mobile {
-        .noscript {
-            display: inline-block;
-
-            width: var(--full-width);
-            min-height: max-content;
-            padding: 0.3rem;
-
-            background-color: red;
-
-            &__main-information {
-                font-weight: bold;
-            }
-        }
-    }
-</style>
