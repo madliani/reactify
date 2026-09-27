@@ -17,7 +17,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Files of TypeScript compiler
-.tsbuildinfo
+*.tsbuildinfo
 
 # Astro directories
 .astro/
