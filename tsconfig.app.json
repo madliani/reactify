@@ -14,7 +14,6 @@
             "ES2022.string",
             "ES2022"
         ],
-        "noEmit": false,
         "paths": {
             "@react/*": ["${configDir}/src/react/*"],
             "@src/*": ["${configDir}/src/*"]
