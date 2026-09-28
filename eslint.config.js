@@ -43,6 +43,17 @@ const tsSettings = { "import/resolver": { typescript: true } }
 
 const webExtends = [pluginCompat.configs["flat/recommended"]]
 
+const webLanguageOptions = {
+    ...tsLanguageOptions,
+    parserOptions: {
+        ...tsLanguageOptions.parserOptions,
+        ecmaFeatures: {
+            ...tsLanguageOptions.parserOptions.ecmaFeatures,
+            jsx: true
+        }
+    }
+}
+
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
     globalIgnores([
@@ -60,16 +71,7 @@ export default defineConfig([
             pluginAstro.configs["flat/recommended"]
         ],
         files: ["**/*.astro", "**/*.ts", "**/*.tsx"],
-        languageOptions: {
-            ...tsLanguageOptions,
-            parserOptions: {
-                ...tsLanguageOptions.parserOptions,
-                ecmaFeatures: {
-                    ...tsLanguageOptions.parserOptions.ecmaFeatures,
-                    jsx: true
-                }
-            }
-        },
+        languageOptions: { ...webLanguageOptions },
         plugins: { ...tsPlugins },
         rules: { ...tsRules },
         settings: {
