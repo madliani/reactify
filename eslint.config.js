@@ -41,9 +41,9 @@ const tsRules = {
 
 const tsSettings = { "import/resolver": { typescript: true } }
 
-const webExtends = [pluginCompat.configs["flat/recommended"]]
+const browserExtends = [pluginCompat.configs["flat/recommended"]]
 
-const webLanguageOptions = {
+const jsxLanguageOptions = {
     ...tsLanguageOptions,
     parserOptions: {
         ...tsLanguageOptions.parserOptions,
@@ -65,7 +65,7 @@ export default defineConfig([
         "package-lock.json"
     ]),
     {
-        extends: [...tsExtends, ...webExtends],
+        extends: [...tsExtends, ...browserExtends],
         files: ["**/*.ts"],
         languageOptions: { ...tsLanguageOptions },
         plugins: { ...tsPlugins },
@@ -96,9 +96,9 @@ export default defineConfig([
         rules: { "markdown/no-missing-label-refs": "off" }
     },
     {
-        extends: [...tsExtends, ...webExtends],
+        extends: [...tsExtends, ...browserExtends],
         files: ["**/*.tsx"],
-        languageOptions: { ...webLanguageOptions },
+        languageOptions: { ...jsxLanguageOptions },
         plugins: { ...tsPlugins },
         rules: { ...tsRules },
         settings: { ...tsSettings }
@@ -106,11 +106,11 @@ export default defineConfig([
     {
         extends: [
             ...tsExtends,
-            ...webExtends,
+            ...browserExtends,
             pluginAstro.configs["flat/recommended"]
         ],
         files: ["**/*.astro"],
-        languageOptions: { ...webLanguageOptions },
+        languageOptions: { ...jsxLanguageOptions },
         plugins: { ...tsPlugins },
         rules: { ...tsRules },
         settings: {
