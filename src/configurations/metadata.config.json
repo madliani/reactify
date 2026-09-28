@@ -6,7 +6,13 @@
     "csp": {
         "base_uri": ["self"],
         "connect_src": ["self"],
-        "form_action": ["self"]
+        "default_src": ["self"],
+        "font_src": ["self", "unsafe-inline"],
+        "form_action": ["self"],
+        "frame_src": ["self"],
+        "img_src": ["self"],
+        "script_src": ["self", "unsafe-inline"],
+        "style_src": ["self", "unsafe-inline"]
     },
     "description": "A starter kit for React.",
     "favicon_path": "/icons/favicon.ico",
