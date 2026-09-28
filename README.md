@@ -55,28 +55,28 @@ Follow these steps to set up the website:
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/madliani/reactify.git
-    cd reactify
-    ```
+```bash
+git clone https://github.com/madliani/reactify.git
+cd reactify
+```
 
 2. Install dependencies:
 
-    ```bash
-    pnpm install
-    ```
+```bash
+pnpm install
+```
 
 3. Run tests:
 
-    ```bash
-    pnpm test
-    ```
+```bash
+pnpm test
+```
 
 4. Build the website:
 
-    ```bash
-    pnpm build
-    ```
+```bash
+pnpm build
+```
 
 ## Project Structure
 
