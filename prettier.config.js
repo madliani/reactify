@@ -1,4 +1,4 @@
-/** @type {import("prettier").Config & import("prettier-plugin-tailwindcss").PluginOptions} */
+/** @type {import("prettier").Config} */
 export default {
     arrowParens: "avoid",
     bracketSameLine: false,
@@ -7,7 +7,7 @@ export default {
     endOfLine: "auto",
     htmlWhitespaceSensitivity: "strict",
     objectWrap: "collapse",
-    plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+    plugins: ["prettier-plugin-astro"],
     printWidth: 80,
     proseWrap: "always",
     quoteProps: "preserve",
@@ -15,7 +15,6 @@ export default {
     singleAttributePerLine: false,
     singleQuote: false,
     tabWidth: 4,
-    tailwindStylesheet: "./src/styles/global.css",
     trailingComma: "none",
     useTabs: false
 }
