@@ -67,7 +67,7 @@ export default defineConfig([
     {
         extends: [...tsExtends],
         files: ["*.config.js"],
-        languageOptions: { ...tsLanguageOptions, parser: ts.parser },
+        languageOptions: { ...tsLanguageOptions },
         plugins: { ...tsPlugins },
         rules: { ...tsRules },
         settings: {
