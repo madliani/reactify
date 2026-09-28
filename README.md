@@ -186,7 +186,8 @@ bugfixes, or hotfixes at the same time.
 
 ## License
 
-The source code is distributed under the [Unlicense](./LICENSE.txt) license.
+The project is distributed under the [Unlicense](./LICENSE.txt) license, with
+the exception of [certain assets](./README.md#attributions).
 
 ## Attributions
 
