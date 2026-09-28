@@ -41,6 +41,8 @@ const tsRules = {
 
 const tsSettings = { "import/resolver": { typescript: true } }
 
+const webExtends = [pluginCompat.configs["flat/recommended"]]
+
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
     globalIgnores([
@@ -54,8 +56,8 @@ export default defineConfig([
     {
         extends: [
             ...tsExtends,
-            pluginAstro.configs["flat/recommended"],
-            pluginCompat.configs["flat/recommended"]
+            ...webExtends,
+            pluginAstro.configs["flat/recommended"]
         ],
         files: ["**/*.astro", "**/*.ts", "**/*.tsx"],
         languageOptions: {
