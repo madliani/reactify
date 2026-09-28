@@ -32,7 +32,7 @@ export default defineConfig([
             pluginAstro.configs["flat/recommended"],
             pluginCompat.configs["flat/recommended"]
         ],
-        files: ["*.config.js", "**/*.astro", "**/*.ts", "**/*.tsx"],
+        files: ["**/*.astro", "**/*.ts", "**/*.tsx"],
         languageOptions: {
             ecmaVersion: 2022,
             globals: globals.builtin,
@@ -58,7 +58,36 @@ export default defineConfig([
             "import/resolver": { typescript: true }
         }
     },
-    { files: ["*.config.js"], settings: { "import/resolver": { node: true } } },
+    {
+        extends: [
+            pluginJS.configs.recommended,
+            ts.configs.eslintRecommended,
+            ts.configs.strict,
+            ts.configs.stylistic,
+            pluginPerfect.configs["recommended-alphabetical"],
+            pluginImport.flatConfigs.recommended,
+            pluginImport.flatConfigs.typescript
+        ],
+        files: ["*.config.js"],
+        languageOptions: {
+            ecmaVersion: 2022,
+            globals: globals.builtin,
+            parser: ts.parser,
+            parserOptions: {
+                allowReserved: false,
+                ecmaFeatures: { globalReturn: false, impliedStrict: true }
+            },
+            sourceType: "module"
+        },
+        plugins: { "no-secrets": pluginNoSecrets },
+        rules: {
+            "import/no-named-as-default-member": "off",
+            "import/order": "off",
+            "no-secrets/no-pattern-match": "error",
+            "no-secrets/no-secrets": "error"
+        },
+        settings: { "import/resolver": { node: true, typescript: true } }
+    },
     {
         extends: [pluginJSON.configs.recommended],
         files: ["**/*.json", "**/*.jsonc"],
