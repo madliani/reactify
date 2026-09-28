@@ -29,13 +29,13 @@ export default defineConfig([
             pluginPerfect.configs["recommended-alphabetical"],
             pluginImport.flatConfigs.recommended,
             pluginImport.flatConfigs.typescript,
+            pluginAstro.configs["flat/recommended"],
             pluginCompat.configs["flat/recommended"]
         ],
-        files: ["*.config.js", "**/*.ts", "**/*.tsx"],
+        files: ["*.config.js", "**/*.astro", "**/*.ts", "**/*.tsx"],
         languageOptions: {
             ecmaVersion: 2022,
             globals: globals.builtin,
-            parser: ts.parser,
             parserOptions: {
                 allowReserved: false,
                 ecmaFeatures: {
@@ -53,7 +53,10 @@ export default defineConfig([
             "no-secrets/no-pattern-match": "error",
             "no-secrets/no-secrets": "error"
         },
-        settings: { "import/resolver": { typescript: true } }
+        settings: {
+            "import/core-modules": ["astro:transitions"],
+            "import/resolver": { typescript: true }
+        }
     },
     { files: ["*.config.js"], settings: { "import/resolver": { node: true } } },
     {
@@ -67,6 +70,5 @@ export default defineConfig([
         files: ["**/*.md"],
         language: "markdown/commonmark",
         rules: { "markdown/no-missing-label-refs": "off" }
-    },
-    { extends: [pluginAstro.configs["flat/recommended"]], files: ["*.astro"] }
+    }
 ])

@@ -12,6 +12,14 @@ function canonicalURLTemplate(pathname: string, site: undefined | URL) {
     return new URL(pathname, site)
 }
 
+function cspTemplate(csp: typeof MetadataConfig.csp) {
+    return Object.entries(csp).map(formatCSP).join("; ")
+}
+
+function descTemplate(defaultDesc: string, desc: string | undefined) {
+    return desc || defaultDesc
+}
+
 function formatCSP([directive, sourceList]: [string, string[]]) {
     const formattedDirective = directive.replace("_", "-")
     const formattedSourceList = sourceList
@@ -21,23 +29,15 @@ function formatCSP([directive, sourceList]: [string, string[]]) {
     return `${formattedDirective} ${formattedSourceList}`
 }
 
-function cspTemplate(csp: typeof MetadataConfig.csp) {
-    return Object.entries(csp).map(formatCSP).join("; ")
-}
-
-function descTemplate(defaultDesc: string, desc: string | undefined) {
-    return desc || defaultDesc
-}
-
-function titleTemplate(defaultTitle: string, title: string | undefined) {
-    return title ? `${title} | ${defaultTitle}` : defaultTitle
-}
-
 function formatViewport([attr, value]: [string, number | string]) {
     const formattedAttr = attr.replace("_", "-")
     const formattedValue = typeof value === "number" ? value.toFixed(1) : value
 
     return `${formattedAttr}=${formattedValue}`
+}
+
+function titleTemplate(defaultTitle: string, title: string | undefined) {
+    return title ? `${title} | ${defaultTitle}` : defaultTitle
 }
 
 function viewportTemplate(viewport: typeof MetadataConfig.viewport) {
