@@ -65,14 +65,6 @@ export default defineConfig([
         "package-lock.json"
     ]),
     {
-        extends: [...tsExtends, ...browserExtends],
-        files: ["**/*.ts"],
-        languageOptions: { ...tsLanguageOptions },
-        plugins: { ...tsPlugins },
-        rules: { ...tsRules },
-        settings: { ...tsSettings }
-    },
-    {
         extends: [...tsExtends],
         files: ["*.config.js"],
         languageOptions: { ...tsLanguageOptions, parser: ts.parser },
@@ -82,6 +74,14 @@ export default defineConfig([
             ...tsSettings,
             "import/resolver": { ...tsSettings["import/resolver"], node: true }
         }
+    },
+    {
+        extends: [...tsExtends, ...browserExtends],
+        files: ["**/*.ts"],
+        languageOptions: { ...tsLanguageOptions },
+        plugins: { ...tsPlugins },
+        rules: { ...tsRules },
+        settings: { ...tsSettings }
     },
     {
         extends: [pluginJSON.configs.recommended],
