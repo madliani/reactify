@@ -184,14 +184,11 @@ bugfixes, or hotfixes at the same time.
    [officially recommended](https://docs.astro.build/en/recipes/sharing-state-islands)
    by the `Astro` developers.
 
-## FAQs
-
-<details>
-<summary>Under what license is the source code distributed?</summary>
+## License
 
 The source code is distributed under the [Unlicense](./LICENSE.txt) license.
 
-</details>
+## FAQs
 
 <details>
 <summary>How do I start contributing to the project?</summary>
