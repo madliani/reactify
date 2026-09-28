@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/react"
-import { Button, Flex, Heading } from "@radix-ui/themes"
+import { Button, Heading } from "@radix-ui/themes"
 import { counterAtom, decCount, incCount } from "@react/Counter/Counter.atom"
 
 interface CounterViewProps {
@@ -11,28 +11,17 @@ interface CounterViewProps {
 
 const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     return (
-        <Flex
-            align="center"
-            direction="column"
-            gap="2"
-            justify="center"
-            wrap="nowrap"
-        >
+        <section className="flex flex-col flex-nowrap justify-center gap-4">
             <Heading
                 as="h1"
+                className="text-center"
                 data-testid="counter__heading"
                 size="9"
                 title={count.toString()}
             >
                 {count}
             </Heading>
-            <Flex
-                align="center"
-                direction="row"
-                gap="1"
-                justify="center"
-                wrap="wrap"
-            >
+            <div className="flex flex-row flex-wrap justify-center gap-2">
                 <Button onClick={inc} title="Increment" variant="solid">
                     Increment
                 </Button>
@@ -44,8 +33,8 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                 >
                     Decrement
                 </Button>
-            </Flex>
-        </Flex>
+            </div>
+        </section>
     )
 }
 
