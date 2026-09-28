@@ -65,19 +65,12 @@ export default defineConfig([
         "package-lock.json"
     ]),
     {
-        extends: [
-            ...tsExtends,
-            ...webExtends,
-            pluginAstro.configs["flat/recommended"]
-        ],
-        files: ["**/*.astro", "**/*.ts", "**/*.tsx"],
-        languageOptions: { ...webLanguageOptions },
+        extends: [...tsExtends, ...webExtends],
+        files: ["**/*.ts"],
+        languageOptions: { ...tsLanguageOptions },
         plugins: { ...tsPlugins },
         rules: { ...tsRules },
-        settings: {
-            ...tsSettings,
-            "import/core-modules": ["astro:transitions"]
-        }
+        settings: { ...tsSettings }
     },
     {
         extends: [...tsExtends],
@@ -101,5 +94,28 @@ export default defineConfig([
         files: ["**/*.md"],
         language: "markdown/commonmark",
         rules: { "markdown/no-missing-label-refs": "off" }
+    },
+    {
+        extends: [...tsExtends, ...webExtends],
+        files: ["**/*.tsx"],
+        languageOptions: { ...webLanguageOptions },
+        plugins: { ...tsPlugins },
+        rules: { ...tsRules },
+        settings: { ...tsSettings }
+    },
+    {
+        extends: [
+            ...tsExtends,
+            ...webExtends,
+            pluginAstro.configs["flat/recommended"]
+        ],
+        files: ["**/*.astro"],
+        languageOptions: { ...webLanguageOptions },
+        plugins: { ...tsPlugins },
+        rules: { ...tsRules },
+        settings: {
+            ...tsSettings,
+            "import/core-modules": ["astro:transitions"]
+        }
     }
 ])
