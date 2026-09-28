@@ -12,7 +12,7 @@ function canonicalURLTemplate(pathname: string, site: undefined | URL) {
     return new URL(pathname, site)
 }
 
-const formatCSP = ([directive, sourceList]: [string, string[]]) => {
+function formatCSP([directive, sourceList]: [string, string[]]) {
     const formattedDirective = directive.replace("_", "-")
     const formattedSourceList = sourceList
         .map(source => `'${source}'`)
@@ -33,7 +33,7 @@ function titleTemplate(defaultTitle: string, title: string | undefined) {
     return title ? `${title} | ${defaultTitle}` : defaultTitle
 }
 
-const formatViewport = ([attr, value]: [string, number | string]) => {
+function formatViewport([attr, value]: [string, number | string]) {
     const formattedAttr = attr.replace("_", "-")
     const formattedValue = typeof value === "number" ? value.toFixed(1) : value
 
