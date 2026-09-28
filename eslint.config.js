@@ -10,6 +10,37 @@ import { defineConfig, globalIgnores } from "eslint/config"
 import globals from "globals"
 import ts from "typescript-eslint"
 
+const tsExtends = [
+    pluginJS.configs.recommended,
+    ts.configs.eslintRecommended,
+    ts.configs.strict,
+    ts.configs.stylistic,
+    pluginPerfect.configs["recommended-alphabetical"],
+    pluginImport.flatConfigs.recommended,
+    pluginImport.flatConfigs.typescript
+]
+
+const tsLanguageOptions = {
+    ecmaVersion: 2022,
+    globals: globals.builtin,
+    parserOptions: {
+        allowReserved: false,
+        ecmaFeatures: { globalReturn: false, impliedStrict: true }
+    },
+    sourceType: "module"
+}
+
+const tsPlugins = { "no-secrets": pluginNoSecrets }
+
+const tsRules = {
+    "import/no-named-as-default-member": "off",
+    "import/order": "off",
+    "no-secrets/no-pattern-match": "error",
+    "no-secrets/no-secrets": "error"
+}
+
+const tsSettings = { "import/resolver": { typescript: true } }
+
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
     globalIgnores([
@@ -22,71 +53,38 @@ export default defineConfig([
     ]),
     {
         extends: [
-            pluginJS.configs.recommended,
-            ts.configs.eslintRecommended,
-            ts.configs.strict,
-            ts.configs.stylistic,
-            pluginPerfect.configs["recommended-alphabetical"],
-            pluginImport.flatConfigs.recommended,
-            pluginImport.flatConfigs.typescript,
+            ...tsExtends,
             pluginAstro.configs["flat/recommended"],
             pluginCompat.configs["flat/recommended"]
         ],
         files: ["**/*.astro", "**/*.ts", "**/*.tsx"],
         languageOptions: {
-            ecmaVersion: 2022,
-            globals: globals.builtin,
+            ...tsLanguageOptions,
             parserOptions: {
-                allowReserved: false,
+                ...tsLanguageOptions.parserOptions,
                 ecmaFeatures: {
-                    globalReturn: false,
-                    impliedStrict: true,
+                    ...tsLanguageOptions.parserOptions.ecmaFeatures,
                     jsx: true
                 }
-            },
-            sourceType: "module"
+            }
         },
-        plugins: { "no-secrets": pluginNoSecrets },
-        rules: {
-            "import/no-named-as-default-member": "off",
-            "import/order": "off",
-            "no-secrets/no-pattern-match": "error",
-            "no-secrets/no-secrets": "error"
-        },
+        plugins: { ...tsPlugins },
+        rules: { ...tsRules },
         settings: {
-            "import/core-modules": ["astro:transitions"],
-            "import/resolver": { typescript: true }
+            ...tsSettings,
+            "import/core-modules": ["astro:transitions"]
         }
     },
     {
-        extends: [
-            pluginJS.configs.recommended,
-            ts.configs.eslintRecommended,
-            ts.configs.strict,
-            ts.configs.stylistic,
-            pluginPerfect.configs["recommended-alphabetical"],
-            pluginImport.flatConfigs.recommended,
-            pluginImport.flatConfigs.typescript
-        ],
+        extends: [...tsExtends],
         files: ["*.config.js"],
-        languageOptions: {
-            ecmaVersion: 2022,
-            globals: globals.builtin,
-            parser: ts.parser,
-            parserOptions: {
-                allowReserved: false,
-                ecmaFeatures: { globalReturn: false, impliedStrict: true }
-            },
-            sourceType: "module"
-        },
-        plugins: { "no-secrets": pluginNoSecrets },
-        rules: {
-            "import/no-named-as-default-member": "off",
-            "import/order": "off",
-            "no-secrets/no-pattern-match": "error",
-            "no-secrets/no-secrets": "error"
-        },
-        settings: { "import/resolver": { node: true, typescript: true } }
+        languageOptions: { ...tsLanguageOptions, parser: ts.parser },
+        plugins: { ...tsPlugins },
+        rules: { ...tsRules },
+        settings: {
+            ...tsSettings,
+            "import/resolver": { ...tsSettings["import/resolver"], node: true }
+        }
     },
     {
         extends: [pluginJSON.configs.recommended],
