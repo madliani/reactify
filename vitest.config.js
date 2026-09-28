@@ -6,11 +6,7 @@ export default defineConfig({
     resolve: { tsconfigPaths: true },
     test: {
         ...configDefaults,
-        coverage: {
-            enabled: false,
-            provider: "v8",
-            reporter: ["html", "lcov"]
-        },
+        coverage: { enabled: true, provider: "v8", reporter: ["html", "lcov"] },
         environment: "happy-dom",
         globals: false,
         globalSetup: [],

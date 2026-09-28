@@ -103,8 +103,8 @@
         "serve": "astro dev",
         "serve:preview": "astro preview",
         "test": "vitest run",
-        "test:coverage": "vitest run --coverage",
-        "test:ui": "vitest watch --ui --coverage.enabled=true"
+        "test:coverage": "vitest run",
+        "test:ui": "vitest watch --ui"
     },
     "type": "module",
     "version": "3.3.2"
