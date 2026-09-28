@@ -188,6 +188,14 @@ bugfixes, or hotfixes at the same time.
 
 The source code is distributed under the [Unlicense](./LICENSE.txt) license.
 
+## Attributions
+
+1. In the [React logo](./assets/icons/reactify-logo.svg), painted by me, used
+   the [React logo](https://icon-icons.com/icon/react-original-logo/146374),
+   from [Icon-Icons.com](https://icon-icons.com/), painted by
+   [Julien Monty](https://icon-icons.com/authors/934-julien-monty/) and licensed
+   under the `Free for commerical use` license.
+
 ## FAQs
 
 <details>
@@ -206,11 +214,3 @@ These dependencies are necessary for other dependencies to work correctly.
 | Dependency | Purpose                                 |
 | ---------- | --------------------------------------- |
 | tslib      | Dependency for the `typescript` package |
-
-## Attributions
-
-1. In the [React logo](./assets/icons/reactify-logo.svg), painted by me, used
-   the [React logo](https://icon-icons.com/icon/react-original-logo/146374),
-   from [Icon-Icons.com](https://icon-icons.com/), painted by
-   [Julien Monty](https://icon-icons.com/authors/934-julien-monty/) and licensed
-   under the `Free for commerical use` license.
