@@ -1,3 +1,4 @@
+import { playwright } from "@vitest/browser-playwright"
 import { configDefaults, defineConfig } from "vitest/config"
 
 /** @type {import("./types/vitest").UserConfig} */
@@ -9,16 +10,24 @@ export default defineConfig({
             {
                 test: {
                     ...configDefaults,
+                    browser: {
+                        enabled: true,
+                        headless: true,
+                        instances: [
+                            { browser: "chromium" },
+                            { browser: "firefox" }
+                        ],
+                        provider: playwright()
+                    },
                     coverage: {
                         enabled: true,
                         provider: "v8",
                         reporter: ["html", "lcov"]
                     },
-                    environment: "happy-dom",
                     globals: false,
                     globalSetup: [],
                     include: ["./src/**/*.test.ts", "./src/**/*.test.tsx"],
-                    name: "reactify-node",
+                    name: "reactify-browser",
                     passWithNoTests: true,
                     reporters: ["default", "html"],
                     setupFiles: []
