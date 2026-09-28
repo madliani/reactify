@@ -17,14 +17,7 @@ export default defineConfig({
     integrations: [...integrations],
     output: "static",
     prefetch: { defaultStrategy: "tap" },
-    server: {
-        cors: true,
-        hmr: true,
-        host: true,
-        open: true,
-        port: PORT,
-        strictPort: true
-    },
+    server: { host: true, open: true, port: PORT },
     site: "https://madliani-reactify.vercel.app/",
 
     vite: {
