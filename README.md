@@ -153,6 +153,8 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `tsconfig.json`: a main `TypeScript` configuration file
 - `tsconfig.test.json`: a `TypeScript` configuration file for the tests
 - `tsdown.config.js`: a JavaScript-based `tsdown` configuration file
+- `vitest.browser.js`: a JavaScript-based `Vitest` configuration file for
+  running tests in the browsers
 - `vitest.config.js`: a JavaScript-based `Vitest` configuration file
 
 ## Branches
