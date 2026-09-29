@@ -48,6 +48,7 @@ public/
 
 # JavaScript-based configuration files
 *.config.js
+vitest.browser.js
 
 # TypeScript-based configuration files
 *.config.ts
