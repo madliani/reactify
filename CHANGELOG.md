@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.3] - 2026-09-29
+
+## Added
+
+- The [Browser Mode](https://vitest.dev/guide/browser/) of `Vitest`
+
+### Fixed
+
+- Project configuration
+- The `README.md` file
+- The settings for Content Security Policy (CSP) was fixed
+
+### Changed
+
+- The `Counter` component was refactored
+- The homepage screenshot was updated
+- The homepage was refactored
+
 ## [3.3.2] - 2026-09-27
 
 ### Fixed
