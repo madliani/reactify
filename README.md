@@ -66,7 +66,7 @@ cd reactify
 pnpm install
 ```
 
-3. Install dependencies for running tests in browser mode (optional):
+3. Install browsers for running tests in browsers (optional):
 
 ```bash
 pnpm exec playwright install
@@ -78,7 +78,7 @@ pnpm exec playwright install
 pnpm test
 ```
 
-5. Run tests in browser mode (optional):
+5. Run tests in the browsers (optional):
 
 ```bash
 pnpm test:browser
@@ -90,8 +90,8 @@ pnpm test:browser
 pnpm build
 ```
 
-**Note**: The optional steps are needed if you want to run the tests in browser
-mode as well.
+**Note**: The optional steps are needed if you want to run the tests in the
+browsers as well.
 
 ## Project Structure
 
