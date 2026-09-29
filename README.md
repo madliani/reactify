@@ -66,7 +66,7 @@ cd reactify
 pnpm install
 ```
 
-3. Install browsers for running tests in browsers (optional):
+3. Install browsers for running tests in the browser (optional):
 
 ```bash
 pnpm exec playwright install
@@ -78,7 +78,7 @@ pnpm exec playwright install
 pnpm test
 ```
 
-5. Run tests in the browsers (optional):
+5. Run tests in the browser (optional):
 
 ```bash
 pnpm test:browser
@@ -154,7 +154,7 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `tsconfig.test.json`: a `TypeScript` configuration file for the tests
 - `tsdown.config.js`: a JavaScript-based `tsdown` configuration file
 - `vitest.browser.js`: a JavaScript-based `Vitest` configuration file for
-  running tests in the browsers
+  running tests in the browser
 - `vitest.config.js`: a JavaScript-based `Vitest` configuration file
 
 ## Branches
