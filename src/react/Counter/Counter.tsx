@@ -22,7 +22,12 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                 {count}
             </Heading>
             <div className="flex flex-row flex-wrap justify-center gap-2">
-                <Button onClick={inc} title="Increment" variant="solid">
+                <Button
+                    data-testid="counter__inc-btn"
+                    onClick={inc}
+                    title="Increment"
+                    variant="solid"
+                >
                     Increment
                 </Button>
                 <Button
