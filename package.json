@@ -103,6 +103,7 @@
         "check:spell": "cspell ./",
         "serve": "astro dev",
         "serve:preview": "astro preview",
+        "telemetry:disable": "astro telemetry disable",
         "test": "vitest run",
         "test:browser": "vitest run --config=./vitest.browser.js --browser",
         "test:coverage": "vitest run",
