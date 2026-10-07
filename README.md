@@ -92,7 +92,7 @@ pnpm build
 ```
 
 **Note**: The optional steps are needed if you want to run the tests in the
-browsers as well.
+[browser](https://vitest.dev/guide/browser) as well.
 
 ## Project Structure
 
