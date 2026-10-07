@@ -4,7 +4,7 @@ import { describe, expect, test } from "vitest"
 import { Counter } from "./Counter"
 
 describe("Counter", () => {
-    test("loads and displays Counters's heading", async () => {
+    test("loads and displays heading", async () => {
         render(<Counter />)
 
         const countEl = await screen.findByTestId("counter__heading")
