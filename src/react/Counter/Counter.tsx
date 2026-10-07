@@ -31,6 +31,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                     Increment
                 </Button>
                 <Button
+                    data-testid="counter__dec-btn"
                     disabled={decIsDisabled}
                     onClick={dec}
                     title="Decrement"
