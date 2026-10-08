@@ -41,7 +41,7 @@ describe("Counter", () => {
         expect(count).toBe(1)
     })
 
-    test("should not trigger decrement", async () => {
+    test("shouldn't trigger decrement", async () => {
         const user = userEvent.setup()
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
         const countEl = await screen.findByTestId("counter__heading")
