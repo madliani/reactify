@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.5] - 2026-10-08
+
+### Fixed
+
+- Project configuration
+- The `README.md` file
+
+### Changed
+
+- Tests for the `Counter` component
+
 ## [3.3.4] - 2026-10-07
 
 ### Fixed

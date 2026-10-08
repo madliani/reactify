@@ -111,5 +111,5 @@
         "test:ui": "vitest watch --ui"
     },
     "type": "module",
-    "version": "3.3.4"
+    "version": "3.3.5"
 }
