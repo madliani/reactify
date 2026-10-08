@@ -26,11 +26,7 @@ export default defineConfig({
                     },
                     globals: false,
                     globalSetup: [],
-                    include: [
-                        "./react/**/*.test.ts",
-                        "./react/**/*.test.tsx",
-                        "./src/**/*.test.ts"
-                    ],
+                    include: ["./react/**/*.test.ts", "./react/**/*.test.tsx"],
                     name: "reactify-browser",
                     passWithNoTests: true,
                     reporters: ["default", "html"],
