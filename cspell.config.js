@@ -14,7 +14,6 @@ const englishWords = [
     "commonmark",
     "fontsource",
     "hotfixes",
-    "lightningcss",
     "madliani",
     "nanostores",
     "reactify",
