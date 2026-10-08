@@ -106,7 +106,7 @@
         "serve:preview": "astro preview",
         "telemetry:disable": "astro telemetry disable",
         "test": "vitest run",
-        "test:browser": "vitest run --config=./vitest.browser.js --browser",
+        "test:browser": "vitest run --config=./vitest.browser.js",
         "test:coverage": "vitest run",
         "test:ui": "vitest watch --ui"
     },
