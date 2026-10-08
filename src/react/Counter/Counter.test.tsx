@@ -24,7 +24,7 @@ describe("Counter", () => {
         expect(decBtnEl).toBeDisabled()
     })
 
-    test("trigger increment when clicking increment button", async () => {
+    test("triggers increment when clicking increment button is clicked", async () => {
         const user = userEvent.setup()
         const incBtnEl = await screen.findByTestId("counter__inc-btn")
         const countEl = await screen.findByTestId("counter__heading")
