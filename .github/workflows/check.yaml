@@ -1,0 +1,44 @@
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7
+            - name: Setup pnpm and Node.js
+              uses: pnpm/setup@v3
+              with:
+                  cache: false
+                  node-version-file: .node-version
+                  version: 12
+            - name: Install dependencies
+              run: pnpm ci
+            - name: Lint
+              run: |
+                  pnpm check:lint
+                  pnpm check:spell
+    test:
+        needs: [lint]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7
+            - name: Setup pnpm and Node.js
+              uses: pnpm/setup@v3
+              with:
+                  cache: false
+                  node-version-file: .node-version
+                  version: 12
+            - name: Install dependencies
+              run: pnpm ci
+            - name: Install browsers for running tests in the browser
+              run: pnpm exec playwright install
+            - name: Test
+              run: |
+                  pnpm test pnpm test:browser
+        strategy:
+            matrix:
+                os: [ubuntu-latest, windows-latest, macos-latest]
+name: Check
+"on":
+    push:
+        branches: [stable, unstable]

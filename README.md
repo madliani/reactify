@@ -99,6 +99,9 @@ pnpm build
 **Note:** The website is a `React`-based single-page application (SPA), but it
 uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 
+- `.github/`: a directory containing files for `GitHub`
+    - `.github/workflows/`: a directory containing workflow files for
+      `GitHub Actions`
 - `assets/`: a directory containing assets for the `README.md` file
     - `assets/icons/`: a directory containing icons for the `README.md` file
     - `assets/images/`: a directory containing images for the `README.md`
