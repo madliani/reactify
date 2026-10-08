@@ -54,6 +54,7 @@ vitest.browser.js
 *.config.ts
 
 # TypeScript-based source files
-src/**/*.ts
-src/react/**/*.tsx
+react/**/*.ts
+react/**/*.tsx
+astro/**/*.ts
 types/**/*.d.ts
