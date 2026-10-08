@@ -19,10 +19,11 @@ describe("Counter", () => {
     })
 
     test("trigger increment when clicking increment button", async () => {
+        const user = userEvent.setup()
         const incBtnEl = await screen.findByTestId("counter__inc-btn")
         const countEl = await screen.findByTestId("counter__heading")
 
-        await userEvent.click(incBtnEl)
+        await user.click(incBtnEl)
 
         const countStr = countEl.textContent
         const count = parseInt(countStr)
@@ -31,10 +32,11 @@ describe("Counter", () => {
     })
 
     test("trigger decrement when clicking decrement button", async () => {
+        const user = userEvent.setup()
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
         const countEl = await screen.findByTestId("counter__heading")
 
-        await userEvent.click(decBtnEl)
+        await user.click(decBtnEl)
 
         const countStr = countEl.textContent
         const count = parseInt(countStr)
