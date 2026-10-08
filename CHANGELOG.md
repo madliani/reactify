@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.6] - 2026-10-08
+
+### Fixed
+
+- Project configuration
+- The `CHANGELOG.md` file
+- The `README.md` file
+
+### Changed
+
+- The `Counter` component was moved to the `react/components/` directory
+- The `react/` directory was moved to the root directory
+- The `src/` directory was renamed to `astro/`
+
 ## [3.3.5] - 2026-10-08
 
 ### Fixed
