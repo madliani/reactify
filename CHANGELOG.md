@@ -102,7 +102,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- The structure of the `react` directory was made more simple
+- The structure of the `react/` directory was made more simple
 
 ## [3.1.0] - 2026-09-20
 
