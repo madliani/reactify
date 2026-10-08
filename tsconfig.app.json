@@ -41,6 +41,7 @@
         "${configDir}/src/**/*.test.tsx",
         "${configDir}/src/**/*.ts",
         "${configDir}/src/**/*.tsx",
-        "${configDir}/tests/setup.ts"
+        "${configDir}/tests/setup.ts",
+        "${configDir}/types/vitest.d.ts"
     ]
 }
