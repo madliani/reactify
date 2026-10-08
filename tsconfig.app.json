@@ -19,7 +19,13 @@
             "@react/*": ["${configDir}/src/react/*"],
             "@src/*": ["${configDir}/src/*"]
         },
-        "types": ["astro/astro-jsx", "astro/client", "react", "react-dom"]
+        "types": [
+            "@testing-library/jest-dom",
+            "astro/astro-jsx",
+            "astro/client",
+            "react-dom",
+            "react"
+        ]
     },
     "exclude": [
         "${configDir}/.vitest/",
@@ -34,6 +40,7 @@
         "${configDir}/src/**/*.test.ts",
         "${configDir}/src/**/*.test.tsx",
         "${configDir}/src/**/*.ts",
-        "${configDir}/src/**/*.tsx"
+        "${configDir}/src/**/*.tsx",
+        "${configDir}/tests/setup.ts"
     ]
 }

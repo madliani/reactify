@@ -18,6 +18,12 @@ describe("Counter", () => {
         expect(count).toBe(0)
     })
 
+    test("loads and displays disabled decrement button", async () => {
+        const decBtnEl = await screen.findByTestId("counter__dec-btn")
+
+        expect(decBtnEl).toBeDisabled()
+    })
+
     test("trigger increment when clicking increment button", async () => {
         const user = userEvent.setup()
         const incBtnEl = await screen.findByTestId("counter__inc-btn")

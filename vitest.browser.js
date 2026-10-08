@@ -30,7 +30,7 @@ export default defineConfig({
                     name: "reactify-browser",
                     passWithNoTests: true,
                     reporters: ["default", "html"],
-                    setupFiles: []
+                    setupFiles: ["./tests/setup.ts"]
                 }
             }
         ]
