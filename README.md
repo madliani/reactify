@@ -5,7 +5,7 @@
         alt="Reactify logo"
         aria-label="Reactify logo"
         height="96px"
-        src="./assets/icons/reactify-logo.svg"
+        astro="./assets/icons/reactify-logo.svg"
         title="Reactify logo"
         width="96px"
     />
@@ -15,14 +15,14 @@
 ## Tech Stack
 
 <div align="center">
-    <img alt="Astro" src="https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white" title="Astro" />
-    <img alt="Node.js" src="https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" title="Node.js" />
-    <img alt="pnpm" src="https://img.shields.io/badge/pnpm-F69220.svg?style=for-the-badge&logo=pnpm&logoColor=white" title="pnpm" />
-    <img alt="Radix UI" src="https://img.shields.io/badge/Radix%20UI-161618.svg?style=for-the-badge&logo=Radix-UI&logoColor=white" title="Radix UI">
-    <img alt="React" src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black" title="React" />
-    <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white" title="Tailwind CSS">
-    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white" title="TypeScript" />
-    <img alt="Vitest" src="https://img.shields.io/badge/Vitest-6E9F18.svg?style=for-the-badge&logo=Vitest&logoColor=white" title="Vitest" />
+    <img alt="Astro" astro="https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white" title="Astro" />
+    <img alt="Node.js" astro="https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" title="Node.js" />
+    <img alt="pnpm" astro="https://img.shields.io/badge/pnpm-F69220.svg?style=for-the-badge&logo=pnpm&logoColor=white" title="pnpm" />
+    <img alt="Radix UI" astro="https://img.shields.io/badge/Radix%20UI-161618.svg?style=for-the-badge&logo=Radix-UI&logoColor=white" title="Radix UI">
+    <img alt="React" astro="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black" title="React" />
+    <img alt="Tailwind CSS" astro="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white" title="Tailwind CSS">
+    <img alt="TypeScript" astro="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white" title="TypeScript" />
+    <img alt="Vitest" astro="https://img.shields.io/badge/Vitest-6E9F18.svg?style=for-the-badge&logo=Vitest&logoColor=white" title="Vitest" />
 </div>
 
 ## Overview
@@ -37,7 +37,7 @@ This is a starter kit for React.
 
 <div align="center">
     <figure>
-        <img alt="A screenshot of the homepage" src="./assets/images/reactify-homepage.png" title="A screenshot of the homepage">
+        <img alt="A screenshot of the homepage" astro="./assets/images/reactify-homepage.png" title="A screenshot of the homepage">
         <figcaption>A screenshot of the homepage</figcaption>
     </figure>
 </div>
@@ -102,26 +102,28 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `assets/`: a directory containing assets for the `README.md` file
     - `assets/icons/`: a directory containing icons for the `README.md` file
     - `assets/images/`: a directory containing images for the `README.md`
+- `astro/`: a directory containing source files of the website
+    - `astro/blocks/`: a directory containing `Astro`-based blocks of the
+      website
+        - `astro/blocks/metadata.astro`: a file containing metadata, which makes
+          the website more SEO-friendly
+    - `astro/components/`: a directory containing `Astro`-based components of
+      the website
+    - `astro/configurations/`: a directory containing configuration files for
+      the website
+        - `astro/configurations/metadata.config.json`: a configuration file for
+          the `metadata` block
+    - `astro/layouts/`: a directory containing `Astro`-based layouts of the
+      website
+    - `astro/pages/`: a directory containing `Astro`-based pages of the website
+    - `astro/templates/`: a directory containing `Astro`-based templates for the
+      pages of the website
 - `public/`: a directory containing assets for the website
     - `assets/icons/`: a directory containing icons for the website
     - `assets/images`: a directory containing icons for the website
-- `src/`: a directory containing source files of the website
-    - `src/blocks/`: a directory containing `Astro`-based blocks of the website
-        - `src/blocks/metadata.astro`: a file containing metadata, which makes
-          the website more SEO-friendly
-    - `src/components/`: a directory containing `Astro`-based components of the
-      website
-    - `src/configurations/`: a directory containing configuration files for the
-      website
-        - `src/configurations/metadata.config.json`: a configuration file for
-          the `metadata` block
-    - `src/layouts/`: a directory containing `Astro`-based layouts of the
-      website
-    - `src/pages/`: a directory containing `Astro`-based pages of the website
-    - `src/react/`: a directory containing `React`-based components of the web
-      app
-    - `src/templates/`: a directory containing `Astro`-based templates for the
-      pages of the website
+- `react/`: a directory containing `React`-based components of the web app
+    - `react/components/`: a directory containing `React`-based components of
+      the web app
 - `tests/`: a directory containing setup files for the tests
     - `tests/setup.ts`: a main setup file for the tests
 - `types/`: a directory containing type declarations for the configuration files
