@@ -21,6 +21,7 @@ export default defineConfig({
                     name: "reactify-node",
                     passWithNoTests: true,
                     reporters: ["default", "html"],
+                    restoreMocks: true,
                     setupFiles: ["./tests/setup.ts"]
                 }
             }

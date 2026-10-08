@@ -1,8 +1,11 @@
+import { decCount, incCount } from "@react/Counter/Counter.atom"
 import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import { beforeAll, describe, expect, test } from "vitest"
+import { beforeAll, describe, expect, test, vi } from "vitest"
 
 import { Counter } from "./Counter"
+
+vi.mock(import("@react/Counter/Counter.atom"), { spy: true })
 
 describe("Counter", () => {
     beforeAll(() => {
@@ -34,6 +37,7 @@ describe("Counter", () => {
         const countStr = countEl.textContent
         const count = parseInt(countStr)
 
+        expect(incCount).toHaveBeenCalledOnce()
         expect(count).toBe(1)
     })
 
@@ -47,6 +51,7 @@ describe("Counter", () => {
         const countStr = countEl.textContent
         const count = parseInt(countStr)
 
+        expect(decCount).toHaveBeenCalledOnce()
         expect(count).toBe(0)
     })
 })
