@@ -19,14 +19,15 @@ export default defineConfig({
     prefetch: { defaultStrategy: "tap" },
     server: { host: true, open: true, port: PORT },
     site: "https://madliani-reactify.vercel.app/",
+    srcDir: "./astro/",
 
     vite: {
         css: { transformer: "postcss" },
         plugins: [...vitePlugins],
         resolve: {
             alias: {
-                "@react": path.resolve(import.meta.dirname, "./react/"),
-                "@src": path.resolve(import.meta.dirname, "./src/")
+                "@astro": path.resolve(import.meta.dirname, "./astro/"),
+                "@react": path.resolve(import.meta.dirname, "./react/")
             }
         }
     }

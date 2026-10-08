@@ -20,7 +20,7 @@ export default defineConfig({
                     include: [
                         "./react/**/*.test.ts",
                         "./react/**/*.test.tsx",
-                        "./src/**/*.test.ts"
+                        "./astro/**/*.test.ts"
                     ],
                     name: "reactify-node",
                     passWithNoTests: true,

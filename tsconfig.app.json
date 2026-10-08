@@ -16,8 +16,8 @@
         ],
         "noEmit": false,
         "paths": {
-            "@react/*": ["${configDir}/react/*"],
-            "@src/*": ["${configDir}/src/*"]
+            "@astro/*": ["${configDir}/astro/*"],
+            "@react/*": ["${configDir}/react/*"]
         },
         "types": [
             "@testing-library/jest-dom",
@@ -40,9 +40,9 @@
         "${configDir}/react/**/*.test.tsx",
         "${configDir}/react/**/*.ts",
         "${configDir}/react/**/*.tsx",
-        "${configDir}/src/**/*.astro",
-        "${configDir}/src/**/*.test.ts",
-        "${configDir}/src/**/*.ts",
+        "${configDir}/astro/**/*.astro",
+        "${configDir}/astro/**/*.test.ts",
+        "${configDir}/astro/**/*.ts",
         "${configDir}/tests/setup.ts",
         "${configDir}/types/vitest.d.ts"
     ]
