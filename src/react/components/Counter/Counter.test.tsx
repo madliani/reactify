@@ -1,11 +1,11 @@
-import { decCount, incCount } from "@react/Counter/Counter.atom"
+import { decCount, incCount } from "@react/components/Counter/Counter.atom"
 import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { beforeAll, describe, expect, test, vi } from "vitest"
 
 import { Counter } from "./Counter"
 
-vi.mock(import("@react/Counter/Counter.atom"), { spy: true })
+vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
 describe("Counter", () => {
     beforeAll(() => {

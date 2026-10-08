@@ -1,6 +1,10 @@
 import { useStore } from "@nanostores/react"
 import { Button, Heading } from "@radix-ui/themes"
-import { counterAtom, decCount, incCount } from "@react/Counter/Counter.atom"
+import {
+    counterAtom,
+    decCount,
+    incCount
+} from "@react/components/Counter/Counter.atom"
 
 interface CounterViewProps {
     count: number
