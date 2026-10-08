@@ -57,4 +57,5 @@ vitest.browser.js
 react/**/*.ts
 react/**/*.tsx
 astro/**/*.ts
+tests/**/*.ts
 types/**/*.d.ts
