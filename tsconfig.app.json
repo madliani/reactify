@@ -16,7 +16,7 @@
         ],
         "noEmit": false,
         "paths": {
-            "@react/*": ["${configDir}/src/react/*"],
+            "@react/*": ["${configDir}/react/*"],
             "@src/*": ["${configDir}/src/*"]
         },
         "types": [
@@ -36,11 +36,13 @@
     "extends": "./tsconfig.base.json",
     "include": [
         "${configDir}/.astro/types.d.ts",
+        "${configDir}/react/**/*.test.ts",
+        "${configDir}/react/**/*.test.tsx",
+        "${configDir}/react/**/*.ts",
+        "${configDir}/react/**/*.tsx",
         "${configDir}/src/**/*.astro",
         "${configDir}/src/**/*.test.ts",
-        "${configDir}/src/**/*.test.tsx",
         "${configDir}/src/**/*.ts",
-        "${configDir}/src/**/*.tsx",
         "${configDir}/tests/setup.ts",
         "${configDir}/types/vitest.d.ts"
     ]

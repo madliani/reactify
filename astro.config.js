@@ -25,7 +25,7 @@ export default defineConfig({
         plugins: [...vitePlugins],
         resolve: {
             alias: {
-                "@react": path.resolve(import.meta.dirname, "./src/react/"),
+                "@react": path.resolve(import.meta.dirname, "./react/"),
                 "@src": path.resolve(import.meta.dirname, "./src/")
             }
         }
