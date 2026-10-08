@@ -122,6 +122,8 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
       app
     - `src/templates/`: a directory containing `Astro`-based templates for the
       pages of the website
+- `tests/`: a directory containing setup files for the tests
+    - `tests/setup.ts`: a main setup file for the tests
 - `types/`: a directory containing type declarations for the configuration files
     - `types/vitest.ts`: a file containing type declarations for the `Vitest`
       configuration file
