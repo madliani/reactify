@@ -94,3 +94,5 @@ name: Check stable
 "on":
     push:
         branches: [stable]
+    pull_request:
+        branches: [stable]
