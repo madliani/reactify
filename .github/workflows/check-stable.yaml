@@ -41,9 +41,29 @@ jobs:
             - name: Disable Astro telemetry collection
               run: pnpm telemetry:disable
             - name: Test
-              run: |
-                  pnpm test
-                  pnpm test:browser
+              run: pnpm test
+    browser-test:
+        needs: [lint, test]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7
+              with:
+                  ref: "stable"
+            - name: Setup pnpm and Node.js
+              uses: pnpm/setup@v3
+              with:
+                  cache: false
+                  node-version-file: .node-version
+                  version: 12
+            - name: Install dependencies
+              run: pnpm ci
+            - name: Install browsers for running tests in the browser
+              run: pnpm exec playwright install
+            - name: Disable Astro telemetry collection
+              run: pnpm telemetry:disable
+            - name: Test
+              run: pnpm test:browser
         strategy:
             matrix:
                 os: [ubuntu-latest, windows-latest, macos-latest]
