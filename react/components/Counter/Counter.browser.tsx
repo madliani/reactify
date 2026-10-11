@@ -33,14 +33,6 @@ describe("Counter", () => {
         await expect.element(countEl).toBeVisible()
     })
 
-    test("should trigger increment hook", async () => {
-        const { act, result } = await renderHook(() => useCounterEffect())
-
-        await act(() => result.current.inc())
-
-        expect(result.current.count).toBe(1)
-    })
-
     test("shouldn't trigger decrement", async () => {
         const screen = await render(<Counter />)
 
@@ -50,6 +42,16 @@ describe("Counter", () => {
         await decBtnEl.click()
 
         await expect.element(countEl).toBeVisible()
+    })
+})
+
+describe("Counter hooks", () => {
+    test("should trigger increment hook", async () => {
+        const { act, result } = await renderHook(() => useCounterEffect())
+
+        await act(() => result.current.inc())
+
+        expect(result.current.count).toBe(1)
     })
 
     test("shouldn't trigger decrement hook", async () => {
