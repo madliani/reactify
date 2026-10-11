@@ -68,7 +68,7 @@ jobs:
             matrix:
                 os: [ubuntu-latest, windows-latest, macos-latest]
     build:
-        needs: [lint]
+        needs: [lint, test, browser-test]
         runs-on: ${{ matrix.os }}
         steps:
             - name: Checkout
