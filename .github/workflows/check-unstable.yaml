@@ -94,3 +94,5 @@ name: Check unstable
 "on":
     push:
         branches: [unstable]
+    pull_request:
+        branches: [unstable]
