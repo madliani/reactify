@@ -40,7 +40,7 @@ All notable changes to this project will be documented in this file.
 
 ## [3.3.3] - 2026-09-29
 
-## Added
+### Added
 
 - The [Browser Mode](https://vitest.dev/guide/browser/) of `Vitest`
 
@@ -70,7 +70,7 @@ All notable changes to this project will be documented in this file.
 
 ## [3.3.0] - 2026-09-27
 
-## Added
+### Added
 
 - The `Tailwind CSS` framework
 
