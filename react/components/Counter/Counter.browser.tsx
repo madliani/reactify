@@ -10,7 +10,7 @@ describe("Counter", () => {
     test("should render heading", async () => {
         const screen = await render(<Counter />)
 
-        const countEl = screen.getByRole("heading", { name: /^\d+$/ })
+        const countEl = await screen.getByRole("heading", { name: /^\d+$/ })
 
         expect.element(countEl).toBe(0)
     })
@@ -18,7 +18,7 @@ describe("Counter", () => {
     test("should render disabled decrement button", async () => {
         const screen = await render(<Counter />)
 
-        const decBtnEl = screen.getByRole("button", { name: "Decrement" })
+        const decBtnEl = await screen.getByRole("button", { name: "Decrement" })
 
         expect.element(decBtnEl).toBeDisabled()
     })
@@ -26,8 +26,8 @@ describe("Counter", () => {
     test("should trigger increment", async () => {
         const screen = await render(<Counter />)
 
-        const incBtnEl = screen.getByRole("button", { name: "Increment" })
-        const countEl = screen.getByRole("heading", { name: /^\d+$/ })
+        const incBtnEl = await screen.getByRole("button", { name: "Increment" })
+        const countEl = await screen.getByRole("heading", { name: /^\d+$/ })
 
         await incBtnEl.click()
 
@@ -38,8 +38,8 @@ describe("Counter", () => {
     test("shouldn't trigger decrement", async () => {
         const screen = await render(<Counter />)
 
-        const decBtnEl = screen.getByRole("button", { name: "Decrement" })
-        const countEl = screen.getByRole("heading", { name: /^\d+$/ })
+        const decBtnEl = await screen.getByRole("button", { name: "Decrement" })
+        const countEl = await screen.getByRole("heading", { name: /^\d+$/ })
 
         await decBtnEl.click()
 
