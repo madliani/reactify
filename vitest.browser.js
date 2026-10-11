@@ -34,7 +34,7 @@ export default defineConfig({
                     passWithNoTests: true,
                     reporters: ["default", "html"],
                     restoreMocks: true,
-                    setupFiles: ["./react/tests/setup.ts"]
+                    setupFiles: ["./react/tests/browser-setup.ts"]
                 }
             }
         ]
