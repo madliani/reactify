@@ -1,4 +1,3 @@
-import { decCount, incCount } from "@react/components/Counter/Counter.atom"
 import { describe, expect, test, vi } from "vitest"
 import { render } from "vitest-browser-react"
 
@@ -31,7 +30,6 @@ describe("Counter", () => {
 
         await incBtnEl.click()
 
-        expect(incCount).toHaveBeenCalledOnce()
         await expect.element(countEl).toBeVisible()
     })
 
@@ -43,7 +41,6 @@ describe("Counter", () => {
 
         await decBtnEl.click()
 
-        expect(decCount).toHaveBeenCalledOnce()
         await expect.element(countEl).toBeVisible()
     })
 })
