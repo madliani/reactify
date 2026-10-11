@@ -4,6 +4,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v7
+              with:
+                  ref: "stable"
             - name: Setup pnpm and Node.js
               uses: pnpm/setup@v3
               with:
@@ -24,6 +26,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v7
+              with:
+                  ref: "stable"
             - name: Setup pnpm and Node.js
               uses: pnpm/setup@v3
               with:
@@ -45,4 +49,4 @@ jobs:
 name: Check
 "on":
     push:
-        branches: [stable, unstable]
+        branches: [stable]
