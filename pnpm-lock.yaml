@@ -32,6 +32,9 @@ importers:
       astro:
         specifier: 7.3.8
         version: 7.3.8(@types/node@26.6.5)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.1)
+      pathe:
+        specifier: 2.0.3
+        version: 2.0.3
       react:
         specifier: 19.3.0
         version: 19.3.0

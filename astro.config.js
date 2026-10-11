@@ -2,7 +2,7 @@ import reactIntegration from "@astrojs/react"
 import sitemapIntegration from "@astrojs/sitemap"
 import vitePluginTW from "@tailwindcss/vite"
 import { defineConfig } from "astro/config"
-import path from "node:path"
+import pathe from "pathe"
 
 const PORT = 4321
 
@@ -26,8 +26,8 @@ export default defineConfig({
         plugins: [...vitePlugins],
         resolve: {
             alias: {
-                "@astro": path.resolve(import.meta.dirname, "./astro/"),
-                "@react": path.resolve(import.meta.dirname, "./react/")
+                "@astro": pathe.resolve(import.meta.dirname, "./astro/"),
+                "@react": pathe.resolve(import.meta.dirname, "./react/")
             }
         }
     }
