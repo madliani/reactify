@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.7] - 2026-10-11
+
+### Added
+
+- The workflows for `GitHub Actions`
+
+### Fixed
+
+- Project configuration
+- The `CHANGELOG.md` file
+- The `README.md` file
+
 ## [3.3.6] - 2026-10-08
 
 ### Fixed
