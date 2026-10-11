@@ -6,7 +6,7 @@ import { Counter, useCounterEffect } from "./Counter"
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
 describe("Counter", () => {
-    test("should render heading", async () => {
+    test("should render count", async () => {
         const screen = await render(<Counter />)
 
         const countEl = screen.getByRole("heading", { name: "0" })
@@ -14,7 +14,7 @@ describe("Counter", () => {
         await expect.element(countEl).toBeVisible()
     })
 
-    test("should render disabled decrement button", async () => {
+    test("should render disabled decrementing button", async () => {
         const screen = await render(<Counter />)
 
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
@@ -22,7 +22,7 @@ describe("Counter", () => {
         await expect.element(decBtnEl).toBeDisabled()
     })
 
-    test("should trigger increment", async () => {
+    test("should trigger incrementing", async () => {
         const screen = await render(<Counter />)
 
         const incBtnEl = screen.getByRole("button", { name: "Increment" })
@@ -33,7 +33,7 @@ describe("Counter", () => {
         await expect.element(countEl).toBeVisible()
     })
 
-    test("shouldn't trigger decrement", async () => {
+    test("shouldn't trigger decrementing", async () => {
         const screen = await render(<Counter />)
 
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
@@ -46,7 +46,7 @@ describe("Counter", () => {
 })
 
 describe("Counter hooks", () => {
-    test("should trigger increment hook", async () => {
+    test("should trigger incrementing hook", async () => {
         const { act, result } = await renderHook(() => useCounterEffect())
 
         await act(() => result.current.inc())
@@ -54,7 +54,7 @@ describe("Counter hooks", () => {
         expect(result.current.count).toBe(1)
     })
 
-    test("shouldn't trigger decrement hook", async () => {
+    test("shouldn't trigger decrementing hook", async () => {
         const { act, result } = await renderHook(() => useCounterEffect())
 
         await act(() => result.current.dec())
