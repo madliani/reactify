@@ -10,9 +10,9 @@ describe("Counter", () => {
     test("should render heading", async () => {
         const screen = await render(<Counter />)
 
-        const countEl = screen.getByRole("heading", { name: /^\d+$/ })
+        const countEl = screen.getByRole("heading", { name: "0" })
 
-        await expect.element(countEl).toBe(0)
+        await expect.element(countEl).toBeVisible()
     })
 
     test("should render disabled decrement button", async () => {
@@ -27,23 +27,23 @@ describe("Counter", () => {
         const screen = await render(<Counter />)
 
         const incBtnEl = screen.getByRole("button", { name: "Increment" })
-        const countEl = screen.getByRole("heading", { name: /^\d+$/ })
+        const countEl = screen.getByRole("heading", { name: "1" })
 
         await incBtnEl.click()
 
         expect(incCount).toHaveBeenCalledOnce()
-        await expect.element(countEl).toBe(1)
+        await expect.element(countEl).toBeVisible()
     })
 
     test("shouldn't trigger decrement", async () => {
         const screen = await render(<Counter />)
 
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
-        const countEl = screen.getByRole("heading", { name: /^\d+$/ })
+        const countEl = screen.getByRole("heading", { name: "0" })
 
         await decBtnEl.click()
 
         expect(decCount).toHaveBeenCalledOnce()
-        await expect.element(countEl).toBe(0)
+        await expect.element(countEl).toBeVisible()
     })
 })
