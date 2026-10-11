@@ -85,7 +85,7 @@ jobs:
               run: pnpm ci
             - name: Disable telemetry collection by Astro
               run: pnpm telemetry:disable
-            - name: Lint
+            - name: Build
               run: pnpm build
         strategy:
             matrix:
