@@ -46,7 +46,7 @@ jobs:
         strategy:
             matrix:
                 os: [ubuntu-latest, windows-latest, macos-latest]
-name: Check
+name: Check unstable
 "on":
     push:
         branches: [unstable]
