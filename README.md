@@ -103,9 +103,9 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
     - `.github/workflows/`: a directory containing workflow files for
       `GitHub Actions`
         - `.github/workflows/check-stable.yaml`: a workflow file for checking
-          the stable branch
+          the `stable` branch
         - `.github/workflows/check-unstable.yaml`: a workflow file for checking
-          the unstable branch
+          the `unstable` branch
 - `assets/`: a directory containing assets for the `README.md` file
     - `assets/icons/`: a directory containing icons for the `README.md` file
     - `assets/images/`: a directory containing images for the `README.md`
