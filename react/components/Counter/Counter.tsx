@@ -71,4 +71,4 @@ const Counter = () => {
     )
 }
 
-export { Counter, counterAtom }
+export { Counter, counterAtom, useCounterEffect }

@@ -1,7 +1,7 @@
 import { describe, expect, test, vi } from "vitest"
-import { render } from "vitest-browser-react"
+import { render, renderHook } from "vitest-browser-react"
 
-import { Counter } from "./Counter"
+import { Counter, useCounterEffect } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
@@ -33,6 +33,14 @@ describe("Counter", () => {
         await expect.element(countEl).toBeVisible()
     })
 
+    test("should trigger increment hook", async () => {
+        const { act, result } = await renderHook(() => useCounterEffect())
+
+        await act(() => result.current.inc())
+
+        expect(result.current.count).toBe(1)
+    })
+
     test("shouldn't trigger decrement", async () => {
         const screen = await render(<Counter />)
 
@@ -42,5 +50,13 @@ describe("Counter", () => {
         await decBtnEl.click()
 
         await expect.element(countEl).toBeVisible()
+    })
+
+    test("shouldn't trigger decrement hook", async () => {
+        const { act, result } = await renderHook(() => useCounterEffect())
+
+        await act(() => result.current.dec())
+
+        expect(result.current.count).toBe(0)
     })
 })
