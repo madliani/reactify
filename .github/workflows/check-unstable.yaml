@@ -14,7 +14,7 @@ jobs:
                   version: 12
             - name: Install dependencies
               run: pnpm ci
-            - name: Disable Astro telemetry collection
+            - name: Disable telemetry collection by Astro
               run: pnpm telemetry:disable
             - name: Lint
               run: |
@@ -38,7 +38,7 @@ jobs:
               run: pnpm ci
             - name: Install browsers for running tests in the browser
               run: pnpm exec playwright install
-            - name: Disable Astro telemetry collection
+            - name: Disable telemetry collection by Astro
               run: pnpm telemetry:disable
             - name: Test
               run: pnpm test
@@ -60,7 +60,7 @@ jobs:
               run: pnpm ci
             - name: Install browsers for running tests in the browser
               run: pnpm exec playwright install
-            - name: Disable Astro telemetry collection
+            - name: Disable telemetry collection by Astro
               run: pnpm telemetry:disable
             - name: Test
               run: pnpm test:browser
@@ -83,7 +83,7 @@ jobs:
                   version: 12
             - name: Install dependencies
               run: pnpm ci
-            - name: Disable Astro telemetry collection
+            - name: Disable telemetry collection by Astro
               run: pnpm telemetry:disable
             - name: Lint
               run: pnpm build
