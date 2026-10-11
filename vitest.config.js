@@ -1,8 +1,11 @@
+import vitePluginReact from "@vitejs/plugin-react"
 import { configDefaults, defineConfig } from "vitest/config"
+
+const vitePlugins = [vitePluginReact()]
 
 /** @type {import("./types/vitest").UserConfig} */
 export default defineConfig({
-    plugins: [],
+    plugins: [...vitePlugins],
     resolve: { tsconfigPaths: true },
     test: {
         projects: [
