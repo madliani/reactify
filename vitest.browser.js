@@ -29,10 +29,7 @@ export default defineConfig({
                     },
                     globals: false,
                     globalSetup: [],
-                    include: [
-                        "./react/**/*.browser.ts",
-                        "./react/**/*.browser.tsx"
-                    ],
+                    include: ["./react/**/*.browser.tsx"],
                     name: "reactify-browser",
                     passWithNoTests: true,
                     reporters: ["default", "html"],
