@@ -131,8 +131,8 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `react/`: a directory containing `React`-based components of the web app
     - `react/components/`: a directory containing `React`-based components of
       the web app
-- `tests/`: a directory containing setup files for the tests
-    - `tests/setup.ts`: a main setup file for the tests
+    - `tests/`: a directory containing setup files for the tests
+        - `tests/setup.ts`: a main setup file for the tests
 - `types/`: a directory containing type declarations for the configuration files
     - `types/vitest.ts`: a file containing type declarations for the `Vitest`
       configuration file
