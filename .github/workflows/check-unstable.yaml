@@ -67,6 +67,29 @@ jobs:
         strategy:
             matrix:
                 os: [ubuntu-latest, windows-latest, macos-latest]
+    build:
+        needs: [lint, test, browser-test]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7
+              with:
+                  ref: "unstable"
+            - name: Setup pnpm and Node.js
+              uses: pnpm/setup@v3
+              with:
+                  cache: false
+                  node-version-file: .node-version
+                  version: 12
+            - name: Install dependencies
+              run: pnpm ci
+            - name: Disable Astro telemetry collection
+              run: pnpm telemetry:disable
+            - name: Lint
+              run: pnpm build
+        strategy:
+            matrix:
+                os: [ubuntu-latest, windows-latest, macos-latest]
 name: Check unstable
 "on":
     push:
