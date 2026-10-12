@@ -1,17 +1,17 @@
 import { decCount, incCount } from "@react/components/Counter/Counter.atom"
-import { cleanup, render, screen } from "@testing-library/react"
+import { cleanup, render } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
+import { afterEach, describe, expect, test, vi } from "vitest"
 
 import { Counter } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
 describe("Counter", () => {
-    beforeEach(() => render(<Counter />))
     afterEach(() => cleanup())
 
     test("should render count", async () => {
+        const screen = render(<Counter />)
         const countEl = await screen.findByTestId("counter__heading")
         const countStr = countEl.textContent
         const count = parseInt(countStr)
@@ -20,12 +20,14 @@ describe("Counter", () => {
     })
 
     test("should render disabled decrementing button", async () => {
+        const screen = render(<Counter />)
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
         expect(decBtnEl).toBeDisabled()
     })
 
     test("should trigger incrementing", async () => {
+        const screen = render(<Counter />)
         const user = userEvent.setup()
         const incBtnEl = await screen.findByTestId("counter__inc-btn")
 
@@ -40,6 +42,7 @@ describe("Counter", () => {
     })
 
     test("shouldn't trigger decrementing", async () => {
+        const screen = render(<Counter />)
         const user = userEvent.setup()
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
