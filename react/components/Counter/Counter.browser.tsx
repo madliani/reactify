@@ -26,9 +26,10 @@ describe("Counter", () => {
         const screen = await render(<Counter />)
 
         const incBtnEl = screen.getByRole("button", { name: "Increment" })
-        const countEl = screen.getByRole("heading", { name: "1" })
 
         await incBtnEl.click()
+
+        const countEl = screen.getByRole("heading", { name: "1" })
 
         await expect.element(countEl).toBeVisible()
     })
@@ -37,9 +38,10 @@ describe("Counter", () => {
         const screen = await render(<Counter />)
 
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
-        const countEl = screen.getByRole("heading", { name: "0" })
 
         await decBtnEl.click()
+
+        const countEl = screen.getByRole("heading", { name: "0" })
 
         await expect.element(countEl).toBeVisible()
     })
