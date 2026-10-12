@@ -1,11 +1,13 @@
-import { describe, expect, test, vi } from "vitest"
-import { render, renderHook } from "vitest-browser-react"
+import { afterEach, describe, expect, test, vi } from "vitest"
+import { cleanup, render, renderHook } from "vitest-browser-react"
 
 import { Counter, useCounterEffect } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
 describe("Counter", () => {
+    afterEach(() => cleanup())
+
     test("should render count", async () => {
         const screen = await render(<Counter />)
         const countEl = screen.getByRole("heading", { name: "0" })
