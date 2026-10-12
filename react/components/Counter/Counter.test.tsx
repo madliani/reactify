@@ -30,18 +30,22 @@ describe("Counter render", () => {
 describe("Counter incrementing", () => {
     afterEach(() => cleanup())
 
-    test("should trigger incrementing", async () => {
+    test("should trigger incrementing button", async () => {
         const screen = render(<Counter />)
         const user = userEvent.setup()
         const incBtnEl = await screen.findByTestId("counter__inc-btn")
 
         await user.click(incBtnEl)
 
+        expect(incCount).toHaveBeenCalledOnce()
+    })
+
+    test("should increment count", async () => {
+        const screen = render(<Counter />)
         const countEl = await screen.findByTestId("counter__heading")
         const countStr = countEl.textContent
         const count = parseInt(countStr)
 
-        expect(incCount).toHaveBeenCalledOnce()
         expect(count).toBe(1)
     })
 })
@@ -49,18 +53,22 @@ describe("Counter incrementing", () => {
 describe("Counter decrementing", () => {
     afterEach(() => cleanup())
 
-    test("shouldn't trigger decrementing", async () => {
+    test("should trigger decrementing button", async () => {
         const screen = render(<Counter />)
         const user = userEvent.setup()
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
         await user.click(decBtnEl)
 
+        expect(decCount).toHaveBeenCalledOnce()
+    })
+
+    test("shouldn't decrement count", async () => {
+        const screen = render(<Counter />)
         const countEl = await screen.findByTestId("counter__heading")
         const countStr = countEl.textContent
         const count = parseInt(countStr)
 
-        expect(decCount).toHaveBeenCalledOnce()
         expect(count).toBe(0)
     })
 })
