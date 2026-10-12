@@ -12,7 +12,7 @@ describe("Counter", () => {
         render(<Counter />)
     })
 
-    test("should render heading", async () => {
+    test("should render count", async () => {
         const countEl = await screen.findByTestId("counter__heading")
 
         const countStr = countEl.textContent
@@ -21,13 +21,13 @@ describe("Counter", () => {
         expect(count).toBe(0)
     })
 
-    test("should render disabled decrement button", async () => {
+    test("should render disabled decrementing button", async () => {
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
         expect(decBtnEl).toBeDisabled()
     })
 
-    test("should trigger increment", async () => {
+    test("should trigger incrementing", async () => {
         const user = userEvent.setup()
         const incBtnEl = await screen.findByTestId("counter__inc-btn")
         const countEl = await screen.findByTestId("counter__heading")
@@ -41,7 +41,7 @@ describe("Counter", () => {
         expect(count).toBe(1)
     })
 
-    test("shouldn't trigger decrement", async () => {
+    test("shouldn't trigger decrementing", async () => {
         const user = userEvent.setup()
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
         const countEl = await screen.findByTestId("counter__heading")
