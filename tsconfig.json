@@ -1,5 +1,49 @@
 {
-    "compilerOptions": { "noEmit": true },
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+        "lib": [
+            "DOM",
+            "DOM.AsyncIterable",
+            "DOM.Iterable",
+            "ES2022.array",
+            "ES2022.error",
+            "ES2022.intl",
+            "ES2022.object",
+            "ES2022.regExp",
+            "ES2022.string",
+            "ES2022"
+        ],
+        "paths": {
+            "@astro/*": ["${configDir}/astro/*"],
+            "@react/*": ["${configDir}/react/*"]
+        },
+        "types": [
+            "@testing-library/jest-dom",
+            "astro/astro-jsx",
+            "astro/client",
+            "react-dom",
+            "react"
+        ]
+    },
+    "exclude": [
+        "${configDir}/.vitest/",
+        "${configDir}/coverage/",
+        "${configDir}/dist/",
+        "${configDir}/node_modules/"
+    ],
+    "extends": "./tsconfig.base.json",
     "files": [],
-    "references": [{ "path": "./tsconfig.app.json" }]
+    "include": [
+        "${configDir}/.astro/types.d.ts",
+        "${configDir}/react/**/*.test.ts",
+        "${configDir}/react/**/*.test.tsx",
+        "${configDir}/react/**/*.ts",
+        "${configDir}/react/**/*.tsx",
+        "${configDir}/astro/**/*.astro",
+        "${configDir}/astro/**/*.test.ts",
+        "${configDir}/astro/**/*.ts",
+        "${configDir}/tests/setup.ts",
+        "${configDir}/types/vitest.d.ts"
+    ]
 }
