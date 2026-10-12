@@ -8,13 +8,9 @@ import { Counter } from "./Counter"
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
 describe("Counter", () => {
-    beforeEach(() => {
-        render(<Counter />)
-    })
+    beforeEach(() => render(<Counter />))
 
-    afterEach(() => {
-        cleanup()
-    })
+    afterEach(() => cleanup())
 
     test("should render count", async () => {
         const countEl = await screen.findByTestId("counter__heading")
