@@ -19,7 +19,6 @@ const tsExtends = [
     pluginImport.flatConfigs.recommended,
     pluginImport.flatConfigs.typescript
 ]
-
 const tsLanguageOptions = {
     ecmaVersion: 2022,
     globals: globals.builtin,
@@ -29,16 +28,13 @@ const tsLanguageOptions = {
     },
     sourceType: "module"
 }
-
 const tsPlugins = { "no-secrets": pluginNoSecrets }
-
 const tsRules = {
     "import/no-named-as-default-member": "off",
     "import/order": "off",
     "no-secrets/no-pattern-match": "error",
     "no-secrets/no-secrets": "error"
 }
-
 const tsSettings = { "import/resolver": { typescript: true } }
 
 const browserExtends = [pluginCompat.configs["flat/recommended"]]
