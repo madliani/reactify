@@ -5,7 +5,7 @@ import { Counter, useCounterEffect } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
-describe("Counter", () => {
+describe("Counter render", () => {
     test("should render count", async () => {
         const screen = await render(<Counter />)
         const countEl = screen.getByRole("heading", { name: "0" })
@@ -19,24 +19,38 @@ describe("Counter", () => {
 
         await expect.element(decBtnEl).toBeDisabled()
     })
+})
 
-    test("should trigger incrementing", async () => {
+describe("Counter incrementing", () => {
+    test("should trigger incrementing button", async () => {
         const screen = await render(<Counter />)
         const incBtnEl = screen.getByRole("button", { name: "Increment" })
 
         await incBtnEl.click()
 
+        await expect.element(incBtnEl).toHaveBeenCalledOnce()
+    })
+
+    test("should increment count", async () => {
+        const screen = await render(<Counter />)
         const countEl = screen.getByRole("heading", { name: "1" })
 
         await expect.element(countEl).toBeVisible()
     })
+})
 
-    test("shouldn't trigger decrementing", async () => {
+describe("Counter decrementing", () => {
+    test("should trigger decrementing button", async () => {
         const screen = await render(<Counter />)
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
 
         await decBtnEl.click()
 
+        await expect.element(decBtnEl).toHaveBeenCalledOnce()
+    })
+
+    test("shouldn't decrement count", async () => {
+        const screen = await render(<Counter />)
         const countEl = screen.getByRole("heading", { name: "0" })
 
         await expect.element(countEl).toBeVisible()
