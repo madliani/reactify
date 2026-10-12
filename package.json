@@ -79,15 +79,11 @@
     "homepage": "https://github.com/madliani/reactify#readme",
     "keywords": [
         "astro",
-        "nanostores",
-        "nodejs",
-        "pnpm",
         "radix-ui",
         "react",
         "reactify",
         "tailwindcss",
-        "typescript",
-        "vitest"
+        "typescript"
     ],
     "license": "UNLICENSED",
     "name": "reactify",
