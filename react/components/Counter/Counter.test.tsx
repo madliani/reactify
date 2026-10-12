@@ -7,7 +7,7 @@ import { Counter } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
-describe("Counter", () => {
+describe("Counter render", () => {
     afterEach(() => cleanup())
 
     test("should render count", async () => {
@@ -25,6 +25,10 @@ describe("Counter", () => {
 
         expect(decBtnEl).toBeDisabled()
     })
+})
+
+describe("Counter incrementing", () => {
+    afterEach(() => cleanup())
 
     test("should trigger incrementing", async () => {
         const screen = render(<Counter />)
@@ -40,6 +44,10 @@ describe("Counter", () => {
         expect(incCount).toHaveBeenCalledOnce()
         expect(count).toBe(1)
     })
+})
+
+describe("Counter decrementing", () => {
+    afterEach(() => cleanup())
 
     test("shouldn't trigger decrementing", async () => {
         const screen = render(<Counter />)
