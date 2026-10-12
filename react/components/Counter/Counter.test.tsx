@@ -29,6 +29,7 @@ describe("Counter", () => {
 
     test("should trigger incrementing", async () => {
         const user = userEvent.setup()
+
         const incBtnEl = await screen.findByTestId("counter__inc-btn")
         const countEl = await screen.findByTestId("counter__heading")
 
@@ -43,6 +44,7 @@ describe("Counter", () => {
 
     test("shouldn't trigger decrementing", async () => {
         const user = userEvent.setup()
+
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
         const countEl = await screen.findByTestId("counter__heading")
 
