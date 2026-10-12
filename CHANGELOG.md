@@ -37,7 +37,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- Tests for the `Counter` component
+- The tests for the `Counter` component
 
 ## [3.3.4] - 2026-10-07
 
