@@ -46,6 +46,8 @@ describe("Counter", () => {
 })
 
 describe("Counter hooks", () => {
+    afterEach(() => cleanup())
+
     test("should trigger incrementing hook", async () => {
         const { act, result } = await renderHook(() => useCounterEffect())
 
