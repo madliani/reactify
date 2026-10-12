@@ -9,7 +9,6 @@ vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
 describe("Counter", () => {
     beforeEach(() => render(<Counter />))
-
     afterEach(() => cleanup())
 
     test("should render count", async () => {
