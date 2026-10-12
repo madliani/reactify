@@ -70,7 +70,7 @@ pnpm install
    [browser](https://vitest.dev/guide/browser) (optional):
 
 ```bash
-pnpm exec playwright install
+PLAYWRIGHT_BROWSERS_PATH=0 pnpm exec playwright install
 ```
 
 4. Run tests:
