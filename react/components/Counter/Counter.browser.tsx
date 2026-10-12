@@ -8,7 +8,6 @@ vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 describe("Counter", () => {
     test("should render count", async () => {
         const screen = await render(<Counter />)
-
         const countEl = screen.getByRole("heading", { name: "0" })
 
         await expect.element(countEl).toBeVisible()
@@ -16,7 +15,6 @@ describe("Counter", () => {
 
     test("should render disabled decrementing button", async () => {
         const screen = await render(<Counter />)
-
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
 
         await expect.element(decBtnEl).toBeDisabled()
@@ -24,7 +22,6 @@ describe("Counter", () => {
 
     test("should trigger incrementing", async () => {
         const screen = await render(<Counter />)
-
         const incBtnEl = screen.getByRole("button", { name: "Increment" })
 
         await incBtnEl.click()
@@ -36,7 +33,6 @@ describe("Counter", () => {
 
     test("shouldn't trigger decrementing", async () => {
         const screen = await render(<Counter />)
-
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
 
         await decBtnEl.click()
