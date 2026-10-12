@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.4.0] - 2026-10-12
+
+### Fixed
+
+- Project configuration
+- The `CHANGELOG.md` file
+
+### Changed
+
+- The tests for the `Counter` component
+
 ## [3.3.7] - 2026-10-11
 
 ### Added
