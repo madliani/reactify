@@ -31,10 +31,10 @@ describe("Counter", () => {
         const user = userEvent.setup()
 
         const incBtnEl = await screen.findByTestId("counter__inc-btn")
-        const countEl = await screen.findByTestId("counter__heading")
 
         await user.click(incBtnEl)
 
+        const countEl = await screen.findByTestId("counter__heading")
         const countStr = countEl.textContent
         const count = parseInt(countStr)
 
@@ -46,10 +46,10 @@ describe("Counter", () => {
         const user = userEvent.setup()
 
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
-        const countEl = await screen.findByTestId("counter__heading")
 
         await user.click(decBtnEl)
 
+        const countEl = await screen.findByTestId("counter__heading")
         const countStr = countEl.textContent
         const count = parseInt(countStr)
 
