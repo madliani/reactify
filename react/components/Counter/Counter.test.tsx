@@ -1,15 +1,19 @@
 import { decCount, incCount } from "@react/components/Counter/Counter.atom"
-import { render, screen } from "@testing-library/react"
+import { cleanup, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import { beforeAll, describe, expect, test, vi } from "vitest"
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import { Counter } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
 describe("Counter", () => {
-    beforeAll(() => {
+    beforeEach(() => {
         render(<Counter />)
+    })
+
+    afterEach(() => {
+        cleanup()
     })
 
     test("should render count", async () => {
