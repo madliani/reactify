@@ -33,7 +33,6 @@
         "${configDir}/node_modules/"
     ],
     "extends": "./tsconfig.base.json",
-    "files": [],
     "include": [
         "${configDir}/.astro/types.d.ts",
         "${configDir}/react/**/*.test.ts",
