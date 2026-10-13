@@ -1,9 +1,9 @@
 import { decCount, incCount } from "@react/components/Counter/Counter.atom"
-import { cleanup, render } from "@testing-library/react"
+import { act, cleanup, render, renderHook } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { afterEach, describe, expect, test, vi } from "vitest"
 
-import { Counter } from "./Counter"
+import { Counter, useCounterEffect } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
@@ -70,5 +70,25 @@ describe("Counter decrement", () => {
         const count = parseInt(countStr)
 
         expect(count).toBe(0)
+    })
+})
+
+describe("Counter hooks", () => {
+    afterEach(() => cleanup())
+
+    test("should trigger hook with increment", async () => {
+        const { result } = renderHook(() => useCounterEffect())
+
+        act(() => result.current.inc())
+
+        expect(result.current.count).toBe(1)
+    })
+
+    test("shouldn't trigger hook with decrement", async () => {
+        const { result } = renderHook(() => useCounterEffect())
+
+        act(() => result.current.dec())
+
+        expect(result.current.count).toBe(0)
     })
 })
