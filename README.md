@@ -208,7 +208,7 @@ bugfixes, or hotfixes at the same time.
    `Astro` as a bundler, a router, and an alternative for `React Helmet`
 2. Files with the `.browser.ts` extension are files containing tests in the
    browser.
-3. For compatibility reasons, in the project, I used
+3. For compatibility reasons, the project uses
    [Nano Stores](https://github.com/nanostores/nanostores/) state manager, which
    both works with `Astro` and `React`. It allows you to share the state of the
    web app between the `Astro`-based and `React`-based components, and also it's
