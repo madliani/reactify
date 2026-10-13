@@ -150,26 +150,26 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `AUTHORS.txt`: an `AUTHORS` file
 - `CHANGELOG.md`: a `CHANGELOG.md` file
 - `CONTRIBUTING.md`: a `CONTRIBUTING.md` file
-- `cspell.config.js`: a JavaScript-based `cSpell` configuration file
-- `eslint.config.js`: a JavaScript-based `ESLint` configuration file
+- `cspell.config.js`: a `JavaScript`-based `cSpell` configuration file
+- `eslint.config.js`: a `JavaScript`-based `ESLint` configuration file
 - `index.html`: an `index.html` file
 - `LICENSE.txt`: a license file
 - `package.json`: a `package.json` file
 - `pnpm-lock.yaml`: a `pnpm` lockfile
 - `pnpm-workspace.yaml`: a `pnpm-workspace.yaml` file
-- `prettier.config.js`: a JavaScript-based `Prettier` configuration file
+- `prettier.config.js`: a `JavaScript`-based `Prettier` configuration file
 - `README.md`: a `README` file
 - `tsconfig.app.json`: a `TypeScript` configuration file for the web app
 - `tsconfig.json`: a base `TypeScript` configuration file
 - `tsconfig.json`: a main `TypeScript` configuration file
 - `tsconfig.test.json`: a `TypeScript` configuration file for tests
-- `tsdown.config.js`: a JavaScript-based `tsdown` configuration file
+- `tsdown.config.js`: a `JavaScript`-based `tsdown` configuration file
 - `tsconfig.tsbuildinfo`: a file of the `TypeScript` compiler, which contains
   incremental compilation information (local and ignored by `Git`)
 - `vercel.json`: a JSON-based configuration file for `Vercel`
-- `vitest.browser.js`: a JavaScript-based `Vitest` configuration file for
+- `vitest.browser.js`: a `JavaScript`-based `Vitest` configuration file for
   running tests in the [browser](https://vitest.dev/guide/browser)
-- `vitest.config.js`: a JavaScript-based `Vitest` configuration file
+- `vitest.config.js`: a `JavaScript`-based `Vitest` configuration file
 
 ## Branches
 
