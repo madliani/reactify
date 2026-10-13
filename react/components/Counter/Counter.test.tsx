@@ -21,85 +21,87 @@ import { Counter, useCounterEffect } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
-describe("Counter rendering", () => {
-    beforeAll(() => render(<Counter />))
-    afterAll(() => cleanup())
+describe("Counter", () => {
+    describe("Counter rendering", () => {
+        beforeAll(() => render(<Counter />))
+        afterAll(() => cleanup())
 
-    test("should render count", async () => {
-        const countEl = await screen.findByTestId("counter__heading")
-        const countStr = countEl.textContent
-        const count = parseInt(countStr)
+        test("should render count", async () => {
+            const countEl = await screen.findByTestId("counter__heading")
+            const countStr = countEl.textContent
+            const count = parseInt(countStr)
 
-        expect(count).toBe(0)
+            expect(count).toBe(0)
+        })
+
+        test("should render disabled decrement button", async () => {
+            const decBtnEl = await screen.findByTestId("counter__dec-btn")
+
+            expect(decBtnEl).toBeDisabled()
+        })
     })
 
-    test("should render disabled decrement button", async () => {
-        const decBtnEl = await screen.findByTestId("counter__dec-btn")
+    describe("Counter increment", { concurrent: false }, () => {
+        beforeAll(() => render(<Counter />))
+        afterAll(() => cleanup())
 
-        expect(decBtnEl).toBeDisabled()
-    })
-})
+        test("should trigger increment button", async () => {
+            const user = userEvent.setup()
+            const incBtnEl = await screen.findByTestId("counter__inc-btn")
 
-describe("Counter increment", { concurrent: false }, () => {
-    beforeAll(() => render(<Counter />))
-    afterAll(() => cleanup())
+            await user.click(incBtnEl)
 
-    test("should trigger increment button", async () => {
-        const user = userEvent.setup()
-        const incBtnEl = await screen.findByTestId("counter__inc-btn")
+            expect(incCount).toHaveBeenCalledOnce()
+        })
 
-        await user.click(incBtnEl)
+        test("should increment count", async () => {
+            const countEl = await screen.findByTestId("counter__heading")
+            const countStr = countEl.textContent
+            const count = parseInt(countStr)
 
-        expect(incCount).toHaveBeenCalledOnce()
-    })
-
-    test("should increment count", async () => {
-        const countEl = await screen.findByTestId("counter__heading")
-        const countStr = countEl.textContent
-        const count = parseInt(countStr)
-
-        expect(count).toBe(1)
-    })
-})
-
-describe("Counter decrement", { concurrent: false }, () => {
-    beforeAll(() => render(<Counter />))
-    afterAll(() => cleanup())
-
-    test("should trigger decrement button", async () => {
-        const user = userEvent.setup()
-        const decBtnEl = await screen.findByTestId("counter__dec-btn")
-
-        await user.click(decBtnEl)
-
-        expect(decCount).toHaveBeenCalledOnce()
+            expect(count).toBe(1)
+        })
     })
 
-    test("shouldn't decrement count", async () => {
-        const countEl = await screen.findByTestId("counter__heading")
-        const countStr = countEl.textContent
-        const count = parseInt(countStr)
+    describe("Counter decrement", { concurrent: false }, () => {
+        beforeAll(() => render(<Counter />))
+        afterAll(() => cleanup())
 
-        expect(count).toBe(0)
+        test("should trigger decrement button", async () => {
+            const user = userEvent.setup()
+            const decBtnEl = await screen.findByTestId("counter__dec-btn")
+
+            await user.click(decBtnEl)
+
+            expect(decCount).toHaveBeenCalledOnce()
+        })
+
+        test("shouldn't decrement count", async () => {
+            const countEl = await screen.findByTestId("counter__heading")
+            const countStr = countEl.textContent
+            const count = parseInt(countStr)
+
+            expect(count).toBe(0)
+        })
     })
-})
 
-describe("Counter hooks", () => {
-    afterEach(() => cleanup())
+    describe("Counter hooks", () => {
+        afterEach(() => cleanup())
 
-    test("should trigger hook with increment", async () => {
-        const { result } = renderHook(() => useCounterEffect())
+        test("should trigger hook with increment", async () => {
+            const { result } = renderHook(() => useCounterEffect())
 
-        act(() => result.current.inc())
+            act(() => result.current.inc())
 
-        expect(result.current.count).toBe(1)
-    })
+            expect(result.current.count).toBe(1)
+        })
 
-    test("shouldn't trigger hook with decrement", async () => {
-        const { result } = renderHook(() => useCounterEffect())
+        test("shouldn't trigger hook with decrement", async () => {
+            const { result } = renderHook(() => useCounterEffect())
 
-        act(() => result.current.dec())
+            act(() => result.current.dec())
 
-        expect(result.current.count).toBe(0)
+            expect(result.current.count).toBe(0)
+        })
     })
 })
