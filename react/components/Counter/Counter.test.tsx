@@ -27,7 +27,7 @@ describe("Counter rendering", () => {
     })
 })
 
-describe("Counter incrementing", () => {
+describe("Counter increment", () => {
     afterEach(() => cleanup())
 
     test("should trigger increment button", async () => {
@@ -50,7 +50,7 @@ describe("Counter incrementing", () => {
     })
 })
 
-describe("Counter decrementing", () => {
+describe("Counter decrement", () => {
     afterEach(() => cleanup())
 
     test("should trigger decrement button", async () => {
