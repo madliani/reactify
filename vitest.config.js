@@ -29,7 +29,7 @@ export default defineConfig({
                     passWithNoTests: true,
                     reporters: ["default", "html"],
                     restoreMocks: true,
-                    sequence: { concurrent: false },
+                    sequence: { concurrent: true },
                     setupFiles: ["./tests/setup.ts"]
                 }
             }
