@@ -67,7 +67,8 @@ cd reactify
 pnpm install
 ```
 
-3. Install browsers for running tests in the browser (optional):
+3. Install [browsers](https://playwright.dev/docs/browsers) for running tests in
+   the browser (optional):
 
 ```bash
 pnpm exec playwright install
