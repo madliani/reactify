@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/react"
-import { Button, Card, Heading } from "@radix-ui/themes"
+import { Button, Card, Flex, Heading } from "@radix-ui/themes"
 import {
     counterAtom,
     decCount,
@@ -25,7 +25,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
             >
                 {count}
             </Heading>
-            <div className="flex flex-row flex-wrap justify-center gap-2">
+            <Flex className="flex-row flex-wrap justify-center gap-2">
                 <Button
                     data-testid="counter__inc-btn"
                     onClick={inc}
@@ -43,7 +43,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                 >
                     Decrement
                 </Button>
-            </div>
+            </Flex>
         </Card>
     )
 }
