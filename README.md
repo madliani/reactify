@@ -204,7 +204,7 @@ bugfixes, or hotfixes at the same time.
 
 ## Notes for developer
 
-1. The website is a `React`-based single-page application (SPA), but it uses
+1. The project is a `React`-based single-page application (SPA), but it uses
    `Astro` as a bundler, a router, and an alternative for `React Helmet`
 2. Files with the `.browser.ts` extension are files containing tests in the
    browser.
