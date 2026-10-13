@@ -27,7 +27,7 @@ describe("Counter render", () => {
     })
 })
 
-describe("Incrementing counter", () => {
+describe("Counter incrementing", () => {
     afterEach(() => cleanup())
 
     test("should trigger increment button", async () => {
@@ -50,7 +50,7 @@ describe("Incrementing counter", () => {
     })
 })
 
-describe("Decrementing Counter", () => {
+describe("Counter decrementing", () => {
     afterEach(() => cleanup())
 
     test("should trigger decrement button", async () => {
