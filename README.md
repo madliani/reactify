@@ -147,8 +147,6 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
   processed files, so that `Stylelint` only operates on the changed ones (local
   and ignored by `Git`)
 - `.stylelintignore`: a `Stylelint` ignore file
-- `.tsbuildinfo`: a file of the `TypeScript` compiler, which contains
-  incremental compilation information (local and ignored by `Git`)
 - `AUTHORS.txt`: an `AUTHORS` file
 - `CHANGELOG.md`: a `CHANGELOG.md` file
 - `CONTRIBUTING.md`: a `CONTRIBUTING.md` file
@@ -166,6 +164,8 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `tsconfig.json`: a main `TypeScript` configuration file
 - `tsconfig.test.json`: a `TypeScript` configuration file for tests
 - `tsdown.config.js`: a JavaScript-based `tsdown` configuration file
+- `tsconfig.tsbuildinfo`: a file of the `TypeScript` compiler, which contains
+  incremental compilation information (local and ignored by `Git`)
 - `vitest.browser.js`: a JavaScript-based `Vitest` configuration file for
   running tests in the [browser](https://vitest.dev/guide/browser)
 - `vitest.config.js`: a JavaScript-based `Vitest` configuration file
