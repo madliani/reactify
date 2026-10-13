@@ -22,7 +22,7 @@ describe("Counter", () => {
         await expect.element(decBtnEl).toBeDisabled()
     })
 
-    test("should trigger incrementing", async () => {
+    test("should trigger increment", async () => {
         const screen = await render(<Counter />)
         const incBtnEl = screen.getByRole("button", { name: "Increment" })
 
@@ -33,7 +33,7 @@ describe("Counter", () => {
         await expect.element(countEl).toBeVisible()
     })
 
-    test("shouldn't trigger decrementing", async () => {
+    test("shouldn't trigger decrement", async () => {
         const screen = await render(<Counter />)
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
 
