@@ -92,8 +92,8 @@ pnpm test:browser
 pnpm build
 ```
 
-**Note**: The optional steps are needed if you want to run tests in the
-[browser](https://vitest.dev/guide/browser) as well.
+> **Note**: The optional steps are needed if you want to run tests in the
+> [browser](https://vitest.dev/guide/browser) as well.
 
 ## Project Structure
 
@@ -199,8 +199,8 @@ The **simplified** `Git` workflow contains the following steps:
 12. Delete the branch
 13. Push changes to the remote
 
-**Note:** The optional steps are needed if you are developing a few features,
-bugfixes, or hotfixes at the same time.
+> **Note:** The optional steps are needed if you are developing a few features,
+> bugfixes, or hotfixes at the same time.
 
 ## Notes for developer
 
