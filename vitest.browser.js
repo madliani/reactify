@@ -35,7 +35,7 @@ export default defineConfig({
                     reporters: ["default", "html"],
                     restoreMocks: true,
                     sequence: { concurrent: false },
-                    setupFiles: ["./react/tests/browser-setup.ts"]
+                    setupFiles: ["./tests/browser-setup.ts"]
                 }
             }
         ]
