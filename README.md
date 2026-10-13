@@ -120,6 +120,10 @@ pnpm build
     - `astro/layouts/`: a directory containing `Astro`-based layouts of the
       website
     - `astro/pages/`: a directory containing `Astro`-based pages of the website
+    - `astro/styles/`: a directory containing `CSS`-based stylesheets of the
+      website
+        - `astro/styles/global.css`: a file containing global `CSS`-based
+          stylesheet of the website
     - `astro/templates/`: a directory containing `Astro`-based templates for the
       pages of the website
 - `public/`: a directory containing assets for the website
