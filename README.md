@@ -207,8 +207,7 @@ The **simplified** `Git` workflow contains the following steps:
 1. The project is a `React`-based single-page application (SPA), but it uses
    `Astro` as a bundler, a router, and an alternative for `React Helmet`. So,
    formally, the project is an `Astro`-based website.
-2. Files with the `.browser.ts` extension are files containing tests in the
-   browser.
+2. Files with the `.browser.ts` extension are files containing browser tests.
 3. For compatibility reasons, the project uses
    [Nano Stores](https://github.com/nanostores/nanostores/) state manager, which
    both works with `Astro` and `React`. It allows you to share the state of the
