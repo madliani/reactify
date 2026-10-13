@@ -92,7 +92,7 @@ pnpm test:browser
 pnpm build
 ```
 
-**Note**: The optional steps are needed if you want to run the tests in the
+**Note**: The optional steps are needed if you want to run tests in the
 [browser](https://vitest.dev/guide/browser) as well.
 
 ## Project Structure
@@ -132,8 +132,8 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `react/`: a directory containing `React`-based components of the web app
     - `react/components/`: a directory containing `React`-based components of
       the web app
-- `tests/`: a directory containing setup files for the tests
-    - `tests/setup.ts`: a main setup file for the tests
+- `tests/`: a directory containing setup files for tests
+    - `tests/setup.ts`: a main setup file for tests
 - `types/`: a directory containing type declarations for the configuration files
     - `types/vitest.ts`: a file containing type declarations for the `Vitest`
       configuration file
@@ -164,7 +164,7 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `tsconfig.app.json`: a `TypeScript` configuration file for the web app
 - `tsconfig.json`: a base `TypeScript` configuration file
 - `tsconfig.json`: a main `TypeScript` configuration file
-- `tsconfig.test.json`: a `TypeScript` configuration file for the tests
+- `tsconfig.test.json`: a `TypeScript` configuration file for tests
 - `tsdown.config.js`: a JavaScript-based `tsdown` configuration file
 - `vitest.browser.js`: a JavaScript-based `Vitest` configuration file for
   running tests in the [browser](https://vitest.dev/guide/browser)
