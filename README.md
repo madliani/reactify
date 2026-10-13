@@ -30,6 +30,10 @@
 
 This is a starter kit for React.
 
+> **Note**: Although the website is a `React`-based single-page application
+> (SPA), but it uses `Astro` as a bundler, a router, and an alternative for
+> `React Helmet`.
+
 ## Features
 
 1. SEO-friendly
@@ -168,12 +172,8 @@ pnpm build
   running tests in the [browser](https://vitest.dev/guide/browser)
 - `vitest.config.js`: a `JavaScript`-based `Vitest` configuration file
 
-> **Notes:**
->
-> 1.  The website is a `React`-based single-page application (SPA), but it uses
->     `Astro` as a bundler, a router, and an alternative for `React Helmet`.
-> 2.  Files with the `.browser.ts` extension are files containing tests in the
->     browser.
+> **Note:** Files with the `.browser.ts` extension are files containing tests in
+> the browser.
 
 ## Branches
 
