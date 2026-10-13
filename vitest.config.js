@@ -30,7 +30,7 @@ export default defineConfig({
                     reporters: ["default", "html"],
                     restoreMocks: true,
                     sequence: { concurrent: false },
-                    setupFiles: ["./react/tests/setup.ts"]
+                    setupFiles: ["./tests/setup.ts"]
                 }
             }
         ]
