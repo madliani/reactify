@@ -15,7 +15,7 @@ describe("Counter", () => {
         await expect.element(countEl).toBeVisible()
     })
 
-    test("should render disabled decrementing button", async () => {
+    test("should render disabled decrement button", async () => {
         const screen = await render(<Counter />)
         const decBtnEl = screen.getByRole("button", { name: "Decrement" })
 
@@ -48,7 +48,7 @@ describe("Counter", () => {
 describe("Counter hooks", () => {
     afterEach(() => cleanup())
 
-    test("should trigger incrementing hook", async () => {
+    test("should trigger hook with increment", async () => {
         const { act, result } = await renderHook(() => useCounterEffect())
 
         await act(() => result.current.inc())
@@ -56,7 +56,7 @@ describe("Counter hooks", () => {
         expect(result.current.count).toBe(1)
     })
 
-    test("shouldn't trigger decrementing hook", async () => {
+    test("shouldn't trigger hook with decrement", async () => {
         const { act, result } = await renderHook(() => useCounterEffect())
 
         await act(() => result.current.dec())
