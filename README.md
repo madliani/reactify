@@ -205,7 +205,8 @@ bugfixes, or hotfixes at the same time.
 ## Notes for developer
 
 1. The project is a `React`-based single-page application (SPA), but it uses
-   `Astro` as a bundler, a router, and an alternative for `React Helmet`.
+   `Astro` as a bundler, a router, and an alternative for `React Helmet`. So,
+   formally, the project is an `Astro`-based website.
 2. Files with the `.browser.ts` extension are files containing tests in the
    browser.
 3. For compatibility reasons, the project uses
