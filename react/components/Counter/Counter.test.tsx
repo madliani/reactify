@@ -1,17 +1,31 @@
 import { decCount, incCount } from "@react/components/Counter/Counter.atom"
-import { act, cleanup, render, renderHook } from "@testing-library/react"
+import {
+    act,
+    cleanup,
+    render,
+    renderHook,
+    screen
+} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import { afterEach, describe, expect, test, vi } from "vitest"
+import {
+    afterAll,
+    afterEach,
+    beforeAll,
+    describe,
+    expect,
+    test,
+    vi
+} from "vitest"
 
 import { Counter, useCounterEffect } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
 describe("Counter rendering", () => {
-    afterEach(() => cleanup())
+    beforeAll(() => render(<Counter />))
+    afterAll(() => cleanup())
 
     test("should render count", async () => {
-        const screen = render(<Counter />)
         const countEl = await screen.findByTestId("counter__heading")
         const countStr = countEl.textContent
         const count = parseInt(countStr)
@@ -20,7 +34,6 @@ describe("Counter rendering", () => {
     })
 
     test("should render disabled decrement button", async () => {
-        const screen = render(<Counter />)
         const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
         expect(decBtnEl).toBeDisabled()
