@@ -18,9 +18,8 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
         <Card className="flex h-96 w-96 flex-col flex-nowrap justify-center gap-4">
             <Text
                 as="span"
-                className="text-center font-bold"
+                className="text-center text-7xl font-bold"
                 data-testid="counter__heading"
-                size="9"
                 title={count.toString()}
             >
                 {count}
