@@ -166,6 +166,7 @@ uses `Astro` as a bundler, a router, and an alternative for `React Helmet`.
 - `tsdown.config.js`: a JavaScript-based `tsdown` configuration file
 - `tsconfig.tsbuildinfo`: a file of the `TypeScript` compiler, which contains
   incremental compilation information (local and ignored by `Git`)
+- `vercel.json`: a JSON-based configuration file for `Vercel`
 - `vitest.browser.js`: a JavaScript-based `Vitest` configuration file for
   running tests in the [browser](https://vitest.dev/guide/browser)
 - `vitest.config.js`: a JavaScript-based `Vitest` configuration file
