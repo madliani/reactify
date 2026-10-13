@@ -198,7 +198,7 @@ The **simplified** `Git` workflow contains the following steps:
 7. Synchronize the branch with the `unstable` branch (optional)
 8. Retest the feature, bugfix, or hotfix within the branch (optional)
 9. Merge the branch into the `unstable` branch
-10. Merge the `unstable` branch into `stable` branch
+10. Merge the `unstable` branch into the `stable` branch
 11. Make a release within the `stable` branch
 12. Delete the branch
 13. Push changes to the remote
