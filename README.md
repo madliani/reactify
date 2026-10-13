@@ -67,8 +67,7 @@ cd reactify
 pnpm install
 ```
 
-3. Install browsers for running tests in the
-   [browser](https://vitest.dev/guide/browser) (optional):
+3. Install browsers for running tests in the browser (optional):
 
 ```bash
 pnpm exec playwright install
