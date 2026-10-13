@@ -97,12 +97,12 @@ pnpm build
 
 ## Project Structure
 
-**Notes:**
-
-1. The website is a `React`-based single-page application (SPA), but it uses
-   `Astro` as a bundler, a router, and an alternative for `React Helmet`.
-2. Files with the `.browser.ts` extension are files containing tests in the
-   browser.
+> **Notes:**
+>
+> 1.  The website is a `React`-based single-page application (SPA), but it uses
+>     `Astro` as a bundler, a router, and an alternative for `React Helmet`.
+> 2.  Files with the `.browser.ts` extension are files containing tests in the
+>     browser.
 
 - `.github/`: a directory containing files for `GitHub`
     - `.github/workflows/`: a directory containing workflow files for
