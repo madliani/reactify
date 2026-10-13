@@ -173,8 +173,8 @@ pnpm build
 - `stable`: a stable branch for production builds
 - `unstable`: an unstable branch for development and testing
 
-**Note:** If you were expecting to see additional branches here, please see
-[Git Workflow](./README.md#git-workflow).
+> **Note:** If you were expecting to see additional branches here, please see
+> [Git Workflow](./README.md#git-workflow).
 
 ## Git Workflow
 
