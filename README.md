@@ -202,7 +202,7 @@ The **simplified** `Git` workflow contains the following steps:
 > **Note:** The optional steps are needed if you are developing a few features,
 > bugfixes, or hotfixes at the same time.
 
-## Notes for developer
+## Notes for developers
 
 1. The project is a `React`-based single-page application (SPA), but it uses
    `Astro` as a bundler, a router, and an alternative for `React Helmet`. So,
