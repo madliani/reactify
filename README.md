@@ -165,7 +165,7 @@ pnpm build
   incremental compilation information (local and ignored by `Git`)
 - `vercel.json`: a JSON-based configuration file for `Vercel`
 - `vitest.browser.js`: a `JavaScript`-based `Vitest` configuration file for
-  running tests in the [browser](https://vitest.dev/guide/browser)
+  browser tests
 - `vitest.config.js`: a `JavaScript`-based `Vitest` configuration file
 
 ## Branches
