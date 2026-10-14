@@ -15,7 +15,7 @@ interface CounterViewProps {
 
 const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     return (
-        <Card className="flex h-96 w-96 flex-col flex-nowrap justify-center gap-4">
+        <Card className="flex h-48 w-48 flex-col flex-nowrap justify-center gap-4 sm:h-96 sm:w-96">
             <Text
                 as="span"
                 className="text-center text-7xl font-bold"
