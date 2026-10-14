@@ -6,7 +6,6 @@ const vitePlugins = [vitePluginReact()]
 
 /** @type {import("./types/vitest").UserConfig} */
 export default defineConfig({
-    plugins: [...vitePlugins],
     resolve: { tsconfigPaths: true },
     test: {
         projects: [
@@ -28,6 +27,7 @@ export default defineConfig({
                     ],
                     name: "reactify-node",
                     passWithNoTests: true,
+                    plugins: [...vitePlugins],
                     reporters: ["default", "html"],
                     restoreMocks: true,
                     sequence: { concurrent: true },
@@ -60,6 +60,7 @@ export default defineConfig({
                     ],
                     name: "reactify-browser",
                     passWithNoTests: true,
+                    plugins: [...vitePlugins],
                     reporters: ["default", "html"],
                     restoreMocks: true,
                     sequence: { concurrent: false },
