@@ -13,16 +13,6 @@ interface CounterViewProps {
     inc: () => void
 }
 
-const useCounter = () => {
-    const count = useStore(counterAtom)
-    const decIsDisabled = count === 0
-
-    const inc = () => incCount()
-    const dec = () => decCount()
-
-    return { count, dec, decIsDisabled, inc }
-}
-
 const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     return (
         <Card className="flex h-48 w-48 flex-col flex-nowrap justify-center gap-4 sm:h-96 sm:w-96">
@@ -55,6 +45,16 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
             </Flex>
         </Card>
     )
+}
+
+const useCounter = () => {
+    const count = useStore(counterAtom)
+    const decIsDisabled = count === 0
+
+    const inc = () => incCount()
+    const dec = () => decCount()
+
+    return { count, dec, decIsDisabled, inc }
 }
 
 const Counter = () => {
