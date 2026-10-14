@@ -47,7 +47,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     )
 }
 
-const useCounterEffect = () => {
+const useCounter = () => {
     const count = useStore(counterAtom)
     const decIsDisabled = count === 0
 
@@ -58,7 +58,7 @@ const useCounterEffect = () => {
 }
 
 const Counter = () => {
-    const { count, dec, decIsDisabled, inc } = useCounterEffect()
+    const { count, dec, decIsDisabled, inc } = useCounter()
 
     return (
         <CounterView
@@ -70,4 +70,4 @@ const Counter = () => {
     )
 }
 
-export { Counter, counterAtom, useCounterEffect }
+export { Counter, counterAtom, useCounter }
