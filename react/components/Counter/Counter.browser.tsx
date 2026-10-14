@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, test, vi } from "vitest"
 import { cleanup, render, renderHook } from "vitest-browser-react"
 
-import { Counter, useCounterEffect } from "./Counter"
+import { Counter, useCounter } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
@@ -49,7 +49,7 @@ describe("Counter hooks", () => {
     afterEach(() => cleanup())
 
     test("should trigger hook with increment", async () => {
-        const { act, result } = await renderHook(() => useCounterEffect())
+        const { act, result } = await renderHook(() => useCounter())
 
         await act(() => result.current.inc())
 
@@ -57,7 +57,7 @@ describe("Counter hooks", () => {
     })
 
     test("shouldn't trigger hook with decrement", async () => {
-        const { act, result } = await renderHook(() => useCounterEffect())
+        const { act, result } = await renderHook(() => useCounter())
 
         await act(() => result.current.dec())
 
