@@ -175,7 +175,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- The styles was refactored
+- The styles were refactored
 
 ## [3.0.0] - 2026-09-17
 
