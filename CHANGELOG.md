@@ -12,10 +12,10 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - The `Counter` component was refactored
-- The `test/` directory from the `react/` directory moved to the root directory
+- The `test/` directory from `react/` moved to the root directory
 - The browser tests for the `Counter` component
 - The styles were refactored
-- The tests for the `Counter` component
+- The tests for `Counter`
 
 ## [3.4.1] - 2026-10-12
 
@@ -33,7 +33,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- The tests for the `Counter` component
+- The tests for `Counter`
 
 ## [3.3.7] - 2026-10-11
 
@@ -57,7 +57,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- The `Counter` component was moved to the `react/components/` directory
+- The `Counter` component was moved to `react/components/`
 - The `react/` directory was moved to the root directory
 - The `src/` directory was renamed to `astro/`
 
@@ -70,7 +70,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- The tests for the `Counter` component
+- The tests for `Counter`
 
 ## [3.3.4] - 2026-10-07
 
