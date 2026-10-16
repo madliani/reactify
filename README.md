@@ -67,33 +67,17 @@ cd reactify
 pnpm install
 ```
 
-3. Install [browsers](https://playwright.dev/docs/browsers) for running tests in
-   the browser (optional):
-
-```bash
-pnpm exec playwright install
-```
-
-4. Run tests:
+3. Run tests:
 
 ```bash
 pnpm test
 ```
 
-5. Run tests in the browser (optional):
-
-```bash
-pnpm test:browser
-```
-
-6. Build the website:
+5. Build the website:
 
 ```bash
 pnpm build
 ```
-
-> **Note**: The optional steps are needed if you want to run tests in the
-> [browser](https://vitest.dev/guide/browser) as well.
 
 ## Project Structure
 
@@ -168,8 +152,6 @@ pnpm build
 - `tsconfig.tsbuildinfo`: a file of the `TypeScript` compiler, which contains
   incremental compilation information (local and ignored by `Git`)
 - `vercel.json`: a `JSON`-based configuration file for `Vercel`
-- `vitest.browser.js`: a `JavaScript`-based `Vitest` configuration file for
-  browser tests
 - `vitest.config.js`: a `JavaScript`-based `Vitest` configuration file
 
 ## Branches
