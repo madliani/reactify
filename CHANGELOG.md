@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.4.2] - 2026-10-16
+
+### Fixed
+
+- Project configuration
+- The `README.md` file
+
+### Changed
+
+- The `Counter` component was refactored
+- The `test/` directory from the `react/` directory moved to the root directory
+- The browser tests for the `Counter` component
+- The styles were refactored
+- The tests for the `Counter` component
+
 ## [3.4.1] - 2026-10-12
 
 ### Fixed
