@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.4.3] - 2026-10-17
+
+### Fixed
+
+- The `CHANGELOG.md` file
+
+### Removed
+
+- The browser tests for `Counter`
+
 ## [3.4.2] - 2026-10-16
 
 ### Fixed
