@@ -17,6 +17,7 @@ const englishWords = [
     "madliani",
     "nanostores",
     "reactify",
+    "roboto",
     "stylelintcache",
     "stylelintignore",
     "vite",
