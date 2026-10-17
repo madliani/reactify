@@ -26,6 +26,10 @@ All notable changes to this project will be documented in this file.
 
 ## [3.4.0] - 2026-10-12
 
+### Added
+
+- The browser tests for `Counter`
+
 ### Fixed
 
 - Project configuration
