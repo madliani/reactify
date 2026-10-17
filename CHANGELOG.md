@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -33,7 +33,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
-- The project configuration
+- The project configuration files
 
 ## [3.4.0] - 2026-10-12
 
@@ -44,7 +44,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `CHANGELOG.md` file
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -60,7 +60,7 @@ All notable changes to this project will be documented in this file.
 
 - The `CHANGELOG.md` file
 - The `README.md` file
-- The project configuration
+- The project configuration files
 
 ## [3.3.6] - 2026-10-08
 
@@ -68,7 +68,7 @@ All notable changes to this project will be documented in this file.
 
 - The `CHANGELOG.md` file
 - The `README.md` file
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -81,7 +81,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -92,7 +92,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -107,7 +107,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
-- The project configuration
+- The project configuration files
 - The settings for Content Security Policy (CSP) was fixed
 
 ### Changed
@@ -120,13 +120,13 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- The project configuration
+- The project configuration files
 
 ## [3.3.1] - 2026-09-27
 
 ### Fixed
 
-- The project configuration
+- The project configuration files
 
 ## [3.3.0] - 2026-09-27
 
@@ -137,7 +137,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -151,7 +151,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -172,7 +172,7 @@ All notable changes to this project will be documented in this file.
 
 - The `README.md` file
 - The names of the blocs for `base layout`
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -186,7 +186,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- The project configuration
+- The project configuration files
 
 ### Changed
 
@@ -200,7 +200,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- The project configuration
+- The project configuration files
 
 ### Changed
 
