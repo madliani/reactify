@@ -17,8 +17,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `README.md` file
+- The project configuration
 
 ### Changed
 
@@ -32,8 +32,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `README.md` file
+- The project configuration
 
 ## [3.4.0] - 2026-10-12
 
@@ -43,8 +43,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `CHANGELOG.md` file
+- The project configuration
 
 ### Changed
 
@@ -58,17 +58,17 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `CHANGELOG.md` file
 - The `README.md` file
+- The project configuration
 
 ## [3.3.6] - 2026-10-08
 
 ### Fixed
 
-- Project configuration
 - The `CHANGELOG.md` file
 - The `README.md` file
+- The project configuration
 
 ### Changed
 
@@ -80,8 +80,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `README.md` file
+- The project configuration
 
 ### Changed
 
@@ -91,8 +91,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `README.md` file
+- The project configuration
 
 ### Changed
 
@@ -106,8 +106,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `README.md` file
+- The project configuration
 - The settings for Content Security Policy (CSP) was fixed
 
 ### Changed
@@ -120,13 +120,13 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
+- The project configuration
 
 ## [3.3.1] - 2026-09-27
 
 ### Fixed
 
-- Project configuration
+- The project configuration
 
 ## [3.3.0] - 2026-09-27
 
@@ -136,8 +136,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `README.md` file
+- The project configuration
 
 ### Changed
 
@@ -150,8 +150,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
 - The `README.md` file
+- The project configuration
 
 ### Changed
 
@@ -170,9 +170,9 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- The names of the blocs for `base layout`
-- Project configuration
 - The `README.md` file
+- The names of the blocs for `base layout`
+- The project configuration
 
 ### Changed
 
@@ -186,7 +186,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
+- The project configuration
 
 ### Changed
 
@@ -200,7 +200,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- Project configuration
+- The project configuration
 
 ### Changed
 
