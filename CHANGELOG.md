@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
+- The [Browser Mode](https://vitest.dev/guide/browser/) of `Vitest`
 - The browser tests for `Counter`
 
 ## [3.4.2] - 2026-10-16
