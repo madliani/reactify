@@ -1,5 +1,11 @@
+import {
+    Button,
+    ButtonGroup,
+    Card,
+    CardContent,
+    Typography
+} from "@mui/material"
 import { useStore } from "@nanostores/react"
-import { Button, Card, Flex, Text } from "@radix-ui/themes"
 import {
     counterAtom,
     decCount,
@@ -15,34 +21,91 @@ interface CounterViewProps {
 
 const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     return (
-        <Card className="flex h-48 w-48 flex-col flex-nowrap justify-center gap-4 sm:h-96 sm:w-96">
-            <Text
-                as="span"
-                className="text-center text-5xl font-bold sm:text-7xl"
-                data-testid="counter__heading"
-                title={count.toString()}
+        <Card>
+            <CardContent
+                sx={{
+                    "@media (width >= 640px)": {
+                        height: "24rem",
+                        width: "24rem"
+                    },
+                    alignItems: "center",
+                    display: "flex",
+                    flexFlow: "column nowrap",
+                    gap: "2rem",
+                    height: "12rem",
+                    justifyContent: "center",
+                    width: "12rem"
+                }}
             >
-                {count}
-            </Text>
-            <Flex className="flex-row flex-wrap justify-center gap-2">
-                <Button
-                    data-testid="counter__inc-btn"
-                    onClick={inc}
-                    title="Increment"
-                    variant="solid"
+                <Typography
+                    component="span"
+                    data-testid="counter__heading"
+                    sx={{
+                        "@media (width >= 640px)": { fontSize: "4.5rem" },
+                        fontSize: "3rem",
+                        fontWeight: "bold",
+                        lineHeight: "1rem",
+                        textAlign: "center"
+                    }}
+                    title={count.toString()}
                 >
-                    Increment
-                </Button>
-                <Button
-                    data-testid="counter__dec-btn"
-                    disabled={decIsDisabled}
-                    onClick={dec}
-                    title="Decrement"
-                    variant="soft"
+                    {count}
+                </Typography>
+                <ButtonGroup
+                    orientation="vertical"
+                    sx={{
+                        "@media (width >= 640px)": { display: "none" },
+                        display: "inline-flex"
+                    }}
                 >
-                    Decrement
-                </Button>
-            </Flex>
+                    <Button
+                        color="primary"
+                        data-testid="counter__inc-btn"
+                        onClick={inc}
+                        title="Increment"
+                        variant="contained"
+                    >
+                        Increment
+                    </Button>
+                    <Button
+                        color="error"
+                        data-testid="counter__dec-btn"
+                        disabled={decIsDisabled}
+                        onClick={dec}
+                        title="Decrement"
+                        variant="contained"
+                    >
+                        Decrement
+                    </Button>
+                </ButtonGroup>
+                <ButtonGroup
+                    orientation="horizontal"
+                    sx={{
+                        "@media (width >= 640px)": { display: "inline-flex" },
+                        display: "none"
+                    }}
+                >
+                    <Button
+                        color="primary"
+                        data-testid="counter__inc-btn"
+                        onClick={inc}
+                        title="Increment"
+                        variant="contained"
+                    >
+                        Increment
+                    </Button>
+                    <Button
+                        color="error"
+                        data-testid="counter__dec-btn"
+                        disabled={decIsDisabled}
+                        onClick={dec}
+                        title="Decrement"
+                        variant="contained"
+                    >
+                        Decrement
+                    </Button>
+                </ButtonGroup>
+            </CardContent>
         </Card>
     )
 }
