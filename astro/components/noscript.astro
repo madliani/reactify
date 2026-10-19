@@ -1,0 +1,19 @@
+<Fragment>
+    <noscript class="noscript">
+        <slot />
+    </noscript>
+</Fragment>
+
+<style is:global>
+    .noscript {
+        display: inline-block;
+
+        width: 100%;
+        max-height: min-content;
+        padding: 0.5rem;
+
+        text-align: center;
+
+        background-color: red;
+    }
+</style>
