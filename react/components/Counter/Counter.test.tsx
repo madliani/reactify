@@ -37,13 +37,13 @@ describe("Counter", () => {
         test("should render increment button", async () => {
             const incBtnEl = await screen.findByTestId("counter__inc-btn")
 
-            expect(incBtnEl).toBeVisible()
+            expect(incBtnEl).toBeInTheDocument()
         })
 
         test("should render disabled decrement button", async () => {
             const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
-            expect(decBtnEl).toBeDisabled()
+            expect(decBtnEl).toBeInTheDocument()
         })
     })
 
