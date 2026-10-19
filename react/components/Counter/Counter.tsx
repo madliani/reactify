@@ -87,7 +87,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                 >
                     <Button
                         color="primary"
-                        data-testid="counter__inc-btn"
+                        data-testid="counter__inc-btn--desktop"
                         onClick={inc}
                         title="Increment"
                         variant="contained"
@@ -96,7 +96,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                     </Button>
                     <Button
                         color="error"
-                        data-testid="counter__dec-btn"
+                        data-testid="counter__dec-btn--desktop"
                         disabled={decIsDisabled}
                         onClick={dec}
                         title="Decrement"

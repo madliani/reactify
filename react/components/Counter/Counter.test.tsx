@@ -45,6 +45,22 @@ describe("Counter", () => {
 
             expect(decBtnEl).toBeInTheDocument()
         })
+
+        test("should render increment button on desktop", async () => {
+            const incBtnEl = await screen.findByTestId(
+                "counter__inc-btn--desktop"
+            )
+
+            expect(incBtnEl).toBeInTheDocument()
+        })
+
+        test("should render disabled decrement button on desktop", async () => {
+            const decBtnEl = await screen.findByTestId(
+                "counter__dec-btn--desktop"
+            )
+
+            expect(decBtnEl).toBeInTheDocument()
+        })
     })
 
     describe("Counter increment", { concurrent: false }, () => {
