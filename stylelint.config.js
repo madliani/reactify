@@ -6,7 +6,6 @@ export default {
     extends: [
         "stylelint-config-standard",
         "stylelint-config-html/astro",
-        "stylelint-config-tailwindcss",
         "stylelint-config-clean-order"
     ],
     fix: true,

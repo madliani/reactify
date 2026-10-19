@@ -1,13 +1,11 @@
 import reactIntegration from "@astrojs/react"
 import sitemapIntegration from "@astrojs/sitemap"
-import vitePluginTW from "@tailwindcss/vite"
 import { defineConfig } from "astro/config"
 import pathe from "pathe"
 
 const PORT = 4321
 
 const integrations = [reactIntegration(), sitemapIntegration()]
-const vitePlugins = [vitePluginTW()]
 
 /** @type {import("astro").AstroConfig} */
 export default defineConfig({
@@ -23,7 +21,7 @@ export default defineConfig({
 
     vite: {
         css: { transformer: "postcss" },
-        plugins: [...vitePlugins],
+        plugins: [],
         resolve: {
             alias: {
                 "@astro": pathe.resolve(import.meta.dirname, "./astro/"),
