@@ -107,6 +107,58 @@ describe("Counter", () => {
         })
     })
 
+    describe("Counter increment on desktop", { concurrent: false }, () => {
+        beforeAll(() => render(<Counter />))
+        afterAll(() => cleanup())
+
+        test("should trigger increment button on desktop", async () => {
+            const user = userEvent.setup()
+            const incBtnEl = await screen.findByTestId(
+                "counter__inc-btn--desktop"
+            )
+
+            await user.click(incBtnEl)
+
+            expect(incCount).toHaveBeenCalledOnce()
+        })
+
+        test("should increment count on desktop", async () => {
+            const countEl = await screen.findByTestId("counter__heading")
+            const countStr = countEl.textContent
+            const count = parseInt(countStr)
+
+            expect(count).toBe(1)
+        })
+    })
+
+    describe(
+        "Counter decrement on desktop on desktop",
+        { concurrent: false },
+        () => {
+            beforeAll(() => render(<Counter />))
+            afterAll(() => cleanup())
+
+            test("should trigger decrement button", async () => {
+                const user = userEvent.setup()
+                const decBtnEl = await screen.findByTestId(
+                    "counter__dec-btn--desktop"
+                )
+
+                await user.click(decBtnEl)
+
+                expect(decCount).toHaveBeenCalledOnce()
+            })
+
+            test("shouldn't decrement count on desktop", async () => {
+                const countEl = await screen.findByTestId("counter__heading")
+                const countStr = countEl.textContent
+                const count = parseInt(countStr)
+
+                expect(count).toBe(0)
+            })
+        }
+    )
+
     describe("Counter hooks", () => {
         afterEach(() => cleanup())
 
