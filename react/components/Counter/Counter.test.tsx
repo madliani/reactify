@@ -21,9 +21,11 @@ import { Counter, useCounter } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
+const CounterComponent = <Counter />
+
 describe("Counter", () => {
     describe("Counter rendering", () => {
-        beforeAll(() => render(<Counter />))
+        beforeAll(() => render(CounterComponent))
         afterAll(() => cleanup())
 
         test("should render count", async () => {
@@ -64,7 +66,7 @@ describe("Counter", () => {
     })
 
     describe("Counter increment", { concurrent: false }, () => {
-        beforeAll(() => render(<Counter />))
+        beforeAll(() => render(CounterComponent))
         afterAll(() => cleanup())
 
         test("should trigger increment button", async () => {
@@ -86,7 +88,7 @@ describe("Counter", () => {
     })
 
     describe("Counter decrement", { concurrent: false }, () => {
-        beforeAll(() => render(<Counter />))
+        beforeAll(() => render(CounterComponent))
         afterAll(() => cleanup())
 
         test("should trigger decrement button", async () => {
@@ -108,7 +110,7 @@ describe("Counter", () => {
     })
 
     describe("Counter increment on desktop", { concurrent: false }, () => {
-        beforeAll(() => render(<Counter />))
+        beforeAll(() => render(CounterComponent))
         afterAll(() => cleanup())
 
         test("should trigger increment button on desktop", async () => {
@@ -135,7 +137,7 @@ describe("Counter", () => {
         "Counter decrement on desktop on desktop",
         { concurrent: false },
         () => {
-            beforeAll(() => render(<Counter />))
+            beforeAll(() => render(CounterComponent))
             afterAll(() => cleanup())
 
             test("should trigger decrement button", async () => {
