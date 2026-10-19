@@ -5,12 +5,13 @@ import { Box } from "@mui/material"
 type MainProps = MainViewProps
 
 interface MainViewProps {
-    children: ReactNode
+    children?: ReactNode
 }
 
 const MainView = ({ children }: MainViewProps) => (
     <Box
         component="main"
+        data-testid="main"
         sx={{
             alignItems: "center",
             display: "flex",
