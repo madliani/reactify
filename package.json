@@ -76,6 +76,7 @@
     "homepage": "https://github.com/madliani/reactify#readme",
     "keywords": [
         "astro",
+        "material-ui",
         "react",
         "reactify",
         "typescript"
