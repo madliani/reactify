@@ -1,3 +1,6 @@
+import type { Theme } from "@emotion/react"
+import type { SxProps } from "@mui/material"
+
 import {
     Button,
     ButtonGroup,
@@ -19,44 +22,49 @@ interface CounterViewProps {
     inc: () => void
 }
 
+const counterViewStyles: Record<string, SxProps<Theme>> = {
+    counterButtons: {
+        "@media (width >= 640px)": { display: "none" },
+        display: "inline-flex"
+    },
+    counterCardContent: {
+        "@media (width >= 640px)": { height: "24rem", width: "24rem" },
+        alignItems: "center",
+        display: "flex",
+        flexFlow: "column nowrap",
+        gap: "2rem",
+        height: "12rem",
+        justifyContent: "center",
+        width: "12rem"
+    },
+    counterDesktopButtons: {
+        "@media (width >= 640px)": { display: "inline-flex" },
+        display: "none"
+    },
+    counterHeading: {
+        "@media (width >= 640px)": { fontSize: "4.5rem" },
+        fontSize: "3rem",
+        fontWeight: "bold",
+        lineHeight: "1rem",
+        textAlign: "center"
+    }
+}
+
 const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     return (
         <Card>
-            <CardContent
-                sx={{
-                    "@media (width >= 640px)": {
-                        height: "24rem",
-                        width: "24rem"
-                    },
-                    alignItems: "center",
-                    display: "flex",
-                    flexFlow: "column nowrap",
-                    gap: "2rem",
-                    height: "12rem",
-                    justifyContent: "center",
-                    width: "12rem"
-                }}
-            >
+            <CardContent sx={counterViewStyles["counterCardContent"]}>
                 <Typography
                     component="span"
                     data-testid="counter__heading"
-                    sx={{
-                        "@media (width >= 640px)": { fontSize: "4.5rem" },
-                        fontSize: "3rem",
-                        fontWeight: "bold",
-                        lineHeight: "1rem",
-                        textAlign: "center"
-                    }}
+                    sx={counterViewStyles["counterHeading"]}
                     title={count.toString()}
                 >
                     {count}
                 </Typography>
                 <ButtonGroup
                     orientation="vertical"
-                    sx={{
-                        "@media (width >= 640px)": { display: "none" },
-                        display: "inline-flex"
-                    }}
+                    sx={counterViewStyles["counterButtons"]}
                 >
                     <Button
                         color="primary"
@@ -80,10 +88,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                 </ButtonGroup>
                 <ButtonGroup
                     orientation="horizontal"
-                    sx={{
-                        "@media (width >= 640px)": { display: "inline-flex" },
-                        display: "none"
-                    }}
+                    sx={counterViewStyles["counterDesktopButtons"]}
                 >
                     <Button
                         color="primary"
