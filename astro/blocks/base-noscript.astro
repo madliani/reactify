@@ -1,6 +1,20 @@
 <Fragment>
-    <noscript class="noscript inline-block max-h-max w-full bg-[red] p-2 text-center">
+    <noscript class="noscript">
         For full functionality of this site it is necessary to{" "}
         <span class="font-bold">enable JavaScript</span>.
     </noscript>
 </Fragment>
+
+<style is:global>
+    .noscript {
+        display: inline-block;
+
+        width: 100%;
+        max-height: min-content;
+        padding: 0.5rem;
+
+        text-align: center;
+
+        background-color: red;
+    }
+</style>
