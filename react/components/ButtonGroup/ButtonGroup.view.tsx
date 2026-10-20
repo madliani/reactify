@@ -19,6 +19,7 @@ export type ButtonGroupProps = BGViewProps
 const ButtonGroupView = ({ children, styles }: BGViewProps) => (
     <>
         <MUIButtonGroup
+            component="div"
             data-testid="btn-group__mobile-btns"
             orientation="vertical"
             sx={styles?.mobile}
@@ -27,6 +28,7 @@ const ButtonGroupView = ({ children, styles }: BGViewProps) => (
         </MUIButtonGroup>
 
         <MUIButtonGroup
+            component="div"
             data-testid="btn-group__desktop-btns"
             orientation="horizontal"
             sx={styles?.desktop}
