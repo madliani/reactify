@@ -1,14 +1,9 @@
 import type { Theme } from "@emotion/react"
 import type { SxProps } from "@mui/material"
 
-import {
-    Button,
-    ButtonGroup,
-    Card,
-    CardContent,
-    Typography
-} from "@mui/material"
+import { Button, Card, CardContent, Typography } from "@mui/material"
 import { useStore } from "@nanostores/react"
+import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
 import {
     counterAtom,
     decCount,
@@ -63,8 +58,8 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                     {count}
                 </Typography>
                 <ButtonGroup
-                    orientation="vertical"
-                    sx={counterViewStyles["counterButtons"]}
+                    desktopStyles={counterViewStyles["counterDesktopButtons"]}
+                    styles={counterViewStyles["counterButtons"]}
                 >
                     <Button
                         color="primary"
@@ -78,30 +73,6 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                     <Button
                         color="error"
                         data-testid="counter__dec-btn"
-                        disabled={decIsDisabled}
-                        onClick={dec}
-                        title="Decrement"
-                        variant="contained"
-                    >
-                        Decrement
-                    </Button>
-                </ButtonGroup>
-                <ButtonGroup
-                    orientation="horizontal"
-                    sx={counterViewStyles["counterDesktopButtons"]}
-                >
-                    <Button
-                        color="primary"
-                        data-testid="counter__inc-btn--desktop"
-                        onClick={inc}
-                        title="Increment"
-                        variant="contained"
-                    >
-                        Increment
-                    </Button>
-                    <Button
-                        color="error"
-                        data-testid="counter__dec-btn--desktop"
                         disabled={decIsDisabled}
                         onClick={dec}
                         title="Decrement"
