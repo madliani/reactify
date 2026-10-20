@@ -10,24 +10,24 @@ import {
     incCount
 } from "@react/components/Counter/Counter.atom"
 
-interface CounterStyles {
+interface CounterViewProps {
+    count: number
+    dec: () => void
+    decIsDisabled: boolean
+    inc: () => void
+    styles: CounterViewStyles
+}
+
+interface CounterViewStyles {
     cardContent: MUIStyles
     count: MUIStyles
     desktopButtonGroup: MUIStyles
     mobileButtonGroup: MUIStyles
 }
 
-interface CounterViewProps {
-    count: number
-    dec: () => void
-    decIsDisabled: boolean
-    inc: () => void
-    styles: CounterStyles
-}
-
 type MUIStyles = SxProps<Theme>
 
-const counterViewStyles: CounterStyles = {
+const counterViewStyles: CounterViewStyles = {
     cardContent: {
         "@media (width >= 640px)": { height: "24rem", width: "24rem" },
         alignItems: "center",
