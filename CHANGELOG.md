@@ -24,15 +24,15 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
+- The browser tests for the `Counter` component
 - The configuration files of the project
+- The styles
+- The tests for `Counter`
 
 ### Changed
 
 - The `Counter` component was refactored
 - The `test/` directory from `react/` moved to the root directory
-- The browser tests for the `Counter` component
-- The styles were refactored
-- The tests for `Counter`
 
 ## [3.4.1] - 2026-10-12
 
@@ -51,9 +51,6 @@ All notable changes to this project will be documented in this file.
 
 - The `CHANGELOG.md` file
 - The configuration files of the project
-
-### Changed
-
 - The tests for `Counter`
 
 ## [3.3.7] - 2026-10-11
@@ -88,9 +85,6 @@ All notable changes to this project will be documented in this file.
 
 - The `README.md` file
 - The configuration files of the project
-
-### Changed
-
 - The tests for `Counter`
 
 ## [3.3.4] - 2026-10-07
@@ -144,13 +138,13 @@ All notable changes to this project will be documented in this file.
 
 - The `README.md` file
 - The configuration files of the project
+- The styles
 
 ### Changed
 
 - The `Jotai` state manager was replaced by `Nano Stores`
 - The homepage screenshot was updated
 - The homepage, `base template` and `base layout` were refactored
-- The styles were refactored
 
 ## [3.2.0] - 2026-09-24
 
@@ -158,6 +152,7 @@ All notable changes to this project will be documented in this file.
 
 - The `README.md` file
 - The configuration files of the project
+- The styles
 
 ### Changed
 
@@ -165,7 +160,6 @@ All notable changes to this project will be documented in this file.
 - The `Counter` component was refactored
 - The `HeroUI` library was replaced by the `Radix UI` library
 - The homepage screenshot was updated
-- The styles were refactored
 
 ### Removed
 
@@ -193,10 +187,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The configuration files of the project
-
-### Changed
-
-- The styles were refactored
+- The styles
 
 ## [3.0.0] - 2026-09-17
 
