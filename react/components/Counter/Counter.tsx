@@ -15,9 +15,10 @@ interface CounterViewProps {
     dec: () => void
     decIsDisabled: boolean
     inc: () => void
+    styles: Record<string, SxProps<Theme>>
 }
 
-const counterViewStyles: Record<string, SxProps<Theme>> = {
+const counterStyles: Record<string, SxProps<Theme>> = {
     cardContent: {
         "@media (width >= 640px)": { height: "24rem", width: "24rem" },
         alignItems: "center",
@@ -45,14 +46,16 @@ const counterViewStyles: Record<string, SxProps<Theme>> = {
     }
 }
 
-const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
+const CounterView = (props: CounterViewProps) => {
+    const { count, dec, decIsDisabled, inc, styles } = props
+
     return (
         <Card>
-            <CardContent sx={counterViewStyles["cardContent"]}>
+            <CardContent sx={styles["cardContent"]}>
                 <Typography
                     component="span"
                     data-testid="counter__count"
-                    sx={counterViewStyles["count"]}
+                    sx={styles["count"]}
                     title={count.toString()}
                 >
                     {count}
@@ -60,8 +63,8 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
 
                 <ButtonGroup
                     styles={{
-                        desktop: counterViewStyles["desktopButtonGroup"],
-                        mobile: counterViewStyles["mobileButtonGroup"]
+                        desktop: styles["desktopButtonGroup"],
+                        mobile: styles["mobileButtonGroup"]
                     }}
                 >
                     <Button
@@ -109,6 +112,7 @@ const Counter = () => {
             dec={dec}
             decIsDisabled={decIsDisabled}
             inc={inc}
+            styles={counterStyles}
         />
     )
 }
