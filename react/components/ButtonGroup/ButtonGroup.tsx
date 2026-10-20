@@ -7,12 +7,16 @@ import { ButtonGroup as MUIButtonGroup } from "@mui/material"
 interface BGViewProps {
     children?: ReactNode | undefined
     desktopStyles?: SxProps<Theme> | undefined
-    styles?: SxProps<Theme> | undefined
+    mobileStyles?: SxProps<Theme> | undefined
 }
 
 type ButtonGroupProps = BGViewProps
 
-const ButtonGroupView = ({ children, desktopStyles, styles }: BGViewProps) => (
+const ButtonGroupView = ({
+    children,
+    desktopStyles,
+    mobileStyles: styles
+}: BGViewProps) => (
     <>
         <MUIButtonGroup orientation="vertical" sx={styles}>
             {children}
