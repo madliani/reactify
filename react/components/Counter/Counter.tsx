@@ -57,6 +57,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                 >
                     {count}
                 </Typography>
+
                 <ButtonGroup
                     desktopStyles={counterViewStyles["counterDesktopButtons"]}
                     styles={counterViewStyles["counterButtons"]}
@@ -70,6 +71,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                     >
                         Increment
                     </Button>
+
                     <Button
                         color="error"
                         data-testid="counter__dec-btn"
