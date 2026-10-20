@@ -18,11 +18,11 @@ interface CounterViewProps {
 }
 
 const counterViewStyles: Record<string, SxProps<Theme>> = {
-    counterButtons: {
+    buttonGroup: {
         "@media (width >= 640px)": { display: "none" },
         display: "inline-flex"
     },
-    counterCardContent: {
+    cardContent: {
         "@media (width >= 640px)": { height: "24rem", width: "24rem" },
         alignItems: "center",
         display: "flex",
@@ -32,11 +32,11 @@ const counterViewStyles: Record<string, SxProps<Theme>> = {
         justifyContent: "center",
         width: "12rem"
     },
-    counterDesktopButtons: {
+    desktopButtonGroup: {
         "@media (width >= 640px)": { display: "inline-flex" },
         display: "none"
     },
-    counterHeading: {
+    heading: {
         "@media (width >= 640px)": { fontSize: "4.5rem" },
         fontSize: "3rem",
         fontWeight: "bold",
@@ -48,19 +48,19 @@ const counterViewStyles: Record<string, SxProps<Theme>> = {
 const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
     return (
         <Card>
-            <CardContent sx={counterViewStyles["counterCardContent"]}>
+            <CardContent sx={counterViewStyles["cardContent"]}>
                 <Typography
                     component="span"
                     data-testid="counter__heading"
-                    sx={counterViewStyles["counterHeading"]}
+                    sx={counterViewStyles["heading"]}
                     title={count.toString()}
                 >
                     {count}
                 </Typography>
 
                 <ButtonGroup
-                    desktopStyles={counterViewStyles["counterDesktopButtons"]}
-                    styles={counterViewStyles["counterButtons"]}
+                    desktopStyles={counterViewStyles["desktopButtonGroup"]}
+                    styles={counterViewStyles["buttonGroup"]}
                 >
                     <Button
                         color="primary"
