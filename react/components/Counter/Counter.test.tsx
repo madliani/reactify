@@ -29,7 +29,7 @@ describe("Counter", () => {
         afterAll(() => cleanup())
 
         test("should render count", async () => {
-            const countEl = await screen.findByTestId("counter__heading")
+            const countEl = await screen.findByTestId("counter__count")
             const countStr = countEl.textContent
             const count = parseInt(countStr)
 
@@ -79,7 +79,7 @@ describe("Counter", () => {
         })
 
         test("should increment count", async () => {
-            const countEl = await screen.findByTestId("counter__heading")
+            const countEl = await screen.findByTestId("counter__count")
             const countStr = countEl.textContent
             const count = parseInt(countStr)
 
@@ -101,7 +101,7 @@ describe("Counter", () => {
         })
 
         test("shouldn't decrement count", async () => {
-            const countEl = await screen.findByTestId("counter__heading")
+            const countEl = await screen.findByTestId("counter__count")
             const countStr = countEl.textContent
             const count = parseInt(countStr)
 
@@ -125,7 +125,7 @@ describe("Counter", () => {
         })
 
         test("should increment count on desktop", async () => {
-            const countEl = await screen.findByTestId("counter__heading")
+            const countEl = await screen.findByTestId("counter__count")
             const countStr = countEl.textContent
             const count = parseInt(countStr)
 
@@ -152,7 +152,7 @@ describe("Counter", () => {
             })
 
             test("shouldn't decrement count on desktop", async () => {
-                const countEl = await screen.findByTestId("counter__heading")
+                const countEl = await screen.findByTestId("counter__count")
                 const countStr = countEl.textContent
                 const count = parseInt(countStr)
 

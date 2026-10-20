@@ -32,16 +32,16 @@ const counterViewStyles: Record<string, SxProps<Theme>> = {
         justifyContent: "center",
         width: "12rem"
     },
-    desktopButtonGroup: {
-        "@media (width >= 640px)": { display: "inline-flex" },
-        display: "none"
-    },
-    heading: {
+    count: {
         "@media (width >= 640px)": { fontSize: "4.5rem" },
         fontSize: "3rem",
         fontWeight: "bold",
         lineHeight: "1rem",
         textAlign: "center"
+    },
+    desktopButtonGroup: {
+        "@media (width >= 640px)": { display: "inline-flex" },
+        display: "none"
     }
 }
 
@@ -51,8 +51,8 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
             <CardContent sx={counterViewStyles["cardContent"]}>
                 <Typography
                     component="span"
-                    data-testid="counter__heading"
-                    sx={counterViewStyles["heading"]}
+                    data-testid="counter__count"
+                    sx={counterViewStyles["count"]}
                     title={count.toString()}
                 >
                     {count}
