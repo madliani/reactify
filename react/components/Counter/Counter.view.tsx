@@ -70,7 +70,9 @@ const CounterView = (props: CounterViewProps) => {
     return (
         <Card>
             <CardHeader
-                slotProps={{ title: { sx: styles.title } }}
+                slotProps={{
+                    title: { "data-testid": "counter__title", sx: styles.title }
+                }}
                 title="Counter"
             />
 

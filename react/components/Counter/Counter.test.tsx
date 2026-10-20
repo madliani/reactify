@@ -28,6 +28,13 @@ describe("Counter", () => {
         beforeAll(() => render(CounterComponent))
         afterAll(() => cleanup())
 
+        test("should render title", async () => {
+            const titleEl = await screen.findByTestId("counter__title")
+            const titleStr = titleEl.textContent
+
+            expect(titleStr).toBe("Counter")
+        })
+
         test("should render count", async () => {
             const countEl = await screen.findByTestId("counter__count")
             const countStr = countEl.textContent
