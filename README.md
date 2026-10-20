@@ -214,15 +214,12 @@ the exception of [certain assets](./README.md#attributions).
    [Julien Monty](https://icon-icons.com/authors/934-julien-monty/) and licensed
    under the `Free for commerical use` license.
 
-## FAQs
-
-<details>
-<summary>How do I start contributing to the project?</summary>
+## Contributing
 
 To learn about contributing to the project, see
 [CONTRIBUTING.md](./CONTRIBUTING.md).
 
-</details>
+## FAQs
 
 <details>
 <summary>Why are some development dependencies necessary?</summary>
