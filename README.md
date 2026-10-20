@@ -221,13 +221,10 @@ To learn about contributing to the project, see
 
 ## FAQs
 
-<details>
-<summary>Why are some development dependencies necessary?</summary>
+### 1. Why are some development dependencies necessary?
 
 These dependencies are necessary for other dependencies to work correctly.
 
 | Dependency | Purpose                                 |
 | ---------- | --------------------------------------- |
 | tslib      | Dependency for the `typescript` package |
-
-</details>
