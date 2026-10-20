@@ -9,8 +9,13 @@ type MainProps = MainViewProps
 interface MainViewProps {
     children?: ReactNode
 }
+interface MainViewStyles {
+    main: MUIStyles
+}
 
-const mainViewStyles: Record<string, SxProps<Theme>> = {
+type MUIStyles = SxProps<Theme>
+
+const mainViewStyles: MainViewStyles = {
     main: {
         alignItems: "center",
         display: "flex",
@@ -22,7 +27,7 @@ const mainViewStyles: Record<string, SxProps<Theme>> = {
 }
 
 const MainView = ({ children }: MainViewProps) => (
-    <Box component="main" data-testid="main" sx={mainViewStyles["main"]}>
+    <Box component="main" data-testid="main" sx={mainViewStyles.main}>
         {children}
     </Box>
 )
