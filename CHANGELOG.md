@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `CHANGELOG.md` file
+- The `Counter` component
 - The `README.md` file
 - The configuration files of the project
 - The tests for `Counter`
@@ -32,7 +33,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - The `base noscript` block was refactored
-- The `Counter` was refactored
 - The `Tailwind CSS` framework and the `Radix UI` library were replaced by the
   `Material UI` library
 
@@ -58,6 +58,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
+- The `Counter` component
 - The `README.md` file
 - The browser tests for the `Counter` component
 - The configuration files of the project
@@ -66,7 +67,6 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- The `Counter` component was refactored
 - The `test/` directory from `react/` moved to the root directory
 
 ## [3.4.1] - 2026-10-12
@@ -141,13 +141,13 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
+- The `Counter` component
 - The `README.md` file
 - The configuration files of the project
 - The settings for Content Security Policy (CSP) was fixed
 
 ### Changed
 
-- The `Counter` component was refactored
 - The homepage screenshot was updated
 - The homepage was refactored
 
@@ -185,6 +185,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
+- The `Counter` component
 - The `README.md` file
 - The configuration files of the project
 - The styles
@@ -192,7 +193,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Dependencies were upgraded
-- The `Counter` component was refactored
 - The `HeroUI` library was replaced by the `Radix UI` library
 - The homepage screenshot was updated
 
