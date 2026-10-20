@@ -1,7 +1,13 @@
 import type { Theme } from "@emotion/react"
 import type { SxProps } from "@mui/material"
 
-import { Button, Card, CardContent, Typography } from "@mui/material"
+import {
+    Button,
+    Card,
+    CardContent,
+    CardHeader,
+    Typography
+} from "@mui/material"
 import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
 
 export interface CounterViewProps {
@@ -17,6 +23,7 @@ export interface CounterViewStyles {
     count: MUIStyles
     desktopButtonGroup: MUIStyles
     mobileButtonGroup: MUIStyles
+    title: MUIStyles
 }
 
 export type MUIStyles = SxProps<Theme>
@@ -46,6 +53,14 @@ const counterViewStyles: CounterViewStyles = {
     mobileButtonGroup: {
         "@media (width >= 640px)": { display: "none" },
         display: "inline-flex"
+    },
+    title: {
+        "@media (width >= 640px)": { fontSize: "3rem" },
+        fontSize: "1.5rem",
+        fontWeight: "bold",
+        lineHeight: "1rem",
+        paddingY: "1rem",
+        textAlign: "center"
     }
 }
 
@@ -54,6 +69,11 @@ const CounterView = (props: CounterViewProps) => {
 
     return (
         <Card>
+            <CardHeader
+                slotProps={{ title: { sx: styles.title } }}
+                title="Counter"
+            />
+
             <CardContent sx={styles.cardContent}>
                 <Typography
                     component="span"
