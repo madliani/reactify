@@ -192,10 +192,10 @@ The **simplified** `Git` workflow contains the following steps:
 1. The project is a `React`-based single-page application (SPA), but it uses
    `Astro` as a bundler, a router, and an alternative for `React Helmet`. So,
    formally, the project is an `Astro`-based website.
-2. For compatibility reasons, the project uses
-   [Nano Stores](https://github.com/nanostores/nanostores/) state manager, which
-   both works with `Astro` and `React`. It allows you to share the state of the
-   web app between the `Astro`-based and `React`-based components, and also it's
+2. For compatibility reasons, the project uses `Nano Stores` state manager,
+   which both works with `Astro` and `React`. It allows you to share the state
+   of the web app between the `Astro`-based and `React`-based components, and
+   also it's
    [officially recommended](https://docs.astro.build/en/recipes/sharing-state-islands)
    by `Astro` developers.
 3. The size of the image for `The Open Graph protocol` should be `1200x630`
