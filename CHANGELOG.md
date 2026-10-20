@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.2] - 2026-10-20
+
+### Fixed
+
+- The `Counter` component
+- The `Counter` tests
+
+### Changed
+
+- The homepage screenshot was updated
+
 ## [4.0.1] - 2026-10-20
 
 ### Fixed
