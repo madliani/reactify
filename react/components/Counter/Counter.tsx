@@ -27,7 +27,7 @@ interface CounterViewProps {
 
 type MUIStyles = SxProps<Theme>
 
-const counterStyles: CounterStyles = {
+const counterViewStyles: CounterStyles = {
     cardContent: {
         "@media (width >= 640px)": { height: "24rem", width: "24rem" },
         alignItems: "center",
@@ -121,7 +121,7 @@ const Counter = () => {
             dec={dec}
             decIsDisabled={decIsDisabled}
             inc={inc}
-            styles={counterStyles}
+            styles={counterViewStyles}
         />
     )
 }
