@@ -18,10 +18,6 @@ interface CounterViewProps {
 }
 
 const counterViewStyles: Record<string, SxProps<Theme>> = {
-    buttonGroup: {
-        "@media (width >= 640px)": { display: "none" },
-        display: "inline-flex"
-    },
     cardContent: {
         "@media (width >= 640px)": { height: "24rem", width: "24rem" },
         alignItems: "center",
@@ -42,6 +38,10 @@ const counterViewStyles: Record<string, SxProps<Theme>> = {
     desktopButtonGroup: {
         "@media (width >= 640px)": { display: "inline-flex" },
         display: "none"
+    },
+    mobileButtonGroup: {
+        "@media (width >= 640px)": { display: "none" },
+        display: "inline-flex"
     }
 }
 
@@ -60,7 +60,7 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
 
                 <ButtonGroup
                     desktopStyles={counterViewStyles["desktopButtonGroup"]}
-                    styles={counterViewStyles["buttonGroup"]}
+                    styles={counterViewStyles["mobileButtonGroup"]}
                 >
                     <Button
                         color="primary"
