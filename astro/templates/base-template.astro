@@ -22,7 +22,7 @@ const { className, description = "", title = "" } = Astro.props
         <ClientRouter />
     </head>
 
-    <body class="h-svh w-svw">
+    <body class="base-body">
         <BaseNoscript />
 
         <BaseLayout className={className}>
@@ -30,3 +30,10 @@ const { className, description = "", title = "" } = Astro.props
         </BaseLayout>
     </body>
 </html>
+
+<style is:global>
+    .base-body {
+        width: 100svw;
+        height: 100svh;
+    }
+</style>
