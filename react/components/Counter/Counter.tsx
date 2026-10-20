@@ -59,8 +59,10 @@ const CounterView = ({ count, dec, decIsDisabled, inc }: CounterViewProps) => {
                 </Typography>
 
                 <ButtonGroup
-                    desktopStyles={counterViewStyles["desktopButtonGroup"]}
-                    mobileStyles={counterViewStyles["mobileButtonGroup"]}
+                    styles={{
+                        desktop: counterViewStyles["desktopButtonGroup"],
+                        mobile: counterViewStyles["mobileButtonGroup"]
+                    }}
                 >
                     <Button
                         color="primary"

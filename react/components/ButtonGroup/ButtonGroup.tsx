@@ -4,25 +4,25 @@ import type { ReactNode } from "react"
 
 import { ButtonGroup as MUIButtonGroup } from "@mui/material"
 
+interface BGStyles {
+    desktop?: SxProps<Theme> | undefined
+    mobile?: SxProps<Theme> | undefined
+}
+
 interface BGViewProps {
     children?: ReactNode | undefined
-    desktopStyles?: SxProps<Theme> | undefined
-    mobileStyles?: SxProps<Theme> | undefined
+    styles?: BGStyles | undefined
 }
 
 type ButtonGroupProps = BGViewProps
 
-const ButtonGroupView = ({
-    children,
-    desktopStyles,
-    mobileStyles: styles
-}: BGViewProps) => (
+const ButtonGroupView = ({ children, styles }: BGViewProps) => (
     <>
-        <MUIButtonGroup orientation="vertical" sx={styles}>
+        <MUIButtonGroup orientation="vertical" sx={styles?.mobile}>
             {children}
         </MUIButtonGroup>
 
-        <MUIButtonGroup orientation="horizontal" sx={desktopStyles}>
+        <MUIButtonGroup orientation="horizontal" sx={styles?.desktop}>
             {children}
         </MUIButtonGroup>
     </>
