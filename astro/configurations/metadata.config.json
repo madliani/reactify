@@ -14,7 +14,7 @@
         "script_src": ["self", "unsafe-inline"],
         "style_src": ["self", "unsafe-inline"]
     },
-    "description": "A starter kit for React.",
+    "description": "A modern starter kit for React.",
     "favicon_path": "/icons/favicon.ico",
     "favicon_svg_path": "/icons/favicon.svg",
     "is_indexable": true,
