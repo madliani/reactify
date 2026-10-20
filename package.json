@@ -12,8 +12,8 @@
         "x64"
     ],
     "dependencies": {
-        "@astrojs/check": "0.9.10",
-        "@astrojs/react": "7.0.1",
+        "@astrojs/check": "0.9.11",
+        "@astrojs/react": "7.1.0",
         "@astrojs/sitemap": "3.7.4",
         "@emotion/react": "11.14.0",
         "@emotion/styled": "11.14.1",
@@ -21,10 +21,10 @@
         "@fontsource/roboto": "5.3.0",
         "@mui/material": "9.5.0",
         "@nanostores/react": "2.0.1",
-        "astro": "7.3.8",
+        "astro": "7.4.1",
         "pathe": "2.0.3",
-        "react": "19.3.0",
-        "react-dom": "19.3.0",
+        "react": "19.3.1",
+        "react-dom": "19.3.1",
         "sharp": "0.35.5",
         "tslib": "2.8.1",
         "typescript": "6.0.3"
