@@ -9,6 +9,7 @@ type MainProps = MainViewProps
 interface MainViewProps {
     children?: ReactNode
 }
+
 interface MainViewStyles {
     main: MUIStyles
 }
