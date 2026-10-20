@@ -163,7 +163,7 @@ All notable changes to this project will be documented in this file.
 
 - Dependencies were upgraded
 - The `Counter` component was refactored
-- The `HeroUI` library was replaced by `Radix UI`
+- The `HeroUI` library was replaced by the `Radix UI` library
 - The homepage screenshot was updated
 - The styles were refactored
 
