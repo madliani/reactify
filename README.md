@@ -32,7 +32,8 @@ This is a starter kit for React.
 ## Features
 
 1. Modern UI framework: `Material UI`
-2. SEO-friendly via `Astro`
+2. Mobile-first design
+3. SEO-friendly via `Astro`
 
 ## Screenshots
 
