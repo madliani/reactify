@@ -10,15 +10,24 @@ import {
     incCount
 } from "@react/components/Counter/Counter.atom"
 
+interface CounterStyles {
+    cardContent: MUIStyles
+    count: MUIStyles
+    desktopButtonGroup: MUIStyles
+    mobileButtonGroup: MUIStyles
+}
+
 interface CounterViewProps {
     count: number
     dec: () => void
     decIsDisabled: boolean
     inc: () => void
-    styles: Record<string, SxProps<Theme>>
+    styles: CounterStyles
 }
 
-const counterStyles: Record<string, SxProps<Theme>> = {
+type MUIStyles = SxProps<Theme>
+
+const counterStyles: CounterStyles = {
     cardContent: {
         "@media (width >= 640px)": { height: "24rem", width: "24rem" },
         alignItems: "center",
@@ -51,11 +60,11 @@ const CounterView = (props: CounterViewProps) => {
 
     return (
         <Card>
-            <CardContent sx={styles["cardContent"]}>
+            <CardContent sx={styles.cardContent}>
                 <Typography
                     component="span"
                     data-testid="counter__count"
-                    sx={styles["count"]}
+                    sx={styles.count}
                     title={count.toString()}
                 >
                     {count}
@@ -63,8 +72,8 @@ const CounterView = (props: CounterViewProps) => {
 
                 <ButtonGroup
                     styles={{
-                        desktop: styles["desktopButtonGroup"],
-                        mobile: styles["mobileButtonGroup"]
+                        desktop: styles.desktopButtonGroup,
+                        mobile: styles.mobileButtonGroup
                     }}
                 >
                     <Button
