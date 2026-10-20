@@ -36,8 +36,6 @@ jobs:
                   version: 12
             - name: Install dependencies
               run: pnpm ci
-            - name: Install browsers for running tests in the browser
-              run: pnpm exec playwright install
             - name: Disable telemetry collection by Astro
               run: pnpm telemetry:disable
             - name: Test
