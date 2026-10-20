@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.0] - 2026-10-20
+
+### Added
+
+- The `ButtonGroup` component to `react/components/`
+- The `Main` component to `react/components/`
+- The `Noscript` component to `astro/components/`
+
+### Fixed
+
+- The `CHANGELOG.md` file
+- The `README.md` file
+- The configuration files of the project
+- The tests for `Counter`
+
+### Changed
+
+- The `base noscript` block was refactored
+- The `Counter` was refactored
+- The `Tailwind CSS` framework and the `Radix UI` library were replaced by the
+  `Material UI` library
+
 ## [3.4.4] - 2026-10-17
 
 ### Fixed
@@ -13,6 +35,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `CHANGELOG.md` file
+- The tests for `Counter`
 
 ### Removed
 
