@@ -232,3 +232,5 @@ These dependencies are necessary for other dependencies to work correctly.
 | Dependency | Purpose                                 |
 | ---------- | --------------------------------------- |
 | tslib      | Dependency for the `typescript` package |
+
+</details>
