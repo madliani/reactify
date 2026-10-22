@@ -32,7 +32,7 @@
     "title": "Reactify",
     "twitter_card": {
         "card": "summary_large_image",
-        "image_path": "/images/astro-reactify-homepage.png"
+        "image_path": "/images/reactify-homepage.png"
     },
     "viewport": { "initial_scale": 1.0, "width": "device-width" }
 }
