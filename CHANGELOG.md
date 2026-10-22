@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.3] - 2026-10-23
+
+### Fixed
+
+- The `metadata` block
+- The configuration file for `metadata`
+
 ## [4.0.2] - 2026-10-20
 
 ### Fixed
