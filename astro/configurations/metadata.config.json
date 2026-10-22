@@ -19,7 +19,7 @@
     "favicon_svg_path": "/icons/favicon.svg",
     "is_indexable": true,
     "is_supported_ie": false,
-    "keywords": "reactify",
+    "keywords": ["reactify"],
     "language": "en",
     "open_graph": {
         "image_path": "/images/reactify-homepage.png",

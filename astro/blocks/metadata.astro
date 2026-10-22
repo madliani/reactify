@@ -36,6 +36,10 @@ function formatViewport([attr, value]: [string, number | string]) {
     return `${formattedAttr}=${formattedValue}`
 }
 
+function joinKeywords(keywords: typeof MetadataConfig.keywords) {
+    return keywords.join(", ")
+}
+
 function titleTemplate(defaultTitle: string, title: string | undefined) {
     return title ? `${title} | ${defaultTitle}` : defaultTitle
 }
@@ -91,7 +95,7 @@ const twitterCardMetadata = {
 <meta content={metadata.author} name="author" />
 <meta content={metadata.description} name="description" />
 <meta content={metadata.generator} name="generator" />
-<meta content={metadata.keywords} name="keywords" />
+<meta content={joinKeywords(metadata.keywords)} name="keywords" />
 <meta content={metadata.themeColor} name="theme-color" />
 <meta content={metadata.title} name="title" />
 <meta content={metadata.viewport} name="viewport" />
