@@ -3,6 +3,11 @@ import BaseNoscript from "@astro/blocks/base-noscript.astro"
 import Metadata from "@astro/blocks/metadata.astro"
 import MetadataConfig from "@astro/configurations/metadata.config.json"
 import BaseLayout from "@astro/layouts/base-layout.astro"
+import "@fontsource/roboto/300.css"
+import "@fontsource/roboto/400.css"
+import "@fontsource/roboto/500.css"
+import "@fontsource/roboto/700.css"
+import { CssBaseline } from "@mui/material"
 import { ClientRouter } from "astro:transitions"
 
 interface Props {
@@ -26,6 +31,8 @@ const { className, description = "", title = "" } = Astro.props
         <BaseNoscript />
 
         <BaseLayout className={className}>
+            <CssBaseline />
+
             <slot />
         </BaseLayout>
     </body>

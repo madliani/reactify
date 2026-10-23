@@ -1,17 +1,10 @@
 ---
 import BaseTemplate from "@astro/templates/base-template.astro"
-import "@fontsource/roboto/300.css"
-import "@fontsource/roboto/400.css"
-import "@fontsource/roboto/500.css"
-import "@fontsource/roboto/700.css"
-import { CssBaseline } from "@mui/material"
 import { Counter } from "@react/components/Counter/Counter"
 import { Main } from "@react/components/Main/Main"
 ---
 
 <BaseTemplate title="Home">
-    <CssBaseline />
-
     <Main client:load>
         <Counter client:load />
     </Main>
