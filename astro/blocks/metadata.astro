@@ -22,11 +22,17 @@ function descTemplate(defaultDesc: string, desc: string | undefined) {
 
 function formatCSP([directive, sourceList]: [string, string[]]) {
     const formattedDirective = directive.replace("_", "-")
-    const formattedSourceList = sourceList
-        .map(source => `'${source}'`)
-        .join(" ")
+    const formattedSourceList = sourceList.map(formatSource).join(" ")
 
     return `${formattedDirective} ${formattedSourceList}`
+}
+
+function formatSource(source: string) {
+    if (source === "data:") {
+        return source
+    } else {
+        return `'${source}'`
+    }
 }
 
 function formatViewport([attr, value]: [string, number | string]) {
