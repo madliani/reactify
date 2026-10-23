@@ -30,11 +30,15 @@ export type MUIStyles = SxProps<Theme>
 
 const counterViewStyles: CounterViewStyles = {
     cardContent: {
-        "@media (width >= 640px)": { height: "24rem", width: "24rem" },
+        "@media (width >= 640px)": {
+            gap: "2.5rem",
+            height: "24rem",
+            width: "24rem"
+        },
         alignItems: "center",
         display: "flex",
         flexFlow: "column nowrap",
-        gap: "2rem",
+        gap: "1.5rem",
         height: "12rem",
         justifyContent: "center",
         width: "12rem"
@@ -55,7 +59,7 @@ const counterViewStyles: CounterViewStyles = {
         display: "inline-flex"
     },
     title: {
-        "@media (width >= 640px)": { fontSize: "3rem" },
+        "@media (width >= 640px)": { fontSize: "3.5rem" },
         fontSize: "1.5rem",
         fontWeight: "bold",
         lineHeight: "1rem",
