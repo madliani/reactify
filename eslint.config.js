@@ -113,7 +113,7 @@ export default defineConfig([
             pluginAstro.configs["flat/recommended"]
         ],
         files: ["**/*.astro"],
-        languageOptions: { ...jsxConfig.languageOptions },
+        languageOptions: { ...tsConfig.languageOptions },
         plugins: { ...tsConfig.plugins },
         rules: { ...tsConfig.rules },
         settings: {
