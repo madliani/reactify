@@ -1,13 +1,7 @@
 import type { Theme } from "@emotion/react"
 import type { SxProps } from "@mui/material"
 
-import {
-    Button,
-    Card,
-    CardContent,
-    CardHeader,
-    Typography
-} from "@mui/material"
+import { Button, Card, CardContent, Typography } from "@mui/material"
 import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
 
 export interface CounterViewProps {
@@ -19,6 +13,8 @@ export interface CounterViewProps {
 }
 
 export interface CounterViewStyles {
+    attribution: MUIStyles
+    card: MUIStyles
     cardContent: MUIStyles
     count: MUIStyles
     desktopButtonGroup: MUIStyles
@@ -29,6 +25,21 @@ export interface CounterViewStyles {
 export type MUIStyles = SxProps<Theme>
 
 const counterViewStyles: CounterViewStyles = {
+    attribution: {
+        "@media (width >= 640px)": { fontSize: "1rem", paddingY: "1rem" },
+        fontSize: "0.5rem",
+        lineHeight: "1rem",
+        paddingY: "0.5rem",
+        textAlign: "center",
+        width: "100%"
+    },
+    card: {
+        alignItems: "center",
+        display: "flex",
+        flexFlow: "column nowrap",
+        gap: "1rem",
+        justifyContent: "center"
+    },
     cardContent: {
         "@media (width >= 640px)": {
             gap: "2.5rem",
@@ -59,12 +70,13 @@ const counterViewStyles: CounterViewStyles = {
         display: "inline-flex"
     },
     title: {
-        "@media (width >= 640px)": { fontSize: "3.5rem" },
+        "@media (width >= 640px)": { fontSize: "3.5rem", paddingY: "2rem" },
         fontSize: "1.5rem",
         fontWeight: "bold",
         lineHeight: "1rem",
         paddingY: "1rem",
-        textAlign: "center"
+        textAlign: "center",
+        width: "100%"
     }
 }
 
@@ -73,12 +85,13 @@ const CounterView = (props: CounterViewProps) => {
 
     return (
         <Card>
-            <CardHeader
-                slotProps={{
-                    title: { "data-testid": "counter__title", sx: styles.title }
-                }}
-                title="Counter"
-            />
+            <Button
+                data-testid="counter__title"
+                href="https://github.com/madliani/reactify/"
+                sx={styles.title}
+            >
+                Counter
+            </Button>
 
             <CardContent sx={styles.cardContent}>
                 <Typography
@@ -118,6 +131,10 @@ const CounterView = (props: CounterViewProps) => {
                     </Button>
                 </ButtonGroup>
             </CardContent>
+
+            <Button href="https://github.com/madliani/" sx={styles.attribution}>
+                by @madliani
+            </Button>
         </Card>
     )
 }
