@@ -9,7 +9,7 @@
         title="Reactify logo"
         width="96px"
     />
-    <h3 align="center">A modern starter kit for React</h3>
+    <h3 align="center">A simple starter kit for React</h3>
 </div>
 
 ## Tech Stack
@@ -27,7 +27,7 @@
 
 ## Overview
 
-This is a modern starter kit for React.
+This is a simple starter kit for React.
 
 ## Features
 
