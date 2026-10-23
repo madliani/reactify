@@ -65,11 +65,11 @@ export default defineConfig([
         "package-lock.json"
     ]),
     {
-        extends: [...tsConfig.extends],
+        extends: tsConfig.extends,
         files: ["*.config.js"],
-        languageOptions: { ...tsConfig.languageOptions },
-        plugins: { ...tsConfig.plugins },
-        rules: { ...tsConfig.rules },
+        languageOptions: tsConfig.languageOptions,
+        plugins: tsConfig.plugins,
+        rules: tsConfig.rules,
         settings: {
             ...tsConfig.settings,
             "import/resolver": {
@@ -81,10 +81,10 @@ export default defineConfig([
     {
         extends: [...tsConfig.extends, ...browserConfig.extends],
         files: ["**/*.ts"],
-        languageOptions: { ...tsConfig.languageOptions },
-        plugins: { ...tsConfig.plugins },
-        rules: { ...tsConfig.rules },
-        settings: { ...tsConfig.settings }
+        languageOptions: tsConfig.languageOptions,
+        plugins: tsConfig.plugins,
+        rules: tsConfig.rules,
+        settings: tsConfig.settings
     },
     {
         extends: [pluginJSON.configs.recommended],
@@ -101,10 +101,10 @@ export default defineConfig([
     {
         extends: [...tsConfig.extends, ...browserConfig.extends],
         files: ["**/*.tsx"],
-        languageOptions: { ...jsxConfig.languageOptions },
-        plugins: { ...tsConfig.plugins },
-        rules: { ...tsConfig.rules },
-        settings: { ...tsConfig.settings }
+        languageOptions: jsxConfig.languageOptions,
+        plugins: tsConfig.plugins,
+        rules: tsConfig.rules,
+        settings: tsConfig.settings
     },
     {
         extends: [
@@ -113,9 +113,9 @@ export default defineConfig([
             pluginAstro.configs["flat/recommended"]
         ],
         files: ["**/*.astro"],
-        languageOptions: { ...tsConfig.languageOptions },
-        plugins: { ...tsConfig.plugins },
-        rules: { ...tsConfig.rules },
+        languageOptions: tsConfig.languageOptions,
+        plugins: tsConfig.plugins,
+        rules: tsConfig.rules,
         settings: {
             ...tsConfig.settings,
             "import/core-modules": ["astro:transitions"]
