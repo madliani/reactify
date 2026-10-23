@@ -88,7 +88,10 @@ const CounterView = (props: CounterViewProps) => {
             <Button
                 data-testid="counter__title"
                 href="https://github.com/madliani/reactify/"
+                referrerPolicy="no-referrer"
+                rel="noopener noreferrer"
                 sx={styles.title}
+                target="_blank"
             >
                 Counter
             </Button>
@@ -132,7 +135,13 @@ const CounterView = (props: CounterViewProps) => {
                 </ButtonGroup>
             </CardContent>
 
-            <Button href="https://github.com/madliani/" sx={styles.attribution}>
+            <Button
+                href="https://github.com/madliani/"
+                referrerPolicy="no-referrer"
+                rel="noopener noreferrer"
+                sx={styles.attribution}
+                target="_blank"
+            >
                 by @madliani
             </Button>
         </Card>
