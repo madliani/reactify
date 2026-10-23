@@ -212,10 +212,13 @@ the exception of [certain assets](./README.md#attributions).
 
 ## Attributions
 
-1. [React logo](./public/icons/reactify-logo.svg), from
-   [Icon-Icons.com](https://icon-icons.com/icon/react-original-logo/146374),
-   painted by [Julien Monty](https://icon-icons.com/authors/934-julien-monty/)
-   and licensed under the `Free for commerical use` license.
+The project uses the following assets:
+
+1. The [Reactify logo](./public/icons/reactify-logo.svg) is the
+   [React logo](https://icon-icons.com/icon/react-original-logo/146374), from
+   [Icon-Icons.com](https://icon-icons.com/), painted by
+   [Julien Monty](https://icon-icons.com/authors/934-julien-monty/) and licensed
+   under the `Free for commerical use` license.
 
 ## FAQs
 
