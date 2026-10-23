@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.4] - 2026-10-23
+
+### Fixed
+
+- The `Counter` component
+- The `Counter` tests
+- The `metadata` block
+- The configuration file for `metadata`
+
+### Changed
+
+- The homepage screenshot was updated
+
 ## [4.0.3] - 2026-10-23
 
 ### Fixed
