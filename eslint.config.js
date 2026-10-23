@@ -39,8 +39,6 @@ const tsConfig = {
     settings: { "import/resolver": { typescript: true } }
 }
 
-const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
-
 const jsxConfig = {
     languageOptions: {
         ...tsConfig.languageOptions,
@@ -53,6 +51,8 @@ const jsxConfig = {
         }
     }
 }
+
+const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
