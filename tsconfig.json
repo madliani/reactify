@@ -3,9 +3,9 @@
         "jsx": "react-jsx",
         "jsxImportSource": "react",
         "lib": [
-            "DOM",
             "DOM.AsyncIterable",
             "DOM.Iterable",
+            "DOM",
             "ES2022.array",
             "ES2022.error",
             "ES2022.intl",
