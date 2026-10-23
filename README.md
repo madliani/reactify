@@ -5,7 +5,7 @@
         alt="Reactify logo"
         aria-label="Reactify logo"
         height="96px"
-        src="./assets/icons/reactify-logo.svg"
+        src="./public/icons/reactify-logo.svg"
         title="Reactify logo"
         width="96px"
     />
@@ -39,7 +39,7 @@ This is a modern starter kit for React.
 
 <div align="center">
     <figure>
-        <img alt="A screenshot of the homepage" src="./assets/images/reactify-homepage.png" title="A screenshot of the homepage">
+        <img alt="A screenshot of the homepage" src="./public/images/reactify-homepage.png" title="A screenshot of the homepage">
         <figcaption>A screenshot of the homepage</figcaption>
     </figure>
 </div>
@@ -89,9 +89,6 @@ pnpm build
           the `stable` branch
         - `.github/workflows/check-unstable.yaml`: a workflow file for checking
           the `unstable` branch
-- `assets/`: a directory containing assets for the `README.md` file
-    - `assets/icons/`: a directory containing icons for the `README.md` file
-    - `assets/images/`: a directory containing images for the `README.md`
 - `astro/`: a directory containing source files of the website
     - `astro/blocks/`: a directory containing `Astro`-based blocks of the
       website
