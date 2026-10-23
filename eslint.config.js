@@ -10,41 +10,43 @@ import { defineConfig, globalIgnores } from "eslint/config"
 import globals from "globals"
 import ts from "typescript-eslint"
 
-const tsExtends = [
-    pluginJS.configs.recommended,
-    ts.configs.eslintRecommended,
-    ts.configs.strict,
-    ts.configs.stylistic,
-    pluginPerfect.configs["recommended-alphabetical"],
-    pluginImport.flatConfigs.recommended,
-    pluginImport.flatConfigs.typescript
-]
-const tsLanguageOptions = {
-    ecmaVersion: 2022,
-    globals: globals.builtin,
-    parserOptions: {
-        allowReserved: false,
-        ecmaFeatures: { globalReturn: false, impliedStrict: true }
+const tsConfig = {
+    extends: [
+        pluginJS.configs.recommended,
+        ts.configs.eslintRecommended,
+        ts.configs.strict,
+        ts.configs.stylistic,
+        pluginPerfect.configs["recommended-alphabetical"],
+        pluginImport.flatConfigs.recommended,
+        pluginImport.flatConfigs.typescript
+    ],
+    languageOptions: {
+        ecmaVersion: 2022,
+        globals: globals.builtin,
+        parserOptions: {
+            allowReserved: false,
+            ecmaFeatures: { globalReturn: false, impliedStrict: true }
+        },
+        sourceType: "module"
     },
-    sourceType: "module"
+    plugins: { "no-secrets": pluginNoSecrets },
+    rules: {
+        "import/no-named-as-default-member": "off",
+        "import/order": "off",
+        "no-secrets/no-pattern-match": "error",
+        "no-secrets/no-secrets": "error"
+    },
+    settings: { "import/resolver": { typescript: true } }
 }
-const tsPlugins = { "no-secrets": pluginNoSecrets }
-const tsRules = {
-    "import/no-named-as-default-member": "off",
-    "import/order": "off",
-    "no-secrets/no-pattern-match": "error",
-    "no-secrets/no-secrets": "error"
-}
-const tsSettings = { "import/resolver": { typescript: true } }
 
 const browserExtends = [pluginCompat.configs["flat/recommended"]]
 
 const jsxLanguageOptions = {
-    ...tsLanguageOptions,
+    ...tsConfig.languageOptions,
     parserOptions: {
-        ...tsLanguageOptions.parserOptions,
+        ...tsConfig.languageOptions.parserOptions,
         ecmaFeatures: {
-            ...tsLanguageOptions.parserOptions.ecmaFeatures,
+            ...tsConfig.languageOptions.parserOptions.ecmaFeatures,
             jsx: true
         }
     }
@@ -61,23 +63,26 @@ export default defineConfig([
         "package-lock.json"
     ]),
     {
-        extends: [...tsExtends],
+        extends: [...tsConfig.extends],
         files: ["*.config.js"],
-        languageOptions: { ...tsLanguageOptions },
-        plugins: { ...tsPlugins },
-        rules: { ...tsRules },
+        languageOptions: { ...tsConfig.languageOptions },
+        plugins: { ...tsConfig.plugins },
+        rules: { ...tsConfig.rules },
         settings: {
-            ...tsSettings,
-            "import/resolver": { ...tsSettings["import/resolver"], node: true }
+            ...tsConfig.settings,
+            "import/resolver": {
+                ...tsConfig.settings["import/resolver"],
+                node: true
+            }
         }
     },
     {
-        extends: [...tsExtends, ...browserExtends],
+        extends: [...tsConfig.extends, ...browserExtends],
         files: ["**/*.ts"],
-        languageOptions: { ...tsLanguageOptions },
-        plugins: { ...tsPlugins },
-        rules: { ...tsRules },
-        settings: { ...tsSettings }
+        languageOptions: { ...tsConfig.languageOptions },
+        plugins: { ...tsConfig.plugins },
+        rules: { ...tsConfig.rules },
+        settings: { ...tsConfig.settings }
     },
     {
         extends: [pluginJSON.configs.recommended],
@@ -92,25 +97,25 @@ export default defineConfig([
         rules: { "markdown/no-missing-label-refs": "off" }
     },
     {
-        extends: [...tsExtends, ...browserExtends],
+        extends: [...tsConfig.extends, ...browserExtends],
         files: ["**/*.tsx"],
         languageOptions: { ...jsxLanguageOptions },
-        plugins: { ...tsPlugins },
-        rules: { ...tsRules },
-        settings: { ...tsSettings }
+        plugins: { ...tsConfig.plugins },
+        rules: { ...tsConfig.rules },
+        settings: { ...tsConfig.settings }
     },
     {
         extends: [
-            ...tsExtends,
+            ...tsConfig.extends,
             ...browserExtends,
             pluginAstro.configs["flat/recommended"]
         ],
         files: ["**/*.astro"],
         languageOptions: { ...jsxLanguageOptions },
-        plugins: { ...tsPlugins },
-        rules: { ...tsRules },
+        plugins: { ...tsConfig.plugins },
+        rules: { ...tsConfig.rules },
         settings: {
-            ...tsSettings,
+            ...tsConfig.settings,
             "import/core-modules": ["astro:transitions"]
         }
     }
