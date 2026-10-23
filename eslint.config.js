@@ -39,7 +39,7 @@ const tsConfig = {
     settings: { "import/resolver": { typescript: true } }
 }
 
-const browserExtends = [pluginCompat.configs["flat/recommended"]]
+const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 
 const jsxLanguageOptions = {
     ...tsConfig.languageOptions,
@@ -77,7 +77,7 @@ export default defineConfig([
         }
     },
     {
-        extends: [...tsConfig.extends, ...browserExtends],
+        extends: [...tsConfig.extends, ...browserConfig.extends],
         files: ["**/*.ts"],
         languageOptions: { ...tsConfig.languageOptions },
         plugins: { ...tsConfig.plugins },
@@ -97,7 +97,7 @@ export default defineConfig([
         rules: { "markdown/no-missing-label-refs": "off" }
     },
     {
-        extends: [...tsConfig.extends, ...browserExtends],
+        extends: [...tsConfig.extends, ...browserConfig.extends],
         files: ["**/*.tsx"],
         languageOptions: { ...jsxLanguageOptions },
         plugins: { ...tsConfig.plugins },
@@ -107,7 +107,7 @@ export default defineConfig([
     {
         extends: [
             ...tsConfig.extends,
-            ...browserExtends,
+            ...browserConfig.extends,
             pluginAstro.configs["flat/recommended"]
         ],
         files: ["**/*.astro"],
