@@ -65,6 +65,18 @@ export default defineConfig([
         "package-lock.json"
     ]),
     {
+        extends: [pluginJSON.configs.recommended],
+        files: ["**/*.json", "**/*.jsonc"],
+        language: "json/jsonc",
+        rules: { "json/sort-keys": "error" }
+    },
+    {
+        extends: [pluginMD.configs.recommended],
+        files: ["**/*.md"],
+        language: "markdown/commonmark",
+        rules: { "markdown/no-missing-label-refs": "off" }
+    },
+    {
         extends: tsConfig.extends,
         files: ["*.config.js"],
         languageOptions: tsConfig.languageOptions,
@@ -85,18 +97,6 @@ export default defineConfig([
         plugins: tsConfig.plugins,
         rules: tsConfig.rules,
         settings: tsConfig.settings
-    },
-    {
-        extends: [pluginJSON.configs.recommended],
-        files: ["**/*.json", "**/*.jsonc"],
-        language: "json/jsonc",
-        rules: { "json/sort-keys": "error" }
-    },
-    {
-        extends: [pluginMD.configs.recommended],
-        files: ["**/*.md"],
-        language: "markdown/commonmark",
-        rules: { "markdown/no-missing-label-refs": "off" }
     },
     {
         extends: [...tsConfig.extends, ...browserConfig.extends],
