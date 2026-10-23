@@ -203,6 +203,11 @@ The **simplified** `Git` workflow contains the following steps:
 3. The size of the image for `The Open Graph protocol` should be `1200x630`
    pixels.
 
+## Contributing
+
+To learn about contributing to the project, see
+[CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ## License
 
 The project is distributed under the [Unlicense](./LICENSE.txt) license, with
@@ -215,11 +220,6 @@ the exception of [certain assets](./README.md#attributions).
    from [Icon-Icons.com](https://icon-icons.com/), painted by
    [Julien Monty](https://icon-icons.com/authors/934-julien-monty/) and licensed
    under the `Free for commerical use` license.
-
-## Contributing
-
-To learn about contributing to the project, see
-[CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## FAQs
 
