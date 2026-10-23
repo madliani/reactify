@@ -136,6 +136,7 @@ const CounterView = (props: CounterViewProps) => {
             </CardContent>
 
             <Button
+                data-testid="counter__attribution"
                 href="https://github.com/madliani/"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"

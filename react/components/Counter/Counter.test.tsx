@@ -58,6 +58,15 @@ describe("Counter", () => {
 
             expect(decBtnEl).toBeInTheDocument()
         })
+
+        test("should render attribution", async () => {
+            const attributionEl = await screen.findByTestId(
+                "counter__attribution"
+            )
+            const attributionStr = attributionEl.textContent
+
+            expect(attributionStr).toBe("by @madliani")
+        })
     })
 
     describe("Counter increment", { concurrent: false }, () => {
