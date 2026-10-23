@@ -41,13 +41,15 @@ const tsConfig = {
 
 const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 
-const jsxLanguageOptions = {
-    ...tsConfig.languageOptions,
-    parserOptions: {
-        ...tsConfig.languageOptions.parserOptions,
-        ecmaFeatures: {
-            ...tsConfig.languageOptions.parserOptions.ecmaFeatures,
-            jsx: true
+const jsxConfig = {
+    languageOptions: {
+        ...tsConfig.languageOptions,
+        parserOptions: {
+            ...tsConfig.languageOptions.parserOptions,
+            ecmaFeatures: {
+                ...tsConfig.languageOptions.parserOptions.ecmaFeatures,
+                jsx: true
+            }
         }
     }
 }
@@ -99,7 +101,7 @@ export default defineConfig([
     {
         extends: [...tsConfig.extends, ...browserConfig.extends],
         files: ["**/*.tsx"],
-        languageOptions: { ...jsxLanguageOptions },
+        languageOptions: { ...jsxConfig.languageOptions },
         plugins: { ...tsConfig.plugins },
         rules: { ...tsConfig.rules },
         settings: { ...tsConfig.settings }
@@ -111,7 +113,7 @@ export default defineConfig([
             pluginAstro.configs["flat/recommended"]
         ],
         files: ["**/*.astro"],
-        languageOptions: { ...jsxLanguageOptions },
+        languageOptions: { ...jsxConfig.languageOptions },
         plugins: { ...tsConfig.plugins },
         rules: { ...tsConfig.rules },
         settings: {
