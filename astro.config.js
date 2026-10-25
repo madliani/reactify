@@ -12,7 +12,7 @@ export default defineConfig({
     base: "/",
     build: { inlineStylesheets: "never" },
     devToolbar: { enabled: true },
-    integrations: [...integrations],
+    integrations,
     output: "static",
     prefetch: { defaultStrategy: "tap" },
     server: { host: true, open: true, port: PORT },
