@@ -61,7 +61,7 @@ const jsxConfig = {
 const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 
 const astroConfig = {
-    settings: { ["import/core-modules"]: [...ASTRO_CORE_MODULES] }
+    settings: { "import/core-modules": [...ASTRO_CORE_MODULES] }
 }
 
 /** @type {import("eslint/config").Config} */
