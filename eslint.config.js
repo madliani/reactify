@@ -12,6 +12,7 @@ import pathe from "pathe"
 import ts from "typescript-eslint"
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
+const globalIgnorePatterns = ["package-lock.json"]
 
 const tsConfig = {
     extends: [
@@ -60,7 +61,7 @@ const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
     includeIgnoreFile(gitIgnorePath),
-    globalIgnores(["package-lock.json"]),
+    globalIgnores(globalIgnorePatterns),
     {
         extends: [pluginJSON.configs.recommended],
         files: ["**/*.json", "**/*.jsonc"],
