@@ -4,8 +4,12 @@ const EXTENDS = [
     "stylelint-config-clean-order"
 ]
 const PLUGINS = ["stylelint-no-unsupported-browser-features"]
-const RULES = {
+
+const STYLELINT_RULES = {
     "import-notation": "string",
+    "selector-class-pattern": null
+}
+const PLUGIN_RULES = {
     "plugin/no-unsupported-browser-features": [
         true,
         {
@@ -19,9 +23,9 @@ const RULES = {
             ],
             severity: "error"
         }
-    ],
-    "selector-class-pattern": null
+    ]
 }
+const RULES = { ...STYLELINT_RULES, ...PLUGIN_RULES }
 
 /** @type {import("stylelint").Config} */
 export default {
