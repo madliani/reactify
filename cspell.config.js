@@ -32,7 +32,6 @@ const ENGLISH_WORDS = [
     "vitest"
 ]
 const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
-
 const DICTS = [GENERAL_DICT, PL_DICT, MISCELLANEOUS_DICT, RUSSIAN_DICT]
 const WORDS = [...ENGLISH_WORDS]
 
