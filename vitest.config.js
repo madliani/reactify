@@ -1,13 +1,11 @@
 import vitePluginReact from "@vitejs/plugin-react"
 import { configDefaults, defineConfig } from "vitest/config"
 
-const COVERAGE_REPORTER = ["html", "lcov"]
 const INCLUDE = [
     "./react/**/*.test.ts",
     "./react/**/*.test.tsx",
     "./astro/**/*.test.ts"
 ]
-const REPORTERS = ["default", "html"]
 const SETUP_FILES = ["./tests/setup.ts"]
 
 const vitePlugins = [vitePluginReact()]
@@ -17,11 +15,7 @@ export default defineConfig({
     resolve: { tsconfigPaths: true },
     test: {
         ...configDefaults,
-        coverage: {
-            enabled: true,
-            provider: "v8",
-            reporter: COVERAGE_REPORTER
-        },
+        coverage: { enabled: true, provider: "v8", reporter: ["html", "lcov"] },
         environment: "happy-dom",
         globals: false,
         globalSetup: [],
@@ -29,7 +23,7 @@ export default defineConfig({
         name: "reactify-node",
         passWithNoTests: true,
         plugins: [...vitePlugins],
-        reporters: REPORTERS,
+        reporters: ["default", "html"],
         restoreMocks: true,
         sequence: { concurrent: true },
         setupFiles: SETUP_FILES
