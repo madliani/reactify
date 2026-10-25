@@ -3,6 +3,7 @@ import { defineConfig } from "cspell"
 const GENERAL_DICT = "en, en-US, en-GB, companies, softwareTerms, misc"
 const PL_DICT = "typescript, node, html, css"
 const MISCELLANEOUS_DICT = "fonts, fileTypes, npm"
+
 const RUSSIAN_DICT = "ru, ru-RU"
 
 const IGNORE_PATHS = [
