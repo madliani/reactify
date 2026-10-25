@@ -63,9 +63,8 @@ const jsxConfig = {
 
 const ASTRO_CORE_MODULES = ["astro:transitions"]
 
-const astroConfig = {
-    settings: { "import/core-modules": [...ASTRO_CORE_MODULES] }
-}
+const astroSettings = { "import/core-modules": [...ASTRO_CORE_MODULES] }
+const astroConfig = { settings: astroSettings }
 
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
