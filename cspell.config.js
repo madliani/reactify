@@ -4,7 +4,7 @@ const GENERAL_DICT = "en, en-US, en-GB, companies, softwareTerms, misc"
 const PL_DICT = "typescript, node, html, css"
 const MISC_DICT = "fonts, fileTypes, npm"
 
-const RUSSIAN_DICT = "ru, ru-RU"
+const RU_DICT = "ru, ru-RU"
 
 const IGNORE_PATHS = [
     ".astro/",
@@ -20,7 +20,7 @@ const IGNORE_PATHS = [
 
 const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
 
-const DICTIONARIES = [GENERAL_DICT, PL_DICT, MISC_DICT, RUSSIAN_DICT]
+const DICTIONARIES = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
 const LANGUAGE = DICTIONARIES.join(",")
 
 const ENGLISH_WORDS = [
