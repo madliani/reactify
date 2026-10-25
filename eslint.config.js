@@ -68,7 +68,6 @@ const ASTRO_CORE_MODULES = ["astro:transitions"]
 const astroSettings = { "import/core-modules": [...ASTRO_CORE_MODULES] }
 const astroConfig = { settings: { ...tsConfig.settings, ...astroSettings } }
 
-/** @type {import("eslint/config").Config} */
 export default defineConfig([
     includeIgnoreFile(gitIgnorePath),
     globalIgnores(GLOBAL_IGNORE_PATTERNS),
