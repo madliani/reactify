@@ -15,6 +15,13 @@ const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
+const tsPlugins = { "no-secrets": pluginNoSecrets }
+const tsRules = {
+    "import/no-named-as-default-member": "off",
+    "import/order": "off",
+    "no-secrets/no-pattern-match": "error",
+    "no-secrets/no-secrets": "error"
+}
 const tsConfig = {
     extends: [
         pluginJS.configs.recommended,
@@ -34,13 +41,8 @@ const tsConfig = {
         },
         sourceType: "module"
     },
-    plugins: { "no-secrets": pluginNoSecrets },
-    rules: {
-        "import/no-named-as-default-member": "off",
-        "import/order": "off",
-        "no-secrets/no-pattern-match": "error",
-        "no-secrets/no-secrets": "error"
-    },
+    plugins: tsPlugins,
+    rules: tsRules,
     settings: { "import/resolver": { typescript: true } }
 }
 
