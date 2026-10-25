@@ -60,7 +60,7 @@ const tsConfig = {
 const browserConfig = { extends: [...tsConfig.extends, ...browserExtends] }
 
 /** @type {import("eslint/config").ConfigObject} */
-const jsxConfig = {
+const tsxConfig = {
     languageOptions: {
         ...tsConfig.languageOptions,
         parserOptions: {
@@ -113,7 +113,7 @@ export default defineConfig([
     {
         extends: browserConfig.extends,
         files: ["**/*.tsx"],
-        languageOptions: jsxConfig.languageOptions,
+        languageOptions: tsxConfig.languageOptions,
         plugins: tsConfig.plugins,
         rules: tsConfig.rules,
         settings: tsConfig.settings
