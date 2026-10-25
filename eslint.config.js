@@ -60,14 +60,7 @@ const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
     includeIgnoreFile(gitIgnorePath),
-    globalIgnores([
-        ".astro/",
-        ".vitest/",
-        "coverage/",
-        "dist/",
-        "node_modules/",
-        "package-lock.json"
-    ]),
+    globalIgnores(["package-lock.json"]),
     {
         extends: [pluginJSON.configs.recommended],
         files: ["**/*.json", "**/*.jsonc"],
