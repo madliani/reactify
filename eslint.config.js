@@ -11,7 +11,7 @@ import globals from "globals"
 import pathe from "pathe"
 import ts from "typescript-eslint"
 
-const globalIgnorePatterns = ["package-lock.json"]
+const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
@@ -62,7 +62,7 @@ const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
     includeIgnoreFile(gitIgnorePath),
-    globalIgnores(globalIgnorePatterns),
+    globalIgnores(GLOBAL_IGNORE_PATTERNS),
     {
         extends: [pluginJSON.configs.recommended],
         files: ["**/*.json", "**/*.jsonc"],
