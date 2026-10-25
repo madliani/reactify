@@ -6,9 +6,12 @@ import pluginCompat from "eslint-plugin-compat"
 import pluginImport from "eslint-plugin-import"
 import pluginNoSecrets from "eslint-plugin-no-secrets"
 import pluginPerfect from "eslint-plugin-perfectionist"
-import { defineConfig, globalIgnores } from "eslint/config"
+import { defineConfig, globalIgnores, includeIgnoreFile } from "eslint/config"
 import globals from "globals"
+import pathe from "pathe"
 import ts from "typescript-eslint"
+
+const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
 const tsConfig = {
     extends: [
@@ -56,6 +59,7 @@ const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
+    includeIgnoreFile(gitIgnorePath),
     globalIgnores([
         ".astro/",
         ".vitest/",
