@@ -36,6 +36,7 @@ const tsSettings = { "import/resolver": { typescript: true } }
 const browserExtends = [pluginCompat.configs["flat/recommended"]]
 
 const ASTRO_CORE_MODULES = ["astro:transitions"]
+const astroExtends = [pluginAstro.configs["flat/recommended"]]
 const astroSettings = { "import/core-modules": [...ASTRO_CORE_MODULES] }
 
 /** @type {import("eslint/config").ConfigObject} */
@@ -73,7 +74,10 @@ const jsxConfig = {
 }
 
 /** @type {import("eslint/config").ConfigObject} */
-const astroConfig = { settings: { ...tsConfig.settings, ...astroSettings } }
+const astroConfig = {
+    extends: astroExtends,
+    settings: { ...tsConfig.settings, ...astroSettings }
+}
 
 export default defineConfig([
     includeIgnoreFile(gitIgnorePath),
@@ -118,7 +122,7 @@ export default defineConfig([
         extends: [
             ...tsConfig.extends,
             ...browserConfig.extends,
-            pluginAstro.configs["flat/recommended"]
+            ...astroConfig.extends
         ],
         files: ["**/*.astro"],
         languageOptions: tsConfig.languageOptions,
