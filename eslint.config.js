@@ -31,6 +31,7 @@ const tsRules = {
     "no-secrets/no-pattern-match": "error",
     "no-secrets/no-secrets": "error"
 }
+const tsSettings = { "import/resolver": { typescript: true } }
 const tsConfig = {
     extends: tsExtends,
     languageOptions: {
@@ -44,7 +45,7 @@ const tsConfig = {
     },
     plugins: tsPlugins,
     rules: tsRules,
-    settings: { "import/resolver": { typescript: true } }
+    settings: tsSettings
 }
 
 const browserExtends = [pluginCompat.configs["flat/recommended"]]
