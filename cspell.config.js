@@ -20,8 +20,8 @@ const IGNORE_PATHS = [
 
 const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
 
-const DICTIONARIES = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
-const LANGUAGE = DICTIONARIES.join(",")
+const DICTS = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
+const LANGUAGE = DICTS.join(",")
 
 const ENGLISH_WORDS = [
     "asynciterable",
