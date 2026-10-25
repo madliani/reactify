@@ -48,7 +48,8 @@ const tsConfig = {
     settings: { "import/resolver": { typescript: true } }
 }
 
-const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
+const browserExtends = [pluginCompat.configs["flat/recommended"]]
+const browserConfig = { extends: browserExtends }
 
 const jsxConfig = {
     languageOptions: {
