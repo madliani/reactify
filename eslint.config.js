@@ -15,6 +15,16 @@ const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
+const tsExtends = [
+    pluginJS.configs.recommended,
+    ts.configs.eslintRecommended,
+    ts.configs.strict,
+    ts.configs.stylistic,
+    pluginPerfect.configs["recommended-alphabetical"],
+    pluginImport.flatConfigs.recommended,
+    pluginImport.flatConfigs.typescript
+]
+
 const tsPlugins = { "no-secrets": pluginNoSecrets }
 const tsRules = {
     "import/no-named-as-default-member": "off",
@@ -23,15 +33,7 @@ const tsRules = {
     "no-secrets/no-secrets": "error"
 }
 const tsConfig = {
-    extends: [
-        pluginJS.configs.recommended,
-        ts.configs.eslintRecommended,
-        ts.configs.strict,
-        ts.configs.stylistic,
-        pluginPerfect.configs["recommended-alphabetical"],
-        pluginImport.flatConfigs.recommended,
-        pluginImport.flatConfigs.typescript
-    ],
+    extends: tsExtends,
     languageOptions: {
         ecmaVersion: 2022,
         globals: globals.builtin,
