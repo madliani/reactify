@@ -33,7 +33,8 @@ This is a simple starter kit for React.
 
 1. Modern UI framework via `Material UI`
 2. Mobile-first design
-3. SEO-friendly via `Astro`
+3. Security via `Content Security Policy`
+4. SEO-friendly via `Astro`
 
 ## Screenshots
 
