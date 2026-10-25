@@ -58,25 +58,29 @@ const tsConfig = {
 
 /** @type {import("eslint/config").ConfigObject} */
 const browserConfig = {
+    extends: [...tsConfig.extends, ...browserExtends],
     languageOptions: tsConfig.languageOptions,
     plugins: tsConfig.plugins,
     rules: tsConfig.rules,
-    settings: tsConfig.settings,
-    extends: [...tsConfig.extends, ...browserExtends]
+    settings: tsConfig.settings
 }
 
 /** @type {import("eslint/config").ConfigObject} */
 const tsxConfig = {
+    extends: browserConfig.extends,
     languageOptions: {
-        ...tsConfig.languageOptions,
+        ...browserConfig.languageOptions,
         parserOptions: {
-            ...tsConfig.languageOptions.parserOptions,
+            ...browserConfig.languageOptions.parserOptions,
             ecmaFeatures: {
-                ...tsConfig.languageOptions.parserOptions.ecmaFeatures,
+                ...browserConfig.languageOptions.parserOptions.ecmaFeatures,
                 jsx: true
             }
         }
-    }
+    },
+    plugins: browserConfig.plugins,
+    rules: browserConfig.rules,
+    settings: browserConfig.settings
 }
 
 /** @type {import("eslint/config").ConfigObject} */
@@ -117,12 +121,12 @@ export default defineConfig([
         settings: tsConfig.settings
     },
     {
-        extends: browserConfig.extends,
+        extends: tsConfig.extends,
         files: ["**/*.tsx"],
         languageOptions: tsxConfig.languageOptions,
-        plugins: tsConfig.plugins,
-        rules: tsConfig.rules,
-        settings: tsConfig.settings
+        plugins: tsxConfig.plugins,
+        rules: tsxConfig.rules,
+        settings: tsxConfig.settings
     },
     {
         extends: astroConfig.extends,
