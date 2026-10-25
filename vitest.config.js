@@ -9,6 +9,7 @@ const INCLUDE = [
 const SETUP_FILES = ["./tests/setup.ts"]
 
 const vitePlugins = [vitePluginReact()]
+const plugins = [...vitePlugins]
 
 /** @type {import("./types/vitest").UserConfig} */
 export default defineConfig({
@@ -22,7 +23,7 @@ export default defineConfig({
         include: INCLUDE,
         name: "reactify-node",
         passWithNoTests: true,
-        plugins: [...vitePlugins],
+        plugins,
         reporters: ["default", "html"],
         restoreMocks: true,
         sequence: { concurrent: true },
