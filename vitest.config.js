@@ -7,32 +7,22 @@ const vitePlugins = [vitePluginReact()]
 export default defineConfig({
     resolve: { tsconfigPaths: true },
     test: {
-        projects: [
-            {
-                test: {
-                    ...configDefaults,
-                    coverage: {
-                        enabled: true,
-                        provider: "v8",
-                        reporter: ["html", "lcov"]
-                    },
-                    environment: "happy-dom",
-                    globals: false,
-                    globalSetup: [],
-                    include: [
-                        "./react/**/*.test.ts",
-                        "./react/**/*.test.tsx",
-                        "./astro/**/*.test.ts"
-                    ],
-                    name: "reactify-node",
-                    passWithNoTests: true,
-                    plugins: [...vitePlugins],
-                    reporters: ["default", "html"],
-                    restoreMocks: true,
-                    sequence: { concurrent: true },
-                    setupFiles: ["./tests/setup.ts"]
-                }
-            }
-        ]
+        ...configDefaults,
+        coverage: { enabled: true, provider: "v8", reporter: ["html", "lcov"] },
+        environment: "happy-dom",
+        globals: false,
+        globalSetup: [],
+        include: [
+            "./react/**/*.test.ts",
+            "./react/**/*.test.tsx",
+            "./astro/**/*.test.ts"
+        ],
+        name: "reactify-node",
+        passWithNoTests: true,
+        plugins: [...vitePlugins],
+        reporters: ["default", "html"],
+        restoreMocks: true,
+        sequence: { concurrent: true },
+        setupFiles: ["./tests/setup.ts"]
     }
 })
