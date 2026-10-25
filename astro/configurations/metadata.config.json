@@ -11,6 +11,7 @@
         "form_action": ["self"],
         "frame_src": ["self"],
         "img_src": ["data:", "https:", "self"],
+        "media_src": ["data:", "https:", "self"],
         "script_src": ["self", "unsafe-inline"],
         "style_src": ["data:", "https:", "self", "unsafe-inline"]
     },
