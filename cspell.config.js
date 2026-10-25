@@ -16,8 +16,6 @@ const IGNORE_PATHS = [
     "pnpm-lock.yaml",
     "public/"
 ]
-const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
-const DICTS = [GENERAL_DICT, PL_DICT, MISCELLANEOUS_DICT, RUSSIAN_DICT]
 const ENGLISH_WORDS = [
     "asynciterable",
     "browserslistrc",
@@ -34,6 +32,9 @@ const ENGLISH_WORDS = [
     "vitest"
 ]
 const RUSSIAN_WORDS = []
+const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
+
+const DICTS = [GENERAL_DICT, PL_DICT, MISCELLANEOUS_DICT, RUSSIAN_DICT]
 
 const language = DICTS.join(",")
 
