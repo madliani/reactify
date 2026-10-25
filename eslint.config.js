@@ -12,6 +12,7 @@ import pathe from "pathe"
 import ts from "typescript-eslint"
 
 const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
+
 const ASTRO_CORE_MODULES = ["astro:transitions"]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
