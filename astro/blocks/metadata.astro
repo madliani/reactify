@@ -1,4 +1,5 @@
 ---
+import CSP from "@astro/components/csp.astro"
 import OpenGraph from "@astro/components/open-graph.astro"
 import TwitterCard from "@astro/components/twitter-card.astro"
 import MetadataConfig from "@astro/configurations/metadata.config.json"
@@ -12,29 +13,8 @@ function canonicalURLTemplate(pathname: string, site: undefined | URL) {
     return new URL(pathname, site)
 }
 
-function cspTemplate(csp: typeof MetadataConfig.csp) {
-    return Object.entries(csp).map(formatCSP).join("; ")
-}
-
 function descTemplate(defaultDesc: string, desc: string | undefined) {
     return desc || defaultDesc
-}
-
-function formatCSP([directive, sourceList]: [string, string[]]) {
-    const formattedDirective = directive.replace("_", "-")
-    const formattedSourceList = sourceList.map(formatSource).join(" ")
-
-    return `${formattedDirective} ${formattedSourceList}`
-}
-
-function formatSource(source: string) {
-    const sourceExceptions = ["data:", "https:"]
-
-    if (sourceExceptions.includes(source)) {
-        return source
-    } else {
-        return `'${source}'`
-    }
 }
 
 function formatViewport([attr, value]: [string, number | string]) {
@@ -62,7 +42,7 @@ const metadata = {
     basePath: MetadataConfig.base_path,
     canonicalURL: canonicalURLTemplate(Astro.url.pathname, Astro.site),
     charset: MetadataConfig.charset,
-    csp: cspTemplate(MetadataConfig.csp),
+    csp: MetadataConfig.csp,
     description: descTemplate(
         MetadataConfig.description,
         Astro.props.description
@@ -113,7 +93,7 @@ const twitterCardMetadata = {
     <meta content="nofollow, noindex" name="robots" />
 )}
 
-<meta content={metadata.csp} http-equiv="content-security-policy" />
+<CSP csp={metadata.csp} />
 {metadata.isSupportedIE && (
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 )}
