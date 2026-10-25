@@ -32,6 +32,13 @@ const tsRules = {
     "no-secrets/no-secrets": "error"
 }
 const tsSettings = { "import/resolver": { typescript: true } }
+
+const browserExtends = [pluginCompat.configs["flat/recommended"]]
+
+const ASTRO_CORE_MODULES = ["astro:transitions"]
+const astroSettings = { "import/core-modules": [...ASTRO_CORE_MODULES] }
+
+/** @type {import("eslint/config").ConfigObject} */
 const tsConfig = {
     extends: tsExtends,
     languageOptions: {
@@ -48,9 +55,10 @@ const tsConfig = {
     settings: tsSettings
 }
 
-const browserExtends = [pluginCompat.configs["flat/recommended"]]
+/** @type {import("eslint/config").ConfigObject} */
 const browserConfig = { extends: browserExtends }
 
+/** @type {import("eslint/config").ConfigObject} */
 const jsxConfig = {
     languageOptions: {
         ...tsConfig.languageOptions,
@@ -64,8 +72,7 @@ const jsxConfig = {
     }
 }
 
-const ASTRO_CORE_MODULES = ["astro:transitions"]
-const astroSettings = { "import/core-modules": [...ASTRO_CORE_MODULES] }
+/** @type {import("eslint/config").ConfigObject} */
 const astroConfig = { settings: { ...tsConfig.settings, ...astroSettings } }
 
 export default defineConfig([
