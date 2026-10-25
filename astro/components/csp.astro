@@ -1,0 +1,32 @@
+---
+import MetadataConfig from "@astro/configurations/metadata.config.json"
+
+interface Props {
+    csp: typeof MetadataConfig.csp
+}
+
+function cspTemplate(csp: typeof MetadataConfig.csp) {
+    return Object.entries(csp).map(formatCSP).join("; ")
+}
+
+function formatCSP([directive, sourceList]: [string, string[]]) {
+    const formattedDirective = directive.replace("_", "-")
+    const formattedSourceList = sourceList.map(formatSource).join(" ")
+
+    return `${formattedDirective} ${formattedSourceList}`
+}
+
+function formatSource(source: string) {
+    const sourceExceptions = ["data:", "https:"]
+
+    if (sourceExceptions.includes(source)) {
+        return source
+    } else {
+        return `'${source}'`
+    }
+}
+
+const { csp } = Astro.props
+---
+
+<meta content={cspTemplate(csp)} http-equiv="content-security-policy" />
