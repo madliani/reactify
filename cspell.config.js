@@ -21,7 +21,7 @@ const DICTS = [GENERAL_DICT, PL_DICT, MISCELLANEOUS_DICT, RUSSIAN_DICT]
 
 const language = DICTS.join(",")
 
-const englishWords = [
+const ENGLISH_WORDS = [
     "asynciterable",
     "browserslistrc",
     "commonmark",
@@ -37,7 +37,7 @@ const englishWords = [
     "vitest"
 ]
 
-const russianWords = []
+const RUSSIAN_WORDS = []
 
 /** @type {import("cspell").CSpellSettings} */
 export default defineConfig({
@@ -45,5 +45,5 @@ export default defineConfig({
     import: IMPORT,
     language: language,
     useGitignore: true,
-    words: [...englishWords, ...russianWords]
+    words: [...ENGLISH_WORDS, ...RUSSIAN_WORDS]
 })
