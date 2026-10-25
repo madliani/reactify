@@ -28,7 +28,9 @@ function formatCSP([directive, sourceList]: [string, string[]]) {
 }
 
 function formatSource(source: string) {
-    if (source === "data:") {
+    const sourceExceptions = ["data:", "https:"]
+
+    if (sourceExceptions.includes(source)) {
         return source
     } else {
         return `'${source}'`
