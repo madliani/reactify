@@ -1,16 +1,19 @@
+const EXTENDS = [
+    "stylelint-config-standard",
+    "stylelint-config-html/astro",
+    "stylelint-config-clean-order"
+]
+const PLUGINS = ["stylelint-no-unsupported-browser-features"]
+
 /** @type {import("stylelint").Config} */
 export default {
     allowEmptyInput: true,
     cache: true,
     defaultSeverity: "error",
-    extends: [
-        "stylelint-config-standard",
-        "stylelint-config-html/astro",
-        "stylelint-config-clean-order"
-    ],
+    extends: EXTENDS,
     fix: true,
     maxWarnings: 0,
-    plugins: ["stylelint-no-unsupported-browser-features"],
+    plugins: PLUGINS,
     rules: {
         "import-notation": "string",
         "plugin/no-unsupported-browser-features": [
