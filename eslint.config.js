@@ -57,7 +57,7 @@ const tsConfig = {
 }
 
 /** @type {import("eslint/config").ConfigObject} */
-const browserConfig = { extends: browserExtends }
+const browserConfig = { extends: [...tsConfig.extends, ...browserExtends] }
 
 /** @type {import("eslint/config").ConfigObject} */
 const jsxConfig = {
@@ -75,7 +75,7 @@ const jsxConfig = {
 
 /** @type {import("eslint/config").ConfigObject} */
 const astroConfig = {
-    extends: astroExtends,
+    extends: [...browserExtends, ...astroExtends],
     settings: { ...tsConfig.settings, ...astroSettings }
 }
 
@@ -103,7 +103,7 @@ export default defineConfig([
         settings: tsConfig.settings
     },
     {
-        extends: [...tsConfig.extends, ...browserConfig.extends],
+        extends: browserConfig.extends,
         files: ["**/*.ts"],
         languageOptions: tsConfig.languageOptions,
         plugins: tsConfig.plugins,
@@ -111,7 +111,7 @@ export default defineConfig([
         settings: tsConfig.settings
     },
     {
-        extends: [...tsConfig.extends, ...browserConfig.extends],
+        extends: browserConfig.extends,
         files: ["**/*.tsx"],
         languageOptions: jsxConfig.languageOptions,
         plugins: tsConfig.plugins,
@@ -119,11 +119,7 @@ export default defineConfig([
         settings: tsConfig.settings
     },
     {
-        extends: [
-            ...tsConfig.extends,
-            ...browserConfig.extends,
-            ...astroConfig.extends
-        ],
+        extends: astroConfig.extends,
         files: ["**/*.astro"],
         languageOptions: tsConfig.languageOptions,
         plugins: tsConfig.plugins,
