@@ -6,6 +6,7 @@ const MISCELLANEOUS_DICT = "fonts, fileTypes, npm"
 const RUSSIAN_DICT = "ru, ru-RU"
 
 const IGNORE_PATHS = [
+    ".astro/",
     ".vitest/",
     "assets/",
     "coverage/",
