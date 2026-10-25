@@ -11,8 +11,9 @@ import globals from "globals"
 import pathe from "pathe"
 import ts from "typescript-eslint"
 
-const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 const globalIgnorePatterns = ["package-lock.json"]
+
+const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
 const tsConfig = {
     extends: [
