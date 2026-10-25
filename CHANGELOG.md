@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.1.0] - 2026-10-25
+
+### Added
+
+- The `CSP` component to `astro/components/`
+
+### Fixed
+
+- The `metadata` block
+- The `README.md` file
+- The configuration file for `metadata`
+- The configuration files of the project
+
 ## [4.0.5] - 2026-10-25
 
 ### Fixed
