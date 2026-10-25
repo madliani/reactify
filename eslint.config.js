@@ -45,6 +45,15 @@ const tsConfig = {
     settings: { "import/resolver": { typescript: true } }
 }
 
+const jsConfig = {
+    settings: {
+        "import/resolver": {
+            ...tsConfig.settings["import/resolver"],
+            node: true
+        }
+    }
+}
+
 const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
 
 const jsxConfig = {
@@ -86,13 +95,7 @@ export default defineConfig([
         languageOptions: tsConfig.languageOptions,
         plugins: tsConfig.plugins,
         rules: tsConfig.rules,
-        settings: {
-            ...tsConfig.settings,
-            "import/resolver": {
-                ...tsConfig.settings["import/resolver"],
-                node: true
-            }
-        }
+        settings: { ...tsConfig.settings, ...jsConfig.settings }
     },
     {
         extends: [...tsConfig.extends, ...browserConfig.extends],
