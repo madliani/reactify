@@ -12,7 +12,7 @@
         "img_src": ["data:", "https:", "self"],
         "manifest_src": ["self"],
         "media_src": ["data:", "https:", "self"],
-        "script_src": ["self", "https:", "strict-dynamic", "unsafe-inline"],
+        "script_src": ["self", "https:", "unsafe-inline"],
         "style_src": ["data:", "https:", "self", "unsafe-inline"],
         "worker_src": ["self"]
     },
