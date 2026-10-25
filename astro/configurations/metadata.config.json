@@ -7,12 +7,12 @@
         "base_uri": ["self"],
         "connect_src": ["self"],
         "default_src": ["self"],
-        "font_src": ["data:", "self", "unsafe-inline"],
+        "font_src": ["data:", "https:", "self", "unsafe-inline"],
         "form_action": ["self"],
         "frame_src": ["self"],
         "img_src": ["self"],
-        "script_src": ["data:", "self", "unsafe-inline"],
-        "style_src": ["data:", "self", "unsafe-inline"]
+        "script_src": ["data:", "https:", "self", "unsafe-inline"],
+        "style_src": ["data:", "https:", "self", "unsafe-inline"]
     },
     "description": "A simple starter kit for React.",
     "favicon_path": "/icons/favicon.ico",
