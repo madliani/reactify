@@ -31,7 +31,6 @@ const ENGLISH_WORDS = [
     "vite",
     "vitest"
 ]
-const RUSSIAN_WORDS = []
 const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
 
 const DICTS = [GENERAL_DICT, PL_DICT, MISCELLANEOUS_DICT, RUSSIAN_DICT]
@@ -44,5 +43,5 @@ export default defineConfig({
     import: IMPORT,
     language: language,
     useGitignore: true,
-    words: [...ENGLISH_WORDS, ...RUSSIAN_WORDS]
+    words: [...ENGLISH_WORDS]
 })
