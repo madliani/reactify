@@ -6,6 +6,8 @@ import pathe from "pathe"
 const PORT = 4321
 
 const integrations = [reactIntegration(), sitemapIntegration()]
+const viteAliasAstro = pathe.resolve(import.meta.dirname, "./astro/")
+const viteAliasReact = pathe.resolve(import.meta.dirname, "./react/")
 
 /** @type {import("astro").AstroConfig} */
 export default defineConfig({
@@ -23,10 +25,7 @@ export default defineConfig({
         css: { transformer: "postcss" },
         plugins: [],
         resolve: {
-            alias: {
-                "@astro": pathe.resolve(import.meta.dirname, "./astro/"),
-                "@react": pathe.resolve(import.meta.dirname, "./react/")
-            }
+            alias: { "@astro": viteAliasAstro, "@react": viteAliasReact }
         }
     }
 })
