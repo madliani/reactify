@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.5] - 2026-10-25
+
+### Fixed
+
+- The `README.md` file
+- The configuration files of the project
+
+### Changed
+
+- Dependencies were upgraded
+- The homepage and `base template` were refactored
+- The icons were replaced by new ones
+
+### Removed
+
+- The `assets` directory was deleted from the root directory
+
 ## [4.0.4] - 2026-10-23
 
 ### Fixed
