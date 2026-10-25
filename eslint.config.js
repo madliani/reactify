@@ -57,7 +57,13 @@ const tsConfig = {
 }
 
 /** @type {import("eslint/config").ConfigObject} */
-const browserConfig = { extends: [...tsConfig.extends, ...browserExtends] }
+const browserConfig = {
+    languageOptions: tsConfig.languageOptions,
+    plugins: tsConfig.plugins,
+    rules: tsConfig.rules,
+    settings: tsConfig.settings,
+    extends: [...tsConfig.extends, ...browserExtends]
+}
 
 /** @type {import("eslint/config").ConfigObject} */
 const tsxConfig = {
