@@ -7,7 +7,7 @@
         "base_uri": ["self"],
         "connect_src": ["self"],
         "default_src": ["self"],
-        "font_src": ["data:", "https:", "self", "unsafe-inline"],
+        "font_src": ["data:", "https:", "self"],
         "form_action": ["self"],
         "img_src": ["data:", "https:", "self"],
         "media_src": ["data:", "https:", "self"],
