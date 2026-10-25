@@ -13,7 +13,6 @@ import ts from "typescript-eslint"
 
 const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
 const ASTRO_CORE_MODULES = ["astro:transitions"]
-const IMPORT_CORE_MODULES = [...ASTRO_CORE_MODULES]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
@@ -60,6 +59,10 @@ const jsxConfig = {
 }
 
 const browserConfig = { extends: [pluginCompat.configs["flat/recommended"]] }
+
+const astroConfig = {
+    settings: { ["import/core-modules"]: [...ASTRO_CORE_MODULES] }
+}
 
 /** @type {import("eslint/config").Config} */
 export default defineConfig([
@@ -117,9 +120,6 @@ export default defineConfig([
         languageOptions: tsConfig.languageOptions,
         plugins: tsConfig.plugins,
         rules: tsConfig.rules,
-        settings: {
-            ...tsConfig.settings,
-            "import/core-modules": IMPORT_CORE_MODULES
-        }
+        settings: { ...tsConfig.settings, ...astroConfig.settings }
     }
 ])
