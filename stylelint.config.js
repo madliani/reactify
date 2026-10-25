@@ -4,6 +4,24 @@ const EXTENDS = [
     "stylelint-config-clean-order"
 ]
 const PLUGINS = ["stylelint-no-unsupported-browser-features"]
+const RULES = {
+    "import-notation": "string",
+    "plugin/no-unsupported-browser-features": [
+        true,
+        {
+            ignore: [
+                "css-cascade-layers",
+                "css-logical-props",
+                "css-media-range-syntax",
+                "css-nesting",
+                "intrinsic-width",
+                "viewport-unit-variants"
+            ],
+            severity: "error"
+        }
+    ],
+    "selector-class-pattern": null
+}
 
 /** @type {import("stylelint").Config} */
 export default {
@@ -14,22 +32,5 @@ export default {
     fix: true,
     maxWarnings: 0,
     plugins: PLUGINS,
-    rules: {
-        "import-notation": "string",
-        "plugin/no-unsupported-browser-features": [
-            true,
-            {
-                ignore: [
-                    "css-cascade-layers",
-                    "css-logical-props",
-                    "css-media-range-syntax",
-                    "css-nesting",
-                    "intrinsic-width",
-                    "viewport-unit-variants"
-                ],
-                severity: "error"
-            }
-        ],
-        "selector-class-pattern": null
-    }
+    rules: RULES
 }
