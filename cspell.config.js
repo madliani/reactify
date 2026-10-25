@@ -16,6 +16,12 @@ const IGNORE_PATHS = [
     "pnpm-lock.yaml",
     "public/"
 ]
+
+const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
+
+const DICTS = [GENERAL_DICT, PL_DICT, MISCELLANEOUS_DICT, RUSSIAN_DICT]
+const LANGUAGE = DICTS.join(",")
+
 const ENGLISH_WORDS = [
     "asynciterable",
     "browserslistrc",
@@ -31,11 +37,7 @@ const ENGLISH_WORDS = [
     "vite",
     "vitest"
 ]
-const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
-const DICTS = [GENERAL_DICT, PL_DICT, MISCELLANEOUS_DICT, RUSSIAN_DICT]
 const WORDS = [...ENGLISH_WORDS]
-
-const LANGUAGE = DICTS.join(",")
 
 /** @type {import("cspell").CSpellSettings} */
 export default defineConfig({
