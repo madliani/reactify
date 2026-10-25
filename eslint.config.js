@@ -39,7 +39,7 @@ const ASTRO_CORE_MODULES = ["astro:transitions"]
 const astroExtends = [pluginAstro.configs["flat/recommended"]]
 const astroSettings = { "import/core-modules": [...ASTRO_CORE_MODULES] }
 
-/** @type {import("eslint/config").ConfigObject} */
+/** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const tsConfig = {
     extends: tsExtends,
     languageOptions: {
@@ -56,7 +56,7 @@ const tsConfig = {
     settings: tsSettings
 }
 
-/** @type {import("eslint/config").ConfigObject} */
+/** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const browserConfig = {
     extends: [...tsConfig.extends, ...browserExtends],
     languageOptions: tsConfig.languageOptions,
@@ -65,7 +65,7 @@ const browserConfig = {
     settings: tsConfig.settings
 }
 
-/** @type {import("eslint/config").ConfigObject} */
+/** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const tsxConfig = {
     extends: browserConfig.extends,
     languageOptions: {
@@ -83,7 +83,7 @@ const tsxConfig = {
     settings: browserConfig.settings
 }
 
-/** @type {import("eslint/config").ConfigObject} */
+/** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const astroConfig = {
     extends: [...browserExtends, ...astroExtends],
     languageOptions: browserConfig.languageOptions,
