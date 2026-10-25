@@ -4,6 +4,7 @@ import { defineConfig } from "astro/config"
 import pathe from "pathe"
 
 const PORT = 4321
+const SITE = "https://madliani-reactify.vercel.app/"
 
 const integrations = [reactIntegration(), sitemapIntegration()]
 const viteAliasAstro = pathe.resolve(import.meta.dirname, "./astro/")
@@ -18,7 +19,7 @@ export default defineConfig({
     output: "static",
     prefetch: { defaultStrategy: "tap" },
     server: { host: true, open: true, port: PORT },
-    site: "https://madliani-reactify.vercel.app/",
+    site: SITE,
     srcDir: "./astro/",
 
     vite: {
