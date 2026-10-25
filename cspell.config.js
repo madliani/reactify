@@ -10,6 +10,7 @@ const IGNORE_PATHS = [
     "pnpm-lock.yaml",
     "public/"
 ]
+const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
 
 const GENERAL_DICT = "en, en-US, en-GB, companies, softwareTerms, misc"
 const PL_DICT = "typescript, node, html, css"
@@ -40,7 +41,7 @@ const russianWords = []
 /** @type {import("cspell").CSpellSettings} */
 export default defineConfig({
     ignorePaths: IGNORE_PATHS,
-    import: ["@cspell/dict-ru_ru/cspell-ext.json"],
+    import: IMPORT,
     language: language,
     useGitignore: true,
     words: [...englishWords, ...russianWords]
