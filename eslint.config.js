@@ -12,6 +12,8 @@ import pathe from "pathe"
 import ts from "typescript-eslint"
 
 const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
+const ASTRO_CORE_MODULES = ["astro:transitions"]
+const IMPORT_CORE_MODULES = [...ASTRO_CORE_MODULES]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
@@ -117,7 +119,7 @@ export default defineConfig([
         rules: tsConfig.rules,
         settings: {
             ...tsConfig.settings,
-            "import/core-modules": ["astro:transitions"]
+            "import/core-modules": IMPORT_CORE_MODULES
         }
     }
 ])
