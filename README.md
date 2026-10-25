@@ -5,7 +5,7 @@
         alt="Reactify logo"
         aria-label="Reactify logo"
         height="96px"
-        src="./public/icons/reactify-logo.svg"
+        src="./public/icons/favicon.svg"
         title="Reactify logo"
         width="96px"
     />
