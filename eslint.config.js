@@ -105,13 +105,13 @@ export default defineConfig([
     {
         extends: browserConfig.extends,
         files: ["**/*.ts"],
-        languageOptions: tsConfig.languageOptions,
-        plugins: tsConfig.plugins,
-        rules: tsConfig.rules,
-        settings: tsConfig.settings
+        languageOptions: browserConfig.languageOptions,
+        plugins: browserConfig.plugins,
+        rules: browserConfig.rules,
+        settings: browserConfig.settings
     },
     {
-        extends: tsConfig.extends,
+        extends: tsxConfig.extends,
         files: ["**/*.tsx"],
         languageOptions: tsxConfig.languageOptions,
         plugins: tsxConfig.plugins,
