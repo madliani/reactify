@@ -94,36 +94,8 @@ export default defineConfig([
         language: "markdown/commonmark",
         rules: { "markdown/no-missing-label-refs": "off" }
     },
-    {
-        extends: tsConfig.extends,
-        files: ["*.config.js"],
-        languageOptions: tsConfig.languageOptions,
-        plugins: tsConfig.plugins,
-        rules: tsConfig.rules,
-        settings: tsConfig.settings
-    },
-    {
-        extends: browserConfig.extends,
-        files: ["**/*.ts"],
-        languageOptions: browserConfig.languageOptions,
-        plugins: browserConfig.plugins,
-        rules: browserConfig.rules,
-        settings: browserConfig.settings
-    },
-    {
-        extends: tsxConfig.extends,
-        files: ["**/*.tsx"],
-        languageOptions: tsxConfig.languageOptions,
-        plugins: tsxConfig.plugins,
-        rules: tsxConfig.rules,
-        settings: tsxConfig.settings
-    },
-    {
-        extends: astroConfig.extends,
-        files: ["**/*.astro"],
-        languageOptions: astroConfig.languageOptions,
-        plugins: astroConfig.plugins,
-        rules: astroConfig.rules,
-        settings: astroConfig.settings
-    }
+    { ...tsConfig, files: ["*.config.js"] },
+    { ...browserConfig, files: ["**/*.ts"] },
+    { ...tsxConfig, files: ["**/*.tsx"] },
+    { ...astroConfig, files: ["**/*.astro"] }
 ])
