@@ -6,18 +6,6 @@ const MISC_DICT = "fonts, fileTypes, npm"
 
 const RU_DICT = "ru, ru-RU"
 
-const IGNORE_PATHS = [
-    ".astro/",
-    ".vitest/",
-    "assets/",
-    "coverage/",
-    "dist/",
-    "node_modules/",
-    "package-lock.json",
-    "pnpm-lock.yaml",
-    "public/"
-]
-
 const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
 
 const DICTS = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
@@ -42,7 +30,17 @@ const WORDS = [...ENGLISH_WORDS]
 
 /** @type {import("cspell").CSpellSettings} */
 export default defineConfig({
-    ignorePaths: IGNORE_PATHS,
+    ignorePaths: [
+        ".astro/",
+        ".vitest/",
+        "assets/",
+        "coverage/",
+        "dist/",
+        "node_modules/",
+        "package-lock.json",
+        "pnpm-lock.yaml",
+        "public/"
+    ],
     import: IMPORT,
     language: LANGUAGE,
     useGitignore: true,
