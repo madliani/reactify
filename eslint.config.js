@@ -15,8 +15,6 @@ const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
-const browserExtends = [pluginCompat.configs["flat/recommended"]]
-
 const ASTRO_CORE_MODULES = ["astro:transitions"]
 const astroExtends = [pluginAstro.configs["flat/recommended"]]
 const astroSettings = { "import/core-modules": [...ASTRO_CORE_MODULES] }
@@ -53,7 +51,7 @@ const tsConfig = {
 
 /** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const browserConfig = {
-    extends: [...tsConfig.extends, ...browserExtends],
+    extends: [...tsConfig.extends, pluginCompat.configs["flat/recommended"]],
     languageOptions: tsConfig.languageOptions,
     plugins: tsConfig.plugins,
     rules: tsConfig.rules,
@@ -80,7 +78,7 @@ const tsxConfig = {
 
 /** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const astroConfig = {
-    extends: [...browserExtends, ...astroExtends],
+    extends: [...browserConfig.extends, ...astroExtends],
     languageOptions: browserConfig.languageOptions,
     plugins: browserConfig.plugins,
     rules: browserConfig.rules,
