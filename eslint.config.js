@@ -47,16 +47,13 @@ const tsConfig = {
 
 /** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const browserConfig = {
-    extends: [...tsConfig.extends, pluginCompat.configs["flat/recommended"]],
-    languageOptions: tsConfig.languageOptions,
-    plugins: tsConfig.plugins,
-    rules: tsConfig.rules,
-    settings: tsConfig.settings
+    ...tsConfig,
+    extends: [...tsConfig.extends, pluginCompat.configs["flat/recommended"]]
 }
 
 /** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const tsxConfig = {
-    extends: browserConfig.extends,
+    ...browserConfig,
     languageOptions: {
         ...browserConfig.languageOptions,
         parserOptions: {
@@ -66,21 +63,16 @@ const tsxConfig = {
                 jsx: true
             }
         }
-    },
-    plugins: browserConfig.plugins,
-    rules: browserConfig.rules,
-    settings: browserConfig.settings
+    }
 }
 
 /** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const astroConfig = {
+    ...browserConfig,
     extends: [
         ...browserConfig.extends,
         pluginAstro.configs["flat/recommended"]
     ],
-    languageOptions: browserConfig.languageOptions,
-    plugins: browserConfig.plugins,
-    rules: browserConfig.rules,
     settings: {
         ...browserConfig.settings,
         "import/core-modules": ["astro:transitions"]
