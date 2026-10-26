@@ -26,7 +26,6 @@ const ENGLISH_WORDS = [
     "vite",
     "vitest"
 ]
-const WORDS = [...ENGLISH_WORDS]
 
 /** @type {import("cspell").CSpellSettings} */
 export default defineConfig({
@@ -44,5 +43,5 @@ export default defineConfig({
     import: IMPORT,
     language: LANGUAGE,
     useGitignore: true,
-    words: WORDS
+    words: [...ENGLISH_WORDS]
 })
