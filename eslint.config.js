@@ -11,8 +11,6 @@ import globals from "globals"
 import pathe from "pathe"
 import ts from "typescript-eslint"
 
-const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
-
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
 /** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
@@ -81,7 +79,7 @@ const astroConfig = {
 
 export default defineConfig([
     includeIgnoreFile(gitIgnorePath),
-    globalIgnores(GLOBAL_IGNORE_PATTERNS),
+    globalIgnores(["package-lock.json"]),
     {
         extends: [pluginJSON.configs.recommended],
         files: ["**/*.json", "**/*.jsonc"],
