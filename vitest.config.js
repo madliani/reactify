@@ -6,7 +6,6 @@ const INCLUDE = [
     "./react/**/*.test.tsx",
     "./astro/**/*.test.ts"
 ]
-
 const SETUP_FILES = ["./tests/setup.ts"]
 
 const vitePlugins = [vitePluginReact()]
