@@ -5,9 +5,7 @@ const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
 const GENERAL_DICT = "en, en-US, en-GB, companies, softwareTerms, misc"
 const PL_DICT = "typescript, node, html, css"
 const MISC_DICT = "fonts, fileTypes, npm"
-
 const RU_DICT = "ru, ru-RU"
-
 const DICTS = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
 const LANGUAGE = DICTS.join(",")
 
