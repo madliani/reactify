@@ -3,7 +3,6 @@ const EXTENDS = [
     "stylelint-config-html/astro",
     "stylelint-config-clean-order"
 ]
-
 const PLUGINS = ["stylelint-no-unsupported-browser-features"]
 
 const STYLELINT_RULES = {
