@@ -16,18 +16,28 @@ const plugins = [...vitePlugins]
 export default defineConfig({
     resolve: { tsconfigPaths: true },
     test: {
-        ...configDefaults,
-        coverage: { enabled: true, provider: "v8", reporter: ["html", "lcov"] },
-        environment: "happy-dom",
-        globals: false,
-        globalSetup: [],
-        include: INCLUDE,
-        name: "reactify-node",
-        passWithNoTests: true,
-        plugins,
-        reporters: ["default", "html"],
-        restoreMocks: true,
-        sequence: { concurrent: true },
-        setupFiles: SETUP_FILES
+        projects: [
+            {
+                test: {
+                    ...configDefaults,
+                    coverage: {
+                        enabled: true,
+                        provider: "v8",
+                        reporter: ["html", "lcov"]
+                    },
+                    environment: "happy-dom",
+                    globals: false,
+                    globalSetup: [],
+                    include: INCLUDE,
+                    name: "reactify-node",
+                    passWithNoTests: true,
+                    plugins,
+                    reporters: ["default", "html"],
+                    restoreMocks: true,
+                    sequence: { concurrent: true },
+                    setupFiles: SETUP_FILES
+                }
+            }
+        ]
     }
 })
