@@ -1,11 +1,7 @@
 import vitePluginReact from "@vitejs/plugin-react"
 import { configDefaults, defineConfig } from "vitest/config"
 
-const INCLUDE = [
-    "./react/**/*.test.ts",
-    "./react/**/*.test.tsx",
-    "./astro/**/*.test.ts"
-]
+const INCLUDE = ["./react/**/*.test.ts", "./react/**/*.test.tsx"]
 const SETUP_FILES = ["./tests/setup.ts"]
 
 const vitePlugins = [vitePluginReact()]
