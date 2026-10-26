@@ -13,31 +13,26 @@ const vitePlugins = [vitePluginReact()]
 const plugins = [...vitePlugins]
 
 /** @type {import("./types/vitest").UserConfig} */
+const reactTests = {
+    test: {
+        ...configDefaults,
+        coverage: { enabled: true, provider: "v8", reporter: ["html", "lcov"] },
+        environment: "happy-dom",
+        globals: false,
+        globalSetup: [],
+        include: INCLUDE,
+        name: "reactify-node",
+        passWithNoTests: true,
+        plugins,
+        reporters: ["default", "html"],
+        restoreMocks: true,
+        sequence: { concurrent: true },
+        setupFiles: SETUP_FILES
+    }
+}
+
+/** @type {import("./types/vitest").UserConfig} */
 export default defineConfig({
     resolve: { tsconfigPaths: true },
-    test: {
-        projects: [
-            {
-                test: {
-                    ...configDefaults,
-                    coverage: {
-                        enabled: true,
-                        provider: "v8",
-                        reporter: ["html", "lcov"]
-                    },
-                    environment: "happy-dom",
-                    globals: false,
-                    globalSetup: [],
-                    include: INCLUDE,
-                    name: "reactify-node",
-                    passWithNoTests: true,
-                    plugins,
-                    reporters: ["default", "html"],
-                    restoreMocks: true,
-                    sequence: { concurrent: true },
-                    setupFiles: SETUP_FILES
-                }
-            }
-        ]
-    }
+    test: { projects: [reactTests] }
 })
