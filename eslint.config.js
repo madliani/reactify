@@ -15,24 +15,6 @@ const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
-const tsExtends = [
-    pluginJS.configs.recommended,
-    ts.configs.eslintRecommended,
-    ts.configs.strict,
-    ts.configs.stylistic,
-    pluginPerfect.configs["recommended-alphabetical"],
-    pluginImport.flatConfigs.recommended,
-    pluginImport.flatConfigs.typescript
-]
-const tsPlugins = { "no-secrets": pluginNoSecrets }
-const tsRules = {
-    "import/no-named-as-default-member": "off",
-    "import/order": "off",
-    "no-secrets/no-pattern-match": "error",
-    "no-secrets/no-secrets": "error"
-}
-const tsSettings = { "import/resolver": { typescript: true } }
-
 const browserExtends = [pluginCompat.configs["flat/recommended"]]
 
 const ASTRO_CORE_MODULES = ["astro:transitions"]
@@ -41,7 +23,15 @@ const astroSettings = { "import/core-modules": [...ASTRO_CORE_MODULES] }
 
 /** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const tsConfig = {
-    extends: tsExtends,
+    extends: [
+        pluginJS.configs.recommended,
+        ts.configs.eslintRecommended,
+        ts.configs.strict,
+        ts.configs.stylistic,
+        pluginPerfect.configs["recommended-alphabetical"],
+        pluginImport.flatConfigs.recommended,
+        pluginImport.flatConfigs.typescript
+    ],
     languageOptions: {
         ecmaVersion: 2022,
         globals: globals.builtin,
@@ -51,9 +41,14 @@ const tsConfig = {
         },
         sourceType: "module"
     },
-    plugins: tsPlugins,
-    rules: tsRules,
-    settings: tsSettings
+    plugins: { "no-secrets": pluginNoSecrets },
+    rules: {
+        "import/no-named-as-default-member": "off",
+        "import/order": "off",
+        "no-secrets/no-pattern-match": "error",
+        "no-secrets/no-secrets": "error"
+    },
+    settings: { "import/resolver": { typescript: true } }
 }
 
 /** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
