@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.2.0] - 2026-10-27
+
+### Fixed
+
+- The `README.md` file
+- The configuration files of the project
+
+### Changed
+
+- Dependencies were updated
+
 ## [4.1.0] - 2026-10-25
 
 ### Added
