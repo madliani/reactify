@@ -130,24 +130,24 @@ describe("Counter", () => {
             expect(count).toBe(0)
         })
     })
+})
 
-    describe("Hooks", () => {
-        afterEach(() => cleanup())
+describe("Counter hooks", () => {
+    afterEach(() => cleanup())
 
-        test("should trigger hook with increment", async () => {
-            const { result } = renderHook(() => useCounter())
+    test("should trigger hook with increment", async () => {
+        const { result } = renderHook(() => useCounter())
 
-            act(() => result.current.increment())
+        act(() => result.current.increment())
 
-            expect(result.current.count).toBe(1)
-        })
+        expect(result.current.count).toBe(1)
+    })
 
-        test("shouldn't trigger hook with decrement", async () => {
-            const { result } = renderHook(() => useCounter())
+    test("shouldn't trigger hook with decrement", async () => {
+        const { result } = renderHook(() => useCounter())
 
-            act(() => result.current.decrement())
+        act(() => result.current.decrement())
 
-            expect(result.current.count).toBe(0)
-        })
+        expect(result.current.count).toBe(0)
     })
 })
