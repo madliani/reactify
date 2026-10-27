@@ -15,7 +15,7 @@ const reactProjectConfig = {
         plugins: [vitePluginReact()],
         reporters: ["default", "html"],
         restoreMocks: true,
-        sequence: { concurrent: true },
+        sequence: { concurrent: false },
         setupFiles: ["./tests/setup.ts"]
     }
 }
