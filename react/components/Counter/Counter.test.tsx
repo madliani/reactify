@@ -23,10 +23,8 @@ import {
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
-const CounterComponent = <Counter />
-
 describe("Counter rendering", () => {
-    beforeAll(() => render(CounterComponent))
+    beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
     test("should render title", async () => {
@@ -74,7 +72,7 @@ describe("Counter rendering", () => {
 })
 
 describe("Counter increment", { concurrent: false }, () => {
-    beforeAll(() => render(CounterComponent))
+    beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
     test("should trigger increment button", async () => {
@@ -99,7 +97,7 @@ describe("Counter increment", { concurrent: false }, () => {
 })
 
 describe("Counter decrement", { concurrent: false }, () => {
-    beforeAll(() => render(CounterComponent))
+    beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
     test("should trigger decrement button", async () => {
