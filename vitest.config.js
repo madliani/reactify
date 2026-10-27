@@ -1,8 +1,6 @@
 import vitePluginReact from "@vitejs/plugin-react"
 import { configDefaults, defineConfig } from "vitest/config"
 
-const vitePlugins = [vitePluginReact()]
-
 /** @type {import("./types/vitest").UserConfig} */
 const reactTests = {
     test: {
@@ -14,7 +12,7 @@ const reactTests = {
         include: ["./react/**/*.test.ts", "./react/**/*.test.tsx"],
         name: "reactify-node",
         passWithNoTests: true,
-        plugins: [...vitePlugins],
+        plugins: [vitePluginReact()],
         reporters: ["default", "html"],
         restoreMocks: true,
         sequence: { concurrent: true },
