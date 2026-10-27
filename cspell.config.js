@@ -1,5 +1,17 @@
 import { defineConfig } from "cspell"
 
+const IGNORE_PATHS = [
+    ".astro/",
+    ".vitest/",
+    "assets/",
+    "coverage/",
+    "dist/",
+    "node_modules/",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "public/"
+]
+
 const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
 
 const GENERAL_DICT = "en, en-US, en-GB, companies, softwareTerms, misc"
@@ -27,17 +39,7 @@ const ENGLISH_WORDS = [
 
 /** @type {import("cspell").CSpellSettings} */
 export default defineConfig({
-    ignorePaths: [
-        ".astro/",
-        ".vitest/",
-        "assets/",
-        "coverage/",
-        "dist/",
-        "node_modules/",
-        "package-lock.json",
-        "pnpm-lock.yaml",
-        "public/"
-    ],
+    ignorePaths: IGNORE_PATHS,
     import: IMPORT,
     language: LANGUAGE,
     useGitignore: true,
