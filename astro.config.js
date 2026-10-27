@@ -23,7 +23,7 @@ export default defineConfig({
     srcDir: "./astro/",
 
     vite: {
-        css: { transformer: "postcss" },
+        css: { transformer: "lightningcss" },
         plugins: [],
         resolve: {
             alias: { "@astro": viteAliasAstro, "@react": viteAliasReact }
