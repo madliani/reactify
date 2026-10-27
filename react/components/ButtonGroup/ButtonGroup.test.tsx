@@ -2,11 +2,9 @@ import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
 import { cleanup, render, screen } from "@testing-library/react"
 import { afterAll, beforeAll, describe, expect, test } from "vitest"
 
-const ButtonGroupComponent = <ButtonGroup />
-
 describe("Button Group", () => {
     describe("Button Group rendering", () => {
-        beforeAll(() => render(ButtonGroupComponent))
+        beforeAll(() => render(<ButtonGroup />))
         afterAll(() => cleanup())
 
         test("should render mobile button group", async () => {
