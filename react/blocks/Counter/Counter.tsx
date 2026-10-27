@@ -3,11 +3,11 @@ import {
     counterAtom,
     decrementCount,
     incrementCount
-} from "@react/components/Counter/Counter.atom"
+} from "@react/blocks/Counter/Counter.atom"
 import {
     CounterView,
     counterViewStyles
-} from "@react/components/Counter/Counter.view"
+} from "@react/blocks/Counter/Counter.view"
 
 const useIncrement = () => {
     const increment = () => incrementCount()

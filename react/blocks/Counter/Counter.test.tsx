@@ -1,8 +1,8 @@
-import { Counter, useCounter } from "@react/components/Counter/Counter"
+import { Counter, useCounter } from "@react/blocks/Counter/Counter"
 import {
     decrementCount,
     incrementCount
-} from "@react/components/Counter/Counter.atom"
+} from "@react/blocks/Counter/Counter.atom"
 import {
     act,
     cleanup,
@@ -21,7 +21,7 @@ import {
     vi
 } from "vitest"
 
-vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
+vi.mock(import("@react/blocks/Counter/Counter.atom"), { spy: true })
 
 describe("Counter rendering", () => {
     beforeAll(() => render(<Counter />))
