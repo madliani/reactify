@@ -2,7 +2,7 @@ import vitePluginReact from "@vitejs/plugin-react"
 import { configDefaults, defineConfig } from "vitest/config"
 
 /** @type {import("./types/vitest").UserConfig} */
-const reactTestConfig = {
+const reactProjectConfig = {
     test: {
         ...configDefaults,
         coverage: { enabled: true, provider: "v8", reporter: ["html", "lcov"] },
@@ -23,5 +23,5 @@ const reactTestConfig = {
 /** @type {import("./types/vitest").UserConfig} */
 export default defineConfig({
     resolve: { tsconfigPaths: true },
-    test: { projects: [reactTestConfig] }
+    test: { projects: [reactProjectConfig] }
 })
