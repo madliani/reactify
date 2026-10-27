@@ -53,7 +53,7 @@ describe("Counter", () => {
             expect(incBtnEl).toBeInTheDocument()
         })
 
-        test("should render disabled decrement button", async () => {
+        test("should render decrement button", async () => {
             const decBtnElements =
                 await screen.findAllByTestId("counter__dec-btn")
             const decBtnEl = decBtnElements[0]
@@ -68,6 +68,19 @@ describe("Counter", () => {
             const attributionStr = attributionEl.textContent
 
             expect(attributionStr).toBe("by @madliani")
+        })
+    })
+
+    describe("Decrement button", () => {
+        beforeAll(() => render(CounterComponent))
+        afterAll(() => cleanup())
+
+        test("should be disabled decrement button", async () => {
+            const decBtnElements =
+                await screen.findAllByTestId("counter__dec-btn")
+            const decBtnEl = decBtnElements[0]
+
+            expect(decBtnEl).toBeDisabled()
         })
     })
 
