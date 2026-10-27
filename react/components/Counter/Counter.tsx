@@ -9,12 +9,23 @@ import {
     counterViewStyles
 } from "@react/components/Counter/Counter.view"
 
-const useCounter = () => {
-    const count = useStore(counterAtom)
+const useIncrement = () => {
+    const increment = () => incrementCount()
+
+    return { increment }
+}
+
+const useDecrement = (count: number) => {
+    const decrement = () => decrementCount()
     const decIsDisabled = count === 0
 
-    const increment = () => incrementCount()
-    const decrement = () => decrementCount()
+    return { decIsDisabled, decrement }
+}
+
+const useCounter = () => {
+    const count = useStore(counterAtom)
+    const { increment } = useIncrement()
+    const { decIsDisabled, decrement } = useDecrement(count)
 
     return { count, decIsDisabled, decrement, increment }
 }
