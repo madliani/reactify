@@ -1,3 +1,4 @@
+import { Counter, useCounter } from "@react/components/Counter/Counter"
 import {
     decrementCount,
     incrementCount
@@ -19,8 +20,6 @@ import {
     test,
     vi
 } from "vitest"
-
-import { Counter, useCounter } from "./Counter"
 
 vi.mock(import("@react/components/Counter/Counter.atom"), { spy: true })
 
