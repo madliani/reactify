@@ -1,4 +1,7 @@
-import { decCount, incCount } from "@react/components/Counter/Counter.atom"
+import {
+    decrementCount,
+    incrementCount
+} from "@react/components/Counter/Counter.atom"
 import {
     act,
     cleanup,
@@ -83,7 +86,7 @@ describe("Counter", () => {
                 await user.click(incBtnEl)
             }
 
-            expect(incCount).toHaveBeenCalledOnce()
+            expect(incrementCount).toHaveBeenCalledOnce()
         })
 
         test("should increment count", async () => {
@@ -109,7 +112,7 @@ describe("Counter", () => {
                 await user.click(decBtnEl)
             }
 
-            expect(decCount).toHaveBeenCalledOnce()
+            expect(decrementCount).toHaveBeenCalledOnce()
         })
 
         test("shouldn't decrement count", async () => {
@@ -127,7 +130,7 @@ describe("Counter", () => {
         test("should trigger hook with increment", async () => {
             const { result } = renderHook(() => useCounter())
 
-            act(() => result.current.inc())
+            act(() => result.current.increment())
 
             expect(result.current.count).toBe(1)
         })
@@ -135,7 +138,7 @@ describe("Counter", () => {
         test("shouldn't trigger hook with decrement", async () => {
             const { result } = renderHook(() => useCounter())
 
-            act(() => result.current.dec())
+            act(() => result.current.decrement())
 
             expect(result.current.count).toBe(0)
         })

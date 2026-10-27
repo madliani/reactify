@@ -1,8 +1,8 @@
 import { useStore } from "@nanostores/react"
 import {
     counterAtom,
-    decCount,
-    incCount
+    decrementCount,
+    incrementCount
 } from "@react/components/Counter/Counter.atom"
 import {
     CounterView,
@@ -13,21 +13,21 @@ const useCounter = () => {
     const count = useStore(counterAtom)
     const decIsDisabled = count === 0
 
-    const inc = () => incCount()
-    const dec = () => decCount()
+    const increment = () => incrementCount()
+    const decrement = () => decrementCount()
 
-    return { count, dec, decIsDisabled, inc }
+    return { count, decIsDisabled, decrement, increment }
 }
 
 const Counter = () => {
-    const { count, dec, decIsDisabled, inc } = useCounter()
+    const { count, decIsDisabled, decrement, increment } = useCounter()
 
     return (
         <CounterView
             count={count}
-            dec={dec}
             decIsDisabled={decIsDisabled}
-            inc={inc}
+            decrement={decrement}
+            increment={increment}
             styles={counterViewStyles}
         />
     )

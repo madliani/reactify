@@ -6,9 +6,9 @@ import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
 
 export interface CounterViewProps {
     count: number
-    dec: () => void
     decIsDisabled: boolean
-    inc: () => void
+    decrement: () => void
+    increment: () => void
     styles: CounterViewStyles
 }
 
@@ -81,7 +81,7 @@ const counterViewStyles: CounterViewStyles = {
 }
 
 const CounterView = (props: CounterViewProps) => {
-    const { count, dec, decIsDisabled, inc, styles } = props
+    const { count, decIsDisabled, decrement, increment, styles } = props
 
     return (
         <Card>
@@ -115,7 +115,7 @@ const CounterView = (props: CounterViewProps) => {
                     <Button
                         color="primary"
                         data-testid="counter__inc-btn"
-                        onClick={inc}
+                        onClick={increment}
                         title="Increment"
                         variant="contained"
                     >
@@ -126,7 +126,7 @@ const CounterView = (props: CounterViewProps) => {
                         color="error"
                         data-testid="counter__dec-btn"
                         disabled={decIsDisabled}
-                        onClick={dec}
+                        onClick={decrement}
                         title="Decrement"
                         variant="contained"
                     >
