@@ -1,8 +1,9 @@
-import { Counter, useCounter } from "@react/blocks/Counter/Counter"
+import { Counter } from "@react/blocks/Counter/Counter"
 import {
     decrementCount,
     incrementCount
 } from "@react/blocks/Counter/Counter.atom"
+import { useCounter } from "@react/blocks/Counter/Counter.hook"
 import {
     act,
     cleanup,
