@@ -11,21 +11,19 @@ import {
 
 const useCounter = () => {
     const count = useStore(counterAtom)
-    const decIsDisabled = count === 0
 
     const increment = () => incrementCount()
     const decrement = () => decrementCount()
 
-    return { count, decIsDisabled, decrement, increment }
+    return { count, decrement, increment }
 }
 
 const Counter = () => {
-    const { count, decIsDisabled, decrement, increment } = useCounter()
+    const { count, decrement, increment } = useCounter()
 
     return (
         <CounterView
             count={count}
-            decIsDisabled={decIsDisabled}
             decrement={decrement}
             increment={increment}
             styles={counterViewStyles}
