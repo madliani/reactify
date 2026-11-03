@@ -1,4 +1,3 @@
-import { counterAtom } from "@react/blocks/Counter/Counter.atom"
 import { useCounter } from "@react/blocks/Counter/Counter.hook"
 import { CounterView } from "@react/blocks/Counter/Counter.view"
 
@@ -14,4 +13,4 @@ const Counter = () => {
     )
 }
 
-export { Counter, counterAtom, useCounter }
+export { Counter }
