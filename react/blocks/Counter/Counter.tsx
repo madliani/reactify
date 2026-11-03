@@ -4,7 +4,6 @@ import {
     decrementCount,
     incrementCount
 } from "@react/blocks/Counter/Counter.atom"
-import { counterViewStyles } from "@react/blocks/Counter/Counter.style"
 import { CounterView } from "@react/blocks/Counter/Counter.view"
 
 const useCounter = () => {
@@ -24,7 +23,6 @@ const Counter = () => {
             count={count}
             decrement={decrement}
             increment={increment}
-            styles={counterViewStyles}
         />
     )
 }

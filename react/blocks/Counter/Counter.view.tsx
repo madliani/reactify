@@ -1,17 +1,15 @@
-import type { CounterViewStyles } from "@react/blocks/Counter/Counter.style"
-
 import { Button, Card, CardContent, Typography } from "@mui/material"
+import { counterViewStyles } from "@react/blocks/Counter/Counter.style"
 import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
 
 export interface CounterViewProps {
     count: number
     decrement: () => void
     increment: () => void
-    styles: CounterViewStyles
 }
 
 const CounterView = (props: CounterViewProps) => {
-    const { count, decrement, increment, styles } = props
+    const { count, decrement, increment } = props
 
     return (
         <Card>
@@ -20,17 +18,17 @@ const CounterView = (props: CounterViewProps) => {
                 href="https://github.com/madliani/reactify/"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                sx={styles.title}
+                sx={counterViewStyles.title}
                 target="_blank"
             >
                 Counter
             </Button>
 
-            <CardContent sx={styles.cardContent}>
+            <CardContent sx={counterViewStyles.cardContent}>
                 <Typography
                     component="span"
                     data-testid="counter__count"
-                    sx={styles.count}
+                    sx={counterViewStyles.count}
                     title={count.toString()}
                 >
                     {count}
@@ -38,8 +36,8 @@ const CounterView = (props: CounterViewProps) => {
 
                 <ButtonGroup
                     styles={{
-                        desktop: styles.desktopButtonGroup,
-                        mobile: styles.mobileButtonGroup
+                        desktop: counterViewStyles.desktopButtonGroup,
+                        mobile: counterViewStyles.mobileButtonGroup
                     }}
                 >
                     <Button
@@ -70,7 +68,7 @@ const CounterView = (props: CounterViewProps) => {
                 href="https://github.com/madliani/"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                sx={styles.attribution}
+                sx={counterViewStyles.attribution}
                 target="_blank"
             >
                 by @madliani
