@@ -1,4 +1,4 @@
-import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
+import ButtonGroup from "@react/components/ButtonGroup/ButtonGroup"
 import { cleanup, render, screen } from "@testing-library/react"
 import { afterAll, beforeAll, describe, expect, test } from "vitest"
 
