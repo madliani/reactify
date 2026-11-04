@@ -1,7 +1,7 @@
 import { useStore } from "@nanostores/react"
 import counterAtom from "@react/blocks/Counter/Counter.atom"
 
-const useCounter = () => {
+const use = () => {
     const count = useStore(counterAtom.store)
     const isDisabled = count === 0
 
@@ -12,4 +12,4 @@ const useCounter = () => {
     return { count, decrementCount, incrementCount, isDisabled, resetCount }
 }
 
-export { useCounter }
+export default { use }

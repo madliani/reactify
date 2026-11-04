@@ -1,6 +1,6 @@
 import { Counter } from "@react/blocks/Counter/Counter"
 import counterAtom from "@react/blocks/Counter/Counter.atom"
-import { useCounter } from "@react/blocks/Counter/Counter.hook"
+import counterHook from "@react/blocks/Counter/Counter.hook"
 import {
     act,
     cleanup,
@@ -157,7 +157,7 @@ describe("Counter hooks", () => {
     afterEach(() => cleanup())
 
     test("should trigger hook with increment", async () => {
-        const { result } = renderHook(() => useCounter())
+        const { result } = renderHook(() => counterHook.use())
 
         act(() => result.current.incrementCount())
 
@@ -165,7 +165,7 @@ describe("Counter hooks", () => {
     })
 
     test("shouldn't trigger hook with decrement", async () => {
-        const { result } = renderHook(() => useCounter())
+        const { result } = renderHook(() => counterHook.use())
 
         act(() => result.current.decrementCount())
 
@@ -173,7 +173,7 @@ describe("Counter hooks", () => {
     })
 
     test("shouldn't trigger hook with resetting", async () => {
-        const { result } = renderHook(() => useCounter())
+        const { result } = renderHook(() => counterHook.use())
 
         act(() => result.current.resetCount())
 

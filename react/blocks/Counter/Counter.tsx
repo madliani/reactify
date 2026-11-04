@@ -1,9 +1,9 @@
-import { useCounter } from "@react/blocks/Counter/Counter.hook"
+import counterHook from "@react/blocks/Counter/Counter.hook"
 import { CounterView } from "@react/blocks/Counter/Counter.view"
 
 const Counter = () => {
     const { count, decrementCount, incrementCount, isDisabled, resetCount } =
-        useCounter()
+        counterHook.use()
 
     return (
         <CounterView
