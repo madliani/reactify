@@ -15,7 +15,7 @@ export default (props: CounterViewProps) => {
         props
 
     return (
-        <Card>
+        <Card component="div">
             <Button
                 data-testid="counter__title"
                 href="https://github.com/madliani/reactify/"
@@ -27,7 +27,7 @@ export default (props: CounterViewProps) => {
                 Counter
             </Button>
 
-            <CardContent sx={counterStyles.cardContent}>
+            <CardContent component="div" sx={counterStyles.cardContent}>
                 <Typography
                     component="span"
                     data-testid="counter__count"
