@@ -128,7 +128,7 @@ describe("Counter hooks", () => {
     test("should trigger hook with increment", async () => {
         const { result } = renderHook(() => useCounter())
 
-        act(() => result.current.increment())
+        act(() => result.current.incrementCount())
 
         expect(result.current.count).toBe(1)
     })
@@ -136,7 +136,7 @@ describe("Counter hooks", () => {
     test("shouldn't trigger hook with decrement", async () => {
         const { result } = renderHook(() => useCounter())
 
-        act(() => result.current.decrement())
+        act(() => result.current.decrementCount())
 
         expect(result.current.count).toBe(0)
     })

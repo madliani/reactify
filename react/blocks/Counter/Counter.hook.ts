@@ -9,10 +9,7 @@ const useCounter = () => {
     const count = useStore(counterAtom)
     const isDisabled = count === 0
 
-    const increment = () => incrementCount()
-    const decrement = () => decrementCount()
-
-    return { count, decrement, increment, isDisabled }
+    return { count, decrementCount, incrementCount, isDisabled }
 }
 
 export { useCounter }
