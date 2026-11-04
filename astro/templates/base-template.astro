@@ -30,13 +30,13 @@ const { className, description = "", title = "" } = Astro.props
     <body class="base-body">
         <BaseNoscript />
 
-        <BaseLayout className={className}>
-            <StyledEngineProvider enableCssLayer injectFirst>
-                <CssBaseline enableColorScheme />
+        <StyledEngineProvider enableCssLayer injectFirst>
+            <CssBaseline enableColorScheme />
 
+            <BaseLayout className={className}>
                 <slot />
-            </StyledEngineProvider>
-        </BaseLayout>
+            </BaseLayout>
+        </StyledEngineProvider>
     </body>
 </html>
 
