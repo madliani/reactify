@@ -67,7 +67,6 @@ const CounterView = (props: CounterViewProps) => {
                     <Button
                         color="error"
                         data-testid="counter__reset-btn"
-                        disabled={isDisabled}
                         onClick={resetCount}
                         title="Reset"
                         variant="contained"

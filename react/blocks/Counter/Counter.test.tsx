@@ -1,7 +1,8 @@
 import { Counter } from "@react/blocks/Counter/Counter"
 import {
     decrementCount,
-    incrementCount
+    incrementCount,
+    resetCount
 } from "@react/blocks/Counter/Counter.atom"
 import { useCounter } from "@react/blocks/Counter/Counter.hook"
 import {
@@ -122,6 +123,32 @@ describe("Counter decrement", { concurrent: false }, () => {
     })
 
     test("shouldn't decrement count", async () => {
+        const countEl = await screen.findByTestId("counter__count")
+        const countStr = countEl.textContent
+        const count = parseInt(countStr)
+
+        expect(count).toBe(0)
+    })
+})
+
+describe("Counter resetting", { concurrent: false }, () => {
+    beforeAll(() => render(<Counter />))
+    afterAll(() => cleanup())
+
+    test("should trigger reset button", async () => {
+        const user = userEvent.setup()
+        const resetBtnElements =
+            await screen.findAllByTestId("counter__reset-btn")
+        const resetBtnEl = resetBtnElements[0]
+
+        if (resetBtnEl) {
+            await user.click(resetBtnEl)
+        }
+
+        expect(resetCount).toHaveBeenCalledOnce()
+    })
+
+    test("shouldn't reset count", async () => {
         const countEl = await screen.findByTestId("counter__count")
         const countStr = countEl.textContent
         const count = parseInt(countStr)
