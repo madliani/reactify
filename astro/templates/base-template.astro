@@ -31,7 +31,7 @@ const { className, description = "", title = "" } = Astro.props
         <BaseNoscript />
 
         <BaseLayout className={className}>
-            <StyledEngineProvider injectFirst>
+            <StyledEngineProvider enableCssLayer injectFirst>
                 <CssBaseline enableColorScheme />
 
                 <slot />
