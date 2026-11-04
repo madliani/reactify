@@ -9,7 +9,7 @@ export interface BGViewProps {
     styles?: BGStyles | undefined
 }
 
-const ButtonGroupView = ({ children }: BGViewProps) => (
+export default ({ children }: BGViewProps) => (
     <>
         <MUIButtonGroup
             component="div"
@@ -30,5 +30,3 @@ const ButtonGroupView = ({ children }: BGViewProps) => (
         </MUIButtonGroup>
     </>
 )
-
-export { ButtonGroupView }
