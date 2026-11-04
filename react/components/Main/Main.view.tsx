@@ -4,8 +4,8 @@ import { Box } from "@mui/material"
 import "@react/components/Main/Main.style.css"
 
 export interface MainViewProps {
-    children?: ReactNode
-    className?: string
+    children?: ReactNode | undefined
+    className?: string | undefined
 }
 
 export default ({ children, className }: MainViewProps) => (
