@@ -1,9 +1,5 @@
 import { Counter } from "@react/blocks/Counter/Counter"
-import {
-    decrementCount,
-    incrementCount,
-    resetCount
-} from "@react/blocks/Counter/Counter.atom"
+import { decrement, increment, reset } from "@react/blocks/Counter/Counter.atom"
 import { useCounter } from "@react/blocks/Counter/Counter.hook"
 import {
     act,
@@ -94,7 +90,7 @@ describe("Counter increment", { concurrent: false }, () => {
             await user.click(incBtnEl)
         }
 
-        expect(incrementCount).toHaveBeenCalledOnce()
+        expect(increment).toHaveBeenCalledOnce()
     })
 
     test("should increment count", async () => {
@@ -119,7 +115,7 @@ describe("Counter decrement", { concurrent: false }, () => {
             await user.click(decBtnEl)
         }
 
-        expect(decrementCount).toHaveBeenCalledOnce()
+        expect(decrement).toHaveBeenCalledOnce()
     })
 
     test("shouldn't decrement count", async () => {
@@ -145,7 +141,7 @@ describe("Counter resetting", { concurrent: false }, () => {
             await user.click(resetBtnEl)
         }
 
-        expect(resetCount).toHaveBeenCalledOnce()
+        expect(reset).toHaveBeenCalledOnce()
     })
 
     test("shouldn't reset count", async () => {

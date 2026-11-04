@@ -1,14 +1,18 @@
 import { useStore } from "@nanostores/react"
 import {
-    countAtom,
-    decrementCount,
-    incrementCount,
-    resetCount
+    decrement,
+    increment,
+    reset,
+    store
 } from "@react/blocks/Counter/Counter.atom"
 
 const useCounter = () => {
-    const count = useStore(countAtom)
+    const count = useStore(store)
     const isDisabled = count === 0
+
+    const decrementCount = () => decrement()
+    const incrementCount = () => increment()
+    const resetCount = () => reset()
 
     return { count, decrementCount, incrementCount, isDisabled, resetCount }
 }
