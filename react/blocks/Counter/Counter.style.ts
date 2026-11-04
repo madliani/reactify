@@ -6,8 +6,6 @@ export interface CounterStyles {
     card: MUIStyles
     cardContent: MUIStyles
     count: MUIStyles
-    desktopButtonGroup: MUIStyles
-    mobileButtonGroup: MUIStyles
     title: MUIStyles
 }
 
@@ -49,14 +47,6 @@ export default {
         fontWeight: "bold",
         lineHeight: "1rem",
         textAlign: "center"
-    },
-    desktopButtonGroup: {
-        "@media (width >= 640px)": { display: "inline-flex" },
-        display: "none"
-    },
-    mobileButtonGroup: {
-        "@media (width >= 640px)": { display: "none" },
-        display: "inline-flex"
     },
     title: {
         "@media (width >= 640px)": { fontSize: "3.5rem", paddingY: "2rem" },

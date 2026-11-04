@@ -16,13 +16,24 @@ export interface BGViewProps {
 
 export type ButtonGroupProps = BGViewProps
 
-const ButtonGroupView = ({ children, styles }: BGViewProps) => (
+const buttonGroupStyles: BGStyles = {
+    desktop: {
+        "@media (width >= 640px)": { display: "inline-flex" },
+        display: "none"
+    },
+    mobile: {
+        "@media (width >= 640px)": { display: "none" },
+        display: "inline-flex"
+    }
+}
+
+const ButtonGroupView = ({ children }: BGViewProps) => (
     <>
         <MUIButtonGroup
             component="div"
             data-testid="btn-group__mobile-btns"
             orientation="vertical"
-            sx={styles?.mobile}
+            sx={buttonGroupStyles.mobile}
         >
             {children}
         </MUIButtonGroup>
@@ -31,7 +42,7 @@ const ButtonGroupView = ({ children, styles }: BGViewProps) => (
             component="div"
             data-testid="btn-group__desktop-btns"
             orientation="horizontal"
-            sx={styles?.desktop}
+            sx={buttonGroupStyles.desktop}
         >
             {children}
         </MUIButtonGroup>
