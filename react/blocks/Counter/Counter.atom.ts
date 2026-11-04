@@ -6,5 +6,6 @@ const counterAtom = atom<number>(INITIAL_COUNT)
 
 const incrementCount = () => counterAtom.set(counterAtom.get() + 1)
 const decrementCount = () => counterAtom.set(counterAtom.get() - 1)
+const resetCount = () => counterAtom.set(INITIAL_COUNT)
 
-export { counterAtom, decrementCount, incrementCount }
+export { counterAtom, decrementCount, incrementCount, resetCount }

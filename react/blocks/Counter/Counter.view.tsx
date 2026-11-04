@@ -7,10 +7,12 @@ export interface CounterViewProps {
     decrementCount: () => void
     incrementCount: () => void
     isDisabled: boolean
+    resetCount: () => void
 }
 
 const CounterView = (props: CounterViewProps) => {
-    const { count, decrementCount, incrementCount, isDisabled } = props
+    const { count, decrementCount, incrementCount, isDisabled, resetCount } =
+        props
 
     return (
         <Card>
@@ -42,7 +44,7 @@ const CounterView = (props: CounterViewProps) => {
                     }}
                 >
                     <Button
-                        color="primary"
+                        color="success"
                         data-testid="counter__inc-btn"
                         onClick={incrementCount}
                         title="Increment"
@@ -52,7 +54,7 @@ const CounterView = (props: CounterViewProps) => {
                     </Button>
 
                     <Button
-                        color="error"
+                        color="warning"
                         data-testid="counter__dec-btn"
                         disabled={isDisabled}
                         onClick={decrementCount}
@@ -60,6 +62,17 @@ const CounterView = (props: CounterViewProps) => {
                         variant="contained"
                     >
                         Decrement
+                    </Button>
+
+                    <Button
+                        color="error"
+                        data-testid="counter__reset-btn"
+                        disabled={isDisabled}
+                        onClick={resetCount}
+                        title="Reset"
+                        variant="contained"
+                    >
+                        Reset
                     </Button>
                 </ButtonGroup>
             </CardContent>

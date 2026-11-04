@@ -64,6 +64,14 @@ describe("Counter rendering", () => {
         expect(decBtnEl).toBeDisabled()
     })
 
+    test("should render reset button", async () => {
+        const resetBtnElements =
+            await screen.findAllByTestId("counter__reset-btn")
+        const resetBtnEl = resetBtnElements[0]
+
+        expect(resetBtnEl).toBeInTheDocument()
+    })
+
     test("should render attribution", async () => {
         const attributionEl = await screen.findByTestId("counter__attribution")
         const attributionStr = attributionEl.textContent
@@ -137,6 +145,14 @@ describe("Counter hooks", () => {
         const { result } = renderHook(() => useCounter())
 
         act(() => result.current.decrementCount())
+
+        expect(result.current.count).toBe(0)
+    })
+
+    test("shouldn't trigger hook with resetting", async () => {
+        const { result } = renderHook(() => useCounter())
+
+        act(() => result.current.resetCount())
 
         expect(result.current.count).toBe(0)
     })
