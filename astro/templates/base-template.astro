@@ -41,8 +41,12 @@ const { className, description = "", title = "" } = Astro.props
 </html>
 
 <style is:global>
-    .base-body {
-        width: 100svw;
-        height: 100svh;
+    @layer root, mui, components;
+
+    @layer root {
+        .base-body {
+            width: 100svw;
+            height: 100svh;
+        }
     }
 </style>
