@@ -2,8 +2,8 @@ import type { Theme } from "@emotion/react"
 import type { SxProps } from "@mui/material"
 
 export interface BGStyles {
-    desktop?: SxProps<Theme> | undefined
-    mobile?: SxProps<Theme> | undefined
+    desktop: SxProps<Theme>
+    mobile: SxProps<Theme>
 }
 
 const buttonGroupStyles: BGStyles = {
