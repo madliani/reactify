@@ -9,8 +9,6 @@ export interface BGViewProps {
     styles?: BGStyles | undefined
 }
 
-export type ButtonGroupProps = BGViewProps
-
 const ButtonGroupView = ({ children }: BGViewProps) => (
     <>
         <MUIButtonGroup
