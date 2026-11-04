@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.3.0] - 2026-11-04
+
+### Fixed
+
+- The `ButtonGroup` tests
+- The `Counter` component
+- The `Counter` tests
+- The `Main` tests
+- The configuration files of the project
+
+### Changed
+
+- Dependencies were updated
+- The `Counter` component was moved to `react/blocks/`
+
 ## [4.2.0] - 2026-10-27
 
 ### Fixed
