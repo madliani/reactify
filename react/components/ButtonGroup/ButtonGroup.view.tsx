@@ -13,7 +13,7 @@ const ButtonGroupView = ({ children }: BGViewProps) => (
     <>
         <MUIButtonGroup
             component="div"
-            data-testid="btn-group__mobile-btns"
+            data-testid="btn-group__mobile"
             orientation="vertical"
             sx={buttonGroupStyles.mobile}
         >
@@ -22,7 +22,7 @@ const ButtonGroupView = ({ children }: BGViewProps) => (
 
         <MUIButtonGroup
             component="div"
-            data-testid="btn-group__desktop-btns"
+            data-testid="btn-group__desktop"
             orientation="horizontal"
             sx={buttonGroupStyles.desktop}
         >

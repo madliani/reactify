@@ -7,15 +7,13 @@ describe("ButtonGroup rendering", () => {
     afterAll(() => cleanup())
 
     test("should render mobile button group", async () => {
-        const mobileBtnEl = await screen.findByTestId("btn-group__mobile-btns")
+        const mobileBtnEl = await screen.findByTestId("btn-group__mobile")
 
         expect(mobileBtnEl).toBeInTheDocument()
     })
 
     test("should render desktop button group", async () => {
-        const desktopBtnEl = await screen.findByTestId(
-            "btn-group__desktop-btns"
-        )
+        const desktopBtnEl = await screen.findByTestId("btn-group__desktop")
 
         expect(desktopBtnEl).toBeInTheDocument()
     })
