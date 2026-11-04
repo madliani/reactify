@@ -16,7 +16,7 @@ interface Props {
     title?: string | undefined
 }
 
-const { className, description = "", title = "" } = Astro.props
+const { description = "", title = "" } = Astro.props
 ---
 
 <!doctype html>
@@ -33,7 +33,7 @@ const { className, description = "", title = "" } = Astro.props
         <StyledEngineProvider enableCssLayer injectFirst>
             <CssBaseline enableColorScheme />
 
-            <BaseLayout className={className}>
+            <BaseLayout>
                 <slot />
             </BaseLayout>
         </StyledEngineProvider>
