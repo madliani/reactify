@@ -2,8 +2,8 @@ import type { BGViewProps } from "@react/components/ButtonGroup/ButtonGroup.view
 
 import { ButtonGroupView } from "@react/components/ButtonGroup/ButtonGroup.view"
 
-export type ButtonGroupProps = BGViewProps
+export type BGProps = BGViewProps
 
-const ButtonGroup = (props: ButtonGroupProps) => <ButtonGroupView {...props} />
+const ButtonGroup = (props: BGProps) => <ButtonGroupView {...props} />
 
 export { ButtonGroup }
