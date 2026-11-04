@@ -1,13 +1,8 @@
-import type { Theme } from "@emotion/react"
-import type { SxProps } from "@mui/material"
+import type { BGStyles } from "@react/components/ButtonGroup/ButtonGroup.style"
 import type { ReactNode } from "react"
 
 import { ButtonGroup as MUIButtonGroup } from "@mui/material"
-
-export interface BGStyles {
-    desktop?: SxProps<Theme> | undefined
-    mobile?: SxProps<Theme> | undefined
-}
+import { buttonGroupStyles } from "@react/components/ButtonGroup/ButtonGroup.style"
 
 export interface BGViewProps {
     children?: ReactNode | undefined
@@ -15,17 +10,6 @@ export interface BGViewProps {
 }
 
 export type ButtonGroupProps = BGViewProps
-
-const buttonGroupStyles: BGStyles = {
-    desktop: {
-        "@media (width >= 640px)": { display: "inline-flex" },
-        display: "none"
-    },
-    mobile: {
-        "@media (width >= 640px)": { display: "none" },
-        display: "inline-flex"
-    }
-}
 
 const ButtonGroupView = ({ children }: BGViewProps) => (
     <>
