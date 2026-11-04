@@ -7,7 +7,7 @@ export interface MainViewStyles {
 
 export type MUIStyles = SxProps<Theme>
 
-const mainViewStyles: MainViewStyles = {
+export default {
     main: {
         alignItems: "center",
         display: "flex",
@@ -16,6 +16,4 @@ const mainViewStyles: MainViewStyles = {
         justifyContent: "center",
         weight: "100svw"
     }
-}
-
-export { mainViewStyles }
+} as const satisfies MainViewStyles
