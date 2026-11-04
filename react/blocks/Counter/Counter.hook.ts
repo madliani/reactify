@@ -7,11 +7,12 @@ import {
 
 const useCounter = () => {
     const count = useStore(counterAtom)
+    const isDisabled = count === 0
 
     const increment = () => incrementCount()
     const decrement = () => decrementCount()
 
-    return { count, decrement, increment }
+    return { count, decrement, increment, isDisabled }
 }
 
 export { useCounter }
