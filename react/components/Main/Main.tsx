@@ -4,6 +4,4 @@ import MainView from "@react/components/Main/Main.view"
 
 type MainProps = MainViewProps
 
-const Main = ({ children }: MainProps) => <MainView>{children}</MainView>
-
-export { Main }
+export default ({ children }: MainProps) => <MainView>{children}</MainView>

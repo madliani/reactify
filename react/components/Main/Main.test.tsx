@@ -1,4 +1,4 @@
-import { Main } from "@react/components/Main/Main"
+import Main from "@react/components/Main/Main"
 import { cleanup, render, screen } from "@testing-library/react"
 import { afterAll, beforeAll, describe, expect, test } from "vitest"
 
