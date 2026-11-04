@@ -7,10 +7,8 @@ export interface MainViewProps {
     children?: ReactNode
 }
 
-const MainView = ({ children }: MainViewProps) => (
+export default ({ children }: MainViewProps) => (
     <Box component="main" data-testid="main" sx={mainViewStyles.main}>
         {children}
     </Box>
 )
-
-export { MainView }
