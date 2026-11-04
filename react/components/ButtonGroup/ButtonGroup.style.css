@@ -1,19 +1,13 @@
 @layer components {
-    .btn-group__desktop {
-        display: none !important;
-    }
-
-    .btn-group__mobile {
-        display: inline-flex !important;
+    .btn-group {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 0.75rem;
     }
 
     @media (width >= 640px) {
-        .btn-group__desktop {
-            display: inline-flex !important;
-        }
-
-        .btn-group__mobile {
-            display: none !important;
+        .btn-group {
+            flex-direction: row;
         }
     }
 }

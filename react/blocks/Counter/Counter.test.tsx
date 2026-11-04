@@ -41,30 +41,25 @@ describe("Counter rendering", () => {
     })
 
     test("should render increment button", async () => {
-        const incBtnElements = await screen.findAllByTestId("counter__inc-btn")
-        const incBtnEl = incBtnElements[0]
+        const incBtnEl = await screen.findByTestId("counter__inc-btn")
 
         expect(incBtnEl).toBeInTheDocument()
     })
 
     test("should render decrement button", async () => {
-        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
-        const decBtnEl = decBtnElements[0]
+        const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
         expect(decBtnEl).toBeInTheDocument()
     })
 
     test("should render disabled decrement button", async () => {
-        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
-        const decBtnEl = decBtnElements[0]
+        const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
         expect(decBtnEl).toBeDisabled()
     })
 
     test("should render reset button", async () => {
-        const resetBtnElements =
-            await screen.findAllByTestId("counter__reset-btn")
-        const resetBtnEl = resetBtnElements[0]
+        const resetBtnEl = await screen.findByTestId("counter__reset-btn")
 
         expect(resetBtnEl).toBeInTheDocument()
     })
@@ -83,8 +78,7 @@ describe("Counter increment", { concurrent: false }, () => {
 
     test("should trigger increment button", async () => {
         const user = userEvent.setup()
-        const incBtnElements = await screen.findAllByTestId("counter__inc-btn")
-        const incBtnEl = incBtnElements[0]
+        const incBtnEl = await screen.findByTestId("counter__inc-btn")
 
         if (incBtnEl) {
             await user.click(incBtnEl)
@@ -108,8 +102,7 @@ describe("Counter decrement", { concurrent: false }, () => {
 
     test("should trigger decrement button", async () => {
         const user = userEvent.setup()
-        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
-        const decBtnEl = decBtnElements[0]
+        const decBtnEl = await screen.findByTestId("counter__dec-btn")
 
         if (decBtnEl) {
             await user.click(decBtnEl)
