@@ -1,5 +1,5 @@
 import { Button, Card, CardContent, Typography } from "@mui/material"
-import { counterViewStyles } from "@react/blocks/Counter/Counter.style"
+import { counterStyles } from "@react/blocks/Counter/Counter.style"
 import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
 
 export interface CounterViewProps {
@@ -19,17 +19,17 @@ const CounterView = (props: CounterViewProps) => {
                 href="https://github.com/madliani/reactify/"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                sx={counterViewStyles.title}
+                sx={counterStyles.title}
                 target="_blank"
             >
                 Counter
             </Button>
 
-            <CardContent sx={counterViewStyles.cardContent}>
+            <CardContent sx={counterStyles.cardContent}>
                 <Typography
                     component="span"
                     data-testid="counter__count"
-                    sx={counterViewStyles.count}
+                    sx={counterStyles.count}
                     title={count.toString()}
                 >
                     {count}
@@ -37,8 +37,8 @@ const CounterView = (props: CounterViewProps) => {
 
                 <ButtonGroup
                     styles={{
-                        desktop: counterViewStyles.desktopButtonGroup,
-                        mobile: counterViewStyles.mobileButtonGroup
+                        desktop: counterStyles.desktopButtonGroup,
+                        mobile: counterStyles.mobileButtonGroup
                     }}
                 >
                     <Button
@@ -69,7 +69,7 @@ const CounterView = (props: CounterViewProps) => {
                 href="https://github.com/madliani/"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                sx={counterViewStyles.attribution}
+                sx={counterStyles.attribution}
                 target="_blank"
             >
                 by @madliani

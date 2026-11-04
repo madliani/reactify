@@ -1,7 +1,7 @@
 import type { Theme } from "@emotion/react"
 import type { SxProps } from "@mui/material"
 
-export interface CounterViewStyles {
+export interface CounterStyles {
     attribution: MUIStyles
     card: MUIStyles
     cardContent: MUIStyles
@@ -13,7 +13,7 @@ export interface CounterViewStyles {
 
 export type MUIStyles = SxProps<Theme>
 
-const counterViewStyles: CounterViewStyles = {
+const counterStyles: CounterStyles = {
     attribution: {
         "@media (width >= 640px)": { fontSize: "1rem", paddingY: "1rem" },
         fontSize: "0.5rem",
@@ -69,4 +69,4 @@ const counterViewStyles: CounterViewStyles = {
     }
 }
 
-export { counterViewStyles }
+export { counterStyles }
