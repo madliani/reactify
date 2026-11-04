@@ -58,17 +58,17 @@ export default (props: CounterViewProps) => {
                     >
                         Decrement
                     </Button>
-
-                    <Button
-                        color="error"
-                        data-testid="counter__reset-btn"
-                        onClick={resetCount}
-                        title="Reset"
-                        variant="contained"
-                    >
-                        Reset
-                    </Button>
                 </ButtonGroup>
+
+                <Button
+                    color="error"
+                    data-testid="counter__reset-btn"
+                    onClick={resetCount}
+                    title="Reset"
+                    variant="contained"
+                >
+                    Reset
+                </Button>
             </CardContent>
 
             <Button
