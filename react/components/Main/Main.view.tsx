@@ -1,28 +1,10 @@
-import type { Theme } from "@emotion/react"
-import type { SxProps } from "@mui/material"
 import type { ReactNode } from "react"
 
 import { Box } from "@mui/material"
+import { mainViewStyles } from "@react/components/Main/Main.style"
 
 export interface MainViewProps {
     children?: ReactNode
-}
-
-export interface MainViewStyles {
-    main: MUIStyles
-}
-
-type MUIStyles = SxProps<Theme>
-
-const mainViewStyles: MainViewStyles = {
-    main: {
-        alignItems: "center",
-        display: "flex",
-        flexFlow: "column wrap",
-        height: "100svh",
-        justifyContent: "center",
-        weight: "100svw"
-    }
 }
 
 const MainView = ({ children }: MainViewProps) => (
@@ -31,4 +13,4 @@ const MainView = ({ children }: MainViewProps) => (
     </Box>
 )
 
-export { MainView, mainViewStyles }
+export { MainView }
