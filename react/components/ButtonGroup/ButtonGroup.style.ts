@@ -6,7 +6,7 @@ export interface BGStyles {
     mobile: SxProps<Theme>
 }
 
-const buttonGroupStyles: BGStyles = {
+export default {
     desktop: {
         "@media (width >= 640px)": { display: "inline-flex" },
         display: "none"
@@ -15,6 +15,4 @@ const buttonGroupStyles: BGStyles = {
         "@media (width >= 640px)": { display: "none" },
         display: "inline-flex"
     }
-}
-
-export { buttonGroupStyles }
+} as const satisfies BGStyles
