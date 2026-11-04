@@ -4,6 +4,4 @@ import ButtonGroupView from "@react/components/ButtonGroup/ButtonGroup.view"
 
 export type BGProps = BGViewProps
 
-const ButtonGroup = (props: BGProps) => <ButtonGroupView {...props} />
-
-export { ButtonGroup }
+export default (props: BGProps) => <ButtonGroupView {...props} />

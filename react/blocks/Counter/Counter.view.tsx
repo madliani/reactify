@@ -1,6 +1,6 @@
 import { Button, Card, CardContent, Typography } from "@mui/material"
 import counterStyles from "@react/blocks/Counter/Counter.style"
-import { ButtonGroup } from "@react/components/ButtonGroup/ButtonGroup"
+import ButtonGroup from "@react/components/ButtonGroup/ButtonGroup"
 
 export interface CounterViewProps {
     count: number
