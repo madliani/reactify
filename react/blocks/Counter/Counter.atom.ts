@@ -8,4 +8,4 @@ const decrement = () => store.set(store.get() - 1)
 const increment = () => store.set(store.get() + 1)
 const reset = () => store.set(INITIAL_COUNT)
 
-export { decrement, increment, reset, store }
+export default { decrement, increment, reset, store }
