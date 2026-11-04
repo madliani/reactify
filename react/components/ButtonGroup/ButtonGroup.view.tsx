@@ -4,7 +4,7 @@ import { ButtonGroup as MUIButtonGroup } from "@mui/material"
 import buttonGroupStyles from "@react/components/ButtonGroup/ButtonGroup.style"
 
 export interface BGViewProps {
-    children: ReactNode | undefined
+    children?: ReactNode | undefined
 }
 
 export default ({ children }: BGViewProps) => (
