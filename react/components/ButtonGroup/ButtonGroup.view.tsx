@@ -2,7 +2,7 @@ import type { BGStyles } from "@react/components/ButtonGroup/ButtonGroup.style"
 import type { ReactNode } from "react"
 
 import { ButtonGroup as MUIButtonGroup } from "@mui/material"
-import { buttonGroupStyles } from "@react/components/ButtonGroup/ButtonGroup.style"
+import buttonGroupStyles from "@react/components/ButtonGroup/ButtonGroup.style"
 
 export interface BGViewProps {
     children?: ReactNode | undefined
