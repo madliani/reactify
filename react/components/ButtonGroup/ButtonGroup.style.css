@@ -1,0 +1,19 @@
+@layer components {
+    .btn-group__desktop {
+        display: none !important;
+    }
+
+    .btn-group__mobile {
+        display: inline-flex !important;
+    }
+
+    @media (width >= 640px) {
+        .btn-group__desktop {
+            display: inline-flex !important;
+        }
+
+        .btn-group__mobile {
+            display: none !important;
+        }
+    }
+}
