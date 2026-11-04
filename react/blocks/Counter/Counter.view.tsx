@@ -37,12 +37,7 @@ export default (props: CounterViewProps) => {
                     {count}
                 </Typography>
 
-                <ButtonGroup
-                    styles={{
-                        desktop: counterStyles.desktopButtonGroup,
-                        mobile: counterStyles.mobileButtonGroup
-                    }}
-                >
+                <ButtonGroup>
                     <Button
                         color="success"
                         data-testid="counter__inc-btn"
