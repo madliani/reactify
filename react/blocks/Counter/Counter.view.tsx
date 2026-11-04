@@ -10,7 +10,7 @@ export interface CounterViewProps {
     resetCount: () => void
 }
 
-const CounterView = (props: CounterViewProps) => {
+export default (props: CounterViewProps) => {
     const { count, decrementCount, incrementCount, isDisabled, resetCount } =
         props
 
@@ -89,5 +89,3 @@ const CounterView = (props: CounterViewProps) => {
         </Card>
     )
 }
-
-export { CounterView }
