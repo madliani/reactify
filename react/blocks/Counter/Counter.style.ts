@@ -13,7 +13,7 @@ export interface CounterStyles {
 
 export type MUIStyles = SxProps<Theme>
 
-const counterStyles: CounterStyles = {
+export default {
     attribution: {
         "@media (width >= 640px)": { fontSize: "1rem", paddingY: "1rem" },
         fontSize: "0.5rem",
@@ -67,6 +67,4 @@ const counterStyles: CounterStyles = {
         textAlign: "center",
         width: "100%"
     }
-}
-
-export { counterStyles }
+} as const satisfies CounterStyles
