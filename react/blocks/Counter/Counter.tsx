@@ -1,7 +1,7 @@
 import counterHook from "@react/blocks/Counter/Counter.hook"
 import CounterView from "@react/blocks/Counter/Counter.view"
 
-const Counter = () => {
+export default () => {
     const { count, decrementCount, incrementCount, isDisabled, resetCount } =
         counterHook.use()
 
@@ -15,5 +15,3 @@ const Counter = () => {
         />
     )
 }
-
-export { Counter }

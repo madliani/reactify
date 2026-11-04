@@ -1,4 +1,4 @@
-import { Counter } from "@react/blocks/Counter/Counter"
+import Counter from "@react/blocks/Counter/Counter"
 import counterAtom from "@react/blocks/Counter/Counter.atom"
 import counterHook from "@react/blocks/Counter/Counter.hook"
 import {
