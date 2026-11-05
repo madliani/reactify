@@ -1,6 +1,6 @@
 import Counter from "@react/blocks/Counter/Counter"
-import counterAtom from "@react/blocks/Counter/Counter.atom"
-import counterHook from "@react/blocks/Counter/Counter.hook"
+import CounterAtom from "@react/blocks/Counter/Counter.atom"
+import CounterHook from "@react/blocks/Counter/Counter.hook"
 import {
     act,
     cleanup,
@@ -84,7 +84,7 @@ describe("Counter increment", { concurrent: false }, () => {
             await user.click(incBtnEl)
         }
 
-        expect(counterAtom.increment).toHaveBeenCalledOnce()
+        expect(CounterAtom.increment).toHaveBeenCalledOnce()
     })
 
     test("should increment count", async () => {
@@ -108,7 +108,7 @@ describe("Counter decrement", { concurrent: false }, () => {
             await user.click(decBtnEl)
         }
 
-        expect(counterAtom.decrement).toHaveBeenCalledOnce()
+        expect(CounterAtom.decrement).toHaveBeenCalledOnce()
     })
 
     test("shouldn't decrement count", async () => {
@@ -134,7 +134,7 @@ describe("Counter resetting", { concurrent: false }, () => {
             await user.click(resetBtnEl)
         }
 
-        expect(counterAtom.reset).toHaveBeenCalledOnce()
+        expect(CounterAtom.reset).toHaveBeenCalledOnce()
     })
 
     test("shouldn't reset count", async () => {
@@ -150,7 +150,7 @@ describe("Counter hooks", () => {
     afterEach(() => cleanup())
 
     test("should trigger hook with increment", async () => {
-        const { result } = renderHook(() => counterHook.use())
+        const { result } = renderHook(() => CounterHook.use())
 
         act(() => result.current.incrementCount())
 
@@ -158,7 +158,7 @@ describe("Counter hooks", () => {
     })
 
     test("shouldn't trigger hook with decrement", async () => {
-        const { result } = renderHook(() => counterHook.use())
+        const { result } = renderHook(() => CounterHook.use())
 
         act(() => result.current.decrementCount())
 
@@ -166,7 +166,7 @@ describe("Counter hooks", () => {
     })
 
     test("shouldn't trigger hook with resetting", async () => {
-        const { result } = renderHook(() => counterHook.use())
+        const { result } = renderHook(() => CounterHook.use())
 
         act(() => result.current.resetCount())
 
