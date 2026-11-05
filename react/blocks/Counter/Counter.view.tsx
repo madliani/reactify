@@ -6,12 +6,12 @@ export interface CounterViewProps {
     count: number
     decrementCount: () => void
     incrementCount: () => void
-    isDisabled: boolean
+    isCounterZero: boolean
     resetCount: () => void
 }
 
 export default (props: CounterViewProps) => {
-    const { count, decrementCount, incrementCount, isDisabled, resetCount } =
+    const { count, decrementCount, incrementCount, isCounterZero, resetCount } =
         props
 
     return (
@@ -51,7 +51,7 @@ export default (props: CounterViewProps) => {
                     <Button
                         color="warning"
                         data-testid="counter__dec-btn"
-                        disabled={isDisabled}
+                        disabled={isCounterZero}
                         onClick={decrementCount}
                         title="Decrement"
                         variant="contained"
