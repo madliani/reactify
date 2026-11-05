@@ -4,12 +4,20 @@ import CounterAtom from "@react/blocks/Counter/Counter.atom"
 const decrementCount = () => CounterAtom.decrement()
 const incrementCount = () => CounterAtom.increment()
 const resetCount = () => CounterAtom.reset()
+const updateCount = (count: number) => CounterAtom.update(count)
 
 const use = () => {
     const count = useStore(CounterAtom.store)
     const isCountZero = count === 0
 
-    return { count, decrementCount, incrementCount, isCountZero, resetCount }
+    return {
+        count,
+        decrementCount,
+        incrementCount,
+        isCountZero,
+        resetCount,
+        updateCount
+    }
 }
 
 export default { use }
