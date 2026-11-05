@@ -1,0 +1,68 @@
+@layer components {
+    .counter__card {
+        display: flex !important;
+        flex-flow: column nowrap !important;
+        gap: 1rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .counter__card-content {
+        display: flex !important;
+        flex-flow: column nowrap !important;
+        gap: 1.5rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 12rem !important;
+        height: 12rem !important;
+    }
+
+    .counter__title {
+        width: 100% !important;
+        padding: 1rem 0 !important;
+
+        font-size: 1.5rem !important;
+        font-weight: bold !important;
+        line-height: 1rem !important;
+        text-align: center !important;
+    }
+
+    .counter__count {
+        font-size: 3rem !important;
+        font-weight: bold !important;
+        line-height: 1rem !important;
+        text-align: center !important;
+    }
+
+    .counter__attribution {
+        width: 100% !important;
+        padding: 0.5rem 0 !important;
+
+        font-size: 0.5rem !important;
+        line-height: 1rem !important;
+        text-align: center !important;
+    }
+
+    @media (width >= 640px) {
+        .counter__card-content {
+            gap: 2.5rem !important;
+            width: 24rem !important;
+            height: 24rem !important;
+        }
+
+        .counter__title {
+            padding: 2rem 0 !important;
+            font-size: 3.5rem !important;
+        }
+
+        .counter__count {
+            font-size: 4.5rem !important;
+        }
+
+        .counter__attribution {
+            padding: 1rem 0 !important;
+            font-size: 1rem !important;
+        }
+    }
+}

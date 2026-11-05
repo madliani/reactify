@@ -1,5 +1,5 @@
 import { Button, Card, CardContent, Typography } from "@mui/material"
-import counterStyles from "@react/blocks/Counter/Counter.style"
+import "@react/blocks/Counter/Counter.style.css"
 import ButtonGroup from "@react/components/ButtonGroup/ButtonGroup"
 
 export interface CounterViewProps {
@@ -17,21 +17,21 @@ export default (props: CounterViewProps) => {
     return (
         <Card component="div">
             <Button
+                className="counter__title"
                 data-testid="counter__title"
                 href="https://github.com/madliani/reactify/"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                sx={counterStyles.title}
                 target="_blank"
             >
                 Counter
             </Button>
 
-            <CardContent component="div" sx={counterStyles.cardContent}>
+            <CardContent className="counter__card-content" component="div">
                 <Typography
+                    className="counter__count"
                     component="span"
                     data-testid="counter__count"
-                    sx={counterStyles.count}
                     title={count.toString()}
                 >
                     {count}
@@ -72,11 +72,11 @@ export default (props: CounterViewProps) => {
             </CardContent>
 
             <Button
+                className="counter__attribution"
                 data-testid="counter__attribution"
                 href="https://github.com/madliani/"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                sx={counterStyles.attribution}
                 target="_blank"
             >
                 by @madliani
