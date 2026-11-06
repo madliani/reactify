@@ -2,8 +2,11 @@ import { useStore } from "@nanostores/react"
 import CounterAtom from "@react/blocks/Counter/Counter.atom"
 
 const decrementCount = () => CounterAtom.decrement()
+
 const incrementCount = () => CounterAtom.increment()
+
 const resetCount = () => CounterAtom.reset()
+
 const updateCount = (count: number) => CounterAtom.update(count)
 
 const use = () => {
