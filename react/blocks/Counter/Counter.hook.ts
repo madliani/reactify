@@ -7,7 +7,7 @@ const incrementCount = () => CounterAtom.increment()
 
 const resetCount = () => CounterAtom.reset()
 
-const updateCount = (count: number) => CounterAtom.update(count)
+const updateCount = (count: number) => CounterAtom.set(count)
 
 const use = () => {
     const count = useStore(CounterAtom.store)
