@@ -51,7 +51,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Dependencies were upgraded
-- The homepage and `base template` were refactored
+- The homepage and `base-template` were refactored
 - The icons were replaced by new ones
 
 ### Removed
@@ -119,7 +119,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- The `base noscript` block was refactored
+- The `base-noscript` block was refactored
 - The `Tailwind CSS` framework and the `Radix UI` library were replaced by the
   `Material UI` library
 
@@ -266,7 +266,7 @@ All notable changes to this project will be documented in this file.
 
 - The `Jotai` state manager was replaced by `Nano Stores`
 - The homepage screenshot was updated
-- The homepage, `base template` and `base layout` were refactored
+- The homepage, `base-template` and `base-layout` were refactored
 
 ## [3.2.0] - 2026-09-24
 
@@ -293,7 +293,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `README.md` file
-- The names of the blocs for `base layout`
+- The names of the blocs for `base-layout`
 - The configuration files of the project
 
 ### Changed
