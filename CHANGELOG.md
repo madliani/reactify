@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.4.0] - 2026-10-08
+
+### Added
+
+- Saving count to localStorage
+
+### Fixed
+
+- The `base-template` template
+- The `ButtonGroup` component
+- The `ButtonGroup` styles
+- The `ButtonGroup` tests
+- The `CHANGELOG.md` file
+- The `Counter` component
+- The `Counter` styles
+- The `Counter` tests
+- The `Main` component
+- The `Main` tests
+
+### Changed
+
+- The homepage screenshot was updated
+
 ## [4.3.0] - 2026-11-04
 
 ### Fixed
