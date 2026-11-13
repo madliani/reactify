@@ -12,7 +12,6 @@ const vitePlugins = [vitePluginTW({ optimize: { minify: true } })]
 const viteAliasAstro = pathe.resolve(import.meta.dirname, "./astro/")
 const viteAliasReact = pathe.resolve(import.meta.dirname, "./react/")
 
-/** @type {import("astro").AstroConfig} */
 export default defineConfig({
     base: "/",
     build: { inlineStylesheets: "never" },
