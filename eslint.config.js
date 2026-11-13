@@ -15,6 +15,7 @@ const GLOBAL_IGNORE_PATTERNS = ["package-lock.json"]
 
 const gitIgnorePath = pathe.resolve(import.meta.dirname, ".gitignore")
 
+/** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const tsConfig = {
     extends: [
         pluginJS.configs.recommended,
@@ -44,11 +45,13 @@ const tsConfig = {
     settings: { "import/resolver": { typescript: true } }
 }
 
+/** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const browserConfig = {
     ...tsConfig,
     extends: [...tsConfig.extends, pluginCompat.configs["flat/recommended"]]
 }
 
+/** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const tsxConfig = {
     ...browserConfig,
     languageOptions: {
@@ -63,6 +66,7 @@ const tsxConfig = {
     }
 }
 
+/** @type {import("./types/eslint.d").ConfigWithExtendsArray} */
 const astroConfig = {
     ...browserConfig,
     extends: [
