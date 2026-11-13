@@ -241,4 +241,5 @@ These dependencies are necessary for other dependencies to work correctly.
 
 | Dependency | Purpose                                 |
 | ---------- | --------------------------------------- |
+| sharp      | Dependency for the `astro` package      |
 | tslib      | Dependency for the `typescript` package |
