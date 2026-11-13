@@ -20,7 +20,6 @@ const reactProjectConfig = {
     }
 }
 
-/** @type {import("./types/vitest").UserConfig} */
 export default defineConfig({
     resolve: { tsconfigPaths: true },
     test: { projects: [reactProjectConfig] }
