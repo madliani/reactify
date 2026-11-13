@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.1.0] - 2026-11-13
+
+### Fixed
+
+- The `CHANGELOG.md` file
+- The `README.md` file
+- The configuration files of the project
+
+### Changed
+
+- Dependencies were updated
+- The setup file for React tests was moved to `tests/react/`
+- The tests for `Counter` were moved to `tests/react/`
+
 ## [5.0.0] - 2026-11-13
 
 ### Added
