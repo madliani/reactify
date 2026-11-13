@@ -28,7 +28,6 @@ const PLUGIN_RULES = {
 }
 const RULES = { ...STYLELINT_RULES, ...PLUGIN_RULES }
 
-/** @type {import("stylelint").Config} */
 export default {
     allowEmptyInput: true,
     cache: true,
