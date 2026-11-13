@@ -120,7 +120,8 @@ pnpm build
     - `react/components/`: a directory containing `React`-based components of
       the web app
 - `tests/`: a directory containing setup files for tests
-    - `tests/setup.ts`: a main setup file for tests
+    - `tests/react/`: a directory containing React tests
+        - `tests/react/setup.ts`: a setup file for the React tests
 - `types/`: a directory containing type declarations for the configuration files
     - `types/vitest.ts`: a file containing type declarations for the `Vitest`
       configuration file
