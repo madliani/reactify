@@ -5,10 +5,3 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
 @import "bootstrap/dist/css/bootstrap.min.css" layer(bootstrap);
-
-@layer root {
-    .base-body {
-        width: 100svw;
-        height: 100svh;
-    }
-}
