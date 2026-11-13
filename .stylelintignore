@@ -54,4 +54,5 @@ react/**/*.ts
 react/**/*.tsx
 astro/**/*.ts
 tests/**/*.ts
+tests/**/*.tsx
 types/**/*.d.ts
