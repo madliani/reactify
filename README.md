@@ -23,6 +23,7 @@
     <img alt="React Bootstrap" src="https://img.shields.io/badge/React%20Bootstrap-41E0FD.svg?style=for-the-badge&logo=React-Bootstrap&logoColor=black" title="React Bootstrap" />
     <img alt="React" src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black" title="React" />
     <img alt="Sematic Versioning" src="https://img.shields.io/badge/SemVer-3F4551.svg?style=for-the-badge&logo=SemVer&logoColor=white" title="Semantic Versioning">
+    <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white" title="Tailwind CSS">
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white" title="TypeScript" />
     <img alt="Vitest" src="https://img.shields.io/badge/Vitest-6E9F18.svg?style=for-the-badge&logo=Vitest&logoColor=white" title="Vitest" />
 </div>
@@ -33,7 +34,7 @@ This is a simple starter kit for React.
 
 ## Features
 
-1. Beautiful UI framework via `React Bootstrap`
+1. Beautiful UI framework via `React Bootstrap` and `Tailwind CSS`
 2. Mobile-first design
 3. Security via `Content Security Policy`
 4. SEO-friendly via `Astro`
