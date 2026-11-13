@@ -16,6 +16,7 @@ const viteAliasReact = pathe.resolve(import.meta.dirname, "./react/")
 export default defineConfig({
     base: "/",
     build: { inlineStylesheets: "never" },
+    compressHTML: true,
     devToolbar: { enabled: true },
     integrations,
     output: "static",
