@@ -18,14 +18,7 @@
             "@astro/*": ["${configDir}/astro/*"],
             "@react/*": ["${configDir}/react/*"]
         },
-        "types": [
-            "@testing-library/jest-dom",
-            "astro/astro-jsx",
-            "astro/client",
-            "react-dom",
-            "react",
-            "vitest/globals"
-        ]
+        "types": ["astro/astro-jsx", "astro/client", "react-dom", "react"]
     },
     "exclude": [
         "${configDir}/.vitest/",
