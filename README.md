@@ -16,10 +16,11 @@
 
 <div align="center">
     <img alt="Astro" src="https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white" title="Astro" />
+    <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&logo=Bootstrap&logoColor=white" title="Bootstrap" />
     <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white" title="GitHub Actions" />
-    <img alt="Material Design" src="https://img.shields.io/badge/Material%20Design-6750A4.svg?style=for-the-badge&logo=Material-Design&logoColor=white" title="Material Design">
     <img alt="Node.js" src="https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" title="Node.js" />
     <img alt="pnpm" src="https://img.shields.io/badge/pnpm-F69220.svg?style=for-the-badge&logo=pnpm&logoColor=white" title="pnpm" />
+    <img alt="React Bootstrap" src="https://img.shields.io/badge/React%20Bootstrap-41E0FD.svg?style=for-the-badge&logo=React-Bootstrap&logoColor=black" title="React Bootstrap" />
     <img alt="React" src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black" title="React" />
     <img alt="Sematic Versioning" src="https://img.shields.io/badge/SemVer-3F4551.svg?style=for-the-badge&logo=SemVer&logoColor=white" title="Semantic Versioning">
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white" title="TypeScript" />
@@ -32,7 +33,7 @@ This is a simple starter kit for React.
 
 ## Features
 
-1. Modern UI framework via `Material UI`
+1. Beautiful UI framework via `React Bootstrap`
 2. Mobile-first design
 3. Security via `Content Security Policy`
 4. SEO-friendly via `Astro`
