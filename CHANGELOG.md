@@ -2,7 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
-## [4.4.0] - 2026-10-08
+## [5.0.0] - 2026-11-13
+
+### Fixed
+
+- The `base-template` styles
+- The `base-template` template
+- The `Counter` component
+- The `Counter` styles
+- The `Counter` tests
+- The configuration files of the project
+
+### Changed
+
+- The `Material UI` library was replaced by the `React Bootstrap` library and
+  the `Tailwind CSS` framework
+- The homepage screenshot was updated
+
+### Removed
+
+- The `ButtonGroup` component
+- The `Main` component
 
 ### Added
 
