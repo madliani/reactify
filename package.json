@@ -13,11 +13,11 @@
     ],
     "dependencies": {
         "@astrojs/check": "0.9.12",
-        "@astrojs/react": "7.1.2",
+        "@astrojs/react": "7.1.8",
         "@astrojs/sitemap": "3.7.4",
         "@nanostores/react": "2.0.1",
         "@tailwindcss/vite": "4.3.5",
-        "astro": "7.4.5",
+        "astro": "7.4.11",
         "bootstrap": "5.3.9",
         "pathe": "2.0.3",
         "react": "19.3.1",
