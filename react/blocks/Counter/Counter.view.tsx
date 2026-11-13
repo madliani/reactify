@@ -27,7 +27,7 @@ export default (props: CounterViewProps) => {
 
             <Card.Body
                 as="div"
-                className="flex flex-col justify-center items-center gap-3"
+                className="flex flex-col flex-nowrap justify-center items-center gap-3"
             >
                 <span
                     className="font-bold text-7xl"
