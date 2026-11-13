@@ -1,6 +1,5 @@
-import { Button, Card, CardContent, Typography } from "@mui/material"
 import "@react/blocks/Counter/Counter.style.css"
-import ButtonGroup from "@react/components/ButtonGroup/ButtonGroup"
+import { Button, ButtonGroup, Card } from "react-bootstrap"
 
 export interface CounterViewProps {
     count: number
@@ -15,67 +14,84 @@ export default (props: CounterViewProps) => {
         props
 
     return (
-        <Card component="div">
+        <Card as="div">
             <Button
+                as="a"
                 className="counter__title"
                 data-testid="counter__title"
                 href="https://github.com/madliani/reactify/"
-                referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
                 target="_blank"
             >
                 Counter
             </Button>
 
-            <CardContent className="counter__card-content" component="div">
-                <Typography
+            <Card.Body as="div" className="counter__card-content">
+                <span
                     className="counter__count"
-                    component="span"
                     data-testid="counter__count"
                     title={count.toString()}
                 >
                     {count}
-                </Typography>
+                </span>
 
-                <ButtonGroup>
+                <ButtonGroup className="counter__btn-group--mobile" vertical>
                     <Button
-                        color="success"
                         data-testid="counter__inc-btn"
                         onClick={incrementCount}
                         title="Increment"
-                        variant="contained"
+                        variant="success"
                     >
                         Increment
                     </Button>
 
                     <Button
-                        color="warning"
                         data-testid="counter__dec-btn"
                         disabled={isCounterZero}
                         onClick={decrementCount}
                         title="Decrement"
-                        variant="contained"
+                        variant="warning"
+                    >
+                        Decrement
+                    </Button>
+                </ButtonGroup>
+
+                <ButtonGroup className="counter__btn-group--desktop">
+                    <Button
+                        data-testid="counter__inc-btn"
+                        onClick={incrementCount}
+                        title="Increment"
+                        variant="success"
+                    >
+                        Increment
+                    </Button>
+
+                    <Button
+                        data-testid="counter__dec-btn"
+                        disabled={isCounterZero}
+                        onClick={decrementCount}
+                        title="Decrement"
+                        variant="warning"
                     >
                         Decrement
                     </Button>
                 </ButtonGroup>
 
                 <Button
-                    color="error"
                     data-testid="counter__reset-btn"
                     onClick={resetCount}
                     title="Reset"
-                    variant="contained"
+                    variant="danger"
                 >
                     Reset
                 </Button>
-            </CardContent>
+            </Card.Body>
 
             <Button
+                as="a"
                 className="counter__attribution"
                 data-testid="counter__attribution"
                 href="https://github.com/madliani/"
-                referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
                 target="_blank"
             >

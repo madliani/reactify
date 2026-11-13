@@ -3,11 +3,6 @@ import BaseNoscript from "@astro/blocks/base-noscript.astro"
 import Metadata from "@astro/blocks/metadata.astro"
 import MetadataConfig from "@astro/configurations/metadata.config.json"
 import BaseLayout from "@astro/layouts/base-layout.astro"
-import "@fontsource/roboto/300.css"
-import "@fontsource/roboto/400.css"
-import "@fontsource/roboto/500.css"
-import "@fontsource/roboto/700.css"
-import { CssBaseline, StyledEngineProvider } from "@mui/material"
 import { ClientRouter } from "astro:transitions"
 
 interface Props {
@@ -30,18 +25,16 @@ const { description = "", title = "" } = Astro.props
     <body class="base-body">
         <BaseNoscript />
 
-        <StyledEngineProvider enableCssLayer injectFirst>
-            <CssBaseline enableColorScheme />
-
-            <BaseLayout>
-                <slot />
-            </BaseLayout>
-        </StyledEngineProvider>
+        <BaseLayout>
+            <slot />
+        </BaseLayout>
     </body>
 </html>
 
 <style is:global>
-    @layer root, mui, components, important;
+    @layer bootstrap, root, components, important;
+
+    @import "bootstrap/dist/css/bootstrap.min.css" layer(bootstrap);
 
     @layer root {
         .base-body {

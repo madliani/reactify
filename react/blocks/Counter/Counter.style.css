@@ -1,68 +1,86 @@
 @layer components {
     .counter__card {
-        display: flex !important;
-        flex-flow: column nowrap !important;
-        gap: 1rem !important;
-        align-items: center !important;
-        justify-content: center !important;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
     }
 
     .counter__card-content {
-        display: flex !important;
-        flex-flow: column nowrap !important;
-        gap: 1.5rem !important;
-        align-items: center !important;
-        justify-content: center !important;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
 
-        width: 12rem !important;
-        height: 12rem !important;
+        width: 12rem;
+        height: 12rem;
     }
 
     .counter__title {
-        width: 100% !important;
-        padding: 1rem 0 !important;
+        width: 100%;
+        padding: 1rem 0;
+        border-radius: 0;
 
-        font-size: 1.5rem !important;
-        font-weight: bold !important;
-        line-height: 1rem !important;
-        text-align: center !important;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1rem;
+        text-align: center;
     }
 
     .counter__count {
-        font-size: 3rem !important;
-        font-weight: bold !important;
-        line-height: 1rem !important;
-        text-align: center !important;
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1rem;
+        text-align: center;
+    }
+
+    .counter__btn-group--mobile {
+        display: inline-flex;
+    }
+
+    .counter__btn-group--desktop {
+        display: none;
     }
 
     .counter__attribution {
-        width: 100% !important;
-        padding: 0.5rem 0 !important;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-radius: 0;
 
-        font-size: 0.5rem !important;
-        line-height: 1rem !important;
-        text-align: center !important;
+        font-size: 0.5rem;
+        line-height: 1rem;
+        text-align: center;
     }
 
     @media (width >= 640px) {
         .counter__card-content {
-            gap: 2.5rem !important;
-            width: 24rem !important;
-            height: 24rem !important;
+            gap: 2.5rem;
+            width: 24rem;
+            height: 24rem;
         }
 
         .counter__title {
-            padding: 2rem 0 !important;
-            font-size: 3.5rem !important;
+            padding: 2rem 0;
+            font-size: 3.5rem;
         }
 
         .counter__count {
-            font-size: 4.5rem !important;
+            font-size: 4.5rem;
+        }
+
+        .counter__btn-group--mobile {
+            display: none;
+        }
+
+        .counter__btn-group--desktop {
+            display: inline-flex;
         }
 
         .counter__attribution {
-            padding: 1rem 0 !important;
-            font-size: 1rem !important;
+            padding: 1rem 0;
+            font-size: 1rem;
         }
     }
 }

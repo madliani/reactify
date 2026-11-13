@@ -41,19 +41,22 @@ describe("Counter rendering", () => {
     })
 
     test("should render increment button", async () => {
-        const incBtnEl = await screen.findByTestId("counter__inc-btn")
+        const incBtnElements = await screen.findAllByTestId("counter__inc-btn")
+        const incBtnEl = incBtnElements[0]
 
         expect(incBtnEl).toBeInTheDocument()
     })
 
     test("should render decrement button", async () => {
-        const decBtnEl = await screen.findByTestId("counter__dec-btn")
+        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
+        const decBtnEl = decBtnElements[0]
 
         expect(decBtnEl).toBeInTheDocument()
     })
 
     test("should render disabled decrement button", async () => {
-        const decBtnEl = await screen.findByTestId("counter__dec-btn")
+        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
+        const decBtnEl = decBtnElements[0]
 
         expect(decBtnEl).toBeDisabled()
     })
@@ -78,7 +81,8 @@ describe("Counter increment", { concurrent: false }, () => {
 
     test("should trigger increment button", async () => {
         const user = userEvent.setup()
-        const incBtnEl = await screen.findByTestId("counter__inc-btn")
+        const incBtnElements = await screen.findAllByTestId("counter__inc-btn")
+        const incBtnEl = incBtnElements[0]
 
         if (incBtnEl) {
             await user.click(incBtnEl)
@@ -102,7 +106,8 @@ describe("Counter decrement", { concurrent: false }, () => {
 
     test("should trigger decrement button", async () => {
         const user = userEvent.setup()
-        const decBtnEl = await screen.findByTestId("counter__dec-btn")
+        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
+        const decBtnEl = decBtnElements[0]
 
         if (decBtnEl) {
             await user.click(decBtnEl)
