@@ -34,7 +34,7 @@ This is a simple starter kit for React.
 
 ## Features
 
-1. Beautiful UI framework via `React Bootstrap` and `Tailwind CSS`
+1. Beautiful UI via `React Bootstrap` and `Tailwind CSS`
 2. Mobile-first design
 3. Security via `Content Security Policy`
 4. SEO-friendly via `Astro`
