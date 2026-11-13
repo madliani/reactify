@@ -23,7 +23,8 @@
             "astro/astro-jsx",
             "astro/client",
             "react-dom",
-            "react"
+            "react",
+            "vitest/globals"
         ]
     },
     "exclude": [
