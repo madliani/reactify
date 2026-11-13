@@ -10,12 +10,12 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- The `base-template` styles
 - The `base-template` template
 - The `Counter` component
-- The `Counter` styles
-- The `Counter` tests
 - The configuration files of the project
+- The styles of `base-template`
+- The styles of `Counter`
+- The tests for `Counter`
 
 ### Changed
 
@@ -36,14 +36,14 @@ All notable changes to this project will be documented in this file.
 
 - The `base-template` template
 - The `ButtonGroup` component
-- The `ButtonGroup` styles
-- The `ButtonGroup` tests
 - The `CHANGELOG.md` file
 - The `Counter` component
-- The `Counter` styles
-- The `Counter` tests
 - The `Main` component
-- The `Main` tests
+- The styles of `ButtonGroup`
+- The styles of `Counter`
+- The tests for `ButtonGroup`
+- The tests for `Counter`
+- The tests for `Main`
 
 ### Changed
 
@@ -53,11 +53,11 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- The `ButtonGroup` tests
 - The `Counter` component
-- The `Counter` tests
-- The `Main` tests
 - The configuration files of the project
+- The tests for `ButtonGroup`
+- The tests for `Counter`
+- The tests for `Main`
 
 ### Changed
 
@@ -110,9 +110,9 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `Counter` component
-- The `Counter` tests
 - The `metadata` block
 - The configuration file for `metadata`
+- The tests for `Counter`
 
 ### Changed
 
@@ -130,7 +130,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - The `Counter` component
-- The `Counter` tests
+- The tests for `Counter`
 
 ### Changed
 
