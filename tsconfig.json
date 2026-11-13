@@ -33,7 +33,8 @@
         "${configDir}/astro/**/*.ts",
         "${configDir}/react/**/*.ts",
         "${configDir}/react/**/*.tsx",
-        "${configDir}/tests/*.ts",
+        "${configDir}/tests/react/**/*.ts",
+        "${configDir}/tests/react/**/*.tsx",
         "${configDir}/types/*.d.ts"
     ]
 }

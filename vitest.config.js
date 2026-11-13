@@ -9,7 +9,7 @@ const reactProjectConfig = {
         environment: "happy-dom",
         globals: false,
         globalSetup: [],
-        include: ["./react/**/*.test.ts", "./react/**/*.test.tsx"],
+        include: ["./tests/react/**/*.test.ts", "./tests/react/**/*.test.tsx"],
         name: "reactify-node",
         passWithNoTests: true,
         plugins: [vitePluginReact()],
