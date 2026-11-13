@@ -80,6 +80,7 @@
         "bootstrap",
         "react",
         "reactify",
+        "tailwindcss",
         "typescript"
     ],
     "license": "UNLICENSED",
