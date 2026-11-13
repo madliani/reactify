@@ -16,7 +16,7 @@ const reactProjectConfig = {
         reporters: ["default", "html"],
         restoreMocks: true,
         sequence: { concurrent: true },
-        setupFiles: ["./tests/setup.ts"]
+        setupFiles: ["./tests/react/setup.ts"]
     }
 }
 
