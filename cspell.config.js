@@ -38,7 +38,6 @@ const ENGLISH_WORDS = [
     "vitest"
 ]
 
-/** @type {import("cspell").CSpellSettings} */
 export default defineConfig({
     ignorePaths: IGNORE_PATHS,
     import: IMPORT,
