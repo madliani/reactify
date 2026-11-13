@@ -1,6 +1,7 @@
 const EXTENDS = [
     "stylelint-config-standard",
     "stylelint-config-html/astro",
+    "stylelint-config-tailwindcss",
     "stylelint-config-clean-order"
 ]
 const PLUGINS = ["stylelint-no-unsupported-browser-features"]

@@ -32,7 +32,11 @@ const { description = "", title = "" } = Astro.props
 </html>
 
 <style is:global>
-    @layer bootstrap, root, components, important;
+    @layer theme, base, bootstrap, root, components, utilities, important;
+
+    @import "tailwindcss/theme.css" layer(theme);
+    @import "tailwindcss/preflight.css" layer(base);
+    @import "tailwindcss/utilities.css" layer(utilities);
 
     @import "bootstrap/dist/css/bootstrap.min.css" layer(bootstrap);
 

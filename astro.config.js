@@ -1,5 +1,6 @@
 import reactIntegration from "@astrojs/react"
 import sitemapIntegration from "@astrojs/sitemap"
+import vitePluginTW from "@tailwindcss/vite"
 import { defineConfig } from "astro/config"
 import pathe from "pathe"
 
@@ -7,6 +8,7 @@ const PORT = 4321
 const SITE = "https://madliani-reactify.vercel.app/"
 
 const integrations = [reactIntegration(), sitemapIntegration()]
+const vitePlugins = [vitePluginTW()]
 const viteAliasAstro = pathe.resolve(import.meta.dirname, "./astro/")
 const viteAliasReact = pathe.resolve(import.meta.dirname, "./react/")
 
@@ -23,8 +25,8 @@ export default defineConfig({
     srcDir: "./astro/",
 
     vite: {
-        css: { transformer: "lightningcss" },
-        plugins: [],
+        css: { transformer: "postcss" },
+        plugins: vitePlugins,
         resolve: {
             alias: { "@astro": viteAliasAstro, "@react": viteAliasReact }
         }
