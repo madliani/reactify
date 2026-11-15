@@ -7,6 +7,7 @@ const configs = [
 const plugins = ["stylelint-no-unsupported-browser-features"]
 
 const stylelintRules = {
+    "at-rule-prelude-no-invalid": [true, { "ignoreAtRules": ["apply"] }],
     "import-notation": "string",
     "selector-class-pattern": null
 }

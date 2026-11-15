@@ -1,4 +1,5 @@
 import CounterHook from "@react/blocks/Counter/Counter.hook"
+import "@react/blocks/Counter/Counter.styles.css"
 import CounterView from "@react/blocks/Counter/Counter.view"
 
 export default () => {

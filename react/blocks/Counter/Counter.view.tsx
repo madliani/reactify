@@ -13,10 +13,10 @@ export default (props: CounterViewProps) => {
         props
 
     return (
-        <Card as="div" className="w-96 h-96">
+        <Card as="div" className="counter__card">
             <Button
                 as="a"
-                className="rounded-none font-bold text-3xl"
+                className="counter__title"
                 data-testid="counter__title"
                 href="https://github.com/madliani/reactify/"
                 rel="noopener noreferrer"
@@ -25,10 +25,7 @@ export default (props: CounterViewProps) => {
                 Counter
             </Button>
 
-            <Card.Body
-                as="div"
-                className="flex flex-col flex-nowrap justify-center items-center gap-3"
-            >
+            <Card.Body as="div" className="counter__content">
                 <span
                     className="font-bold text-7xl"
                     data-testid="counter__count"
@@ -37,9 +34,9 @@ export default (props: CounterViewProps) => {
                     {count}
                 </span>
 
-                <ButtonGroup className="sm:hidden inline-flex" vertical>
+                <ButtonGroup className="counter__btn-group--mobile" vertical>
                     <Button
-                        className="font-bold text-xl"
+                        className="counter__btn"
                         data-testid="counter__inc-btn"
                         onClick={incrementCount}
                         title="Increment"
@@ -49,7 +46,7 @@ export default (props: CounterViewProps) => {
                     </Button>
 
                     <Button
-                        className="font-bold text-xl"
+                        className="counter__btn"
                         data-testid="counter__dec-btn"
                         disabled={isCounterZero}
                         onClick={decrementCount}
@@ -60,9 +57,9 @@ export default (props: CounterViewProps) => {
                     </Button>
                 </ButtonGroup>
 
-                <ButtonGroup className="hidden sm:inline-flex">
+                <ButtonGroup className="counter__btn-group--desktop">
                     <Button
-                        className="font-bold text-xl"
+                        className="counter__btn"
                         data-testid="counter__inc-btn"
                         onClick={incrementCount}
                         title="Increment"
@@ -72,7 +69,7 @@ export default (props: CounterViewProps) => {
                     </Button>
 
                     <Button
-                        className="font-bold text-xl"
+                        className="counter__btn"
                         data-testid="counter__dec-btn"
                         disabled={isCounterZero}
                         onClick={decrementCount}
@@ -84,7 +81,7 @@ export default (props: CounterViewProps) => {
                 </ButtonGroup>
 
                 <Button
-                    className="font-bold text-xl"
+                    className="counter__btn"
                     data-testid="counter__reset-btn"
                     onClick={resetCount}
                     title="Reset"
@@ -96,7 +93,7 @@ export default (props: CounterViewProps) => {
 
             <Button
                 as="a"
-                className="rounded-none font-bold text-lg italic"
+                className="counter__annotation"
                 data-testid="counter__attribution"
                 href="https://github.com/madliani/"
                 rel="noopener noreferrer"

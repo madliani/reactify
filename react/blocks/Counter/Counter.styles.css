@@ -1,0 +1,47 @@
+@reference "tailwindcss";
+
+@layer components {
+    .counter__card {
+        @apply w-96;
+        @apply h-96;
+    }
+
+    .counter__title {
+        @apply rounded-none;
+        @apply font-bold;
+        @apply text-3xl;
+    }
+
+    .counter__content {
+        @apply flex;
+        @apply flex-col;
+        @apply flex-nowrap;
+        @apply justify-center;
+        @apply items-center;
+        @apply gap-3;
+    }
+
+    .counter__btn-group--mobile {
+        @apply inline-flex;
+
+        @apply sm:hidden;
+    }
+
+    .counter__btn-group--desktop {
+        @apply hidden;
+
+        @apply inline-flex;
+    }
+
+    .counter__btn {
+        @apply font-bold;
+        @apply text-xl;
+    }
+
+    .counter__annotation {
+        @apply rounded-none;
+        @apply font-bold;
+        @apply text-lg;
+        @apply italic;
+    }
+}

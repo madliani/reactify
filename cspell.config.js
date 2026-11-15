@@ -31,6 +31,7 @@ const englishWords = [
     "lightningcss",
     "madliani",
     "nanostores",
+    "nowrap",
     "reactify",
     "roboto",
     "stylelintcache",
