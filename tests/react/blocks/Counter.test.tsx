@@ -203,7 +203,7 @@ describe(
 
         test("should restore from localStorage", async () => {
             const COUNT_KEY = "count"
-            const COUNT_FALLBACK = ""
+            const COUNT_FALLBACK = "0"
             const INCREMENTED_COUNT = 1
             renderHook(() => CounterHook.use())
 
