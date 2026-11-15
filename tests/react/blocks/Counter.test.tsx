@@ -151,7 +151,7 @@ describe("Counter: Resetting", { concurrent: false }, () => {
     })
 })
 
-describe("Counter: Hooks", () => {
+describe("Counter: Increment hook", () => {
     afterEach(() => cleanup())
 
     test("should trigger increment hook", async () => {
@@ -161,6 +161,10 @@ describe("Counter: Hooks", () => {
 
         expect(result.current.count).toBe(1)
     })
+})
+
+describe("Counter: Decrement hook", () => {
+    afterEach(() => cleanup())
 
     test("shouldn't trigger decrement hook", async () => {
         const { result } = renderHook(() => CounterHook.use())
@@ -169,6 +173,10 @@ describe("Counter: Hooks", () => {
 
         expect(result.current.count).toBe(0)
     })
+})
+
+describe("Counter: Resetting hooks", () => {
+    afterEach(() => cleanup())
 
     test("shouldn't trigger resetting hook", async () => {
         const { result } = renderHook(() => CounterHook.use())
