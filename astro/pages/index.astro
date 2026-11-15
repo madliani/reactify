@@ -4,7 +4,7 @@ import Counter from "@react/blocks/Counter/Counter"
 ---
 
 <BaseTemplate title="Home">
-    <main class="main">
+    <main class="homepage__main">
         <Counter client:load />
     </main>
 </BaseTemplate>
@@ -13,7 +13,7 @@ import Counter from "@react/blocks/Counter/Counter"
     @reference "tailwindcss";
 
     @layer components {
-        .main {
+        .homepage__main {
             @apply flex-col;
             @apply flex;
             @apply h-dvh;
