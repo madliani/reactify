@@ -34,7 +34,11 @@ export default (props: CounterViewProps) => {
                     {count}
                 </span>
 
-                <ButtonGroup className="counter__btn-group--mobile" vertical>
+                <ButtonGroup
+                    as="div"
+                    className="counter__btn-group--mobile"
+                    vertical
+                >
                     <Button
                         className="counter__btn"
                         data-testid="counter__inc-btn"
@@ -57,7 +61,7 @@ export default (props: CounterViewProps) => {
                     </Button>
                 </ButtonGroup>
 
-                <ButtonGroup className="counter__btn-group--desktop">
+                <ButtonGroup as="div" className="counter__btn-group--desktop">
                     <Button
                         className="counter__btn"
                         data-testid="counter__inc-btn"
