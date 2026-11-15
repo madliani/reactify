@@ -32,10 +32,11 @@ describe("Counter: Rendering", () => {
     })
 
     test("should render count", async () => {
+        const INITIAL_COUNT = 0
         const countElement = await screen.findByTestId("counter__count")
         const count = parseInt(countElement.textContent)
 
-        expect(count).toBe(0)
+        expect(count).toBe(INITIAL_COUNT)
     })
 
     test("should render increment button", async () => {
@@ -113,10 +114,11 @@ describe("Counter: Decrement", { concurrent: false }, () => {
     })
 
     test("shouldn't decrement count", async () => {
+        const INITIAL_COUNT = 0
         const countElement = await screen.findByTestId("counter__count")
         const count = parseInt(countElement.textContent)
 
-        expect(count).toBe(0)
+        expect(count).toBe(INITIAL_COUNT)
     })
 })
 
@@ -138,10 +140,11 @@ describe("Counter: Resetting", { concurrent: false }, () => {
     })
 
     test("shouldn't reset count", async () => {
+        const INITIAL_COUNT = 0
         const countElement = await screen.findByTestId("counter__count")
         const count = parseInt(countElement.textContent)
 
-        expect(count).toBe(0)
+        expect(count).toBe(INITIAL_COUNT)
     })
 })
 
@@ -161,11 +164,12 @@ describe("Counter: Decrement hook", () => {
     afterEach(() => cleanup())
 
     test("shouldn't decrement count", async () => {
+        const INITIAL_COUNT = 0
         const { result } = renderHook(() => CounterHook.use())
 
         act(() => result.current.decrementCount())
 
-        expect(result.current.count).toBe(0)
+        expect(result.current.count).toBe(INITIAL_COUNT)
     })
 })
 
@@ -173,11 +177,12 @@ describe("Counter: Resetting hooks", () => {
     afterEach(() => cleanup())
 
     test("shouldn't reset count", async () => {
+        const INITIAL_COUNT = 0
         const { result } = renderHook(() => CounterHook.use())
 
         act(() => result.current.resetCount())
 
-        expect(result.current.count).toBe(0)
+        expect(result.current.count).toBe(INITIAL_COUNT)
     })
 })
 
