@@ -1,6 +1,6 @@
 import { defineConfig } from "cspell"
 
-const IGNORE_PATHS = [
+const ignorePaths = [
     ".astro/",
     ".vitest/",
     "assets/",
@@ -39,7 +39,7 @@ const ENGLISH_WORDS = [
 ]
 
 export default defineConfig({
-    ignorePaths: IGNORE_PATHS,
+    ignorePaths,
     import: IMPORT,
     language: LANGUAGE,
     useGitignore: true,
