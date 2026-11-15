@@ -26,7 +26,7 @@ const pluginRules = {
         }
     ]
 }
-const RULES = { ...stylelintRules, ...pluginRules }
+const rules = { ...stylelintRules, ...pluginRules }
 
 export default {
     allowEmptyInput: true,
@@ -36,5 +36,5 @@ export default {
     fix: true,
     maxWarnings: 0,
     plugins,
-    rules: RULES
+    rules
 }
