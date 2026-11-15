@@ -1,6 +1,6 @@
 import Counter from "@react/blocks/Counter/Counter"
 import CounterAtom from "@react/blocks/Counter/Counter.atom"
-import CounterHook from "@react/blocks/Counter/Counter.hook"
+import CounterHooks from "@react/blocks/Counter/Counter.hooks"
 import {
     act,
     cleanup,
@@ -162,7 +162,7 @@ describe("Counter: Increment hook", () => {
 
     test("should increment count", async () => {
         const INCREMENTED_COUNT = 1
-        const { result } = renderHook(() => CounterHook.use())
+        const { result } = renderHook(() => CounterHooks.use())
 
         act(() => result.current.incrementCount())
 
@@ -175,7 +175,7 @@ describe("Counter: Decrement hook", () => {
 
     test("shouldn't decrement count", async () => {
         const INITIAL_COUNT = 0
-        const { result } = renderHook(() => CounterHook.use())
+        const { result } = renderHook(() => CounterHooks.use())
 
         act(() => result.current.decrementCount())
 
@@ -188,7 +188,7 @@ describe("Counter: Resetting hooks", () => {
 
     test("shouldn't reset count", async () => {
         const INITIAL_COUNT = 0
-        const { result } = renderHook(() => CounterHook.use())
+        const { result } = renderHook(() => CounterHooks.use())
 
         act(() => result.current.resetCount())
 
@@ -204,7 +204,7 @@ describe(
 
         test("should store to localStorage", async () => {
             const INCREMENTED_COUNT = 1
-            const { result } = renderHook(() => CounterHook.use())
+            const { result } = renderHook(() => CounterHooks.use())
 
             act(() => result.current.incrementCount())
 
@@ -214,7 +214,7 @@ describe(
         test("should restore from localStorage", async () => {
             const COUNT_FALLBACK = "0"
             const INCREMENTED_COUNT = 1
-            renderHook(() => CounterHook.use())
+            renderHook(() => CounterHooks.use())
 
             const countItem = localStorage.getItem("count")
             const countFromLS = parseInt(countItem ?? COUNT_FALLBACK)
