@@ -1,4 +1,4 @@
-const EXTENDS = [
+const configs = [
     "stylelint-config-standard",
     "stylelint-config-html/astro",
     "stylelint-config-tailwindcss",
@@ -32,7 +32,7 @@ export default {
     allowEmptyInput: true,
     cache: true,
     defaultSeverity: "error",
-    extends: EXTENDS,
+    extends: configs,
     fix: true,
     maxWarnings: 0,
     plugins: PLUGINS,
