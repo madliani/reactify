@@ -3,16 +3,10 @@ import "@react/blocks/Counter/Counter.tw.css"
 import CounterView from "@react/blocks/Counter/Counter.view"
 
 export default () => {
-    const {
-        count,
-        decrementCount,
-        incrementCount,
-        isCountZero,
-        onMountCounter,
-        resetCount
-    } = CounterHook.use()
+    const { count, decrementCount, incrementCount, isCountZero, resetCount } =
+        CounterHook.use()
 
-    onMountCounter()
+    CounterHook.onMount()
 
     return (
         <CounterView
