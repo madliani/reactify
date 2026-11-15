@@ -30,7 +30,7 @@
     .counter__btn-group--desktop {
         @apply hidden;
 
-        @apply inline-flex;
+        @apply sm:inline-flex;
     }
 
     .counter__btn {
