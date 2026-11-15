@@ -4,7 +4,7 @@ const configs = [
     "stylelint-config-tailwindcss",
     "stylelint-config-clean-order"
 ]
-const PLUGINS = ["stylelint-no-unsupported-browser-features"]
+const plugins = ["stylelint-no-unsupported-browser-features"]
 
 const STYLELINT_RULES = {
     "import-notation": "string",
@@ -35,6 +35,6 @@ export default {
     extends: configs,
     fix: true,
     maxWarnings: 0,
-    plugins: PLUGINS,
+    plugins,
     rules: RULES
 }
