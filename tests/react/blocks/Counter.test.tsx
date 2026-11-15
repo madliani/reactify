@@ -187,22 +187,26 @@ describe("Counter: Resetting hooks", () => {
     })
 })
 
-describe("Counter: Saving to localStorage", { concurrent: false }, () => {
-    afterEach(() => cleanup())
+describe(
+    "Counter: Hook for saving to localStorage",
+    { concurrent: false },
+    () => {
+        afterEach(() => cleanup())
 
-    test("should trigger hook for storing to localStorage", async () => {
-        const { result } = renderHook(() => CounterHook.use())
+        test("should trigger hook for storing to localStorage", async () => {
+            const { result } = renderHook(() => CounterHook.use())
 
-        act(() => result.current.incrementCount())
+            act(() => result.current.incrementCount())
 
-        expect(result.current.count).toBe(1)
-    })
+            expect(result.current.count).toBe(1)
+        })
 
-    test("should trigger hook for restoring from localStorage", async () => {
-        renderHook(() => CounterHook.use())
+        test("should trigger hook for restoring from localStorage", async () => {
+            renderHook(() => CounterHook.use())
 
-        const countFromLS = localStorage.getItem("count")
+            const countFromLS = localStorage.getItem("count")
 
-        expect(countFromLS).toBe("1")
-    })
-})
+            expect(countFromLS).toBe("1")
+        })
+    }
+)
