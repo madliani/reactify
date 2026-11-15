@@ -3,7 +3,7 @@ import CounterAtom from "@react/blocks/Counter/Counter.atom"
 import { type EffectCallback, useEffect } from "react"
 
 const setToLS = () =>
-    localStorage.setItem("count", CounterAtom.get().toString())
+    localStorage.setItem("count", CounterAtom.store.get().toString())
 
 const getFromLS = () => {
     const countItem = localStorage.getItem("count")
@@ -35,7 +35,7 @@ const resetCount = () => {
 }
 
 const updateCount = (count: number) => {
-    CounterAtom.set(count)
+    CounterAtom.store.set(count)
     setToLS()
 }
 
@@ -43,7 +43,7 @@ const onMountEffect: EffectCallback = () => {
     const count = getFromLS()
 
     if (count !== undefined) {
-        CounterAtom.set(count)
+        CounterAtom.store.set(count)
     }
 }
 
