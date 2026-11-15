@@ -12,7 +12,7 @@ const ignorePaths = [
     "public/"
 ]
 
-const IMPORT = ["@cspell/dict-ru_ru/cspell-ext.json"]
+const importedDicts = ["@cspell/dict-ru_ru/cspell-ext.json"]
 
 const GENERAL_DICT = "en, en-US, en-GB, companies, softwareTerms, misc"
 const PL_DICT = "typescript, node, html, css"
@@ -40,7 +40,7 @@ const ENGLISH_WORDS = [
 
 export default defineConfig({
     ignorePaths,
-    import: IMPORT,
+    import: importedDicts,
     language: LANGUAGE,
     useGitignore: true,
     words: [...ENGLISH_WORDS]
