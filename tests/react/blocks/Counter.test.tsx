@@ -187,7 +187,7 @@ describe(
     () => {
         afterEach(() => cleanup())
 
-        test("should trigger hook for storing to localStorage", async () => {
+        test("should store to localStorage", async () => {
             const { result } = renderHook(() => CounterHook.use())
 
             act(() => result.current.incrementCount())
@@ -195,7 +195,7 @@ describe(
             expect(result.current.count).toBe(1)
         })
 
-        test("should trigger hook for restoring from localStorage", async () => {
+        test("should restore from localStorage", async () => {
             renderHook(() => CounterHook.use())
 
             const countFromLS = localStorage.getItem("count")
