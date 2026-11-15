@@ -75,7 +75,7 @@ describe("Counter: Increment button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
-    test("should trigger increment button", async () => {
+    test("should trigger increment", async () => {
         const user = userEvent.setup()
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
@@ -100,7 +100,7 @@ describe("Counter: Decrement button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
-    test("should trigger decrement button", async () => {
+    test("should trigger decrement", async () => {
         const user = userEvent.setup()
         const decrementButtonElements =
             await screen.findAllByTestId("counter__dec-btn")
@@ -126,7 +126,7 @@ describe("Counter: Resetting button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
-    test("should trigger reset button", async () => {
+    test("should trigger reset", async () => {
         const user = userEvent.setup()
         const resetButtonElements =
             await screen.findAllByTestId("counter__reset-btn")
