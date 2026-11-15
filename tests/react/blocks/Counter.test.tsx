@@ -71,7 +71,7 @@ describe("Counter: Rendering", () => {
     })
 })
 
-describe("Counter: Increment", { concurrent: false }, () => {
+describe("Counter: Increment button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -96,7 +96,7 @@ describe("Counter: Increment", { concurrent: false }, () => {
     })
 })
 
-describe("Counter: Decrement", { concurrent: false }, () => {
+describe("Counter: Decrement button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -122,7 +122,7 @@ describe("Counter: Decrement", { concurrent: false }, () => {
     })
 })
 
-describe("Counter: Resetting", { concurrent: false }, () => {
+describe("Counter: Resetting button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
