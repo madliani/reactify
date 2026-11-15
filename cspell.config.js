@@ -19,7 +19,7 @@ const PL_DICT = "typescript, node, html, css"
 const MISC_DICT = "fonts, fileTypes, npm"
 const RU_DICT = "ru, ru-RU"
 const dicts = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
-const LANGUAGE = dicts.join(",")
+const language = dicts.join(",")
 
 const ENGLISH_WORDS = [
     "asynciterable",
@@ -41,7 +41,7 @@ const ENGLISH_WORDS = [
 export default defineConfig({
     ignorePaths,
     import: importedDicts,
-    language: LANGUAGE,
+    language,
     useGitignore: true,
     words: [...ENGLISH_WORDS]
 })
