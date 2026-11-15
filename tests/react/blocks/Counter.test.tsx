@@ -21,7 +21,7 @@ import {
 
 vi.mock(import("@react/blocks/Counter/Counter.atom"), { spy: true })
 
-describe("Counter rendering", () => {
+describe("Counter: Rendering", () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -75,7 +75,7 @@ describe("Counter rendering", () => {
     })
 })
 
-describe("Counter increment", { concurrent: false }, () => {
+describe("Counter: Increment", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -100,7 +100,7 @@ describe("Counter increment", { concurrent: false }, () => {
     })
 })
 
-describe("Counter decrement", { concurrent: false }, () => {
+describe("Counter: Decrement", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -125,7 +125,7 @@ describe("Counter decrement", { concurrent: false }, () => {
     })
 })
 
-describe("Counter resetting", { concurrent: false }, () => {
+describe("Counter: Resetting", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -151,7 +151,7 @@ describe("Counter resetting", { concurrent: false }, () => {
     })
 })
 
-describe("Counter hooks", () => {
+describe("Counter: Hooks", () => {
     afterEach(() => cleanup())
 
     test("should trigger increment hook", async () => {
@@ -179,7 +179,7 @@ describe("Counter hooks", () => {
     })
 })
 
-describe("Counter saving to localStorage", { concurrent: false }, () => {
+describe("Counter: Saving to localStorage", { concurrent: false }, () => {
     afterEach(() => cleanup())
 
     test("should trigger hook with storing to localStorage", async () => {
