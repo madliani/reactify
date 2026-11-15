@@ -38,11 +38,12 @@ const englishWords = [
     "vite",
     "vitest"
 ]
+const words = [...englishWords]
 
 export default defineConfig({
     ignorePaths,
     import: importedDicts,
     language,
     useGitignore: true,
-    words: [...englishWords]
+    words
 })
