@@ -47,13 +47,6 @@ describe("Counter: Rendering", () => {
         expect(incBtnEl).toBeInTheDocument()
     })
 
-    test("should render decrement button", async () => {
-        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
-        const decBtnEl = decBtnElements[0]
-
-        expect(decBtnEl).toBeInTheDocument()
-    })
-
     test("should render disabled decrement button", async () => {
         const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
         const decBtnEl = decBtnElements[0]
