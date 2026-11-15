@@ -47,19 +47,18 @@ const onMountEffect: EffectCallback = () => {
     }
 }
 
-const onMount = () => useEffect(onMountEffect, [])
+const onMountCounter = () => useEffect(onMountEffect, [])
 
 const use = () => {
     const count = useStore(CounterAtom.store)
     const isCountZero = count === 0
-
-    onMount()
 
     return {
         count,
         decrementCount,
         incrementCount,
         isCountZero,
+        onMountCounter,
         resetCount,
         updateCount
     }
