@@ -161,11 +161,12 @@ describe("Counter: Increment hook", () => {
     afterEach(() => cleanup())
 
     test("should increment count", async () => {
+        const INCREMENTED_COUNT = 1
         const { result } = renderHook(() => CounterHook.use())
 
         act(() => result.current.incrementCount())
 
-        expect(result.current.count).toBe(1)
+        expect(result.current.count).toBe(INCREMENTED_COUNT)
     })
 })
 
