@@ -10,7 +10,7 @@ const stylelintRules = {
     "import-notation": "string",
     "selector-class-pattern": null
 }
-const PLUGIN_RULES = {
+const pluginRules = {
     "plugin/no-unsupported-browser-features": [
         true,
         {
@@ -26,7 +26,7 @@ const PLUGIN_RULES = {
         }
     ]
 }
-const RULES = { ...stylelintRules, ...PLUGIN_RULES }
+const RULES = { ...stylelintRules, ...pluginRules }
 
 export default {
     allowEmptyInput: true,
