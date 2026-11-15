@@ -26,45 +26,50 @@ describe("Counter: Rendering", () => {
     afterAll(() => cleanup())
 
     test("should render title", async () => {
-        const titleEl = await screen.findByTestId("counter__title")
-        const titleStr = titleEl.textContent
+        const titleElement = await screen.findByTestId("counter__title")
+        const titleString = titleElement.textContent
 
-        expect(titleStr).toBe("Counter")
+        expect(titleString).toBe("Counter")
     })
 
     test("should render count", async () => {
-        const countEl = await screen.findByTestId("counter__count")
-        const countStr = countEl.textContent
-        const count = parseInt(countStr)
+        const countElement = await screen.findByTestId("counter__count")
+        const countString = countElement.textContent
+        const count = parseInt(countString)
 
         expect(count).toBe(0)
     })
 
     test("should render increment button", async () => {
-        const incBtnElements = await screen.findAllByTestId("counter__inc-btn")
-        const incBtnEl = incBtnElements[0]
+        const incrementButtonElements =
+            await screen.findAllByTestId("counter__inc-btn")
+        const incrementButtonElement = incrementButtonElements[0]
 
-        expect(incBtnEl).toBeInTheDocument()
+        expect(incrementButtonElement).toBeInTheDocument()
     })
 
     test("should render disabled decrement button", async () => {
-        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
-        const decBtnEl = decBtnElements[0]
+        const decrementButtonElements =
+            await screen.findAllByTestId("counter__dec-btn")
+        const decrementButtonElement = decrementButtonElements[0]
 
-        expect(decBtnEl).toBeDisabled()
+        expect(decrementButtonElement).toBeDisabled()
     })
 
     test("should render reset button", async () => {
-        const resetBtnEl = await screen.findByTestId("counter__reset-btn")
+        const resetButtonElement =
+            await screen.findByTestId("counter__reset-btn")
 
-        expect(resetBtnEl).toBeInTheDocument()
+        expect(resetButtonElement).toBeInTheDocument()
     })
 
     test("should render attribution", async () => {
-        const attributionEl = await screen.findByTestId("counter__attribution")
-        const attributionStr = attributionEl.textContent
+        const attributionElement = await screen.findByTestId(
+            "counter__attribution"
+        )
+        const attributionString = attributionElement.textContent
 
-        expect(attributionStr).toBe("by @madliani")
+        expect(attributionString).toBe("by @madliani")
     })
 })
 
@@ -74,20 +79,21 @@ describe("Counter: Increment", { concurrent: false }, () => {
 
     test("should trigger increment button", async () => {
         const user = userEvent.setup()
-        const incBtnElements = await screen.findAllByTestId("counter__inc-btn")
-        const incBtnEl = incBtnElements[0]
+        const incrementButtonElements =
+            await screen.findAllByTestId("counter__inc-btn")
+        const incrementButtonElement = incrementButtonElements[0]
 
-        if (incBtnEl) {
-            await user.click(incBtnEl)
+        if (incrementButtonElement) {
+            await user.click(incrementButtonElement)
         }
 
         expect(CounterAtom.increment).toHaveBeenCalledOnce()
     })
 
     test("should increment count", async () => {
-        const countEl = await screen.findByTestId("counter__count")
-        const countStr = countEl.textContent
-        const count = parseInt(countStr)
+        const countElement = await screen.findByTestId("counter__count")
+        const countString = countElement.textContent
+        const count = parseInt(countString)
 
         expect(count).toBe(1)
     })
@@ -99,20 +105,21 @@ describe("Counter: Decrement", { concurrent: false }, () => {
 
     test("should trigger decrement button", async () => {
         const user = userEvent.setup()
-        const decBtnElements = await screen.findAllByTestId("counter__dec-btn")
-        const decBtnEl = decBtnElements[0]
+        const decrementButtonElements =
+            await screen.findAllByTestId("counter__dec-btn")
+        const decrementButtonElement = decrementButtonElements[0]
 
-        if (decBtnEl) {
-            await user.click(decBtnEl)
+        if (decrementButtonElement) {
+            await user.click(decrementButtonElement)
         }
 
         expect(CounterAtom.decrement).toHaveBeenCalledOnce()
     })
 
     test("shouldn't decrement count", async () => {
-        const countEl = await screen.findByTestId("counter__count")
-        const countStr = countEl.textContent
-        const count = parseInt(countStr)
+        const countElement = await screen.findByTestId("counter__count")
+        const countString = countElement.textContent
+        const count = parseInt(countString)
 
         expect(count).toBe(0)
     })
@@ -124,21 +131,21 @@ describe("Counter: Resetting", { concurrent: false }, () => {
 
     test("should trigger reset button", async () => {
         const user = userEvent.setup()
-        const resetBtnElements =
+        const resetButtonElements =
             await screen.findAllByTestId("counter__reset-btn")
-        const resetBtnEl = resetBtnElements[0]
+        const resetButtonEl = resetButtonElements[0]
 
-        if (resetBtnEl) {
-            await user.click(resetBtnEl)
+        if (resetButtonEl) {
+            await user.click(resetButtonEl)
         }
 
         expect(CounterAtom.reset).toHaveBeenCalledOnce()
     })
 
     test("shouldn't reset count", async () => {
-        const countEl = await screen.findByTestId("counter__count")
-        const countStr = countEl.textContent
-        const count = parseInt(countStr)
+        const countElement = await screen.findByTestId("counter__count")
+        const countString = countElement.textContent
+        const count = parseInt(countString)
 
         expect(count).toBe(0)
     })
