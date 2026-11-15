@@ -1,4 +1,4 @@
-const PLUGINS = ["prettier-plugin-astro"]
+const plugins = ["prettier-plugin-astro"]
 
 /** @type {import("prettier").Config} */
 export default {
@@ -9,7 +9,7 @@ export default {
     endOfLine: "auto",
     htmlWhitespaceSensitivity: "strict",
     objectWrap: "collapse",
-    plugins: PLUGINS,
+    plugins,
     printWidth: 80,
     proseWrap: "always",
     quoteProps: "preserve",
