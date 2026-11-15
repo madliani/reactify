@@ -40,17 +40,21 @@ describe("Counter: Rendering", () => {
     })
 
     test("should render increment button", async () => {
+        const FIRST_ELEMENT_INDEX = 0
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
-        const incrementButtonElement = incrementButtonElements[0]
+        const incrementButtonElement =
+            incrementButtonElements[FIRST_ELEMENT_INDEX]
 
         expect(incrementButtonElement).toBeInTheDocument()
     })
 
     test("should render disabled decrement button", async () => {
+        const FIRST_ELEMENT_INDEX = 0
         const decrementButtonElements =
             await screen.findAllByTestId("counter__dec-btn")
-        const decrementButtonElement = decrementButtonElements[0]
+        const decrementButtonElement =
+            decrementButtonElements[FIRST_ELEMENT_INDEX]
 
         expect(decrementButtonElement).toBeDisabled()
     })
@@ -76,10 +80,12 @@ describe("Counter: Increment button", { concurrent: false }, () => {
     afterAll(() => cleanup())
 
     test("should trigger increment", async () => {
+        const FIRST_ELEMENT_INDEX = 0
         const user = userEvent.setup()
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
-        const incrementButtonElement = incrementButtonElements[0]
+        const incrementButtonElement =
+            incrementButtonElements[FIRST_ELEMENT_INDEX]
 
         if (incrementButtonElement) {
             await user.click(incrementButtonElement)
@@ -101,10 +107,12 @@ describe("Counter: Decrement button", { concurrent: false }, () => {
     afterAll(() => cleanup())
 
     test("should trigger decrement", async () => {
+        const FIRST_ELEMENT_INDEX = 0
         const user = userEvent.setup()
         const decrementButtonElements =
             await screen.findAllByTestId("counter__dec-btn")
-        const decrementButtonElement = decrementButtonElements[0]
+        const decrementButtonElement =
+            decrementButtonElements[FIRST_ELEMENT_INDEX]
 
         if (decrementButtonElement) {
             await user.click(decrementButtonElement)
@@ -127,10 +135,11 @@ describe("Counter: Resetting button", { concurrent: false }, () => {
     afterAll(() => cleanup())
 
     test("should trigger reset", async () => {
+        const FIRST_ELEMENT_INDEX = 0
         const user = userEvent.setup()
         const resetButtonElements =
             await screen.findAllByTestId("counter__reset-btn")
-        const resetButtonEl = resetButtonElements[0]
+        const resetButtonEl = resetButtonElements[FIRST_ELEMENT_INDEX]
 
         if (resetButtonEl) {
             await user.click(resetButtonEl)
