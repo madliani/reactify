@@ -27,15 +27,13 @@ describe("Counter: Rendering", () => {
 
     test("should render title", async () => {
         const titleElement = await screen.findByTestId("counter__title")
-        const titleString = titleElement.textContent
 
-        expect(titleString).toBe("Counter")
+        expect(titleElement.textContent).toBe("Counter")
     })
 
     test("should render count", async () => {
         const countElement = await screen.findByTestId("counter__count")
-        const countString = countElement.textContent
-        const count = parseInt(countString)
+        const count = parseInt(countElement.textContent)
 
         expect(count).toBe(0)
     })
@@ -67,9 +65,8 @@ describe("Counter: Rendering", () => {
         const attributionElement = await screen.findByTestId(
             "counter__attribution"
         )
-        const attributionString = attributionElement.textContent
 
-        expect(attributionString).toBe("by @madliani")
+        expect(attributionElement.textContent).toBe("by @madliani")
     })
 })
 
@@ -92,8 +89,7 @@ describe("Counter: Increment", { concurrent: false }, () => {
 
     test("should increment count", async () => {
         const countElement = await screen.findByTestId("counter__count")
-        const countString = countElement.textContent
-        const count = parseInt(countString)
+        const count = parseInt(countElement.textContent)
 
         expect(count).toBe(1)
     })
@@ -118,8 +114,7 @@ describe("Counter: Decrement", { concurrent: false }, () => {
 
     test("shouldn't decrement count", async () => {
         const countElement = await screen.findByTestId("counter__count")
-        const countString = countElement.textContent
-        const count = parseInt(countString)
+        const count = parseInt(countElement.textContent)
 
         expect(count).toBe(0)
     })
@@ -144,8 +139,7 @@ describe("Counter: Resetting", { concurrent: false }, () => {
 
     test("shouldn't reset count", async () => {
         const countElement = await screen.findByTestId("counter__count")
-        const countString = countElement.textContent
-        const count = parseInt(countString)
+        const count = parseInt(countElement.textContent)
 
         expect(count).toBe(0)
     })
