@@ -216,10 +216,10 @@ describe(
             const INCREMENTED_COUNT = 1
             renderHook(() => CounterHook.use())
 
-            const countFromLS = localStorage.getItem("count")
-            const count = parseInt(countFromLS ?? COUNT_FALLBACK)
+            const countItem = localStorage.getItem("count")
+            const countFromLS = parseInt(countItem ?? COUNT_FALLBACK)
 
-            expect(count).toBe(INCREMENTED_COUNT)
+            expect(countFromLS).toBe(INCREMENTED_COUNT)
         })
     }
 )
