@@ -21,7 +21,7 @@ const RU_DICT = "ru, ru-RU"
 const dicts = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
 const language = dicts.join(",")
 
-const ENGLISH_WORDS = [
+const englishWords = [
     "asynciterable",
     "browserslistrc",
     "commonmark",
@@ -43,5 +43,5 @@ export default defineConfig({
     import: importedDicts,
     language,
     useGitignore: true,
-    words: [...ENGLISH_WORDS]
+    words: [...englishWords]
 })
