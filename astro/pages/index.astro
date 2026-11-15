@@ -4,7 +4,25 @@ import Counter from "@react/blocks/Counter/Counter"
 ---
 
 <BaseTemplate title="Home">
-    <main class="flex flex-col justify-center items-center w-dvw sm:w-screen h-dvh sm:h-screen">
+    <main class="main">
         <Counter client:load />
     </main>
 </BaseTemplate>
+
+<style is:global>
+    @reference "tailwindcss";
+
+    @layer components {
+        .main {
+            @apply flex-col;
+            @apply flex;
+            @apply h-dvh;
+            @apply items-center;
+            @apply justify-center;
+            @apply w-dvw;
+
+            @apply sm:h-screen;
+            @apply sm:w-screen;
+        }
+    }
+</style>
