@@ -202,12 +202,11 @@ describe(
         })
 
         test("should restore from localStorage", async () => {
-            const COUNT_KEY = "count"
             const COUNT_FALLBACK = "0"
             const INCREMENTED_COUNT = 1
             renderHook(() => CounterHook.use())
 
-            const countFromLS = localStorage.getItem(COUNT_KEY)
+            const countFromLS = localStorage.getItem("count")
             const count = parseInt(countFromLS ?? COUNT_FALLBACK)
 
             expect(count).toBe(INCREMENTED_COUNT)
