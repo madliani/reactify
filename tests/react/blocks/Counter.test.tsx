@@ -205,8 +205,9 @@ describe(
             renderHook(() => CounterHook.use())
 
             const countFromLS = localStorage.getItem("count")
+            const count = parseInt(countFromLS ?? "")
 
-            expect(countFromLS).toBe("1")
+            expect(count).toBe(1)
         })
     }
 )
