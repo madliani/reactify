@@ -10,6 +10,10 @@
         @apply rounded-none;
         @apply font-bold;
         @apply text-3xl;
+        @apply w-full;
+        @apply inline-flex;
+        @apply justify-center;
+        @apply items-center;
     }
 
     .counter__content {
@@ -43,5 +47,9 @@
         @apply font-bold;
         @apply text-lg;
         @apply italic;
+        @apply w-full;
+        @apply inline-flex;
+        @apply justify-center;
+        @apply items-center;
     }
 }

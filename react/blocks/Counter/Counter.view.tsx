@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Card } from "react-bootstrap"
+import { Button, ButtonGroup, Card, Link } from "@heroui/react"
 
 export interface CounterViewProps {
     count: number
@@ -13,9 +13,8 @@ export default (props: CounterViewProps) => {
         props
 
     return (
-        <Card as="div" className="counter__card">
-            <Button
-                as="a"
+        <Card className="counter__card">
+            <Link
                 className="counter__title"
                 data-testid="counter__title"
                 href="https://github.com/madliani/reactify/"
@@ -23,9 +22,9 @@ export default (props: CounterViewProps) => {
                 target="_blank"
             >
                 Counter
-            </Button>
+            </Link>
 
-            <Card.Body as="div" className="counter__content">
+            <Card.Content className="counter__content">
                 <span
                     className="font-bold text-7xl"
                     data-testid="counter__count"
@@ -35,16 +34,14 @@ export default (props: CounterViewProps) => {
                 </span>
 
                 <ButtonGroup
-                    as="div"
                     className="counter__btn-group--mobile"
-                    vertical
+                    orientation="vertical"
                 >
                     <Button
                         className="counter__btn"
                         data-testid="counter__inc-btn"
                         onClick={incrementCount}
-                        title="Increment"
-                        variant="success"
+                        variant="primary"
                     >
                         Increment
                     </Button>
@@ -52,22 +49,23 @@ export default (props: CounterViewProps) => {
                     <Button
                         className="counter__btn"
                         data-testid="counter__dec-btn"
-                        disabled={isCounterZero}
+                        isDisabled={isCounterZero}
                         onClick={decrementCount}
-                        title="Decrement"
-                        variant="warning"
+                        variant="secondary"
                     >
                         Decrement
                     </Button>
                 </ButtonGroup>
 
-                <ButtonGroup as="div" className="counter__btn-group--desktop">
+                <ButtonGroup
+                    className="counter__btn-group--desktop"
+                    orientation="horizontal"
+                >
                     <Button
                         className="counter__btn"
                         data-testid="counter__inc-btn"
                         onClick={incrementCount}
-                        title="Increment"
-                        variant="success"
+                        variant="primary"
                     >
                         Increment
                     </Button>
@@ -75,10 +73,9 @@ export default (props: CounterViewProps) => {
                     <Button
                         className="counter__btn"
                         data-testid="counter__dec-btn"
-                        disabled={isCounterZero}
+                        isDisabled={isCounterZero}
                         onClick={decrementCount}
-                        title="Decrement"
-                        variant="warning"
+                        variant="secondary"
                     >
                         Decrement
                     </Button>
@@ -88,15 +85,13 @@ export default (props: CounterViewProps) => {
                     className="counter__btn"
                     data-testid="counter__reset-btn"
                     onClick={resetCount}
-                    title="Reset"
                     variant="danger"
                 >
                     Reset
                 </Button>
-            </Card.Body>
+            </Card.Content>
 
-            <Button
-                as="a"
+            <Link
                 className="counter__annotation"
                 data-testid="counter__attribution"
                 href="https://github.com/madliani/"
@@ -104,7 +99,7 @@ export default (props: CounterViewProps) => {
                 target="_blank"
             >
                 by @madliani
-            </Button>
+            </Link>
         </Card>
     )
 }
