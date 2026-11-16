@@ -27,6 +27,7 @@ const englishWords = [
     "browserslistrc",
     "commonmark",
     "fontsource",
+    "heroui",
     "hotfixes",
     "lightningcss",
     "madliani",
