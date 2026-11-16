@@ -1,8 +1,7 @@
-@layer theme, base, bootstrap, components, utilities;
+@layer theme, base, components, utilities;
 
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
-@import "bootstrap/dist/css/bootstrap.min.css" layer(bootstrap);
 @import "@heroui/styles";
