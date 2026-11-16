@@ -22,7 +22,7 @@ const { description = "", title = "" } = Astro.props
         <ClientRouter />
     </head>
 
-    <body class="base-template__body">
+    <body class="base-template">
         <BaseNoscript />
 
         <BaseLayout>
@@ -35,7 +35,7 @@ const { description = "", title = "" } = Astro.props
     @reference "tailwindcss";
 
     @layer components {
-        .base-template__body {
+        .base-template {
             @apply bg-gray-50;
             @apply h-dvh;
             @apply w-dvw;
