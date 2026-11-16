@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.0] - 2026-11-16
+
+### Fixed
+
+- The `Counter` tests
+- The `README.md` file
+- The configuration files of the project
+- The global styles
+- The styles of `base template`
+- The styles of `Counter`
+- The styles of homepage
+
+### Changed
+
+- Dependencies were updated
+- The `Counter` tests were moved to `tests/react/blocks/`
+- The `React Bootstrap` was replaced by `HeroUI`
+
 ## [5.2.0] - 2026-11-15
 
 ### Fixed
