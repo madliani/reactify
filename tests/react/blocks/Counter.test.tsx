@@ -9,19 +9,11 @@ import {
     screen
 } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import {
-    afterAll,
-    afterEach,
-    beforeAll,
-    describe,
-    expect,
-    test,
-    vi
-} from "vitest"
+import { afterAll, afterEach, beforeAll, expect, suite, test, vi } from "vitest"
 
 vi.mock(import("@react/blocks/Counter/Counter.atom"), { spy: true })
 
-describe("Counter: Rendering", () => {
+suite("Counter: Rendering", () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -75,7 +67,7 @@ describe("Counter: Rendering", () => {
     })
 })
 
-describe("Counter: Increment button", { concurrent: false }, () => {
+suite("Counter: Increment button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -102,7 +94,7 @@ describe("Counter: Increment button", { concurrent: false }, () => {
     })
 })
 
-describe("Counter: Decrement button", { concurrent: false }, () => {
+suite("Counter: Decrement button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -130,7 +122,7 @@ describe("Counter: Decrement button", { concurrent: false }, () => {
     })
 })
 
-describe("Counter: Resetting button", { concurrent: false }, () => {
+suite("Counter: Resetting button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
     afterAll(() => cleanup())
 
@@ -157,7 +149,7 @@ describe("Counter: Resetting button", { concurrent: false }, () => {
     })
 })
 
-describe("Counter: Increment hook", () => {
+suite("Counter: Increment hook", () => {
     afterEach(() => cleanup())
 
     test("should increment count", async () => {
@@ -170,7 +162,7 @@ describe("Counter: Increment hook", () => {
     })
 })
 
-describe("Counter: Decrement hook", () => {
+suite("Counter: Decrement hook", () => {
     afterEach(() => cleanup())
 
     test("shouldn't decrement count", async () => {
@@ -183,7 +175,7 @@ describe("Counter: Decrement hook", () => {
     })
 })
 
-describe("Counter: Resetting hooks", () => {
+suite("Counter: Resetting hooks", () => {
     afterEach(() => cleanup())
 
     test("shouldn't reset count", async () => {
@@ -196,30 +188,26 @@ describe("Counter: Resetting hooks", () => {
     })
 })
 
-describe(
-    "Counter: Hook for saving to localStorage",
-    { concurrent: false },
-    () => {
-        afterEach(() => cleanup())
+suite("Counter: Hook for saving to localStorage", { concurrent: false }, () => {
+    afterEach(() => cleanup())
 
-        test("should store to localStorage", async () => {
-            const INCREMENTED_COUNT = 1
-            const { result } = renderHook(() => CounterHooks.use())
+    test("should store to localStorage", async () => {
+        const INCREMENTED_COUNT = 1
+        const { result } = renderHook(() => CounterHooks.use())
 
-            act(() => result.current.incrementCount())
+        act(() => result.current.incrementCount())
 
-            expect(result.current.count).toBe(INCREMENTED_COUNT)
-        })
+        expect(result.current.count).toBe(INCREMENTED_COUNT)
+    })
 
-        test("should restore from localStorage", async () => {
-            const COUNT_FALLBACK = "0"
-            const INCREMENTED_COUNT = 1
-            renderHook(() => CounterHooks.use())
+    test("should restore from localStorage", async () => {
+        const COUNT_FALLBACK = "0"
+        const INCREMENTED_COUNT = 1
+        renderHook(() => CounterHooks.use())
 
-            const countItem = localStorage.getItem("count")
-            const countFromLS = parseInt(countItem ?? COUNT_FALLBACK)
+        const countItem = localStorage.getItem("count")
+        const countFromLS = parseInt(countItem ?? COUNT_FALLBACK)
 
-            expect(countFromLS).toBe(INCREMENTED_COUNT)
-        })
-    }
-)
+        expect(countFromLS).toBe(INCREMENTED_COUNT)
+    })
+})
