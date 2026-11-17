@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 
-@layer theme {
+@layer components {
     :root {
         --font-playfair-display: "Playfair Display Variable", serif;
     }
