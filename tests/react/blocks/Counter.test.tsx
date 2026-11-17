@@ -20,7 +20,7 @@ suite("Counter: Rendering", () => {
     test("should render title", async () => {
         const titleElement = await screen.findByTestId("counter__title")
 
-        expect(titleElement.textContent).toBe("Counter")
+        expect(titleElement.textContent).toBe("Reactify")
     })
 
     test("should render count", async () => {
@@ -63,7 +63,7 @@ suite("Counter: Rendering", () => {
             "counter__attribution"
         )
 
-        expect(attributionElement.textContent).toBe("by @madliani")
+        expect(attributionElement.textContent).toBe("@madliani")
     })
 })
 
