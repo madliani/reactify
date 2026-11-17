@@ -1,5 +1,25 @@
 @reference "tailwindcss";
 
+@font-face {
+    font-family: "Playfair Display Variable";
+    font-weight: 400;
+    font-style: normal;
+
+    src: url("@fontsource-variable/playfair-display");
+}
+
+@layer theme {
+    :root {
+        --font-playfair-display: "Playfair Display Variable", serif;
+    }
+}
+
+@layer components {
+    .counter__title {
+        font-family: var(--font-playfair-display);
+    }
+}
+
 @layer components {
     .counter__card {
         @apply h-96;
