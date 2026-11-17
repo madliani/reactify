@@ -24,7 +24,7 @@
         @apply items-center;
         @apply justify-center;
         @apply rounded-none;
-        @apply text-3xl;
+        @apply text-4xl;
         @apply w-full;
     }
 
