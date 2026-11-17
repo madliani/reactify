@@ -98,7 +98,7 @@ export default (props: CounterViewProps) => {
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                by @madliani
+                @madliani
             </Link>
         </Card>
     )
