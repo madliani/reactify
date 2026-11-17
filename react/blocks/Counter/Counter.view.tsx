@@ -26,7 +26,7 @@ export default (props: CounterViewProps) => {
 
             <Card.Content className="counter__content">
                 <span
-                    className="font-bold text-7xl"
+                    className="counter__count"
                     data-testid="counter__count"
                     title={count.toString()}
                 >

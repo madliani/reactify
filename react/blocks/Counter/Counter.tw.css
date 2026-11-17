@@ -37,6 +37,11 @@
         @apply justify-center;
     }
 
+    .counter__count {
+        @apply font-bold;
+        @apply text-7xl;
+    }
+
     .counter__btn-group--mobile {
         @apply inline-flex;
 
