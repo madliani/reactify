@@ -21,7 +21,7 @@ export default (props: CounterViewProps) => {
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                Counter
+                Reactify
             </Link>
 
             <Card.Content className="counter__content">
