@@ -26,6 +26,7 @@ const englishWords = [
     "asynciterable",
     "browserslistrc",
     "commonmark",
+    "fontsource",
     "heroui",
     "hotfixes",
     "madliani",
