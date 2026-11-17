@@ -43,7 +43,6 @@
     }
 
     .counter__annotation {
-        @apply font-bold;
         @apply inline-flex;
         @apply italic;
         @apply items-center;
