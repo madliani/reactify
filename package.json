@@ -12,7 +12,6 @@
         "x64"
     ],
     "dependencies": {
-        "@astrojs/check": "0.9.12",
         "@astrojs/react": "7.1.9",
         "@astrojs/sitemap": "3.7.5",
         "@heroui/react": "3.2.7",
@@ -30,6 +29,7 @@
     },
     "description": "A simple starter kit for React.",
     "devDependencies": {
+        "@astrojs/check": "0.9.12",
         "@cspell/dict-ru_ru": "2.3.4",
         "@eslint/compat": "2.1.1",
         "@eslint/js": "10.0.1",
