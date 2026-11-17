@@ -1,3 +1,5 @@
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button, ButtonGroup, Card, Link } from "@heroui/react"
 
 export interface CounterViewProps {
@@ -43,7 +45,7 @@ export default (props: CounterViewProps) => {
                         onClick={incrementCount}
                         variant="primary"
                     >
-                        Increment
+                        <FontAwesomeIcon icon={faPlus} />
                     </Button>
 
                     <Button
@@ -53,7 +55,7 @@ export default (props: CounterViewProps) => {
                         onClick={decrementCount}
                         variant="secondary"
                     >
-                        Decrement
+                        <FontAwesomeIcon icon={faMinus} />
                     </Button>
                 </ButtonGroup>
 
@@ -67,7 +69,7 @@ export default (props: CounterViewProps) => {
                         onClick={incrementCount}
                         variant="primary"
                     >
-                        Increment
+                        <FontAwesomeIcon icon={faPlus} />
                     </Button>
 
                     <Button
@@ -77,7 +79,7 @@ export default (props: CounterViewProps) => {
                         onClick={decrementCount}
                         variant="secondary"
                     >
-                        Decrement
+                        <FontAwesomeIcon icon={faMinus} />
                     </Button>
                 </ButtonGroup>
 
