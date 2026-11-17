@@ -87,10 +87,11 @@ suite("Counter: Increment button", { concurrent: false }, () => {
     })
 
     test("should increment count", async () => {
+        const INCREMENTED_COUNT = 1
         const countElement = await screen.findByTestId("counter__count")
         const count = parseInt(countElement.textContent)
 
-        expect(count).toBe(1)
+        expect(count).toBe(INCREMENTED_COUNT)
     })
 })
 
