@@ -6,7 +6,7 @@
 
 @import "@heroui/styles";
 
-@import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/playfair-display" layer(components);
 
 @layer components {
     :root {
