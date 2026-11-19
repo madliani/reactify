@@ -9,7 +9,7 @@ import {
     screen
 } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
-import { head as firstElement } from "es-toolkit"
+import { head as first } from "es-toolkit"
 import { afterAll, afterEach, beforeAll, expect, suite, test, vi } from "vitest"
 
 vi.mock(import("@react/blocks/Counter/Counter.atom"), { spy: true })
@@ -35,7 +35,7 @@ suite("Counter: Rendering", () => {
     test("should render increment button", async () => {
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
-        const incrementButtonElement = firstElement(incrementButtonElements)
+        const incrementButtonElement = first(incrementButtonElements)
 
         expect(incrementButtonElement).toBeInTheDocument()
     })
@@ -43,7 +43,7 @@ suite("Counter: Rendering", () => {
     test("should render disabled decrement button", async () => {
         const decrementButtonElements =
             await screen.findAllByTestId("counter__dec-btn")
-        const decrementButtonElement = firstElement(decrementButtonElements)
+        const decrementButtonElement = first(decrementButtonElements)
 
         expect(decrementButtonElement).toBeDisabled()
     })
@@ -72,7 +72,7 @@ suite("Counter: Increment button", { concurrent: false }, () => {
         const user = userEvent.setup()
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
-        const incrementButtonElement = firstElement(incrementButtonElements)
+        const incrementButtonElement = first(incrementButtonElements)
 
         if (incrementButtonElement) {
             await user.click(incrementButtonElement)
@@ -98,7 +98,7 @@ suite("Counter: Decrement button", { concurrent: false }, () => {
         const user = userEvent.setup()
         const decrementButtonElements =
             await screen.findAllByTestId("counter__dec-btn")
-        const decrementButtonElement = firstElement(decrementButtonElements)
+        const decrementButtonElement = first(decrementButtonElements)
 
         if (decrementButtonElement) {
             await user.click(decrementButtonElement)
@@ -124,7 +124,7 @@ suite("Counter: Resetting button", { concurrent: false }, () => {
         const user = userEvent.setup()
         const resetButtonElements =
             await screen.findAllByTestId("counter__reset-btn")
-        const resetButtonEl = firstElement(resetButtonElements)
+        const resetButtonEl = first(resetButtonElements)
 
         if (resetButtonEl) {
             await user.click(resetButtonEl)
