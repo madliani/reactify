@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.1.0] - 2026-11-19
+
+### Added
+
+- The `es-toolkit` library
+- The `Font Awesome` icons
+- The `Playfair Display` font via `Fontsource`
+
+### Fixed
+
+- The `Counter` tests
+- The `Counter`
+- The `README.md` file
+- The configuration files of the project
+- The global styles
+- The styles of `Counter`
+
+### Changed
+
+- The homepage screenshot was updated
+
 ## [6.0.0] - 2026-11-16
 
 ### Fixed
