@@ -1,12 +1,4 @@
-@import "@fontsource-variable/playfair-display";
-
 @reference "tailwindcss";
-
-@layer components {
-    :root {
-        --font-playfair-display: "Playfair Display Variable", serif;
-    }
-}
 
 @layer components {
     .counter__title {

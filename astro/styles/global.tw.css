@@ -5,3 +5,11 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
 @import "@heroui/styles";
+
+@import "@fontsource-variable/playfair-display";
+
+@layer components {
+    :root {
+        --font-playfair-display: "Playfair Display Variable", serif;
+    }
+}
