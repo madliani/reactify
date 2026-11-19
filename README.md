@@ -16,6 +16,7 @@
 
 <div align="center">
     <img alt="Astro" src="https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white" title="Astro" />
+    <img alt="Font Awesome" src="https://img.shields.io/badge/Font%20Awesome-538DD7.svg?style=for-the-badge&logo=Font-Awesome&logoColor=white" title="Font Awesome">
     <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white" title="GitHub Actions" />
     <img alt="HeroUI" src="https://img.shields.io/badge/HeroUI-000000.svg?style=for-the-badge&logo=HeroUI&logoColor=white" title="HeroUI">
     <img alt="Node.js" src="https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" title="Node.js" />
