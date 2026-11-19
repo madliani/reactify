@@ -192,7 +192,7 @@ The **simplified** `Git` workflow contains the following steps:
 
 ## Notes for developers
 
-1. The `Husky` hooks isn't configured to work with the `Yarn` package manager.
+1. The `Husky` hooks aren't configured to work with the `Yarn` package manager.
 2. The project is a `React`-based single-page application (SPA), but it uses
    `Astro` as a bundler, a router, and an alternative for `React Helmet`. So,
    formally, the project is an `Astro`-based website.
