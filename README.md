@@ -35,7 +35,7 @@ This is a simple starter kit for React.
 
 1. Beautiful UI via `HeroUI`, `Tailwind CSS`, `Font Awesome` and `Fontsource`
 2. Mobile-first design
-3. Security via `Content Security Policy`
+3. Security by default via `Content Security Policy`
 4. SEO-friendly via `Astro`
 
 ## Screenshots
