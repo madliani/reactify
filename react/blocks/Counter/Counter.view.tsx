@@ -16,15 +16,19 @@ export default (props: CounterViewProps) => {
 
     return (
         <Card className="counter__card">
-            <Link
-                className="counter__title"
-                data-testid="counter__title"
-                href="https://github.com/madliani/reactify/"
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                Reactify
-            </Link>
+            <Card.Header>
+                <Card.Title>
+                    <Link
+                        className="counter__title"
+                        data-testid="counter__title"
+                        href="https://github.com/madliani/reactify/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        Reactify
+                    </Link>
+                </Card.Title>
+            </Card.Header>
 
             <Card.Content className="counter__content">
                 <span
@@ -93,15 +97,17 @@ export default (props: CounterViewProps) => {
                 </Button>
             </Card.Content>
 
-            <Link
-                className="counter__annotation"
-                data-testid="counter__attribution"
-                href="https://github.com/madliani/"
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                @madliani
-            </Link>
+            <Card.Footer>
+                <Link
+                    className="counter__annotation"
+                    data-testid="counter__attribution"
+                    href="https://github.com/madliani/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    @madliani
+                </Link>
+            </Card.Footer>
         </Card>
     )
 }
