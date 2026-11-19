@@ -6,6 +6,8 @@
 
 @import "@heroui/styles";
 
+@import "@fortawesome/fontawesome-free/css/all.css" layer(components);
+
 @import "@fontsource-variable/playfair-display" layer(components);
 
 @layer components {
