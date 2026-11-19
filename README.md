@@ -141,6 +141,7 @@ pnpm build
 - `eslint.config.js`: a `JavaScript`-based `ESLint` configuration file
 - `index.html`: an `index.html` file
 - `LICENSE.txt`: a license file
+- `lint-staged.config.js`: a `JavaScript`-based `lint-staged` configuration file
 - `package.json`: a `package.json` file
 - `pnpm-lock.yaml`: a `pnpm` lockfile
 - `pnpm-workspace.yaml`: a `pnpm-workspace.yaml` file
