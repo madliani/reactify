@@ -12,6 +12,10 @@
     .counter__title {
         font-family: var(--font-playfair-display);
     }
+
+    .counter__annotation {
+        font-family: var(--font-playfair-display);
+    }
 }
 
 @layer components {
@@ -63,7 +67,6 @@
 
     .counter__annotation {
         @apply inline-flex;
-        @apply italic;
         @apply items-center;
         @apply justify-center;
         @apply rounded-none;
