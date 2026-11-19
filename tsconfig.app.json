@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+        "lib": [
+            "DOM.AsyncIterable",
+            "DOM.Iterable",
+            "DOM",
+            "ES2022.array",
+            "ES2022.error",
+            "ES2022.intl",
+            "ES2022.object",
+            "ES2022.regExp",
+            "ES2022.string",
+            "ES2022"
+        ],
+        "paths": {
+            "@astro/*": ["${configDir}/astro/*"],
+            "@react/*": ["${configDir}/react/*"]
+        },
+        "types": ["astro/astro-jsx", "astro/client", "react-dom", "react"]
+    },
+    "extends": "./tsconfig.base.json",
+    "include": [
+        "${configDir}/.astro/*.d.ts",
+        "${configDir}/astro/**/*.astro",
+        "${configDir}/astro/**/*.ts",
+        "${configDir}/react/**/*.ts",
+        "${configDir}/react/**/*.tsx",
+        "${configDir}/tests/react/**/*.ts",
+        "${configDir}/tests/react/**/*.tsx",
+        "${configDir}/types/*.d.ts"
+    ]
+}
