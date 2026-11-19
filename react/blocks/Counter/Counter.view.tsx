@@ -1,6 +1,6 @@
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Button, ButtonGroup, Card, Link } from "@heroui/react"
+import { Button, ButtonGroup, Card, Link, Typography } from "@heroui/react"
 
 export interface CounterViewProps {
     count: number
@@ -31,13 +31,13 @@ export default (props: CounterViewProps) => {
             </Card.Header>
 
             <Card.Content className="counter__content">
-                <span
+                <Typography
                     className="counter__count"
                     data-testid="counter__count"
                     title={count.toString()}
                 >
                     {count}
-                </span>
+                </Typography>
 
                 <ButtonGroup
                     className="counter__btn-group--mobile"

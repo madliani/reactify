@@ -38,7 +38,7 @@
         @apply flex-col;
         @apply flex-nowrap;
         @apply flex;
-        @apply gap-3;
+        @apply gap-7;
         @apply items-center;
         @apply justify-center;
     }
