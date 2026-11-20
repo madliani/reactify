@@ -34,6 +34,7 @@ const englishWords = [
     "madliani",
     "nanostores",
     "nowrap",
+    "preinitialized",
     "reactify",
     "stylelintcache",
     "stylelintignore",

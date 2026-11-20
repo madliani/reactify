@@ -1,9 +1,9 @@
 import { useStore } from "@nanostores/react"
-import CounterAtom from "@react/blocks/Counter/Counter.atom"
+import counterAtom from "@react/blocks/Counter/Counter.atom"
 import { type EffectCallback, useEffect } from "react"
 
 const setToLS = () =>
-    localStorage.setItem("count", CounterAtom.store.get().toString())
+    localStorage.setItem("count", counterAtom.store.get().toString())
 
 const getFromLS = () => {
     const countItem = localStorage.getItem("count")
@@ -20,22 +20,22 @@ const getFromLS = () => {
 }
 
 const decrementCount = () => {
-    CounterAtom.decrement()
+    counterAtom.decrement()
     setToLS()
 }
 
 const incrementCount = () => {
-    CounterAtom.increment()
+    counterAtom.increment()
     setToLS()
 }
 
 const resetCount = () => {
-    CounterAtom.reset()
+    counterAtom.reset()
     setToLS()
 }
 
 const updateCount = (count: number) => {
-    CounterAtom.store.set(count)
+    counterAtom.store.set(count)
     setToLS()
 }
 
@@ -43,12 +43,12 @@ const onMountEffect: EffectCallback = () => {
     const count = getFromLS()
 
     if (count !== undefined) {
-        CounterAtom.store.set(count)
+        counterAtom.store.set(count)
     }
 }
 
 const use = () => {
-    const count = useStore(CounterAtom.store)
+    const count = useStore(counterAtom.store)
     const isCountZero = count === 0
 
     return {
