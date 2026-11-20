@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.2.0] - 2026-11-20
+
+### Added
+
+- The `Husky` hooks
+- The `lint-staged` hook
+
+### Fixed
+
+- The `README.md` file
+- The configuration files of the project
+
 ## [6.1.0] - 2026-11-19
 
 ### Added
