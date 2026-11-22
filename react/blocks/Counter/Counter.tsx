@@ -2,9 +2,9 @@ import CounterHooks from "@react/blocks/Counter/Counter.hooks"
 
 import "@react/blocks/Counter/Counter.tw.css"
 import CounterView from "@react/blocks/Counter/Counter.view"
-import type { FC } from "react"
+import type { JSX } from "react"
 
-const Counter: FC = () => {
+function Counter(): JSX.Element {
     const { count, decrementCount, incrementCount, isCountZero, resetCount } =
         CounterHooks.use()
 
@@ -20,7 +20,5 @@ const Counter: FC = () => {
         />
     )
 }
-
-Counter.displayName = "Counter"
 
 export default Counter
