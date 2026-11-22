@@ -32,17 +32,17 @@ export default defineConfig({
     semi: false,
     singleAttributePerLine: false,
     singleQuote: false,
-    sortPackageJson: { sortScripts: true },
-    tabWidth: 4,
-    trailingComma: "none",
-    useTabs: false,
     sortImports: {
-        newlinesBetween: true,
         groups: [
             ["value-builtin", "value-external"],
             ["value-internal", "value-parent", "value-sibling", "value-index"],
             "type-import",
             "unknown"
-        ]
-    }
+        ],
+        newlinesBetween: true
+    },
+    sortPackageJson: { sortScripts: true },
+    tabWidth: 4,
+    trailingComma: "none",
+    useTabs: false
 })
