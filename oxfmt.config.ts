@@ -1,20 +1,20 @@
 import { defineConfig } from "oxfmt"
 
 const ignorePatterns = [
+    ".astro/",
     ".env*",
+    ".stylelintcache",
+    ".vitest/",
+    "*.tsbuildinfo",
+    "coverage/",
+    "dist/",
     "node_modules/",
     "npm-debug.log*",
     "pnpm-debug.log*",
     "pnpm-lock.yaml",
     "pnpm-workspace.yaml",
     "yarn-debug.log*",
-    "yarn-error.log*",
-    "*.tsbuildinfo",
-    ".astro/",
-    "dist/",
-    ".vitest/",
-    "coverage/",
-    ".stylelintcache"
+    "yarn-error.log*"
 ]
 
 export default defineConfig({
