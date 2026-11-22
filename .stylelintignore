@@ -49,6 +49,9 @@ public/
 # JavaScript-based configuration files
 *.config.js
 
+# TypeScript-based configuration files
+*.config.ts
+
 # TypeScript-based source files
 react/**/*.ts
 react/**/*.tsx
