@@ -26,11 +26,12 @@ export default defineConfig({
         "eslint",
         "import",
         "jsdoc",
+        "jsx-a11y",
         "node",
         "oxc",
         "promise",
-        "react",
         "react-perf",
+        "react",
         "typescript",
         "vitest"
     ],
