@@ -35,5 +35,14 @@ export default defineConfig({
     sortPackageJson: false,
     tabWidth: 4,
     trailingComma: "none",
-    useTabs: false
+    useTabs: false,
+    sortImports: {
+        newlinesBetween: true,
+        groups: [
+            ["value-builtin", "value-external"],
+            ["value-internal", "value-parent", "value-sibling", "value-index"],
+            "type-import",
+            "unknown"
+        ]
+    }
 })
