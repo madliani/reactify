@@ -29,7 +29,10 @@ export default defineConfig({
         "node",
         "oxc",
         "promise",
-        "typescript"
+        "react",
+        "react-perf",
+        "typescript",
+        "vitest"
     ],
     rules: { "eslint/sort-imports": "off", "eslint/sort-keys": "error" }
 })
