@@ -1,6 +1,9 @@
 import vitePluginReact from "@vitejs/plugin-react"
 import { configDefaults, defineConfig } from "vitest/config"
 
+const reactTests = ["./tests/react/**/*.test.ts", "./tests/react/**/*.test.tsx"]
+const reactSetupFiles = ["./tests/react/setup.ts"]
+
 export default defineConfig({
     resolve: { tsconfigPaths: true },
     test: {
@@ -16,17 +19,14 @@ export default defineConfig({
                     environment: "happy-dom",
                     globalSetup: [],
                     globals: false,
-                    include: [
-                        "./tests/react/**/*.test.ts",
-                        "./tests/react/**/*.test.tsx"
-                    ],
+                    include: reactTests,
                     name: "reactify-node",
                     passWithNoTests: true,
                     plugins: [vitePluginReact()],
                     reporters: ["default", "html"],
                     restoreMocks: true,
                     sequence: { concurrent: true },
-                    setupFiles: ["./tests/react/setup.ts"]
+                    setupFiles: reactSetupFiles
                 }
             }
         ]
