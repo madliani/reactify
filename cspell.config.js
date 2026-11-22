@@ -38,6 +38,7 @@ const englishWords = [
     "reactify",
     "stylelintcache",
     "stylelintignore",
+    "tsrs",
     "vite",
     "vitest"
 ]
