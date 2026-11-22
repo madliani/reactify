@@ -1,10 +1,10 @@
 import vitePluginReact from "@vitejs/plugin-react"
 import { configDefaults, defineConfig } from "vitest/config"
 
-const REACT_TEST_TIMEOUT = 5000
+const TEST_TIMEOUT = 5000
 
-const reactTests = ["./tests/react/**/*.test.ts", "./tests/react/**/*.test.tsx"]
-const reactSetupFiles = ["./tests/react/setup.ts"]
+const tests = ["./tests/react/**/*.test.ts", "./tests/react/**/*.test.tsx"]
+const setupFiles = ["./tests/react/setup.ts"]
 
 export default defineConfig({
     resolve: { tsconfigPaths: true },
@@ -14,14 +14,14 @@ export default defineConfig({
         environment: "happy-dom",
         globalSetup: [],
         globals: false,
-        include: reactTests,
+        include: tests,
         name: "reactify-node",
         passWithNoTests: true,
         plugins: [vitePluginReact()],
         reporters: ["default", "html"],
         restoreMocks: true,
         sequence: { concurrent: true },
-        setupFiles: reactSetupFiles,
-        testTimeout: REACT_TEST_TIMEOUT
+        setupFiles: setupFiles,
+        testTimeout: TEST_TIMEOUT
     }
 })
