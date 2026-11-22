@@ -7,28 +7,18 @@ const reactSetupFiles = ["./tests/react/setup.ts"]
 export default defineConfig({
     resolve: { tsconfigPaths: true },
     test: {
-        projects: [
-            {
-                test: {
-                    ...configDefaults,
-                    coverage: {
-                        enabled: true,
-                        provider: "v8",
-                        reporter: ["html", "lcov"]
-                    },
-                    environment: "happy-dom",
-                    globalSetup: [],
-                    globals: false,
-                    include: reactTests,
-                    name: "reactify-node",
-                    passWithNoTests: true,
-                    plugins: [vitePluginReact()],
-                    reporters: ["default", "html"],
-                    restoreMocks: true,
-                    sequence: { concurrent: true },
-                    setupFiles: reactSetupFiles
-                }
-            }
-        ]
+        ...configDefaults,
+        coverage: { enabled: true, provider: "v8", reporter: ["html", "lcov"] },
+        environment: "happy-dom",
+        globalSetup: [],
+        globals: false,
+        include: reactTests,
+        name: "reactify-node",
+        passWithNoTests: true,
+        plugins: [vitePluginReact()],
+        reporters: ["default", "html"],
+        restoreMocks: true,
+        sequence: { concurrent: true },
+        setupFiles: reactSetupFiles
     }
 })
