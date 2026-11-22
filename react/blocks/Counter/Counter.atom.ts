@@ -17,11 +17,17 @@ const DEFAULT_COUNT = 0
 
 const store = atom<number>(DEFAULT_COUNT) as Store
 
-const decrement: Decrement = () => store.set(store.get() - 1)
+const decrement: Decrement = () => {
+    store.set(store.get() - 1)
+}
 
-const increment: Increment = () => store.set(store.get() + 1)
+const increment: Increment = () => {
+    store.set(store.get() + 1)
+}
 
-const reset: Reset = () => store.set(DEFAULT_COUNT)
+const reset: Reset = () => {
+    store.set(DEFAULT_COUNT)
+}
 
 export default {
     decrement,

@@ -9,30 +9,33 @@ interface Props {
     title?: string
 }
 
-function canonicalURLTemplate(pathname: string, site: undefined | URL) {
+function canonicalURLTemplate(pathname: string, site: undefined | URL): URL {
     return new URL(pathname, site)
 }
 
-function descTemplate(defaultDesc: string, desc: string | undefined) {
+function descTemplate(defaultDesc: string, desc: string | undefined): string {
     return desc || defaultDesc
 }
 
-function formatViewport([attr, value]: [string, number | string]) {
-    const formattedAttr = attr.replace("_", "-")
-    const formattedValue = typeof value === "number" ? value.toFixed(1) : value
+function formatViewport([attr, value]: [string, number | string]): string {
+    const formattedAttr = attr.replace("_", "-"),
+        formattedValue = typeof value === "number" ? value.toFixed(1) : value
 
     return `${formattedAttr}=${formattedValue}`
 }
 
-function joinKeywords(keywords: typeof MetadataConfig.keywords) {
+function joinKeywords(keywords: typeof MetadataConfig.keywords): string {
     return keywords.join(", ")
 }
 
-function titleTemplate(defaultTitle: string, title: string | undefined) {
+function titleTemplate(
+    defaultTitle: string,
+    title: string | undefined
+): string {
     return title ? `${title} | ${defaultTitle}` : defaultTitle
 }
 
-function viewportTemplate(viewport: typeof MetadataConfig.viewport) {
+function viewportTemplate(viewport: typeof MetadataConfig.viewport): string {
     return Object.entries(viewport).map(formatViewport).join(", ")
 }
 

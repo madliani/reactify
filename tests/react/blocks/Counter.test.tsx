@@ -10,29 +10,33 @@ import {
 } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { head as first } from "es-toolkit"
-import { afterAll, afterEach, beforeAll, expect, suite, test, vi } from "vitest"
+import { afterAll, afterEach, beforeAll, expect, it, suite, vi } from "vitest"
 
 vi.mock(import("@react/blocks/Counter/Counter.atom"), { spy: true })
 
 suite("Counter: Rendering", () => {
     beforeAll(() => render(<Counter />))
-    afterAll(() => cleanup())
 
-    test("should render title", async () => {
+    afterAll(() => {
+        cleanup()
+    })
+
+    it("should render title", { timeout: 500 }, async () => {
         const titleElement = await screen.findByTestId("counter__title")
 
         expect(titleElement.textContent).toBe("Reactify")
     })
 
-    test("should render count", async () => {
+    it("should render count", { timeout: 500 }, async () => {
         const INITIAL_COUNT = 0
+        const RADIX = 10
         const countElement = await screen.findByTestId("counter__count")
-        const count = parseInt(countElement.textContent)
+        const count = parseInt(countElement.textContent, RADIX)
 
         expect(count).toBe(INITIAL_COUNT)
     })
 
-    test("should render increment button", async () => {
+    it("should render increment button", { timeout: 500 }, async () => {
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
         const incrementButtonElement = first(incrementButtonElements)
@@ -40,22 +44,26 @@ suite("Counter: Rendering", () => {
         expect(incrementButtonElement).toBeInTheDocument()
     })
 
-    test("should render disabled decrement button", async () => {
-        const decrementButtonElements =
-            await screen.findAllByTestId("counter__dec-btn")
-        const decrementButtonElement = first(decrementButtonElements)
+    it(
+        "should render disabled decrement button",
+        { timeout: 500 },
+        async () => {
+            const decrementButtonElements =
+                await screen.findAllByTestId("counter__dec-btn")
+            const decrementButtonElement = first(decrementButtonElements)
 
-        expect(decrementButtonElement).toBeDisabled()
-    })
+            expect(decrementButtonElement).toBeDisabled()
+        }
+    )
 
-    test("should render reset button", async () => {
+    it("should render reset button", { timeout: 500 }, async () => {
         const resetButtonElement =
             await screen.findByTestId("counter__reset-btn")
 
         expect(resetButtonElement).toBeInTheDocument()
     })
 
-    test("should render attribution", async () => {
+    it("should render attribution", { timeout: 500 }, async () => {
         const attributionElement = await screen.findByTestId(
             "counter__attribution"
         )
@@ -64,11 +72,14 @@ suite("Counter: Rendering", () => {
     })
 })
 
-suite("Counter: Increment button", { concurrent: false }, () => {
+suite("counter: Increment button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
-    afterAll(() => cleanup())
 
-    test("should trigger increment", async () => {
+    afterAll(() => {
+        cleanup()
+    })
+
+    it("should trigger increment", { timeout: 500 }, async () => {
         const user = userEvent.setup()
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
@@ -78,23 +89,27 @@ suite("Counter: Increment button", { concurrent: false }, () => {
             await user.click(incrementButtonElement)
         }
 
-        expect(counterAtom.increment).toHaveBeenCalledOnce()
+        expect(counterAtom.increment).toHaveBeenCalledTimes(1)
     })
 
-    test("should increment count", async () => {
+    it("should increment count", { timeout: 500 }, async () => {
         const INCREMENTED_COUNT = 1
+        const RADIX = 10
         const countElement = await screen.findByTestId("counter__count")
-        const count = parseInt(countElement.textContent)
+        const count = parseInt(countElement.textContent, RADIX)
 
         expect(count).toBe(INCREMENTED_COUNT)
     })
 })
 
-suite("Counter: Decrement button", { concurrent: false }, () => {
+suite("counter: Decrement button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
-    afterAll(() => cleanup())
 
-    test("should trigger decrement", async () => {
+    afterAll(() => {
+        cleanup()
+    })
+
+    it("should trigger decrement", { timeout: 500 }, async () => {
         const user = userEvent.setup()
         const decrementButtonElements =
             await screen.findAllByTestId("counter__dec-btn")
@@ -104,23 +119,27 @@ suite("Counter: Decrement button", { concurrent: false }, () => {
             await user.click(decrementButtonElement)
         }
 
-        expect(counterAtom.decrement).toHaveBeenCalledOnce()
+        expect(counterAtom.decrement).toHaveBeenCalledTimes(1)
     })
 
-    test("shouldn't decrement count", async () => {
+    it("shouldn't decrement count", { timeout: 500 }, async () => {
         const INITIAL_COUNT = 0
+        const RADIX = 10
         const countElement = await screen.findByTestId("counter__count")
-        const count = parseInt(countElement.textContent)
+        const count = parseInt(countElement.textContent, RADIX)
 
         expect(count).toBe(INITIAL_COUNT)
     })
 })
 
-suite("Counter: Resetting button", { concurrent: false }, () => {
+suite("counter: Resetting button", { concurrent: false }, () => {
     beforeAll(() => render(<Counter />))
-    afterAll(() => cleanup())
 
-    test("should trigger reset", async () => {
+    afterAll(() => {
+        cleanup()
+    })
+
+    it("should trigger reset", { timeout: 500 }, async () => {
         const user = userEvent.setup()
         const resetButtonElements =
             await screen.findAllByTestId("counter__reset-btn")
@@ -130,76 +149,94 @@ suite("Counter: Resetting button", { concurrent: false }, () => {
             await user.click(resetButtonEl)
         }
 
-        expect(counterAtom.reset).toHaveBeenCalledOnce()
+        expect(counterAtom.reset).toHaveBeenCalledTimes(1)
     })
 
-    test("shouldn't reset count", async () => {
+    it("shouldn't reset count", { timeout: 500 }, async () => {
         const INITIAL_COUNT = 0
+        const RADIX = 10
         const countElement = await screen.findByTestId("counter__count")
-        const count = parseInt(countElement.textContent)
+        const count = parseInt(countElement.textContent, RADIX)
 
         expect(count).toBe(INITIAL_COUNT)
     })
 })
 
-suite("Counter: Increment hook", () => {
-    afterEach(() => cleanup())
+suite("counter: Increment hook", () => {
+    afterEach(() => {
+        cleanup()
+    })
 
-    test("should increment count", async () => {
+    it("should increment count", { timeout: 500 }, () => {
         const INCREMENTED_COUNT = 1
         const { result } = renderHook(() => CounterHooks.use())
 
-        act(() => result.current.incrementCount())
+        act(() => {
+            result.current.incrementCount()
+        })
 
         expect(result.current.count).toBe(INCREMENTED_COUNT)
     })
 })
 
-suite("Counter: Decrement hook", () => {
-    afterEach(() => cleanup())
+suite("counter: Decrement hook", () => {
+    afterEach(() => {
+        cleanup()
+    })
 
-    test("shouldn't decrement count", async () => {
+    it("shouldn't decrement count", { timeout: 500 }, () => {
         const INITIAL_COUNT = 0
         const { result } = renderHook(() => CounterHooks.use())
 
-        act(() => result.current.decrementCount())
+        act(() => {
+            result.current.decrementCount()
+        })
 
         expect(result.current.count).toBe(INITIAL_COUNT)
     })
 })
 
-suite("Counter: Resetting hooks", () => {
-    afterEach(() => cleanup())
+suite("counter: Resetting hooks", () => {
+    afterEach(() => {
+        cleanup()
+    })
 
-    test("shouldn't reset count", async () => {
+    it("shouldn't reset count", { timeout: 500 }, () => {
         const INITIAL_COUNT = 0
         const { result } = renderHook(() => CounterHooks.use())
 
-        act(() => result.current.resetCount())
+        act(() => {
+            result.current.resetCount()
+        })
 
         expect(result.current.count).toBe(INITIAL_COUNT)
     })
 })
 
-suite("Counter: Hook for saving to localStorage", { concurrent: false }, () => {
-    afterEach(() => cleanup())
+suite("counter: Hook for saving to localStorage", { concurrent: false }, () => {
+    afterEach(() => {
+        cleanup()
+    })
 
-    test("should store to localStorage", async () => {
+    it("should store to localStorage", { timeout: 500 }, () => {
         const INCREMENTED_COUNT = 1
         const { result } = renderHook(() => CounterHooks.use())
 
-        act(() => result.current.incrementCount())
+        act(() => {
+            result.current.incrementCount()
+        })
 
         expect(result.current.count).toBe(INCREMENTED_COUNT)
     })
 
-    test("should restore from localStorage", async () => {
+    it("should restore from localStorage", { timeout: 500 }, () => {
         const COUNT_FALLBACK = "0"
         const INCREMENTED_COUNT = 1
+        const RADIX = 10
         renderHook(() => CounterHooks.use())
 
         const countItem = localStorage.getItem("count")
-        const countFromLS = parseInt(countItem ?? COUNT_FALLBACK)
+        const countFromLS = parseInt(countItem ?? COUNT_FALLBACK, RADIX)
 
         expect(countFromLS).toBe(INCREMENTED_COUNT)
     })

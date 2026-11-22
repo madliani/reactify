@@ -18,8 +18,13 @@ const ignorePatterns = [
 ]
 
 export default defineConfig({
-    categories: { correctness: "error" },
-    env: { builtin: true },
+    categories: {
+        correctness: "error",
+        nursery: "error",
+        perf: "error",
+        restriction: "error"
+    },
+    env: { astro: true, browser: true, builtin: true },
     ignorePatterns,
     options: { typeAware: true },
     plugins: [
@@ -35,5 +40,15 @@ export default defineConfig({
         "typescript",
         "vitest"
     ],
-    rules: { "eslint/sort-imports": "off", "eslint/sort-keys": "error" }
+    rules: {
+        "eslint/sort-imports": "off",
+        "eslint/sort-keys": "error",
+        "import/no-default-export": "off",
+        "import/unambiguous": "off",
+        "oxc/no-async-await": "off",
+        "oxc/no-rest-spread-properties": "off",
+        "react/forbid-component-props": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-no-literals": "off"
+    }
 })
