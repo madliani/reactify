@@ -4,6 +4,7 @@ import vitePluginTW from "@tailwindcss/vite"
 import { defineConfig } from "astro/config"
 import pathe from "pathe"
 
+const ASTRO_DIRECTORY = "./astro/"
 const PORT = 4321
 const SITE = "https://madliani-reactify.vercel.app/"
 
@@ -20,7 +21,7 @@ export default defineConfig({
     prefetch: { defaultStrategy: "tap" },
     server: { host: true, open: true, port: PORT },
     site: SITE,
-    srcDir: "./astro/",
+    srcDir: ASTRO_DIRECTORY,
 
     vite: {
         css: { transformer: "postcss" },
