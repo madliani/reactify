@@ -17,8 +17,6 @@ const ignorePaths = [
     "public/"
 ]
 
-const importedDicts = ["@cspell/dict-ru_ru/cspell-ext.json"]
-
 const dicts = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
 const language = dicts.join(",")
 
@@ -42,13 +40,12 @@ const englishWords = [
     "vite",
     "vitest"
 ]
-const words = [...englishWords]
 
 export default defineConfig({
     files: ["**/*"],
     ignorePaths,
-    import: importedDicts,
+    import: ["@cspell/dict-ru_ru/cspell-ext.json"],
     language,
     useGitignore: true,
-    words
+    words: [...englishWords]
 })
