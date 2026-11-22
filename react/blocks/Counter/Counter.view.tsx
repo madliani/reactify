@@ -1,7 +1,7 @@
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Button, ButtonGroup, Card, Link, Typography } from "@heroui/react"
-import type { FC } from "react"
+import type { JSX } from "react"
 
 export interface CounterViewProps {
     count: number
@@ -11,7 +11,7 @@ export interface CounterViewProps {
     resetCount: () => void
 }
 
-const CounterView: FC<Readonly<CounterViewProps>> = props => {
+function CounterView(props: CounterViewProps): JSX.Element {
     const { count, decrementCount, incrementCount, isCounterZero, resetCount } =
         props
 
@@ -112,7 +112,5 @@ const CounterView: FC<Readonly<CounterViewProps>> = props => {
         </Card>
     )
 }
-
-CounterView.displayName = "CounterView"
 
 export default CounterView
