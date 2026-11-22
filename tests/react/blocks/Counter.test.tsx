@@ -21,13 +21,13 @@ suite("Counter: Rendering", () => {
         cleanup()
     })
 
-    it("should render title", { timeout: 5000 }, async () => {
+    it("should render title", async () => {
         const titleElement = await screen.findByTestId("counter__title")
 
         expect(titleElement.textContent).toBe("Reactify")
     })
 
-    it("should render count", { timeout: 5000 }, async () => {
+    it("should render count", async () => {
         const INITIAL_COUNT = 0
         const RADIX = 10
         const countElement = await screen.findByTestId("counter__count")
@@ -36,7 +36,7 @@ suite("Counter: Rendering", () => {
         expect(count).toBe(INITIAL_COUNT)
     })
 
-    it("should render increment button", { timeout: 5000 }, async () => {
+    it("should render increment button", async () => {
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
         const incrementButtonElement = first(incrementButtonElements)
@@ -44,26 +44,22 @@ suite("Counter: Rendering", () => {
         expect(incrementButtonElement).toBeInTheDocument()
     })
 
-    it(
-        "should render disabled decrement button",
-        { timeout: 5000 },
-        async () => {
-            const decrementButtonElements =
-                await screen.findAllByTestId("counter__dec-btn")
-            const decrementButtonElement = first(decrementButtonElements)
+    it("should render disabled decrement button", async () => {
+        const decrementButtonElements =
+            await screen.findAllByTestId("counter__dec-btn")
+        const decrementButtonElement = first(decrementButtonElements)
 
-            expect(decrementButtonElement).toBeDisabled()
-        }
-    )
+        expect(decrementButtonElement).toBeDisabled()
+    })
 
-    it("should render reset button", { timeout: 5000 }, async () => {
+    it("should render reset button", async () => {
         const resetButtonElement =
             await screen.findByTestId("counter__reset-btn")
 
         expect(resetButtonElement).toBeInTheDocument()
     })
 
-    it("should render attribution", { timeout: 5000 }, async () => {
+    it("should render attribution", async () => {
         const attributionElement = await screen.findByTestId(
             "counter__attribution"
         )
@@ -79,7 +75,7 @@ suite("counter: Increment button", { concurrent: false }, () => {
         cleanup()
     })
 
-    it("should trigger increment", { timeout: 5000 }, async () => {
+    it("should trigger increment", async () => {
         const user = userEvent.setup()
         const incrementButtonElements =
             await screen.findAllByTestId("counter__inc-btn")
@@ -92,7 +88,7 @@ suite("counter: Increment button", { concurrent: false }, () => {
         expect(counterAtom.increment).toHaveBeenCalledTimes(1)
     })
 
-    it("should increment count", { timeout: 5000 }, async () => {
+    it("should increment count", async () => {
         const INCREMENTED_COUNT = 1
         const RADIX = 10
         const countElement = await screen.findByTestId("counter__count")
@@ -109,7 +105,7 @@ suite("counter: Decrement button", { concurrent: false }, () => {
         cleanup()
     })
 
-    it("should trigger decrement", { timeout: 5000 }, async () => {
+    it("should trigger decrement", async () => {
         const user = userEvent.setup()
         const decrementButtonElements =
             await screen.findAllByTestId("counter__dec-btn")
@@ -122,7 +118,7 @@ suite("counter: Decrement button", { concurrent: false }, () => {
         expect(counterAtom.decrement).toHaveBeenCalledTimes(1)
     })
 
-    it("shouldn't decrement count", { timeout: 5000 }, async () => {
+    it("shouldn't decrement count", async () => {
         const INITIAL_COUNT = 0
         const RADIX = 10
         const countElement = await screen.findByTestId("counter__count")
@@ -139,7 +135,7 @@ suite("counter: Resetting button", { concurrent: false }, () => {
         cleanup()
     })
 
-    it("should trigger reset", { timeout: 5000 }, async () => {
+    it("should trigger reset", async () => {
         const user = userEvent.setup()
         const resetButtonElements =
             await screen.findAllByTestId("counter__reset-btn")
@@ -152,7 +148,7 @@ suite("counter: Resetting button", { concurrent: false }, () => {
         expect(counterAtom.reset).toHaveBeenCalledTimes(1)
     })
 
-    it("shouldn't reset count", { timeout: 5000 }, async () => {
+    it("shouldn't reset count", async () => {
         const INITIAL_COUNT = 0
         const RADIX = 10
         const countElement = await screen.findByTestId("counter__count")
@@ -167,7 +163,7 @@ suite("counter: Increment hook", () => {
         cleanup()
     })
 
-    it("should increment count", { timeout: 5000 }, () => {
+    it("should increment count", () => {
         const INCREMENTED_COUNT = 1
         const { result } = renderHook(() => CounterHooks.use())
 
@@ -184,7 +180,7 @@ suite("counter: Decrement hook", () => {
         cleanup()
     })
 
-    it("shouldn't decrement count", { timeout: 5000 }, () => {
+    it("shouldn't decrement count", () => {
         const INITIAL_COUNT = 0
         const { result } = renderHook(() => CounterHooks.use())
 
@@ -201,7 +197,7 @@ suite("counter: Resetting hooks", () => {
         cleanup()
     })
 
-    it("shouldn't reset count", { timeout: 5000 }, () => {
+    it("shouldn't reset count", () => {
         const INITIAL_COUNT = 0
         const { result } = renderHook(() => CounterHooks.use())
 
@@ -218,7 +214,7 @@ suite("counter: Hook for saving to localStorage", { concurrent: false }, () => {
         cleanup()
     })
 
-    it("should store to localStorage", { timeout: 5000 }, () => {
+    it("should store to localStorage", () => {
         const INCREMENTED_COUNT = 1
         const { result } = renderHook(() => CounterHooks.use())
 
@@ -229,7 +225,7 @@ suite("counter: Hook for saving to localStorage", { concurrent: false }, () => {
         expect(result.current.count).toBe(INCREMENTED_COUNT)
     })
 
-    it("should restore from localStorage", { timeout: 5000 }, () => {
+    it("should restore from localStorage", () => {
         const COUNT_FALLBACK = "0"
         const INCREMENTED_COUNT = 1
         const RADIX = 10
