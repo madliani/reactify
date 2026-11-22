@@ -1,5 +1,5 @@
 import Counter from "@react/blocks/Counter/Counter"
-import CounterAtom from "@react/blocks/Counter/Counter.atom"
+import counterAtom from "@react/blocks/Counter/Counter.atom"
 import CounterHooks from "@react/blocks/Counter/Counter.hooks"
 import {
     act,
@@ -78,7 +78,7 @@ suite("Counter: Increment button", { concurrent: false }, () => {
             await user.click(incrementButtonElement)
         }
 
-        expect(CounterAtom.increment).toHaveBeenCalledOnce()
+        expect(counterAtom.increment).toHaveBeenCalledOnce()
     })
 
     test("should increment count", async () => {
@@ -104,7 +104,7 @@ suite("Counter: Decrement button", { concurrent: false }, () => {
             await user.click(decrementButtonElement)
         }
 
-        expect(CounterAtom.decrement).toHaveBeenCalledOnce()
+        expect(counterAtom.decrement).toHaveBeenCalledOnce()
     })
 
     test("shouldn't decrement count", async () => {
@@ -130,7 +130,7 @@ suite("Counter: Resetting button", { concurrent: false }, () => {
             await user.click(resetButtonEl)
         }
 
-        expect(CounterAtom.reset).toHaveBeenCalledOnce()
+        expect(counterAtom.reset).toHaveBeenCalledOnce()
     })
 
     test("shouldn't reset count", async () => {
