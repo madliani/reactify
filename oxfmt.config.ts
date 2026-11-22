@@ -32,7 +32,7 @@ export default defineConfig({
     semi: false,
     singleAttributePerLine: false,
     singleQuote: false,
-    sortPackageJson: false,
+    sortPackageJson: { sortScripts: true },
     tabWidth: 4,
     trailingComma: "none",
     useTabs: false,
