@@ -1,25 +1,3 @@
-const stylelintRules = {
-    "at-rule-prelude-no-invalid": [true, { "ignoreAtRules": ["apply"] }],
-    "import-notation": "string",
-    "selector-class-pattern": null
-}
-const pluginRules = {
-    "plugin/no-unsupported-browser-features": [
-        true,
-        {
-            ignore: [
-                "css-cascade-layers",
-                "css-logical-props",
-                "css-media-range-syntax",
-                "css-nesting",
-                "intrinsic-width",
-                "viewport-unit-variants"
-            ],
-            severity: "error"
-        }
-    ]
-}
-
 export default {
     allowEmptyInput: true,
     cache: true,
@@ -33,5 +11,23 @@ export default {
     fix: true,
     maxWarnings: 0,
     plugins: ["stylelint-no-unsupported-browser-features"],
-    rules: { ...stylelintRules, ...pluginRules }
+    rules: {
+        "at-rule-prelude-no-invalid": [true, { "ignoreAtRules": ["apply"] }],
+        "import-notation": "string",
+        "plugin/no-unsupported-browser-features": [
+            true,
+            {
+                ignore: [
+                    "css-cascade-layers",
+                    "css-logical-props",
+                    "css-media-range-syntax",
+                    "css-nesting",
+                    "intrinsic-width",
+                    "viewport-unit-variants"
+                ],
+                severity: "error"
+            }
+        ],
+        "selector-class-pattern": null
+    }
 }
