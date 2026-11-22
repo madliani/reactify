@@ -66,6 +66,7 @@
         "happy-dom": "21.0.4",
         "husky": "9.1.7",
         "lint-staged": "17.6.1",
+        "oxlint": "1.94.0",
         "prettier": "3.10.1",
         "prettier-plugin-astro": "1.1.2",
         "stylelint": "18.0.0",
