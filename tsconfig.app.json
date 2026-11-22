@@ -20,6 +20,7 @@
         },
         "types": ["astro/astro-jsx", "astro/client", "react-dom", "react"]
     },
+    "extends": ["./tsconfig.base.json"],
     "include": [
         "${configDir}/.astro/*.d.ts",
         "${configDir}/**/*.astro",

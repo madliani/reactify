@@ -5,5 +5,5 @@
         "${configDir}/dist/",
         "${configDir}/node_modules/"
     ],
-    "extends": ["./tsconfig.base.json", "./tsconfig.app.json"]
+    "extends": ["./tsconfig.app.json"]
 }
