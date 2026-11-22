@@ -19,6 +19,7 @@ export default defineConfig({
         reporters: ["default", "html"],
         restoreMocks: true,
         sequence: { concurrent: true },
-        setupFiles: reactSetupFiles
+        setupFiles: reactSetupFiles,
+        testTimeout: 5000
     }
 })
