@@ -22,12 +22,9 @@
     },
     "include": [
         "${configDir}/.astro/*.d.ts",
-        "${configDir}/astro/**/*.astro",
-        "${configDir}/astro/**/*.ts",
-        "${configDir}/react/**/*.ts",
-        "${configDir}/react/**/*.tsx",
-        "${configDir}/tests/react/**/*.ts",
-        "${configDir}/tests/react/**/*.tsx",
-        "${configDir}/types/*.d.ts"
+        "${configDir}/**/*.astro",
+        "${configDir}/**/*.d.ts",
+        "${configDir}/**/*.ts",
+        "${configDir}/**/*.tsx"
     ]
 }
