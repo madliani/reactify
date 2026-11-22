@@ -130,7 +130,6 @@ pnpm build
 - `.browserslistrc`: a `Browserslist` configuration file
 - `.gitattributes`: a `Git` attributes file
 - `.gitignore`: a `Git` ignore file
-- `.prettierignore`: a `Prettier` ignore file
 - `.stylelintcache`: a file of `Stylelint`, which contains the results of
   processed files, so that `Stylelint` only operates on the changed ones (local
   and ignored by `Git`)
@@ -139,14 +138,14 @@ pnpm build
 - `CHANGELOG.md`: a `CHANGELOG.md` file
 - `CONTRIBUTING.md`: a `CONTRIBUTING.md` file
 - `cspell.config.js`: a `JavaScript`-based `cSpell` configuration file
-- `eslint.config.js`: a `JavaScript`-based `ESLint` configuration file
 - `index.html`: an `index.html` file
 - `LICENSE.txt`: a license file
 - `lint-staged.config.js`: a `JavaScript`-based `lint-staged` configuration file
+- `oxfmt.config.ts`: a `TypeScript`-based `Oxfmt` configuration file
+- `oxlint.config.ts`: a `TypeScript`-based `Oxlint` configuration file
 - `package.json`: a `package.json` file
 - `pnpm-lock.yaml`: a `pnpm` lockfile
 - `pnpm-workspace.yaml`: a `pnpm-workspace.yaml` file
-- `prettier.config.js`: a `JavaScript`-based `Prettier` configuration file
 - `README.md`: a `README` file
 - `tsconfig.app.json`: a `TypeScript` configuration file for the web app
 - `tsconfig.json`: a base `TypeScript` configuration file
