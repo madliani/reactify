@@ -2,7 +2,7 @@ import { defineConfig } from "oxfmt"
 
 export default defineConfig({
     arrowParens: "avoid",
-    astro: {},
+    astro: true,
     bracketSameLine: false,
     bracketSpacing: true,
     embeddedLanguageFormatting: "auto",
