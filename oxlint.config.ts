@@ -49,6 +49,7 @@ export default defineConfig({
         "oxc/no-rest-spread-properties": "off",
         "react/forbid-component-props": "off",
         "react/jsx-filename-extension": "off",
-        "react/jsx-no-literals": "off"
+        "react/jsx-no-literals": "off",
+        "vitest/require-test-timeout": "off"
     }
 })
