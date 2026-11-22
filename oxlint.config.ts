@@ -13,5 +13,5 @@ export default defineConfig({
         "promise",
         "typescript"
     ],
-    rules: {}
+    rules: { "eslint/sort-imports": "off", "eslint/sort-keys": "error" }
 })
