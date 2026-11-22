@@ -88,10 +88,10 @@
         "url": "git+https://github.com/madliani/reactify.git"
     },
     "scripts": {
-        "build": "tsc && astro build",
-        "check:format": "oxfmt --write",
-        "check:lint": "stylelint --fix ./ && oxlint --fix",
+        "build": "astro build",
+        "check": "oxlint --fix & tsc & oxfmt --write",
         "check:spell": "cspell",
+        "check:styles": "stylelint --fix ./",
         "lint-staged": "lint-staged",
         "prepare": "husky",
         "serve": "astro dev",
