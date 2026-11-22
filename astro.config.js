@@ -7,8 +7,6 @@ import pathe from "pathe"
 const PORT = 4321
 const SITE = "https://madliani-reactify.vercel.app/"
 
-const integrations = [reactIntegration(), sitemapIntegration()]
-const vitePlugins = [vitePluginTW({ optimize: { minify: true } })]
 const viteAliasAstro = pathe.resolve(import.meta.dirname, "./astro/")
 const viteAliasReact = pathe.resolve(import.meta.dirname, "./react/")
 
@@ -17,7 +15,7 @@ export default defineConfig({
     build: { inlineStylesheets: "never" },
     compressHTML: true,
     devToolbar: { enabled: true },
-    integrations,
+    integrations: [reactIntegration(), sitemapIntegration()],
     output: "static",
     prefetch: { defaultStrategy: "tap" },
     server: { host: true, open: true, port: PORT },
@@ -26,7 +24,7 @@ export default defineConfig({
 
     vite: {
         css: { transformer: "postcss" },
-        plugins: vitePlugins,
+        plugins: [vitePluginTW({ optimize: { minify: true } })],
         resolve: {
             alias: { "@astro": viteAliasAstro, "@react": viteAliasReact }
         }
