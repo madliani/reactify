@@ -106,7 +106,7 @@
     },
     "scripts": {
         "build": "tsc && astro check && astro build",
-        "check:format": "prettier ./ --write --ignore-unknown",
+        "check:format": "oxfmt --write",
         "check:lint": "stylelint --fix ./ && oxlint --fix",
         "check:spell": "cspell",
         "lint-staged": "lint-staged",
