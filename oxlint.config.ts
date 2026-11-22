@@ -1,9 +1,11 @@
 import { defineConfig } from "oxlint"
 
+const ignorePatterns = [".output/", "coverage/", "node_modules/"]
+
 export default defineConfig({
     categories: { correctness: "error" },
     env: { builtin: true },
-    ignorePatterns: [".output/", "coverage/", "node_modules/"],
+    ignorePatterns,
     plugins: [
         "eslint",
         "import",
