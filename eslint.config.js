@@ -93,7 +93,7 @@ export default defineConfig([
         language: "markdown/commonmark",
         rules: { "markdown/no-missing-label-refs": "off" }
     },
-    { ...tsConfig, files: ["*.config.js"] },
+    { ...tsConfig, files: ["*.config.js", "*.config.ts"] },
     { ...browserConfig, files: ["**/*.ts"] },
     { ...tsxConfig, files: ["**/*.tsx"] },
     { ...astroConfig, files: ["**/*.astro"] }
