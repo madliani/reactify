@@ -5,6 +5,7 @@ import { defineConfig } from "astro/config"
 import pathe from "pathe"
 
 const ASTRO_DIRECTORY = "./astro/"
+const BASE = "/"
 const PORT = 4321
 const SITE = "https://madliani-reactify.vercel.app/"
 
@@ -12,7 +13,7 @@ const viteAliasAstro = pathe.resolve(import.meta.dirname, "./astro/")
 const viteAliasReact = pathe.resolve(import.meta.dirname, "./react/")
 
 export default defineConfig({
-    base: "/",
+    base: BASE,
     build: { inlineStylesheets: "never" },
     compressHTML: true,
     devToolbar: { enabled: true },
