@@ -5,6 +5,9 @@ const PL_DICT = "typescript, node, html, css"
 const MISC_DICT = "fonts, fileTypes, npm"
 const RU_DICT = "ru, ru-RU"
 
+const dicts = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
+const language = dicts.join(",")
+
 const ignorePaths = [
     ".astro/",
     ".vitest/",
@@ -16,9 +19,6 @@ const ignorePaths = [
     "pnpm-lock.yaml",
     "public/"
 ]
-
-const dicts = [GENERAL_DICT, PL_DICT, MISC_DICT, RU_DICT]
-const language = dicts.join(",")
 
 const englishWords = [
     "asynciterable",
