@@ -1,3 +1,4 @@
+/** @type {import("stylelint").Config} */
 export default {
     allowEmptyInput: true,
     cache: true,
