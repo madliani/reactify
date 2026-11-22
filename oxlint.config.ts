@@ -21,6 +21,7 @@ export default defineConfig({
     categories: { correctness: "error" },
     env: { builtin: true },
     ignorePatterns,
+    options: { typeAware: true },
     plugins: [
         "eslint",
         "import",
