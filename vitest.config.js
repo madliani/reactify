@@ -1,6 +1,8 @@
 import vitePluginReact from "@vitejs/plugin-react"
 import { configDefaults, defineConfig } from "vitest/config"
 
+const REACT_TEST_TIMEOUT = 5000
+
 const reactTests = ["./tests/react/**/*.test.ts", "./tests/react/**/*.test.tsx"]
 const reactSetupFiles = ["./tests/react/setup.ts"]
 
@@ -20,6 +22,6 @@ export default defineConfig({
         restoreMocks: true,
         sequence: { concurrent: true },
         setupFiles: reactSetupFiles,
-        testTimeout: 5000
+        testTimeout: REACT_TEST_TIMEOUT
     }
 })
