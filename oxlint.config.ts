@@ -1,6 +1,21 @@
 import { defineConfig } from "oxlint"
 
-const ignorePatterns = [".output/", "coverage/", "node_modules/"]
+const ignorePatterns = [
+    ".astro/",
+    ".env*",
+    ".stylelintcache",
+    ".vitest/",
+    "*.tsbuildinfo",
+    "coverage/",
+    "dist/",
+    "node_modules/",
+    "npm-debug.log*",
+    "pnpm-debug.log*",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "yarn-debug.log*",
+    "yarn-error.log*"
+]
 
 export default defineConfig({
     categories: { correctness: "error" },
