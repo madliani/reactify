@@ -44,6 +44,7 @@ const englishWords = [
 const words = [...englishWords]
 
 export default defineConfig({
+    files: ["**/*"],
     ignorePaths,
     import: importedDicts,
     language,
