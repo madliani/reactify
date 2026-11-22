@@ -1,11 +1,3 @@
-const configs = [
-    "stylelint-config-standard",
-    "stylelint-config-html/astro",
-    "stylelint-config-tailwindcss",
-    "stylelint-config-clean-order"
-]
-const plugins = ["stylelint-no-unsupported-browser-features"]
-
 const stylelintRules = {
     "at-rule-prelude-no-invalid": [true, { "ignoreAtRules": ["apply"] }],
     "import-notation": "string",
@@ -27,15 +19,19 @@ const pluginRules = {
         }
     ]
 }
-const rules = { ...stylelintRules, ...pluginRules }
 
 export default {
     allowEmptyInput: true,
     cache: true,
     defaultSeverity: "error",
-    extends: configs,
+    extends: [
+        "stylelint-config-standard",
+        "stylelint-config-html/astro",
+        "stylelint-config-tailwindcss",
+        "stylelint-config-clean-order"
+    ],
     fix: true,
     maxWarnings: 0,
-    plugins,
-    rules
+    plugins: ["stylelint-no-unsupported-browser-features"],
+    rules: { ...stylelintRules, ...pluginRules }
 }
