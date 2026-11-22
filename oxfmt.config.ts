@@ -1,5 +1,22 @@
 import { defineConfig } from "oxfmt"
 
+const ignorePatterns = [
+    ".env*",
+    "node_modules/",
+    "npm-debug.log*",
+    "pnpm-debug.log*",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "yarn-debug.log*",
+    "yarn-error.log*",
+    "*.tsbuildinfo",
+    ".astro/",
+    "dist/",
+    ".vitest/",
+    "coverage/",
+    ".stylelintcache"
+]
+
 export default defineConfig({
     arrowParens: "avoid",
     astro: true,
@@ -7,22 +24,7 @@ export default defineConfig({
     bracketSpacing: true,
     embeddedLanguageFormatting: "auto",
     htmlWhitespaceSensitivity: "strict",
-    ignorePatterns: [
-        ".env*",
-        "node_modules/",
-        "npm-debug.log*",
-        "pnpm-debug.log*",
-        "pnpm-lock.yaml",
-        "pnpm-workspace.yaml",
-        "yarn-debug.log*",
-        "yarn-error.log*",
-        "*.tsbuildinfo",
-        ".astro/",
-        "dist/",
-        ".vitest/",
-        "coverage/",
-        ".stylelintcache"
-    ],
+    ignorePatterns,
     objectWrap: "collapse",
     printWidth: 80,
     proseWrap: "always",
